@@ -1,0 +1,81 @@
+.btn
+	display: inline-block
+	padding: 17px 20px 16px
+	min-width: 204px
+	background: $red
+	+br4
+	font-size: 14px
+	line-height: 1
+	+f500
+	color: #fff
+	text-align: center
+	+tr_bg
+	text-decoration: none
+	&:hover
+		background: $red_h
+	&:active
+		background: $red_act
+	&_fluid
+		padding: 25px 20px 22px
+		width: 100%
+		font-size: 16px 
+.btn-blue
+	display: inline-block
+	border: 1px solid $blue_ligth
+	padding: 17px 20px 16px
+	min-width: 146px
+	background: none
+	+br4
+	font-size: 14px
+	line-height: 1
+	+f500
+	text-align: center
+	+transition(color .3s linear, background .3s linear, border .3s linear)
+	color: $blue 
+	text-decoration: none
+	&:hover
+		background: $blue_h
+		border-color: $blue_h
+		color: #fff 
+	&:active
+		background: $blue
+		border-color: $blue
+		color: #fff 
+.btn-blue-small 
+	display: inline-block
+	padding: 9px 20px 7px
+	min-width: 153px
+	background: $blue
+	+br4
+	font-size: 14px
+	line-height: 1
+	+f500
+	color: #fff
+	text-align: center
+	+tr_bg
+	text-decoration: none
+	&:hover
+		background: $blue_h
+	&:active
+		background: $blue_act
+.btn-dark
+	display: inline-block
+	border: 1px solid #ccc
+	padding: 9px 20px 7px
+	min-width: 144px
+	background: none
+	+br4
+	font-size: 14px
+	line-height: 1
+	+f500
+	color: #000
+	text-align: center
+	+tr_bg
+	text-decoration: none
+	+transition(color .3s linear, background .3s linear, border .3s linear)
+	&:hover
+		border-color: #666 
+	&:active
+		background: $blue
+		border-color: $blue 
+		color: #fff 
