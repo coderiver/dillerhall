@@ -8,12 +8,34 @@
     <link rel="stylesheet" href="css/screen.css" media="screen,print"><!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
   </head>
   <body>
-    <div class="l-center"><a href="#" class="btn">Отправить резюме</a>
-      <hr><a href="#" class="btn btn_fluid">Отправить резюме</a>
-      <hr><a href="#" class="btn-blue">Отправить резюме</a>
-      <hr><a href="#" class="btn-blue-small">Отправить резюме</a>
-      <hr><a href="#" class="btn-dark">Отправить резюме</a>
+    <header class="header"></header>
+    <div style="padding: 0 10px" class="l-center">
+      <hr><a href="#" class="btn">.btn</a>
+      <hr><a href="#" class="btn btn_fluid">.btn.btn_fluid</a>
+      <hr><a href="#" class="btn-action">.btn-action</a>
+      <hr><a href="#" class="btn-link">.btn-link</a>
+      <hr><a href="#" class="btn-link btn-link_orange">.btn-link.btn-link_orange</a>
+      <hr><a href="#" class="btn-simple">.btn-simple</a>
+      <hr><a href="#" class="btn-simple btn-simple_yellow">.btn-simple.btn-simple_yellow</a>
+      <hr><a href="#" class="btn-simple btn-simple_prev">.btn-simple.btn-simple_prev</a>
       <hr>
+      <input type="text" class="input">
+      <hr>
+      <form class="js-validate">
+        <label class="field"><span class="field__title">Ваше имя</span><span class="field__body">
+            <input type="text" name="name" required class="input"></span></label>
+        <label class="field"><span class="field__title">Электронная почта</span><span class="field__body">
+            <input type="text" name="email" required class="input"></span></label>
+        <div class="btn-add-wrap to-right">
+          <button data-hidden="js-hidden-field" type="button" class="btn-add js-add-btn">+ добавить e-mail</button>
+        </div>
+        <div hidden class="js-hidden-field">
+          <label class="field"><span class="field__title">Электронная почта</span><span class="field__body">
+              <input type="text" name="email" required class="input"></span></label>
+        </div>
+      </form>
     </div>
+    <div class="footer"></div>
+    <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
   </body>
 </html>

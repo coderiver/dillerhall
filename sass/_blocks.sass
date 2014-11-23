@@ -1,3 +1,9 @@
+.l-center
+	max-width: 1400px
+.to-right
+	text-align: right
+.to-center
+	text-align: center
 .btn
 	display: inline-block
 	padding: 17px 20px 16px
@@ -15,11 +21,12 @@
 		background: $red_h
 	&:active
 		background: $red_act
+		+tr(none)
 	&_fluid
 		padding: 25px 20px 22px
 		width: 100%
 		font-size: 16px 
-.btn-blue
+.btn-action
 	display: inline-block
 	border: 1px solid $blue_ligth
 	padding: 17px 20px 16px
@@ -27,7 +34,7 @@
 	background: none
 	+br4
 	font-size: 14px
-	line-height: 1
+	line-height: 1 
 	+f500
 	text-align: center
 	+transition(color .3s linear, background .3s linear, border .3s linear)
@@ -41,7 +48,8 @@
 		background: $blue
 		border-color: $blue
 		color: #fff 
-.btn-blue-small 
+		+tr(none)
+.btn-link
 	display: inline-block
 	padding: 9px 20px 7px
 	min-width: 153px
@@ -58,7 +66,14 @@
 		background: $blue_h
 	&:active
 		background: $blue_act
-.btn-dark
+		+tr(none)
+	&_orange
+		background: $orange
+		&:hover
+			background: $orange_h
+		&:active
+			background: $orange_act
+.btn-simple
 	display: inline-block
 	border: 1px solid #ccc
 	padding: 9px 20px 7px
@@ -79,12 +94,84 @@
 		background: $blue
 		border-color: $blue 
 		color: #fff 
-
-.input
+		+tr(none)
+	&_prev
+		position: relative
+		padding-left: 30px
+		&:before,
+		&:after
+			content: ""
+			position: absolute
+			left: 13px
+			top: 50%
+			margin-top: -5px
+			+tr_op
+		&:before
+			+svg(arr-prev,7,11) 
+			opacity: 0.5
+		&:after
+			opacity: 0
+			+svg(arr-prev-white,7,11) 
+		&:active
+			&:before
+				opacity: 0
+				+tr(none)
+			&:after
+				opacity: 1
+				+tr(none)
+	&_yellow
+		border-color: $yellow
+		&:hover
+			background: #fffce7
+			border-color: $yellow
+		&:active
+			background: $yellow 
+			
+.btn-add-wrap
+	position: relative
+.btn-add
+	display: inline-block
+	color: $blue
+	font-size: 14px 
+	+f300
+	background: none
+	+tr_color
+	&:hover
+		color: $blue
+	&:active
+		color: $blue_act 
+		+tr(none)
+.field
 	display: block
+	position: relative
+	margin: 0 0 24px 
+	&__title
+		display: block
+		margin: 0 0 10px 
+		font-size: 16px
+		color: #000
+		+f300 
+	&__body
+		display: block
+		position: relative
+	&__action
+		display: block
+		padding: 2px 0 
+		text-align: right
+	+ .btn-add-wrap
+		margin-top: -24px
+.input 
+	display: block
+	padding: 0 14px 
 	width: 100%
 	height: 30px
-	background: #FFF
-	border: 1px solid #000
-	+br5
+	background: #fff
 	border: 1px solid $border-input
+	+br5
+	font-size: 14px
+	color: #000
+	+f300 
+	+transition(border .3s, box-shadow .3s)
+	&:focus
+		border: 1px solid #1BB4ED
+		box-shadow: 0 0 5px rgba(27, 180, 237, 0.3)
