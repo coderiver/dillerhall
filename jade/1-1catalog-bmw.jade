@@ -1,0 +1,32 @@
+doctype
+html
+	head
+		include _head.jade
+	body
+		.out
+			include _header.jade
+			.catalog
+				.l-center
+					h2.title 1 series
+						i i
+					a(href="#").item
+						.item__img
+							img(src="img/item/bmw-1series-hatchback.png", alt="")
+						.item__info
+							p BMW 1-series hatchback 
+							span.item__small Трёхдверный хэтчбек, 2015
+							span.item__price $ 29 900 - 35 000
+					a(href="#").item
+						.item__img
+							img(src="img/item/bmw-1series-hatchback98.png", alt="")
+						.item__info
+							p BMW 1-series hatchback 
+								sup 98
+							span.item__small Пятидверный хэтчбек, 2015 
+							span.item__price $ 29 900 - 35 000
+			.l-center
+				
+			.push 
+		include _footer.jade 
+
+
