@@ -1,9 +1,42 @@
 // default layout
-.l
-	+clr
-	.l-col1
-		float: left
-		width: 20%
-	.l-col2
-		float: right
-		width: 70%
+
+//feedback
+.feedback
+	padding: 76px 0 54px
+	font-size: 0
+	.btn
+		min-width: 176px
+
+// address, delivery, phones
+.address, .delivery, .phones
+	padding-bottom: 16px
+	margin-left: 70px
+	width: 212px
+	font-size: 14px
+	vertical-align: top
+	display: inline-block
+	+f100
+	&:first-child
+		margin-left: 0
+	.title
+		margin-bottom: 20px
+		font-size: 18px
+		line-height: 1
+		font-weight: normal
+		text-transform: uppercase
+		+f500
+
+//delivery
+.delivery
+	.delivery__link
+		color: $blue
+		+opacity(0.8)
+		&:hover
+			+opacity(1)
+
+//map
+.map
+	height: 560px
+	width: 100%
+	.gmnoprint, .gm-style-cc, .gm-style > div + div > a
+		display: none !important
