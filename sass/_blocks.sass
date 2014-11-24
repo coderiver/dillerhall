@@ -5,9 +5,11 @@ body
 	background: #ededed
 a
 	text-decoration: none
+.wrap
+	+clr
 .out
 	position: relative
-	margin: 0 auto -200px
+	margin: 0 auto -410px
 	max-width: 1400px
 	background: #fff 
 	min-height: 100%
@@ -27,10 +29,12 @@ a
 		max-width: 320px
 .push
 	clear: both
-	height: 200px
+	height: 410px
 .l-center
 	margin: 0 auto 
 	max-width: 980px
+	&_width
+		max-width: 1090px
 .to-right
 	text-align: right
 .to-center
@@ -203,6 +207,8 @@ a
 	color: #000
 	+f300 
 	+transition(border .3s, box-shadow .3s)
+	.ie8 &
+		line-height: 30px
 	&:focus
 		border: 1px solid #1BB4ED
 		box-shadow: 0 0 5px rgba(27, 180, 237, 0.3)
@@ -225,3 +231,86 @@ a
 		+s(soc-tw)
 	&__vk
 		+s(soc-vk)
+
+.meta
+	color: #b5b5b5
+	font-size: 10px 
+	text-transform: uppercase
+	+f100
+
+.banner
+	position: relative 
+	&:before
+		content: ""
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 0
+		top: 0
+	&.is-blue-dark 
+		&:before
+			background: rgba(#0a203e,.95) 
+	&__wrap
+		position: absolute
+		left: 0
+		top: 0
+		right: 0
+		bottom: 0
+		z-index: 2
+		+vertical
+	&__in
+		display: inline-block
+		vertical-align: middle
+	&__link
+		font-size: 20px
+		color: #fff
+		+f300 
+		&:hover
+			.arr-next-white
+				+transform(translateX(15px))
+	.arr-next-white
+		vertical-align: middle
+		margin-left: 15px
+		+tr(transform .3s ease-out)
+.arr-next-white
+	+svg(arr-next-white,10,16) 
+
+.news-item
+	text-align: left
+	
+.link-section
+	position: relative
+	padding-right: 25px
+	font-size: 20px
+	color: #737373
+	+f100
+	+tr_c
+	&:hover
+		color: #000
+		&:after
+			+opacity(1)
+	&:after
+		content: ""
+		position: absolute
+		right: 0
+		top: 3px
+		+svg(arr-next,10,16) 
+		+tr_o
+		+opacity(.2)
+	
+.link-title
+	color: #000 
+	font-size: 16px
+	+f300
+	+tr_c
+	&:hover
+		color: $blue
+	&:active
+		color: $blue_act
+.link-all
+	font-size: 14px
+	color: $blue
+	border-bottom: 1px solid transparent 
+	+tr(border .3s)
+	&:hover
+		border-bottom: 1px solid $blue

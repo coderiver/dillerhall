@@ -5,8 +5,32 @@ html
 		title index
 	body
 		.out
-			include _header.jade
-			.l-center
+			include _header_index.jade
+			.banner.is-blue-dark
+				img(src="img/link-img1.jpg", alt="img") 
+				.banner__wrap
+					.banner__in
+						a.banner__link(href="#") Автомобильные салоны в Беларуси
+							i.arr-next-white
+			.l-center.l-center_width
+				.l-cols
+					.l-col2
+						a.link-section(href="#") Новости индустрии
+						.news
+							.meta 15 сентября, 2014 / События
+							a.title-link(href="#") Мы запустили новый проект! Смотрите какой клевый!
+						.news
+							.meta 15 сентября, 2014 / События
+							a.title-link(href="#") Мы запустили новый проект! Смотрите какой клевый!
+					.l-col2
+						a.link-section(href="#") Новости индустрии
+						.news
+							.meta 15 сентября, 2014 / События
+							a.title-link(href="#") Мы запустили новый проект! Смотрите какой клевый!
+						.news
+							.meta 15 сентября, 2014 / События
+							a.title-link(href="#") Мы запустили новый проект! Смотрите какой клевый!
+
 			.push 
 		include _footer.jade 
 

@@ -35,7 +35,10 @@ body { min-width: 320px; font-family: "museosanscyrl_300", Arial, sans-serif; li
 
 a { text-decoration: none; }
 
-.out { position: relative; margin: 0 auto -200px; max-width: 1400px; background: white; min-height: 100%; height: auto !important; height: 100%; }
+.wrap { *zoom: 1; }
+.wrap:after { content: " "; display: table; clear: both; }
+
+.out { position: relative; margin: 0 auto -410px; max-width: 1400px; background: white; min-height: 100%; height: auto !important; height: 100%; }
 @media only screen and (max-width: 1400px) { .out { max-width: 1280px; } }
 @media only screen and (max-width: 1280px) { .out { max-width: 1024px; } }
 @media only screen and (max-width: 1024px) { .out { max-width: 980px; } }
@@ -43,15 +46,16 @@ a { text-decoration: none; }
 @media only screen and (max-width: 768px) { .out { max-width: 480px; } }
 @media only screen and (max-width: 480px) { .out { max-width: 320px; } }
 
-.push { clear: both; height: 200px; }
+.push { clear: both; height: 410px; }
 
 .l-center { margin: 0 auto; max-width: 980px; }
+.l-center_width { max-width: 1090px; }
 
 .to-right { text-align: right; }
 
 .to-center { text-align: center; }
 
-.btn { display: inline-block; padding: 17px 20px 16px; min-width: 204px; background: #ee6e7d; border-radius: 4px; font-size: 14px; line-height: 1; font-family: "museosanscyrl_500", Arial, sans-serif; color: white; text-align: center; -moz-transition: background 0.2s linear; -o-transition: background 0.2s linear; -webkit-transition: background 0.2s linear; transition: background 0.2s linear; text-decoration: none; }
+.btn { display: inline-block; padding: 17px 20px 16px; min-width: 204px; background: #ee6e7d; border-radius: 4px; font-size: 14px; line-height: 1; font-family: "museosanscyrl_500", Arial, sans-serif; color: white; text-align: center; -moz-transition: background 0.2s liner; -o-transition: background 0.2s liner; -webkit-transition: background 0.2s liner; transition: background 0.2s liner; text-decoration: none; }
 .btn:hover { background: #f0586a; }
 .btn:active { background: #d05160; -moz-transition: none; -o-transition: none; -webkit-transition: none; transition: none; }
 .btn_fluid { padding: 25px 20px 22px; width: 100%; font-size: 16px; }
@@ -60,22 +64,22 @@ a { text-decoration: none; }
 .btn-action:hover { background: #17c0ff; border-color: #17c0ff; color: white; }
 .btn-action:active { background: #1bb4ed; border-color: #1bb4ed; color: white; -moz-transition: none; -o-transition: none; -webkit-transition: none; transition: none; }
 
-.btn-link { display: inline-block; padding: 9px 20px 7px; min-width: 153px; background: #1bb4ed; border-radius: 4px; font-size: 14px; line-height: 1; font-family: "museosanscyrl_500", Arial, sans-serif; color: white; text-align: center; -moz-transition: background 0.2s linear; -o-transition: background 0.2s linear; -webkit-transition: background 0.2s linear; transition: background 0.2s linear; text-decoration: none; }
+.btn-link { display: inline-block; padding: 9px 20px 7px; min-width: 153px; background: #1bb4ed; border-radius: 4px; font-size: 14px; line-height: 1; font-family: "museosanscyrl_500", Arial, sans-serif; color: white; text-align: center; -moz-transition: background 0.2s liner; -o-transition: background 0.2s liner; -webkit-transition: background 0.2s liner; transition: background 0.2s liner; text-decoration: none; }
 .btn-link:hover { background: #17c0ff; }
 .btn-link:active { background: #019bd5; -moz-transition: none; -o-transition: none; -webkit-transition: none; transition: none; }
 .btn-link_orange { background: #ff9900; }
 .btn-link_orange:hover { background: #fba637; }
 .btn-link_orange:active { background: #ee8600; }
 
-.btn-simple { display: inline-block; border: 1px solid #cccccc; padding: 9px 20px 7px; min-width: 144px; background: none; border-radius: 4px; font-size: 14px; line-height: 1; font-family: "museosanscyrl_500", Arial, sans-serif; color: black; text-align: center; -moz-transition: background 0.2s linear; -o-transition: background 0.2s linear; -webkit-transition: background 0.2s linear; transition: background 0.2s linear; text-decoration: none; -moz-transition: color 0.3s linear, background 0.3s linear, border 0.3s linear; -o-transition: color 0.3s linear, background 0.3s linear, border 0.3s linear; -webkit-transition: color 0.3s linear, background 0.3s linear, border 0.3s linear; transition: color 0.3s linear, background 0.3s linear, border 0.3s linear; }
+.btn-simple { display: inline-block; border: 1px solid #cccccc; padding: 9px 20px 7px; min-width: 144px; background: none; border-radius: 4px; font-size: 14px; line-height: 1; font-family: "museosanscyrl_500", Arial, sans-serif; color: black; text-align: center; -moz-transition: background 0.2s liner; -o-transition: background 0.2s liner; -webkit-transition: background 0.2s liner; transition: background 0.2s liner; text-decoration: none; -moz-transition: color 0.3s linear, background 0.3s linear, border 0.3s linear; -o-transition: color 0.3s linear, background 0.3s linear, border 0.3s linear; -webkit-transition: color 0.3s linear, background 0.3s linear, border 0.3s linear; transition: color 0.3s linear, background 0.3s linear, border 0.3s linear; }
 .btn-simple:hover { border-color: #666666; }
 .btn-simple:active { background: #1bb4ed; border-color: #1bb4ed; color: white; -moz-transition: none; -o-transition: none; -webkit-transition: none; transition: none; }
 .btn-simple_prev { position: relative; padding-left: 30px; }
 .btn-simple_prev:before, .btn-simple_prev:after { content: ""; position: absolute; left: 13px; top: 50%; margin-top: -5px; -moz-transition: opacity 0.2s linear; -o-transition: opacity 0.2s linear; -webkit-transition: opacity 0.2s linear; transition: opacity 0.2s linear; }
 .btn-simple_prev:before { background: url("../img/svg/arr-prev.svg") no-repeat 0 0; -moz-background-size: 7px 11px; -o-background-size: 7px 11px; -webkit-background-size: 7px 11px; background-size: 7px 11px; width: 7px; height: 11px; display: inline-block; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50); opacity: 0.5; }
-.ie8 .btn-simple_prev:before { background: url('../img/icons-s83ce947aef.png') 0 -21px no-repeat; width: 7px; height: 11px; }
+.ie8 .btn-simple_prev:before { background: url('../img/icons-s29654d49fe.png') 0 -73px no-repeat; width: 7px; height: 11px; }
 .btn-simple_prev:after { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; background: url("../img/svg/arr-prev-white.svg") no-repeat 0 0; -moz-background-size: 7px 11px; -o-background-size: 7px 11px; -webkit-background-size: 7px 11px; background-size: 7px 11px; width: 7px; height: 11px; display: inline-block; }
-.ie8 .btn-simple_prev:after { background: url('../img/icons-s83ce947aef.png') 0 0 no-repeat; width: 7px; height: 11px; }
+.ie8 .btn-simple_prev:after { background: url('../img/icons-s29654d49fe.png') 0 -52px no-repeat; width: 7px; height: 11px; }
 .btn-simple_prev:active:before { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; -moz-transition: none; -o-transition: none; -webkit-transition: none; transition: none; }
 .btn-simple_prev:active:after { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; -moz-transition: none; -o-transition: none; -webkit-transition: none; transition: none; }
 .btn-simple_yellow { border-color: #ffde00; }
@@ -95,30 +99,85 @@ a { text-decoration: none; }
 .field + .btn-add-wrap { margin-top: -24px; }
 
 .input { display: block; padding: 0 14px; width: 100%; height: 30px; background: white; border: 1px solid #d7d7d7; border-radius: 5px; font-size: 14px; color: black; font-family: "museosanscyrl_300", Arial, sans-serif; -moz-transition: border 0.3s, box-shadow 0.3s; -o-transition: border 0.3s, box-shadow 0.3s; -webkit-transition: border 0.3s, box-shadow 0.3s; transition: border 0.3s, box-shadow 0.3s; }
+.ie8 .input { line-height: 30px; }
 .input:focus { border: 1px solid #1bb4ed; box-shadow: 0 0 5px rgba(27, 180, 237, 0.3); }
 
 .soc { text-align: center; }
 .soc a { display: inline-block; margin-left: 30px; vertical-align: middle; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50); opacity: 0.5; -moz-transition: opacity 0.2s linear; -o-transition: opacity 0.2s linear; -webkit-transition: opacity 0.2s linear; transition: opacity 0.2s linear; }
 .soc a:first-child { margin-left: 0; }
 .soc a:hover { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
-.soc__fb { background: url('../img/icons-s83ce947aef.png') 0 -521px no-repeat; width: 30px; height: 30px; }
-.soc__tw { background: url('../img/icons-s83ce947aef.png') 0 -561px no-repeat; width: 30px; height: 30px; }
-.soc__vk { background: url('../img/icons-s83ce947aef.png') 0 -601px no-repeat; width: 30px; height: 30px; }
+.soc__fb { background: url('../img/icons-s29654d49fe.png') 0 -573px no-repeat; width: 30px; height: 30px; }
+.soc__tw { background: url('../img/icons-s29654d49fe.png') 0 -613px no-repeat; width: 30px; height: 30px; }
+.soc__vk { background: url('../img/icons-s29654d49fe.png') 0 -653px no-repeat; width: 30px; height: 30px; }
 
-.header { position: relative; padding: 18px 30px; background: #1bb4ed; min-height: 200px; }
+.meta { color: #b5b5b5; font-size: 10px; text-transform: uppercase; font-family: "museosanscyrl_100", Arial, sans-serif; }
+
+.banner { position: relative; }
+.banner:before { content: ""; position: absolute; left: 0; right: 0; bottom: 0; top: 0; }
+.banner.is-blue-dark:before { background: rgba(10, 32, 62, 0.95); }
+.banner__wrap { position: absolute; left: 0; top: 0; right: 0; bottom: 0; z-index: 2; text-align: center; font-size: 0; }
+.banner__wrap:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.banner__in { display: inline-block; vertical-align: middle; }
+.banner__link { font-size: 20px; color: white; font-family: "museosanscyrl_300", Arial, sans-serif; }
+.banner__link:hover .arr-next-white { -moz-transform: translateX(15px); -ms-transform: translateX(15px); -webkit-transform: translateX(15px); transform: translateX(15px); }
+.banner .arr-next-white { vertical-align: middle; margin-left: 15px; -moz-transition: -moz-transform 0.3s ease-out; -o-transition: -o-transform 0.3s ease-out; -webkit-transition: -webkit-transform 0.3s ease-out; transition: transform 0.3s ease-out; }
+
+.arr-next-white { background: url("../img/svg/arr-next-white.svg") no-repeat 0 0; -moz-background-size: 10px 16px; -o-background-size: 10px 16px; -webkit-background-size: 10px 16px; background-size: 10px 16px; width: 10px; height: 16px; display: inline-block; }
+.ie8 .arr-next-white { background: url('../img/icons-s29654d49fe.png') 0 0 no-repeat; width: 10px; height: 16px; }
+
+.news-item { text-align: left; }
+
+.link-section { position: relative; padding-right: 25px; font-size: 20px; color: #737373; font-family: "museosanscyrl_100", Arial, sans-serif; -moz-transition: color 0.2s linear; -o-transition: color 0.2s linear; -webkit-transition: color 0.2s linear; transition: color 0.2s linear; }
+.link-section:hover { color: black; }
+.link-section:hover:after { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
+.link-section:after { content: ""; position: absolute; right: 0; top: 3px; background: url("../img/svg/arr-next.svg") no-repeat 0 0; -moz-background-size: 10px 16px; -o-background-size: 10px 16px; -webkit-background-size: 10px 16px; background-size: 10px 16px; width: 10px; height: 16px; display: inline-block; -moz-transition: opacity 0.2s linear; -o-transition: opacity 0.2s linear; -webkit-transition: opacity 0.2s linear; transition: opacity 0.2s linear; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20); opacity: 0.2; }
+.ie8 .link-section:after { background: url('../img/icons-s29654d49fe.png') 0 -26px no-repeat; width: 10px; height: 16px; }
+
+.link-title { color: black; font-size: 16px; font-family: "museosanscyrl_300", Arial, sans-serif; -moz-transition: color 0.2s linear; -o-transition: color 0.2s linear; -webkit-transition: color 0.2s linear; transition: color 0.2s linear; }
+.link-title:hover { color: #1bb4ed; }
+.link-title:active { color: #019bd5; }
+
+.link-all { font-size: 14px; color: #1bb4ed; border-bottom: 1px solid transparent; -moz-transition: border 0.3s; -o-transition: border 0.3s; -webkit-transition: border 0.3s; transition: border 0.3s; }
+.link-all:hover { border-bottom: 1px solid #1bb4ed; }
+
+.promo { position: relative; overflow: hidden; }
+.promo_index { height: 800px; }
+.promo_index:hover .promo__img { -ms-transform: scale(1.2); -webkit-transform: scale(1.2); transform: scale(1.2); }
+.promo_index .promo__in { margin: 95px auto 0; max-width: 740px; }
+.promo_index .promo__in img { margin-bottom: 45px; }
+.promo_index .promo__in .page-title { margin-bottom: 7px; }
+.promo:before { content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 1; background: rgba(27, 180, 237, 0.95); }
+.promo .header { background: none; position: absolute; left: 0; top: 0; right: 0; }
+.promo__img { position: absolute; top: 0; right: 0; left: 0; height: 800px; overflow: hidden; -moz-transition: -moz-transform 2.4s ease-out; -o-transition: -o-transform 2.4s ease-out; -webkit-transition: -webkit-transform 2.4s ease-out; transition: transform 2.4s ease-out; will-change: transform; }
+.promo__img img { width: 100%; height: auto; }
+.promo__in { position: relative; z-index: 2; text-align: center; font-size: 18px; font-family: "museosanscyrl_100", Arial, sans-serif; color: white; }
+.promo__box { position: absolute; bottom: 0; left: 0; width: 100%; z-index: 2; border-top: 1px solid rgba(255, 255, 255, 0.3); }
+.promo__box .l-col2 { vertical-align: middle; height: 270px; border-left: 1px solid rgba(255, 255, 255, 0.3); }
+.promo__item { font-family: "museosanscyrl_300", Arial, sans-serif; }
+.promo__item:first-child { border-left: 0; }
+.promo__item a { display: inline-block; color: white; font-size: 20px; line-height: 1.5; }
+.promo__item a:hover span:after { -moz-transform: translateX(15px); -ms-transform: translateX(15px); -webkit-transform: translateX(15px); transform: translateX(15px); }
+.promo__item img, .promo__item span { display: inline-block; vertical-align: middle; text-align: left; }
+.promo__item span { margin-left: 48px; color: white; vertical-align: middle; }
+.promo__item span:after { content: ""; margin-left: 15px; background: url("../img/svg/arr-next-white.svg") no-repeat 0 0; -moz-background-size: 10px 16px; -o-background-size: 10px 16px; -webkit-background-size: 10px 16px; background-size: 10px 16px; width: 10px; height: 16px; display: inline-block; -moz-transition: -moz-transform 0.3s ease-out; -o-transition: -o-transform 0.3s ease-out; -webkit-transition: -webkit-transform 0.3s ease-out; transition: transform 0.3s ease-out; }
+.ie8 .promo__item span:after { background: url('../img/icons-s29654d49fe.png') 0 0 no-repeat; width: 10px; height: 16px; }
+
+.header { position: relative; z-index: 10; padding: 18px 30px; background: #1bb4ed; min-height: 200px; }
 .header__top { position: relative; margin: 0 0 32px; *zoom: 1; }
 .header__top:after { content: " "; display: table; clear: both; }
-.header__logo { float: left; background: url('../img/icons-s83ce947aef.png') 0 -217px no-repeat; width: 142px; height: 44px; }
+.header__logo { float: left; background: url('../img/icons-s29654d49fe.png') 0 -269px no-repeat; width: 142px; height: 44px; }
 .header__key { float: right; position: relative; margin-top: 10px; width: 33px; height: 21px; background: none; }
 .header__key:before, .header__key:after, .header__key i { content: ""; position: absolute; left: 0; width: 33px; height: 3px; background: white; }
 .header__key:before { top: 0; }
 .header__key:after { bottom: 0; }
 .header__key i { top: 9px; }
-.header__nav { position: absolute; left: 200px; right: 200px; text-align: center; top: 100%; font-size: 14px; }
-.header__nav a { display: inline-block; margin-left: 32px; color: white; font-family: "museosanscyrl_300", Arial, sans-serif; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50); opacity: 0.5; -moz-transition: opacity 0.2s linear; -o-transition: opacity 0.2s linear; -webkit-transition: opacity 0.2s linear; transition: opacity 0.2s linear; text-decoration: none; }
-.header__nav a:hover { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
-.header__nav a:first-child { margin: 0; }
-.header__title { font-size: 40px; color: white; font-family: "museosanscyrl_100", Arial, sans-serif; text-align: center; font-weight: normal; }
+
+.breadcumbs { position: absolute; left: 200px; right: 200px; text-align: center; top: 100%; font-size: 14px; }
+.breadcumbs a { display: inline-block; margin-left: 32px; color: white; font-family: "museosanscyrl_300", Arial, sans-serif; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50); opacity: 0.5; -moz-transition: opacity 0.2s linear; -o-transition: opacity 0.2s linear; -webkit-transition: opacity 0.2s linear; transition: opacity 0.2s linear; text-decoration: none; }
+.breadcumbs a:hover { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
+.breadcumbs a:first-child { margin: 0; }
+
+.page-title { font-size: 40px; color: white; font-family: "museosanscyrl_100", Arial, sans-serif; text-align: center; font-weight: normal; }
 
 .footer { position: relative; z-index: 2; border-top: 1px solid #e5e5e5; margin: 0 auto; max-width: 1400px; background: white; }
 @media only screen and (max-width: 1400px) { .footer { max-width: 1280px; } }
@@ -127,17 +186,23 @@ a { text-decoration: none; }
 @media only screen and (max-width: 980px) { .footer { max-width: 768px; } }
 @media only screen and (max-width: 768px) { .footer { max-width: 480px; } }
 @media only screen and (max-width: 480px) { .footer { max-width: 320px; } }
-.footer__main { *zoom: 1; padding: 5% 15%; }
+.footer__main { *zoom: 1; padding: 5% 15% 3.7%; }
 .footer__main:after { content: " "; display: table; clear: both; }
-.footer__nav { width: 25%; float: left; }
+.footer__nav { width: 25%; float: left; padding-right: 10px; }
+.footer__nav:first-child { width: 21%; }
+.footer__nav:nth-child(2) { width: 39%; }
+.footer__nav:nth-child(3) { width: 25%; }
+.footer__nav:last-child { width: 15%; }
+.ie8 .footer__nav { width: 25%; }
 .footer__nav ul { font-family: "museosanscyrl_300", Arial, sans-serif; font-size: 14px; }
-.footer__nav ul a { color: #7f7f7f; -moz-transition: color 0.2s linear; -o-transition: color 0.2s linear; -webkit-transition: color 0.2s linear; transition: color 0.2s linear; }
-.footer__nav ul a:hover { color: #1bb4ed; }
-.footer__title { font-size: 16px; font-family: "museosanscyrl_500", Arial, sans-serif; }
-.footer__title.is-marked a { border-bottom: 1px solid rgba(238, 110, 125, 0.5); }
+.footer__nav li { margin-bottom: 7px; }
+.footer__nav li a { color: #7f7f7f; -moz-transition: color 0.2s linear; -o-transition: color 0.2s linear; -webkit-transition: color 0.2s linear; transition: color 0.2s linear; }
+.footer__nav li a:hover { color: #1bb4ed; }
+.footer__title { margin: 0 0 16px; font-size: 16px; font-family: "museosanscyrl_500", Arial, sans-serif; }
+.footer__title.is-active a { border-bottom: 1px solid rgba(238, 110, 125, 0.5); }
 .footer__title a { color: black; -moz-transition: color 0.2s, border 0.2s; -o-transition: color 0.2s, border 0.2s; -webkit-transition: color 0.2s, border 0.2s; transition: color 0.2s, border 0.2s; }
 .footer__title a:hover { color: #1bb4ed; border-color: transparent; }
-.footer__info { border-top: 1px solid #e5e5e5; padding: 48px 50px; *zoom: 1; color: #7f7f7f; font-size: 14px; font-family: "museosanscyrl_300", Arial, sans-serif; }
+.footer__info { border-top: 1px solid #e5e5e5; padding: 47px 50px; *zoom: 1; color: #7f7f7f; font-size: 14px; font-family: "museosanscyrl_300", Arial, sans-serif; }
 .footer__info:after { content: " "; display: table; clear: both; }
 .footer__copy { float: left; }
 .footer__created { float: right; }
@@ -184,7 +249,7 @@ a { text-decoration: none; }
 .l .l-col1 { float: left; width: 20%; }
 .l .l-col2 { float: right; width: 70%; }
 
-.l { *zoom: 1; }
-.l:after { content: " "; display: table; clear: both; }
-.l .l-col1 { float: left; width: 20%; }
-.l .l-col2 { float: right; width: 70%; }
+.l-cols { display: table; width: 100%; table-layout: fixed; }
+
+.l-col2 { display: table-cell; padding-left: 14%; vertical-align: top; border-left: 1px solid #e5e5e5; }
+.l-col2:first-child { border: 0; padding-left: 0; }

@@ -1,9 +1,13 @@
 // default layout
-.l
-	+clr
-	.l-col1
-		float: left
-		width: 20%
-	.l-col2
-		float: right
-		width: 70%
+.l-cols
+	display: table
+	width: 100%
+	table-layout: fixed
+.l-col2
+	display: table-cell
+	padding-left: 14%
+	vertical-align: top
+	border-left: 1px solid $border
+	&:first-child
+		border: 0
+		padding-left: 0

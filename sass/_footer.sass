@@ -19,23 +19,37 @@
 		max-width: 320px
 	&__main
 		+clr
-		padding: 5% 15%
+		padding: 5% 15% 3.7%
 	&__nav
 		width: 25%
 		float: left
+		padding-right: 10px
+		&:first-child
+			width: 21%
+		&:nth-child(2)
+			width: 39%
+		&:nth-child(3)
+			width: 25%
+		&:last-child
+			width: 15%
+		.ie8 &
+			width: 25%
 		ul
 			+f300
 			font-size: 14px
+		li
+			margin-bottom: 7px
 			a
 				color: #7f7f7f 
 				+tr_color
 				&:hover
 					color: $blue 
 			
-	&__title
+	&__title	
+		margin: 0 0 16px
 		font-size: 16px
 		+f500
-		&.is-marked
+		&.is-active
 			a
 				border-bottom: 1px solid rgba($red,.5) 
 		a
@@ -47,7 +61,7 @@
 	
 	&__info
 		border-top: 1px solid $border 
-		padding: 48px 50px
+		padding: 47px 50px
 		+clr
 		color: #7f7f7f 
 		font-size: 14px

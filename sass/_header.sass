@@ -1,5 +1,92 @@
+.promo
+	position: relative
+	overflow: hidden
+	&_index
+		height: 800px
+		&:hover
+			.promo__img
+				+scale(1.2)
+		.promo__in
+			margin: 95px auto 0
+			max-width: 740px
+			img
+				margin-bottom: 45px
+			.page-title
+				margin-bottom: 7px
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		z-index: 1
+		background: rgba($blue, .95) 
+	.header
+		background: none
+		position: absolute
+		left: 0
+		top: 0
+		right: 0
+	&__img
+		position: absolute
+		top: 0
+		right: 0
+		left: 0
+		height: 800px
+		overflow: hidden
+		+transition(transform 2.4s ease-out)
+		will-change: transform
+		img
+			width: 100%
+			height: auto
+	&__in
+		position: relative
+		z-index: 2
+		text-align: center
+		font-size: 18px
+		+f100
+		color: #fff 
+	&__box
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		z-index: 2
+		border-top: 1px solid rgba(#fff,.3) 
+		.l-col2
+			vertical-align: middle
+			height: 270px
+			border-left: 1px solid rgba(#fff,.3) 
+	&__item
+		+f300
+		&:first-child
+			border-left: 0
+		a
+			display: inline-block
+			color: #fff
+			font-size: 20px 
+			line-height: 1.5
+			&:hover
+				span
+					&:after
+						+transform(translateX(15px))
+		img, span
+			display: inline-block
+			vertical-align: middle
+			text-align: left
+		span
+			margin-left: 48px
+			color: #fff 
+			vertical-align: middle
+			&:after
+				content: ""
+				margin-left: 15px
+				+svg(arr-next-white,10,16) 
+				+tr(transform .3s ease-out)
 .header
 	position: relative 
+	z-index: 10
 	padding: 18px 30px 
 	background: $blue
 	min-height: 200px
@@ -33,28 +120,28 @@
 			bottom: 0
 		i
 			top: 9px
-	&__nav
-		position: absolute
-		left: 200px
-		right: 200px
-		text-align: center
-		top: 100%
-		font-size: 14px
-		a
-			display: inline-block
-			margin-left: 32px
-			color: #fff
-			+f300
-			+opacity(0.5)
-			+tr_op
-			text-decoration: none
-			&:hover
-				+opacity(1)
-			&:first-child
-				margin: 0
-	&__title
-		font-size: 40px
+.breadcumbs
+	position: absolute
+	left: 200px
+	right: 200px
+	text-align: center
+	top: 100%
+	font-size: 14px
+	a
+		display: inline-block
+		margin-left: 32px
 		color: #fff
-		+f100
-		text-align: center
-		font-weight: normal 
+		+f300
+		+opacity(0.5)
+		+tr_op
+		text-decoration: none
+		&:hover
+			+opacity(1)
+		&:first-child
+			margin: 0
+.page-title
+	font-size: 40px
+	color: #fff
+	+f100
+	text-align: center
+	font-weight: normal 
