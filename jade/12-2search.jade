@@ -1,0 +1,38 @@
+doctype
+html
+	head
+		include _head.jade
+	body
+		.out
+			include _header.jade
+			.l-center
+				.search
+					.search__label
+						label
+							input.search__keyword.input
+							i.search__icon
+							button.search__delete.js-not
+						ul
+							li 
+								a(href="#").pills автомобили
+							li
+								a(href="#").pills.is-active сайт
+					p По вашему запросу “ 
+						a(href="#") BMW
+						|  ” найдено  6 результатов.
+				ul.list-wrap
+					li.list
+						span.list__title 
+							span BMW 
+							| 3 series
+						p Седан среднего класса 
+							span BMW
+							| 3-Series (F30) дебютировал в 2011 году, но продажи стартовали годом позже. По габаритным размерам «тройка» стала на 93 мм длиннее, на 6 мм шире и на 8 мм выше своего предшественника (
+							span BMW
+							| E90). Колесная база увеличилась на 50 мм,а объем... 
+						span.list__small BMW 3 series /
+
+			.push 
+		include _footer.jade 
+
+

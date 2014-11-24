@@ -1,0 +1,26 @@
+doctype
+html
+	head
+		include _head.jade
+	body
+		.out
+			include _header.jade
+			.l-center
+				.search
+					.search__label
+						label
+							input.search__keyword.input
+							i.search__icon
+							button.search__delete.js-not
+						ul
+							li 
+								a(href="#").pills.is-active автомобили
+							li
+								a(href="#").pills сайт
+					p К сожалению, по вашему запросу “ 
+						a(href="#") Молочко с печеньками
+						|  ” ничего не найдено Попробуйте по другому сформулировать свой запрос
+			.push 
+		include _footer.jade 
+
+
