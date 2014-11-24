@@ -1,0 +1,31 @@
+doctype
+html
+	head
+		include _head.jade
+		title 9-0contacts
+		<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=abcdefg" type="text/javascript"></script>
+		.out
+			include _header.jade
+			.l-center
+				.feedback.to-center
+					.feedback__row
+						.address
+							h3.title Адрес
+							p 220030, г. Минск,
+							p ул. Энгельса, 20,
+							p 2-ой этаж кинотеатра «Пионер»
+						.delivery
+							h3.title Рассылка
+							a.delivery__link(href="#") Подписаться на редкую,<br> но крайне полезную рассылку
+						.phones
+							h3.title Телефоны
+							p Городской: +375 (17) 210-57-57
+							p Факс: +375 (17) 210-57-58
+							p Мобильный: +375 (29) 614-12-34
+					.feedback__row
+						button.btn Напишите нам
+			.map#map-canvas
+			.push 
+		include _footer.jade 
+
+
