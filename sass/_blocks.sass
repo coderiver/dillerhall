@@ -2,7 +2,9 @@ body
 	min-width: 320px
 	+f300
 	line-height: 1.7
-	background: #ededed 
+	background: #ededed
+a
+	text-decoration: none
 .out
 	position: relative
 	margin: 0 auto -200px
@@ -14,8 +16,14 @@ body
 	+r(1400)
 		max-width: 1280px
 	+r(1280)
+		max-width: 1024px
+	+r(1024)
 		max-width: 980px
 	+r(980)
+		max-width: 768px
+	+r(768)
+		max-width: 480px
+	+r(480)
 		max-width: 320px
 .push
 	clear: both
@@ -198,4 +206,22 @@ body
 	&:focus
 		border: 1px solid #1BB4ED
 		box-shadow: 0 0 5px rgba(27, 180, 237, 0.3)
-		
+
+.soc
+	text-align: center
+	a
+		display: inline-block
+		margin-left: 30px
+		vertical-align: middle
+		+opacity(0.5)
+		+tr_o
+		&:first-child
+			margin-left: 0
+		&:hover
+			+opacity(1)
+	&__fb
+		+s(soc-fb)
+	&__tw
+		+s(soc-tw)
+	&__vk
+		+s(soc-vk)

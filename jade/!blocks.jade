@@ -4,44 +4,44 @@ html
 		include _head.jade
 		title template
 	body
-		include _header.jade
 		.out
+			include _header.jade
 			.l-center
-					hr
-					a.btn(href="#") .btn
-					hr
-					a.btn.btn_fluid(href="#") .btn.btn_fluid
-					hr
-					a.btn-action(href="#") .btn-action
-					hr
-					a.btn-link(href="#") .btn-link
-					hr
-					a.btn-link.btn-link_orange(href="#") .btn-link.btn-link_orange
-					hr
-					a.btn-simple(href="#") .btn-simple
-					hr
-					a.btn-simple.btn-simple_yellow(href="#") .btn-simple.btn-simple_yellow
-					hr
-					a.btn-simple.btn-simple_prev(href="#") .btn-simple.btn-simple_prev
-					hr
-					input.input(type="text")
-					hr
-					form.js-validate
-						label.field
-							span.field__title Ваше имя
-							span.field__body
-								input.input(type="text" name="name" required)
+				hr
+				a.btn(href="#") .btn
+				hr
+				a.btn.btn_fluid(href="#") .btn.btn_fluid
+				hr
+				a.btn-action(href="#") .btn-action
+				hr
+				a.btn-link(href="#") .btn-link
+				hr
+				a.btn-link.btn-link_orange(href="#") .btn-link.btn-link_orange
+				hr
+				a.btn-simple(href="#") .btn-simple
+				hr
+				a.btn-simple.btn-simple_yellow(href="#") .btn-simple.btn-simple_yellow
+				hr
+				a.btn-simple.btn-simple_prev(href="#") .btn-simple.btn-simple_prev
+				hr
+				input.input(type="text")
+				hr
+				form.js-validate
+					label.field
+						span.field__title Ваше имя
+						span.field__body
+							input.input(type="text", name="name", required)
+					label.field
+						span.field__title Электронная почта
+						span.field__body 
+							input.input(type="text", name="email", required) 
+					.btn-add-wrap.to-right
+						button.btn-add.js-add-btn(data-hidden="js-hidden-field", type="button") + добавить e-mail
+					.js-hidden-field(hidden)
 						label.field
 							span.field__title Электронная почта
 							span.field__body 
-								input.input(type="text" name="email" required) 
-						.btn-add-wrap.to-right
-							button.btn-add.js-add-btn(data-hidden="js-hidden-field", type="button") + добавить e-mail
-						.js-hidden-field(hidden)
-							label.field
-								span.field__title Электронная почта
-								span.field__body 
-									input.input(type="text" name="email" required)
-					hr
+								input.input(type="text", name="email", required)
+				hr
 			.push
 		include _footer.jade 

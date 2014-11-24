@@ -1,7 +1,6 @@
 .footer
 	position: relative
 	z-index: 2
-	height: 200px 
 	border-top: 1px solid $border 
 	margin: 0 auto
 	max-width: 1400px
@@ -9,6 +8,58 @@
 	+r(1400)
 		max-width: 1280px
 	+r(1280)
+		max-width: 1024px
+	+r(1024)
 		max-width: 980px
 	+r(980)
+		max-width: 768px
+	+r(768)
+		max-width: 480px
+	+r(480)
 		max-width: 320px
+	&__main
+		+clr
+		padding: 5% 15%
+	&__nav
+		width: 25%
+		float: left
+		ul
+			+f300
+			font-size: 14px
+			a
+				color: #7f7f7f 
+				+tr_color
+				&:hover
+					color: $blue 
+			
+	&__title
+		font-size: 16px
+		+f500
+		&.is-marked
+			a
+				border-bottom: 1px solid rgba($red,.5) 
+		a
+			color: #000
+			+transition(color .2s, border .2s)
+			&:hover
+				color: $blue
+				border-color: transparent
+	
+	&__info
+		border-top: 1px solid $border 
+		padding: 48px 50px
+		+clr
+		color: #7f7f7f 
+		font-size: 14px
+		+f300
+	&__copy
+		float: left
+	&__created
+		float: right
+		a
+			color: #000
+			+tr_color
+			&:hover
+				color: $blue 
+	.soc
+		overflow: hidden
