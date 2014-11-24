@@ -31,9 +31,12 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 @font-face { font-family: museosanscyrl_300_italic; src: url("../fonts/museosanscyrl_300_italic.eot"); src: url("../fonts/museosanscyrl_300_italic.eot?#iefix") format("embedded-opentype"), url("../fonts/museosanscyrl_300_italic.woff2") format("woff2"), url("../fonts/museosanscyrl_300_italic.woff") format("woff"), url("../fonts/museosanscyrl_300_italic.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: museosanscyrl_500; src: url("../fonts/museosanscyrl_500.eot"); src: url("../fonts/museosanscyrl_500.eot?#iefix") format("embedded-opentype"), url("../fonts/museosanscyrl_500.woff2") format("woff2"), url("../fonts/museosanscyrl_500.woff") format("woff"), url("../fonts/museosanscyrl_500.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: museosanscyrl_500_italic; src: url("../fonts/museosanscyrl_500_italic.eot"); src: url("../fonts/museosanscyrl_500_italic.eot?#iefix") format("embedded-opentype"), url("../fonts/museosanscyrl_500_italic.woff2") format("woff2"), url("../fonts/museosanscyrl_500_italic.woff") format("woff"), url("../fonts/museosanscyrl_500_italic.ttf") format("truetype"); font-weight: normal; font-style: normal; }
-.out { margin: 0 auto; max-width: 1400px; }
+.out { margin: 0 auto; max-width: 1400px; background: white; }
+@media only screen and (max-width: 1400px) { .out { max-width: 1280px; } }
+@media only screen and (max-width: 1280px) { .out { max-width: 980px; } }
+@media only screen and (max-width: 980px) { .out { max-width: 320px; } }
 
-.l-center { margin: 0 auto; max-width: 978px; }
+.l-center { margin: 0 auto; max-width: 980px; }
 
 .to-right { text-align: right; }
 
@@ -60,10 +63,12 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 .btn-simple:active { background: #1bb4ed; border-color: #1bb4ed; color: white; -moz-transition: none; -o-transition: none; -webkit-transition: none; transition: none; }
 .btn-simple_prev { position: relative; padding-left: 30px; }
 .btn-simple_prev:before, .btn-simple_prev:after { content: ""; position: absolute; left: 13px; top: 50%; margin-top: -5px; -moz-transition: opacity 0.2s linear; -o-transition: opacity 0.2s linear; -webkit-transition: opacity 0.2s linear; transition: opacity 0.2s linear; }
-.btn-simple_prev:before { background: url("../img/svg/arr-prev.svg") no-repeat 0 0; -moz-background-size: 7px 11px 100%; -webkit-background-size: 7px 11px 100%; background-size: 7px 11px 100%; width: 7px; height: 11px; display: inline-block; opacity: 0.5; }
-.btn-simple_prev:after { opacity: 0; background: url("../img/svg/arr-prev-white.svg") no-repeat 0 0; -moz-background-size: 7px 11px 100%; -webkit-background-size: 7px 11px 100%; background-size: 7px 11px 100%; width: 7px; height: 11px; display: inline-block; }
-.btn-simple_prev:active:before { opacity: 0; -moz-transition: none; -o-transition: none; -webkit-transition: none; transition: none; }
-.btn-simple_prev:active:after { opacity: 1; -moz-transition: none; -o-transition: none; -webkit-transition: none; transition: none; }
+.btn-simple_prev:before { background: url("../img/svg/arr-prev.svg") no-repeat 0 0; -moz-background-size: 7px 11px; -o-background-size: 7px 11px; -webkit-background-size: 7px 11px; background-size: 7px 11px; width: 7px; height: 11px; display: inline-block; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50); opacity: 0.5; }
+.ie8 .btn-simple_prev:before { background: url('../img/icons-se2685b21d9.png') 0 -21px no-repeat; width: 7px; height: 11px; }
+.btn-simple_prev:after { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; background: url("../img/svg/arr-prev-white.svg") no-repeat 0 0; -moz-background-size: 7px 11px; -o-background-size: 7px 11px; -webkit-background-size: 7px 11px; background-size: 7px 11px; width: 7px; height: 11px; display: inline-block; }
+.ie8 .btn-simple_prev:after { background: url('../img/icons-se2685b21d9.png') 0 0 no-repeat; width: 7px; height: 11px; }
+.btn-simple_prev:active:before { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; -moz-transition: none; -o-transition: none; -webkit-transition: none; transition: none; }
+.btn-simple_prev:active:after { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; -moz-transition: none; -o-transition: none; -webkit-transition: none; transition: none; }
 .btn-simple_yellow { border-color: #ffde00; }
 .btn-simple_yellow:hover { background: #fffce7; border-color: #ffde00; }
 .btn-simple_yellow:active { background: #ffde00; }

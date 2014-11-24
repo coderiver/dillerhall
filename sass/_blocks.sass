@@ -1,9 +1,16 @@
 .out
 	margin: 0 auto 
 	max-width: 1400px
+	background: #fff 
+	+r(1400)
+		max-width: 1280px
+	+r(1280)
+		max-width: 980px
+	+r(980)
+		max-width: 320px
 .l-center
 	margin: 0 auto 
-	max-width: 978px
+	max-width: 980px
 .to-right
 	text-align: right
 .to-center
@@ -112,16 +119,16 @@
 			+tr_op
 		&:before
 			+svg(arr-prev,7,11) 
-			opacity: 0.5
+			+opacity(0.5)
 		&:after
-			opacity: 0
+			+opacity(0)
 			+svg(arr-prev-white,7,11) 
 		&:active
 			&:before
-				opacity: 0
+				+opacity(0)
 				+tr(none)
 			&:after
-				opacity: 1
+				+opacity(1)
 				+tr(none)
 	&_yellow
 		border-color: $yellow
@@ -179,3 +186,4 @@
 	&:focus
 		border: 1px solid #1BB4ED
 		box-shadow: 0 0 5px rgba(27, 180, 237, 0.3)
+		

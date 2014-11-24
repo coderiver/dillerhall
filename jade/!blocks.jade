@@ -4,7 +4,8 @@ html
 		include _head.jade
 	body
 		include _header.jade
-		.l-center(style="padding: 0 10px")
+		.out
+			.l-center
 			hr
 			a.btn(href="#") .btn
 			hr
@@ -40,4 +41,7 @@ html
 						span.field__title Электронная почта
 						span.field__body 
 							input.input(type="text" name="email" required)
+			hr
+			a(href="#").fr
+			hr
 		include _footer.jade 
