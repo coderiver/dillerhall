@@ -1,13 +1,25 @@
+body
+	min-width: 320px
+	+f300
+	line-height: 1.7
+	background: #ededed 
 .out
-	margin: 0 auto 
+	position: relative
+	margin: 0 auto -200px
 	max-width: 1400px
 	background: #fff 
+	min-height: 100%
+	height: auto !important
+	height: 100%
 	+r(1400)
 		max-width: 1280px
 	+r(1280)
 		max-width: 980px
 	+r(980)
 		max-width: 320px
+.push
+	clear: both
+	height: 200px
 .l-center
 	margin: 0 auto 
 	max-width: 980px
