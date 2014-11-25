@@ -22,6 +22,8 @@
 				margin-bottom: 7px
 				+r(768)
 					margin-bottom: 24px
+	&_catalog
+		height: 300px
 	&:before
 		content: ""
 		position: absolute
@@ -30,19 +32,13 @@
 		bottom: 0
 		left: 0
 		z-index: 1
-		background: rgba($blue, .95) 
-	.header
-		background: none
-		position: absolute
-		left: 0
-		top: 0
-		right: 0
+		background: rgba($blue, .9) 
 	&__img
 		position: absolute
 		top: 0
 		right: 0
 		left: 0
-		height: 800px
+		bottom: 0
 		overflow: hidden
 		+transition(transform 2.4s ease-out)
 		will-change: transform
@@ -123,6 +119,35 @@
 		img
 			+r(980)
 				max-width: 50px
+.promo__bottom
+	position: absolute
+	bottom: 0
+	left: 0
+	right: 0
+	height: 100px
+	z-index: 1
+	border-top: 1px solid rgba(#fff,.3) 
+.promo__nav
+	position: absolute
+	left: 200px
+	right: 200px
+	text-align: center
+	height: 100px
+	line-height: 100px
+	font-size: 0
+	a
+		display: inline-block
+		margin-left: 4%
+		color: #fff
+		font-size: 18px
+		+f100
+		+opacity(0.7)
+		+tr_o
+		&:hover
+			+opacity(1)
+		&:first-child
+			margin: 0
+
 .header
 	padding: 18px 30px 
 	background: $blue
@@ -137,48 +162,84 @@
 	&__key
 		float: right
 		position: relative
-		margin-top: 4px
-		width: 33px
-		height: 33px
-		background: none
-		+transition(transform .3s)
-		will-change: transform
-		&:before,
-		&:after,
+		top: -15px
+		right: -18px
+		+r(1024)	
+			position: fixed
+			top: 0
+			left: 50%
+			right: 0
+			margin-left: -490px
+			width: 980px
+			z-index: 12
+		+r(980)
+			width: 768px
+			margin-left: -384px
+		+r(768)
+			width: 480px
+			margin-left: -240px
+		+r(480)
+			width: 320px
+			margin-left: -160px
+		button
+			position: relative
+			display: block
+			width: 70px
+			height: 70px
+			background: none
+			+transition(transform .3s)
+			will-change: transform 
+			+r(1024)
+				background: rgba($blue, .95)
+				float: right
+			&.is-active
+				i
+					background: none
+					&:before
+						+rotate(45)
+						top: 0
+					&:after 
+						+rotate(-45)
+						bottom: 0
+			&:hover
+				+rotate(90)
+				+r(1024)
+					+rotate(0)			
 		i
-			content: "" 
 			position: absolute
-			left: 0
+			left: 50%
+			top: 50%
+			margin: -1px 0 0 -16px
 			width: 33px
 			height: 3px
 			background: #fff
-			+transition(transform .3s, opacity .3s)
-		&:before
-			top: 6px
-		&:after
-			bottom: 6px
-		i
-			top: 15px
-		&.is-active
-			i
-				background: none
-				opacity: 0
+			+tr_bg
+			&:before,
+			&:after
+				content: "" 
+				position: absolute
+				left: 0
+				width: 33px
+				height: 3px
+				background: #fff
+				+transition(transform .3s, opacity .3s)
 			&:before
-				+rotate(45)
-				top: 15px
-			&:after 
-				+rotate(-45)
-				bottom: 15px
-		&:hover
-			+rotate(90)
-			+r(1024)
-				+rotate(0)
+				top: 9px
+			&:after
+				bottom: 9px
+.header_absolute
+	background: none
+	position: absolute
+	left: 0
+	top: 0
+	right: 0
 .breadcumbs
 	position: relative
 	top: -14px
 	margin-bottom: -14px
 	text-align: center
 	font-size: 14px
+	z-index: 2
 	+r(1024)
 		top: 0
 		margin: 10px
@@ -195,6 +256,8 @@
 		&:first-child
 			margin: 0
 .page-title
+	position: relative
+	z-index: 2
 	font-size: 40px
 	color: #fff
 	+f100

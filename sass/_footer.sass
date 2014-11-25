@@ -66,6 +66,7 @@
 				border-color: transparent
 	
 	&__info
+		position: relative
 		border-top: 1px solid $border 
 		padding: 47px 50px
 		+clr
@@ -103,8 +104,12 @@
 			&:hover
 				color: $blue 
 	.soc
-		overflow: hidden
+		position: absolute
+		right: 300px
+		left: 300px
+		top: 43px
 		+r(768)
 			order: 1
+			position: static
 			margin-bottom: 16px
 

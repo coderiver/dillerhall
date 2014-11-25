@@ -1,65 +1,10 @@
-.promo.promo_index
-	header.header
-		.header__top
-			button.header__key.js-toggle-nav(type="button")
+header.header.header_absolute
+	.header__top
+		.header__key
+			button.js-toggle-nav(type="button")
 				i
-		.nav.js-nav
-			.nav__in
-				.search-box
-					input.search-box__input(type="text",placeholder="Поиск")
-					button.search-box__btn(type="sumbit")
-				.nav__list
-					.nav__col
-						.nav__title
-							a(href="#") Главная
-					.nav__col
-						.nav__title
-							a(href="#") Новости индустрии
-						ul
-							li
-								a(href="#") Новости и акции дилеров
-					.nav__col
-						.nav__title.is-active
-							a(href="#") Каталог новых автомобилей
-						ul
-							li
-								a(href="#") Подобрать по характеристикам
-							li
-								a(href="#") Найти по названию модели
-							li
-								a(href="#") Автомобильные салоны
-					.nav__col
-						.nav__title
-							a(href="#") О проекте
-						ul
-							li
-								a(href="#") Как это работает
-							li
-								a(href="#") Для дилеров
-							li
-								a(href="#") Новости проекта
-							li
-								a(href="#")
-							li
-								a(href="#")
-					.nav__col
-						.nav__title
-							a(href="#") Обратная связь
-						ul
-							li
-								a(href="#") Стать партнёром
-							li
-								a(href="#") Вакансии
-							li
-								a(href="#")
-							li
-								a(href="#")
-							li
-								a(href="#")
-					.nav__col
-						a.nav__user(href="#")
-							i.icon-lock 
-							|Личный кабинет 
+	include _nav.jade
+.promo.promo_index
 	.promo__img(style="background-image: url(img/index-bg.jpg)")
 	.promo__in
 		img(src="img/logo-big.png", alt="img")
