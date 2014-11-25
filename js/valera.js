@@ -29,7 +29,19 @@ head.ready(function() {
 	// 	myMap.geoObjects.add(myPlacemark);
 	// };
 
-	
+	//js-accordion
+	$(".js-accordion-title").on("click", function(){
+		if ($(this).parents(".js-accordion").hasClass("is-active")) {
+			$(this).parents(".js-accordion").removeClass("is-active").find(".js-accordion-body").hide();
+		}
+		else {
+			$(".js-accordion").removeClass("is-active");
+			$(".js-accordion-body").hide();
+			$(this).parents(".js-accordion").toggleClass("is-active").find(".js-accordion-body").toggle()
+		}
+		
+		return false;
+	});
 
 });
 

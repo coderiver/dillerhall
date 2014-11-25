@@ -136,16 +136,15 @@
 		display: block
 		
 .search
-	max-width: 592px
-	margin: 0 auto
-	padding: 87px 0  
+	padding: 87px 20px 70px
 	.input
 		height: 40px
 		padding: 0 46px
 		color: #1bb4ed
 		margin-bottom: 9px
 	&__label
-		margin-bottom: 36px
+		max-width: 592px
+		margin: 0 auto 36px
 		&.js-active
 			label
 				+opacity(1)
@@ -166,7 +165,7 @@
 		display: block
 		&.js-not
 			display: none
-	p
+	&__text
 		width: 100%
 		max-width: 530px
 		margin: 0 auto
@@ -202,13 +201,21 @@
 		color: #fff 
 		background: #2db9ee 
 
-.list
+.post
+	padding: 40px 7px 22px 17px
+	border-top: 1px solid #e9e9e9  
+	&-wrap
+		padding: 55px 0 10px 0 
+	&:first-child
+		border-top: none
 	&__title
 		font-size: 16px
 		color: #000 
 		line-height: 24px
 		letter-spacing: 0.02em 
 		+f300
+		display: block
+		margin-bottom: 12px
 		span
 			+f500
 	p
@@ -216,6 +223,7 @@
 		font-size: 14px
 		line-height: 24px
 		color: #000
+		margin-bottom: 13px
 		span
 			+f500
 	&__small
@@ -223,3 +231,80 @@
 		color: #b5b5b5
 		font-size: 12px
 		line-height: 24px 
+		+opacity(0.8)
+		display: inline-block
+		
+.box
+	width: 25%
+	display: inline-block
+	vertical-align: top
+	position: relative
+	&:before, &:after
+		content: "" 
+		position: absolute
+		top: 0
+		width: 1px
+		height: 1000px
+		background: #e9e9e9
+	&:before
+		left: 0
+	&:after
+		right: -1px
+	&-wrap
+		font-size: 0
+		border: 1px solid #e9e9e9
+		margin-top: -1px
+		border-left: none
+		overflow: hidden 
+	a
+		+opacity(0.8)
+		+tr_op
+		display: block
+		padding: 30px 25px 17px 30px
+		&:hover
+			+opacity(1)
+			p
+				color: #1bb4ed 
+			.box__small
+				+opacity(0.8)
+	&__img
+		height: 184px
+		+vertical
+		img
+			display: inline-block
+			vertical-align: middle
+	&__info
+		p
+			+f300
+			line-height: 1.65
+			font-size: 14.06px
+			letter-spacing: 0.02em 
+			color: #000 
+			margin-bottom: 7px
+			+tr_color
+			span
+				font-size: 16px
+				span
+					+f500
+	&__small
+		line-height: 2
+		font-size: 12px
+		letter-spacing: 0.02em 
+		+f100
+		color: #b5b5b5
+		margin-bottom: 5px
+	&__price
+		+f100
+		line-height: 1.5
+		letter-spacing: 0.02em 
+		color: #000
+		font-size: 16px
+	&__bottom
+		+clr
+		.box__small
+			color: #a9d16a
+			float: left
+		.box__price
+			float: right
+
+		
