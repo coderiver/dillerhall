@@ -1,0 +1,54 @@
+doctype
+html
+	head
+		include _head.jade
+	body
+		.out
+			include _header.jade
+			.l-center
+				.comp-wrap
+					h2.title История сравнений
+					p.comp-text Здесь вы можете найти всю историю ваших сравнений. Мы сделали это для вашего удобства. 
+					ul
+						li.comp
+							.comp__left
+								span.comp__date 18.10.14
+								a(href="#").comp__delete
+							.comp__right
+								a(href="#").btn-link Посмотреть
+							.comp__center
+								ul
+									li.is-green
+										a(href="#") 
+											span BMW
+											|  320d xDrive Modern Line  
+										| 2.0 AT (220л.с.) дизель 
+									li.is-yellow
+										a(href="#") Mercedes-Benz  SL 63 AMG 
+										| 2.0 AT (220л.с.) дизель 
+									li.is-purple
+										a(href="#") BMW 328i  
+										| 2.0 AT (220л.с.) дизель, полный привод, 6 МКП
+						li.comp
+							.comp__left
+								span.comp__date 18.10.14
+								a(href="#").comp__delete
+							.comp__right
+								a(href="#").btn-link Посмотреть
+							.comp__center
+								ul
+									li.is-green
+										a(href="#") 
+											span BMW
+											|  320d xDrive Modern Line  
+										| 2.0 AT (220л.с.) дизель 
+									li.is-yellow
+										a(href="#") Mercedes-Benz  SL 63 AMG 
+										| 2.0 AT (220л.с.) дизель 
+									li.is-purple
+										a(href="#") BMW 328i  
+										| 2.0 AT (220л.с.) дизель, полный привод, 6 МКП
+			.push 
+		include _footer.jade 
+
+

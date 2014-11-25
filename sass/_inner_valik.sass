@@ -1,20 +1,28 @@
 //valik
-=ttu
-	text-transform: uppercase
+//brands
 .brand
 	+column-count(4)
-	+r(1024)
+	+r(980)
+		margin: 0 auto
+		+column-count(3)
+	+r(768)
+		+column-count(2)
+	+r(480)
 		+column-count(1)
 	&-wrap
-		width: 100%
-		max-width: 980px
 		margin: 0 auto
 		font-size: 0
 		padding: 90px 0 
+		+r(1400)
+			padding: 90px 100px
+		+r(980)
+			padding: 70px 70px
+		+r(480)
+			padding: 50px 75px
 	li
 		padding: 0 0 20px 0 
 	&__title
-		+ttu
+		text-transform: uppercase
 		+f500
 		color: #000
 		font-size: 15.99px
@@ -44,24 +52,39 @@
 					margin-left: 7px
 					+opacity(0)
 					+tr_op
+					will-change: opacity
 
-
+//catalog
 .catalog
-	padding: 75px 120px 40px
-	border-top: 1px solid #e9e9e9 
+	padding: 75px 0px 40px
+	border-top: 1px solid #e9e9e9  
 	+clr
+	+r(768)
+		padding: 40px 0 20px 
 	&:first-child
 		border-top: none
 	&-wrap
 		padding-bottom: 70px
+		+r(1400)
+			padding: 0 50px 50px 50px
+		+r(980)
+			padding: 0 20px 50px 20px 
+		+r(768)
+			padding: 0 0 10px 0
 	&__top
 		padding: 0 35px
 	h2.title
 		margin-bottom: 30px
 		display: inline-block
+		font-size: 24px
+		+f100
+		font-weight: normal
+		letter-spacing: 0.02em 
+		color: #010101 
 		i
 			+opacity(0)
 			+tr_op
+			will-change: opacity
 			+f300i
 			font-size: 14px
 			color: #010101
@@ -79,16 +102,22 @@
 				+opacity(0.3) 
 	.item
 		margin-bottom: 25px
-
+		+r(980)
+			width: 50%
+		+r(768)
+			width: 230px
+			margin: 0 auto 15px
+			float: none
+//item - catalog
 .item
 	width: 33.3%
-	max-width: 345px
 	text-align: center
 	float: left
 	a
 		display: inline-block
 		+opacity(0.8)
 		+tr_op
+		will-change: opacity
 		&:hover
 			+opacity(1)
 			p
@@ -98,7 +127,7 @@
 	&__img
 		height: 100px
 		+vertical
-		width: 270px
+		max-width: 270px
 		margin: 0 auto
 		text-align: left
 		img
@@ -107,9 +136,10 @@
 			max-width: 100%
 	&__info
 		+opacity(0.8)
+		will-change: opacity
 		padding: 15px 10px
 		text-align: left
-		width: 270px
+		max-width: 270px
 		margin: 0 auto
 		p, .item__small, .item__price
 			+f100
@@ -127,6 +157,7 @@
 				top: -9px
 				+opacity(0)
 				+tr_op
+				will-change: opacity
 	&__small
 		display: block
 		font-size: 12px
@@ -134,9 +165,13 @@
 		margin-bottom: 5px
 	&__price
 		display: block
-		
+//poisk		
 .search
-	padding: 87px 20px 70px
+	padding: 87px 40px 70px
+	+r(768)
+		padding: 60px 40px 60px 
+	+r(480)
+		padding: 40px 20px 30px 
 	.input
 		height: 40px
 		padding: 0 46px
@@ -152,17 +187,32 @@
 			position: relative
 			display: block
 			+opacity(0.8)
+			will-change: opacity
+		&_mod
+			.input
+				height: 70px
+				padding: 0 70px 
+				font-size: 24px
+			.search__icon
+				+svg(glass-act, 25, 25)
+				margin-top: -13px
+			.search__delete
+				+s(close-big)
+				margin-top: -12px
+				right: 23px
 	&__icon
 		+svg(glass-act, 18, 18)
 		position: absolute
-		top: 12px
+		top: 50%
+		margin-top: -9px
 		left: 20px
 	&__delete
 		+s(close)
 		position: absolute
-		top: 13px
+		top: 50%
+		margin-top: -7px
 		right: 15px
-		display: block
+		+opacity(0.3)
 		&.js-not
 			display: none
 	&__text
@@ -178,12 +228,14 @@
 			color: #1bb4ed
 			+opacity(1)
 			+tr_op
+			will-change: opacity
 			&:hover
 				+opacity(0.8)
 	ul
 		font-size: 0
 	li
 		display: inline-block
+//poisk - btn
 .pills
 	color: #000
 	+f100
@@ -200,12 +252,20 @@
 	&.is-active
 		color: #fff 
 		background: #2db9ee 
-
+//poisk - post
 .post
 	padding: 40px 7px 22px 17px
 	border-top: 1px solid #e9e9e9  
+	+r(480)
+		padding: 40px 20px 22px 20px 
 	&-wrap
 		padding: 55px 0 10px 0 
+		max-width: 980px
+		margin: 0 auto
+		+r(1024)
+			padding: 40px 25px 10px 
+		+r(768)
+			padding: 40px 0 10px 
 	&:first-child
 		border-top: none
 	&__title
@@ -214,10 +274,13 @@
 		line-height: 24px
 		letter-spacing: 0.02em 
 		+f300
-		display: block
+		display: inline-block
 		margin-bottom: 12px
+		+tr_color
 		span
 			+f500
+		&:hover
+			color: $blue_h
 	p
 		+f100
 		font-size: 14px
@@ -233,12 +296,25 @@
 		line-height: 24px 
 		+opacity(0.8)
 		display: inline-block
-		
+		will-change: opacity
+//poisk item		
+.search-box
+	padding: 12px 0 80px 0
+.search-preloader
+	padding: 0 0 85px 0 
+	text-align: center
+	
+//item(box) - poisk
 .box
 	width: 25%
 	display: inline-block
 	vertical-align: top
 	position: relative
+	border-top: 1px solid #e9e9e9
+	+r(1024)
+		width: 50%
+	+r(768)
+		width: 100%
 	&:before, &:after
 		content: "" 
 		position: absolute
@@ -250,14 +326,19 @@
 		left: 0
 	&:after
 		right: -1px
+	&:hover
+		.box__icons
+			+opacity(1)
 	&-wrap
 		font-size: 0
 		border: 1px solid #e9e9e9
+		border-top: none
 		margin-top: -1px
 		border-left: none
 		overflow: hidden 
 	a
 		+opacity(0.8)
+		will-change: opacity
 		+tr_op
 		display: block
 		padding: 30px 25px 17px 30px
@@ -270,9 +351,11 @@
 	&__img
 		height: 184px
 		+vertical
+		position: relative
 		img
 			display: inline-block
 			vertical-align: middle
+			max-width: 100%
 	&__info
 		p
 			+f300
@@ -306,5 +389,119 @@
 			float: left
 		.box__price
 			float: right
-
+	&__sticker
+		position: absolute
+		top: 0
+		left: 0
+		+f300
+		color: #fff
+		font-size: 10px
+		letter-spacing: 0.02em  
+		background: #ff465c
+		+border-radius(3px)
+		padding: 1px 6px 2px 6px  
+		line-height: 1
+	&__icons
+		position: absolute
+		top: 30px
+		right: 30px
+		+opacity(0)
+		+tr_op
+		will-change: opacity
+		button
+			margin-left: 16px
+	&__rate
+		+svg(rate, 14, 18)
+	&__favorites
+		+svg(star, 18, 16)	
 		
+//personal
+.comp-wrap
+	padding: 50px 0  
+	h2.title
+		text-align: center
+		+f300
+		margin-bottom: 14px
+	.comp-text
+		font-size: 18px
+		line-height: 26px
+		letter-spacing: 0.02em 
+		color: #000
+		text-align: center
+		max-width: 440px
+		margin: 0 auto 25px 
+.comp
+	max-width: 980px
+	padding: 47px 83px 20px 76px
+	+clr
+	border-top: 1px solid #ededed
+	&:first-child
+		border-top: none
+	&__left
+		float: left
+		width: 150px
+		+clr
+		padding: 0 20px 0 0 
+	&__right
+		float: right
+	&__center
+		overflow: hidden
+		ul
+			max-width: 420px
+			margin: 0 auto
+			li
+				+f100
+				font-size: 13px
+				line-height: 1.45
+				margin-bottom: 5px
+				padding: 0 8px 0 32px
+				position: relative
+				&:before
+					position: absolute
+					content: "" 
+					top: 6px
+					left: 0
+					width: 6px
+					height: 6px
+					+border-radius(50%)
+				&.is-green
+					&:before
+						background: #4cd68a 
+				&.is-yellow
+					&:before
+						background: #ffd278 
+				&.is-purple
+					&:before
+						background: #b48ead 
+			a
+				+f300
+				font-size: 14px
+				letter-spacing: 0.02em 
+				color: #000
+				+tr_color
+				&:hover
+					color: #2db9ee 
+				span
+					+f500
+	&__delete
+		+svg(close-gray, 9, 9)
+		float: left
+		+opacity(0.5)
+		margin: 7px 0 0 0
+		&:hover
+			+svg(close-blue, 9, 9)
+	&__date		
+		+f300
+		font-size: 12px
+		line-height: 24px
+		letter-spacing: 0.02em 
+		color: #000
+		+opacity(0.5) 
+		float: right
+
+h2.title
+	font-size: 24px
+	+f100
+	font-weight: normal
+	letter-spacing: 0.02em 
+	color: #010101 
