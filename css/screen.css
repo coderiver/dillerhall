@@ -217,16 +217,23 @@ a { text-decoration: none; }
 
 .feedback { padding: 76px 0 54px; font-size: 0; }
 .feedback .btn { min-width: 176px; }
+.feedback .title { text-transform: uppercase; font-family: "museosanscyrl_500", Arial, sans-serif; }
+
+.feedback .title, .questions .title { margin-bottom: 20px; font-size: 18px; line-height: 1; font-weight: normal; }
 
 .address, .delivery, .phones { padding-bottom: 16px; margin-left: 70px; width: 212px; font-size: 14px; vertical-align: top; display: inline-block; font-family: "museosanscyrl_100", Arial, sans-serif; }
 .address:first-child, .delivery:first-child, .phones:first-child { margin-left: 0; }
-.address .title, .delivery .title, .phones .title { margin-bottom: 20px; font-size: 18px; line-height: 1; font-weight: normal; text-transform: uppercase; font-family: "museosanscyrl_500", Arial, sans-serif; }
 
 .delivery .delivery__link { color: #1bb4ed; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80); opacity: 0.8; }
 .delivery .delivery__link:hover { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
 
 .map { height: 560px; width: 100%; }
 .map .gmnoprint, .map .gm-style-cc, .map .gm-style > div + div > a { display: none !important; }
+
+.questions { padding: 55px 0 151px; }
+.questions .title { font-size: 24px; font-family: "museosanscyrl_300", Arial, sans-serif; }
+
+.accordion .accordion__body { display: none; }
 
 .brand { -moz-column-count: 4; -webkit-column-count: 4; column-count: 4; }
 @media only screen and (max-width: 1024px) { .brand { -moz-column-count: 1; -webkit-column-count: 1; column-count: 1; } }
