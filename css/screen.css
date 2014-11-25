@@ -237,18 +237,26 @@ a { text-decoration: none; }
 .map { height: 560px; width: 100%; }
 .map .gmnoprint, .map .gm-style-cc, .map .gm-style > div + div > a { display: none !important; }
 
-.questions { font-size: 18px; padding: 55px 0 124px; }
-.questions .questions__title { font-size: 24px; font-family: "museosanscyrl_300", Arial, sans-serif; }
+.questions { font-size: 18px; padding: 48px 0 124px; }
 .questions .accordion__body { padding-bottom: 120px; line-height: 1.75; }
 .questions .questions__wrap { padding: 59px 0 0; }
 
+.topic .topic__title { font-size: 24px; font-weight: normal; font-family: "museosanscyrl_300", Arial, sans-serif; }
+.topic .topic__text { margin-top: 12px; font-size: 18px; font-family: "museosanscyrl_100", Arial, sans-serif; }
+
 .accordion { font-size: 14px; font-family: "museosanscyrl_100", Arial, sans-serif; }
 .accordion.is-active .accordion__title:before { -ms-transform: rotate(180deg); -webkit-transform: rotate(180deg); transform: rotate(180deg); }
-.accordion .accordion__title { position: relative; padding-right: 20px; margin-bottom: 31px; color: #1bb4ed; font-size: 18px; cursor: pointer; display: inline-block; }
-.accordion .accordion__title:before { position: absolute; content: ""; top: 13px; right: 0; width: 0px; height: 0px; border-style: solid; border-width: 5px 4px 0 4px; border-color: #1bb4ed transparent transparent transparent; }
-.accordion .accordion__title:after { position: absolute; content: ""; bottom: -3px; left: 0; right: 20px; border-bottom: 1px dotted #1bb4ed; }
+.accordion .accordion__title { position: relative; margin-bottom: 31px; color: #1bb4ed; font-size: 18px; cursor: pointer; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80); opacity: 0.8; -moz-transition: color 0.2s linear; -o-transition: color 0.2s linear; -webkit-transition: color 0.2s linear; transition: color 0.2s linear; }
+.accordion .accordion__title:hover { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
+.accordion .accordion__title span { position: relative; margin-right: 20px; display: inline-block; border-bottom: 1px dotted #1bb4ed; }
+.accordion .accordion__title span:before { position: absolute; content: ""; top: 13px; right: -20px; width: 0px; height: 0px; border-style: solid; border-width: 5px 4px 0 4px; border-color: #1bb4ed transparent transparent transparent; }
 .accordion .accordion__body { margin: 0 auto; width: 740px; }
 .accordion .accordion__body { display: none; }
+
+.jobs .jobs__accordion { margin-top: 50px; border-top: 1px solid #ededed; }
+.jobs .accordion__title { display: block; font-family: "museosanscyrl_300", Arial, sans-serif; }
+.jobs .accordion__title span { text-transform: uppercase; }
+.jobs .accordion__title span:before { display: none; }
 
 .brand { -moz-column-count: 4; -webkit-column-count: 4; column-count: 4; }
 @media only screen and (max-width: 1024px) { .brand { -moz-column-count: 1; -webkit-column-count: 1; column-count: 1; } }
