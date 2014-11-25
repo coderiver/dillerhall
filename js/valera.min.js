@@ -32,12 +32,12 @@ head.ready(function() {
 	//js-accordion
 	$(".js-accordion-title").on("click", function(){
 		if ($(this).parents(".js-accordion").hasClass("is-active")) {
-			$(this).parents(".js-accordion").removeClass("is-active").find(".js-accordion-body").hide();
+			$(this).parents(".js-accordion").removeClass("is-active").find(".js-accordion-body").slideUp();
 		}
 		else {
 			$(".js-accordion").removeClass("is-active");
-			$(".js-accordion-body").hide();
-			$(this).parents(".js-accordion").toggleClass("is-active").find(".js-accordion-body").toggle()
+			$(".js-accordion-body").slideUp();
+			$(this).parents(".js-accordion").toggleClass("is-active").find(".js-accordion-body").slideDown()
 		}
 		
 		return false;
