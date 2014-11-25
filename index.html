@@ -12,13 +12,61 @@
       <div class="promo promo_index">
         <header class="header">
           <div class="header__top">
-            <button type="button" class="header__key js-toggle-nav is-active"><i></i></button>
+            <button type="button" class="header__key js-toggle-nav"><i></i></button>
+          </div>
+          <div class="nav js-nav">
+            <div class="nav__in">
+              <div class="search-box">
+                <input type="text" placeholder="Поиск" class="search-box__input">
+                <button type="sumbit" class="search-box__btn"></button>
+              </div>
+              <div class="nav__list">
+                <div class="nav__col">
+                  <div class="nav__title"><a href="#">Главная</a></div>
+                </div>
+                <div class="nav__col">
+                  <div class="nav__title"><a href="#">Новости индустрии</a></div>
+                  <ul>
+                    <li><a href="#">Новости и акции дилеров</a></li>
+                  </ul>
+                </div>
+                <div class="nav__col">
+                  <div class="nav__title is-active"><a href="#">Каталог новых автомобилей</a></div>
+                  <ul>
+                    <li><a href="#">Подобрать по характеристикам</a></li>
+                    <li><a href="#">Найти по названию модели</a></li>
+                    <li><a href="#">Автомобильные салоны</a></li>
+                  </ul>
+                </div>
+                <div class="nav__col">
+                  <div class="nav__title"><a href="#">О проекте</a></div>
+                  <ul>
+                    <li><a href="#">Как это работает</a></li>
+                    <li><a href="#">Для дилеров</a></li>
+                    <li><a href="#">Новости проекта</a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                  </ul>
+                </div>
+                <div class="nav__col">
+                  <div class="nav__title"><a href="#">Обратная связь</a></div>
+                  <ul>
+                    <li><a href="#">Стать партнёром</a></li>
+                    <li><a href="#">Вакансии</a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                  </ul>
+                </div>
+                <div class="nav__col"><a href="#" class="nav__user"><i class="icon-lock"></i>Личный кабинет </a></div>
+              </div>
+            </div>
           </div>
         </header>
-        <div class="promo__img"><img src="img/index-bg.jpg" alt="img"></div>
+        <div style="background-image: url(img/index-bg.jpg)" class="promo__img"></div>
         <div class="promo__in"><img src="img/logo-big.png" alt="img">
           <div class="page-title">Ваш виртуальный автосалон </div>
-          <p>Дилер Холл — это наглядный, лёгкий и понятный поиск нового автомобиля среди официальных дилеров. Больше не нужно тратить время, силы и нервы, чтобы разобраться в огромном количестве предложений на рынке</p>
+          <div class="page-descr">Дилер Холл — это наглядный, лёгкий и понятный поиск нового автомобиля среди официальных дилеров. Больше не нужно тратить время, силы и нервы, чтобы разобраться в огромном количестве предложений на рынке</div>
         </div>
         <div class="promo__box">
           <div class="l-center l-center_width">
@@ -32,7 +80,6 @@
             </div>
           </div>
         </div>
-        <div class="menu"></div>
       </div>
       <div class="banner is-blue-dark"><img src="img/link-img1.jpg" alt="img">
         <div class="banner__wrap">
@@ -101,6 +148,9 @@
         </div>
       </div>
       <div class="footer__info">
+        <div class="footer__btn">
+          <button type="button" class="btn-simple btn-simple_round js-scroll-top">Наверх</button>
+        </div>
         <div class="footer__copy">© 2014 Dealerhall.by</div>
         <div class="footer__created">Разработка проекта: <a href="#">Flex Media</a></div>
         <div class="soc"><a href="#" class="soc__fb"></a><a href="#" class="soc__vk"></a><a href="#" class="soc__tw"></a></div>

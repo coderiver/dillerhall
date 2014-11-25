@@ -20,6 +20,12 @@
 	&__main
 		+clr
 		padding: 75px 15% 46px
+		+r(1280)	
+			padding: 75px 30px 46px
+		+r(980)	
+			padding: 30px
+		+r(768)
+			display: none
 	&__nav
 		width: 25%
 		float: left
@@ -66,10 +72,31 @@
 		color: #7f7f7f 
 		font-size: 14px
 		+f300
+		+r(768)
+			display: flex
+			padding: 22px
+			border: 0
+			flex-direction: column
+			text-align: center
+			
+	&__btn
+		display: none
+		margin: 0 0 30px 
+		+r(768)
+			display: block
+		.btn-simple
+			min-width: 90px
 	&__copy
 		float: left
+		+r(768)
+			float: noner
+			order: 3
 	&__created
 		float: right
+		+r(768)
+			float: none
+			margin-bottom: 12px
+			order: 2
 		a
 			color: #000
 			+tr_color
@@ -77,4 +104,7 @@
 				color: $blue 
 	.soc
 		overflow: hidden
+		+r(768)
+			order: 1
+			margin-bottom: 16px
 

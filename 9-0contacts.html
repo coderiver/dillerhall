@@ -10,8 +10,56 @@
       <header class="header">
         <div class="header__top"><a href="#" class="header__logo"></a>
           <button type="button" class="header__key js-toggle-nav"><i></i></button>
-          <nav class="breadcumbs"><a href="#">Главная</a><a href="#">Каталог новых автомобилей</a></nav>
         </div>
+        <div class="nav js-nav">
+          <div class="nav__in">
+            <div class="search-box">
+              <input type="text" placeholder="Поиск" class="search-box__input">
+              <button type="sumbit" class="search-box__btn"></button>
+            </div>
+            <div class="nav__list">
+              <div class="nav__col">
+                <div class="nav__title"><a href="#">Главная</a></div>
+              </div>
+              <div class="nav__col">
+                <div class="nav__title"><a href="#">Новости индустрии</a></div>
+                <ul>
+                  <li><a href="#">Новости и акции дилеров</a></li>
+                </ul>
+              </div>
+              <div class="nav__col">
+                <div class="nav__title is-active"><a href="#">Каталог новых автомобилей</a></div>
+                <ul>
+                  <li><a href="#">Подобрать по характеристикам</a></li>
+                  <li><a href="#">Найти по названию модели</a></li>
+                  <li><a href="#">Автомобильные салоны</a></li>
+                </ul>
+              </div>
+              <div class="nav__col">
+                <div class="nav__title"><a href="#">О проекте</a></div>
+                <ul>
+                  <li><a href="#">Как это работает</a></li>
+                  <li><a href="#">Для дилеров</a></li>
+                  <li><a href="#">Новости проекта</a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                </ul>
+              </div>
+              <div class="nav__col">
+                <div class="nav__title"><a href="#">Обратная связь</a></div>
+                <ul>
+                  <li><a href="#">Стать партнёром</a></li>
+                  <li><a href="#">Вакансии</a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                </ul>
+              </div>
+              <div class="nav__col"><a href="#" class="nav__user"><i class="icon-lock"></i>Личный кабинет </a></div>
+            </div>
+          </div>
+        </div>
+        <nav class="breadcumbs"><a href="#">Главная</a><a href="#">Каталог новых автомобилей</a></nav>
         <h1 class="page-title">Каталог новых автомобилей</h1>
       </header>
       <div class="l-center">
@@ -77,6 +125,9 @@
         </div>
       </div>
       <div class="footer__info">
+        <div class="footer__btn">
+          <button type="button" class="btn-simple btn-simple_round js-scroll-top">Наверх</button>
+        </div>
         <div class="footer__copy">© 2014 Dealerhall.by</div>
         <div class="footer__created">Разработка проекта: <a href="#">Flex Media</a></div>
         <div class="soc"><a href="#" class="soc__fb"></a><a href="#" class="soc__vk"></a><a href="#" class="soc__tw"></a></div>

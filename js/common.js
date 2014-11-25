@@ -11,4 +11,32 @@ head.ready(function() {
 		$(this).parent().before(html); 
 		return false;
 	});
+
+// show/hide nav
+	$("body").on("click",".js-toggle-nav",function(){
+		if ($(this).hasClass("is-active")) {
+			$(this).removeClass("is-active");
+			$(".js-nav").removeClass("is-active")
+			setTimeout(function() {
+				$(".js-nav").removeClass("is-visible");
+            }, 500);
+			$("html").removeClass("has-open-nav");
+		}
+		else {
+			$(this).addClass("is-active");
+			$(".js-nav").addClass("is-active is-visible");
+			$("html").addClass("has-open-nav");
+
+		}
+		return false;
+	});
+
+	$(".js-scroll-top").on("click", function (){
+        $('html, body').animate({
+            scrollTop: 0
+        }, 500);
+	 	return false;
+    });
+
+
 });

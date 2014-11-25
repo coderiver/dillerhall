@@ -2,6 +2,7 @@ body
 	min-width: 320px
 	+f300
 	line-height: 1.7
+	font-size: 14px
 	background: #ededed
 a
 	text-decoration: none
@@ -23,6 +24,7 @@ a
 		max-width: 980px
 	+r(980)
 		max-width: 768px
+		margin-bottom: 0
 	+r(768)
 		max-width: 480px
 	+r(480)
@@ -30,11 +32,15 @@ a
 .push
 	clear: both
 	height: 410px
+	+r(980)
+		height: 0
 .l-center
 	margin: 0 auto 
 	max-width: 980px
 	&_width
 		max-width: 1090px
+		+r(1400)
+			width: 100%
 .to-right
 	text-align: right
 .to-center
@@ -161,7 +167,8 @@ a
 			border-color: $yellow
 		&:active
 			background: $yellow 
-			
+	&_round
+		border-radius: 16px 
 .btn-add-wrap
 	position: relative
 .btn-add
@@ -240,8 +247,10 @@ a
 
 .banner
 	position: relative 
+	overflow: hidden
 	img
 		display: block
+		height: 100%
 	&:before
 		content: ""
 		position: absolute
@@ -319,3 +328,7 @@ a
 	+tr(border .3s)
 	&:hover
 		border-bottom: 1px solid $blue
+		
+.icon-lock
+	display: inline-block
+	+s(lock) 

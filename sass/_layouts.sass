@@ -3,10 +3,25 @@
 	display: table
 	width: 100%
 	table-layout: fixed
+	+r(980)
+		display: block
 	&_news
 		.l-col2
 			padding-top: 65px
 			padding-bottom: 90px
+			&:first-child
+				padding: 65px 20px 65px 75px
+				+r(980)
+					padding: 45px 20px 45px 75px
+				+r(768)
+					padding: 45px
+			+r(1400)
+				padding: 65px 20px 65px 75px
+				text-align: left
+			+r(980)
+				padding: 45px 20px 45px 75px
+			+r(768)
+				padding: 45px
 .l-col2
 	display: table-cell
 	padding-left: 14%
@@ -15,3 +30,14 @@
 	&:first-child
 		border: 0
 		padding-left: 0
+		+r(980)
+			border-bottom: 1px solid $border
+	&:last-child
+		+r(980)
+			border-bottom: 0 
+	+r(1400)
+		padding-left: 0
+		text-align: center
+	+r(980)
+		display: block
+		border-left: 0
