@@ -6,6 +6,17 @@
 	font-size: 0
 	.btn
 		min-width: 176px
+	.title
+		text-transform: uppercase
+		+f500
+
+//feedback .questions
+.feedback, .questions
+	.title
+		margin-bottom: 20px
+		font-size: 18px
+		line-height: 1
+		font-weight: normal
 
 // address, delivery, phones
 .address, .delivery, .phones
@@ -18,13 +29,6 @@
 	+f100
 	&:first-child
 		margin-left: 0
-	.title
-		margin-bottom: 20px
-		font-size: 18px
-		line-height: 1
-		font-weight: normal
-		text-transform: uppercase
-		+f500
 
 //delivery
 .delivery
@@ -40,3 +44,15 @@
 	width: 100%
 	.gmnoprint, .gm-style-cc, .gm-style > div + div > a
 		display: none !important
+
+//questions
+.questions
+	padding: 55px 0 151px
+	.title
+		font-size: 24px
+		+f300
+
+//accordion
+.accordion
+	.accordion__body
+		display: none
