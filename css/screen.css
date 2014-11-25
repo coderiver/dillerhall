@@ -31,7 +31,7 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 @font-face { font-family: museosanscyrl_300_italic; src: url("../fonts/museosanscyrl_300_italic.eot"); src: url("../fonts/museosanscyrl_300_italic.eot?#iefix") format("embedded-opentype"), url("../fonts/museosanscyrl_300_italic.woff2") format("woff2"), url("../fonts/museosanscyrl_300_italic.woff") format("woff"), url("../fonts/museosanscyrl_300_italic.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: museosanscyrl_500; src: url("../fonts/museosanscyrl_500.eot"); src: url("../fonts/museosanscyrl_500.eot?#iefix") format("embedded-opentype"), url("../fonts/museosanscyrl_500.woff2") format("woff2"), url("../fonts/museosanscyrl_500.woff") format("woff"), url("../fonts/museosanscyrl_500.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: museosanscyrl_500_italic; src: url("../fonts/museosanscyrl_500_italic.eot"); src: url("../fonts/museosanscyrl_500_italic.eot?#iefix") format("embedded-opentype"), url("../fonts/museosanscyrl_500_italic.woff2") format("woff2"), url("../fonts/museosanscyrl_500_italic.woff") format("woff"), url("../fonts/museosanscyrl_500_italic.ttf") format("truetype"); font-weight: normal; font-style: normal; }
-body { min-width: 320px; font-family: "museosanscyrl_300", Arial, sans-serif; line-height: 1.7; background: #ededed; }
+body { min-width: 320px; font-family: "museosanscyrl_300", Arial, sans-serif; line-height: 1.7; background: #ededed; font-size: 14px; }
 
 a { text-decoration: none; }
 
@@ -224,9 +224,9 @@ a { text-decoration: none; }
 
 .feedback { padding: 76px 0 54px; font-size: 0; }
 .feedback .btn { min-width: 176px; }
-.feedback .title { text-transform: uppercase; font-family: "museosanscyrl_500", Arial, sans-serif; }
+.feedback .address__title, .feedback .delivery__title, .feedback .phones__title { text-transform: uppercase; font-family: "museosanscyrl_500", Arial, sans-serif; }
 
-.feedback .title, .questions .title { margin-bottom: 20px; font-size: 18px; line-height: 1; font-weight: normal; }
+.feedback .address__title, .feedback .delivery__title, .feedback .phones__title, .feedback .questions__title, .questions .address__title, .questions .delivery__title, .questions .phones__title, .questions .questions__title { margin-bottom: 20px; font-size: 18px; line-height: 1; font-weight: normal; }
 
 .address, .delivery, .phones { padding-bottom: 16px; margin-left: 70px; width: 212px; font-size: 14px; vertical-align: top; display: inline-block; font-family: "museosanscyrl_100", Arial, sans-serif; }
 .address:first-child, .delivery:first-child, .phones:first-child { margin-left: 0; }
@@ -237,10 +237,26 @@ a { text-decoration: none; }
 .map { height: 560px; width: 100%; }
 .map .gmnoprint, .map .gm-style-cc, .map .gm-style > div + div > a { display: none !important; }
 
-.questions { padding: 55px 0 151px; }
-.questions .title { font-size: 24px; font-family: "museosanscyrl_300", Arial, sans-serif; }
+.questions { font-size: 18px; padding: 48px 0 124px; }
+.questions .accordion__body { padding-bottom: 120px; line-height: 1.75; }
+.questions .questions__wrap { padding: 59px 0 0; }
 
+.topic .topic__title { font-size: 24px; font-weight: normal; font-family: "museosanscyrl_300", Arial, sans-serif; }
+.topic .topic__text { margin-top: 12px; font-size: 18px; font-family: "museosanscyrl_100", Arial, sans-serif; }
+
+.accordion { font-size: 14px; font-family: "museosanscyrl_100", Arial, sans-serif; }
+.accordion.is-active .accordion__title:before { -ms-transform: rotate(180deg); -webkit-transform: rotate(180deg); transform: rotate(180deg); }
+.accordion .accordion__title { position: relative; margin-bottom: 31px; color: #1bb4ed; font-size: 18px; cursor: pointer; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80); opacity: 0.8; -moz-transition: color 0.2s linear; -o-transition: color 0.2s linear; -webkit-transition: color 0.2s linear; transition: color 0.2s linear; }
+.accordion .accordion__title:hover { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
+.accordion .accordion__title span { position: relative; margin-right: 20px; display: inline-block; border-bottom: 1px dotted #1bb4ed; }
+.accordion .accordion__title span:before { position: absolute; content: ""; top: 13px; right: -20px; width: 0px; height: 0px; border-style: solid; border-width: 5px 4px 0 4px; border-color: #1bb4ed transparent transparent transparent; }
+.accordion .accordion__body { margin: 0 auto; width: 740px; }
 .accordion .accordion__body { display: none; }
+
+.jobs .jobs__accordion { margin-top: 50px; border-top: 1px solid #ededed; }
+.jobs .accordion__title { display: block; font-family: "museosanscyrl_300", Arial, sans-serif; }
+.jobs .accordion__title span { text-transform: uppercase; }
+.jobs .accordion__title span:before { display: none; }
 
 .brand { -moz-column-count: 4; -webkit-column-count: 4; column-count: 4; }
 @media only screen and (max-width: 980px) { .brand { margin: 0 auto; -moz-column-count: 3; -webkit-column-count: 3; column-count: 3; } }
