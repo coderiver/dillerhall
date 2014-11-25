@@ -120,6 +120,13 @@
 			bottom: 0
 		i
 			top: 9px
+		&.is-active
+			i
+				background: none
+			&:before
+				+rotate(45)
+			&:after
+				+rotate(-45)
 .breadcumbs
 	position: absolute
 	left: 200px
@@ -145,3 +152,12 @@
 	+f100
 	text-align: center
 	font-weight: normal 
+	
+.menu
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	z-index: 9
+	background: rgba($blue, .98) 

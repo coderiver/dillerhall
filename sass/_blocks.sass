@@ -240,6 +240,8 @@ a
 
 .banner
 	position: relative 
+	img
+		display: block
 	&:before
 		content: ""
 		position: absolute
@@ -276,10 +278,13 @@ a
 	+svg(arr-next-white,10,16) 
 
 .news-item
-	text-align: left
-	
+	margin: 0 0 38px 
+	&:last-child
+		margin-bottom: 28px
 .link-section
 	position: relative
+	display: inline-block
+	margin-bottom: 20px
 	padding-right: 25px
 	font-size: 20px
 	color: #737373
@@ -293,7 +298,7 @@ a
 		content: ""
 		position: absolute
 		right: 0
-		top: 3px
+		top: 10px
 		+svg(arr-next,10,16) 
 		+tr_o
 		+opacity(.2)
