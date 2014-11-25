@@ -266,18 +266,18 @@ a { text-decoration: none; }
 .item__small { display: block; font-size: 12px; color: #b5b5b5; margin-bottom: 5px; }
 .item__price { display: block; }
 
-.search { max-width: 592px; margin: 0 auto; padding: 87px 0; }
+.search { padding: 87px 20px 70px; }
 .search .input { height: 40px; padding: 0 46px; color: #1bb4ed; margin-bottom: 9px; }
-.search__label { margin-bottom: 36px; }
+.search__label { max-width: 592px; margin: 0 auto 36px; }
 .search__label.js-active label { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
 .search__label label { position: relative; display: block; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80); opacity: 0.8; }
 .search__icon { background: url("../img/svg/glass-act.svg") no-repeat 0 0; -moz-background-size: 18px 18px; -o-background-size: 18px 18px; -webkit-background-size: 18px 18px; background-size: 18px 18px; width: 18px; height: 18px; display: inline-block; position: absolute; top: 12px; left: 20px; }
 .ie8 .search__icon { background: url('../img/icons-sd9fb08cdae.png') 0 -250px no-repeat; width: 14px; height: 14px; }
 .search__delete { background: url('../img/icons-sd9fb08cdae.png') 0 -112px no-repeat; width: 14px; height: 14px; position: absolute; top: 13px; right: 15px; display: block; }
 .search__delete.js-not { display: none; }
-.search p { width: 100%; max-width: 530px; margin: 0 auto; font-family: "museosanscyrl_300", Arial, sans-serif; font-size: 14px; line-height: 1.75; color: #4f4f4f; text-align: center; }
-.search p a { color: #1bb4ed; filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; -moz-transition: opacity 0.2s linear; -o-transition: opacity 0.2s linear; -webkit-transition: opacity 0.2s linear; transition: opacity 0.2s linear; }
-.search p a:hover { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80); opacity: 0.8; }
+.search__text { width: 100%; max-width: 530px; margin: 0 auto; font-family: "museosanscyrl_300", Arial, sans-serif; font-size: 14px; line-height: 1.75; color: #4f4f4f; text-align: center; }
+.search__text a { color: #1bb4ed; filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; -moz-transition: opacity 0.2s linear; -o-transition: opacity 0.2s linear; -webkit-transition: opacity 0.2s linear; transition: opacity 0.2s linear; }
+.search__text a:hover { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80); opacity: 0.8; }
 .search ul { font-size: 0; }
 .search li { display: inline-block; }
 
@@ -285,11 +285,36 @@ a { text-decoration: none; }
 .pills:hover { color: #2db9ee; }
 .pills.is-active { color: white; background: #2db9ee; }
 
-.list__title { font-size: 16px; color: black; line-height: 24px; letter-spacing: 0.02em; font-family: "museosanscyrl_300", Arial, sans-serif; }
-.list__title span { font-family: "museosanscyrl_500", Arial, sans-serif; }
-.list p { font-family: "museosanscyrl_100", Arial, sans-serif; font-size: 14px; line-height: 24px; color: black; }
-.list p span { font-family: "museosanscyrl_500", Arial, sans-serif; }
-.list__small { font-family: "museosanscyrl_300", Arial, sans-serif; color: #b5b5b5; font-size: 12px; line-height: 24px; }
+.post { padding: 40px 7px 22px 17px; border-top: 1px solid #e9e9e9; }
+.post-wrap { padding: 55px 0 10px 0; }
+.post:first-child { border-top: none; }
+.post__title { font-size: 16px; color: black; line-height: 24px; letter-spacing: 0.02em; font-family: "museosanscyrl_300", Arial, sans-serif; display: block; margin-bottom: 12px; }
+.post__title span { font-family: "museosanscyrl_500", Arial, sans-serif; }
+.post p { font-family: "museosanscyrl_100", Arial, sans-serif; font-size: 14px; line-height: 24px; color: black; margin-bottom: 13px; }
+.post p span { font-family: "museosanscyrl_500", Arial, sans-serif; }
+.post__small { font-family: "museosanscyrl_300", Arial, sans-serif; color: #b5b5b5; font-size: 12px; line-height: 24px; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80); opacity: 0.8; display: inline-block; }
+
+.box { width: 25%; display: inline-block; vertical-align: top; position: relative; }
+.box:before, .box:after { content: ""; position: absolute; top: 0; width: 1px; height: 1000px; background: #e9e9e9; }
+.box:before { left: 0; }
+.box:after { right: -1px; }
+.box-wrap { font-size: 0; border: 1px solid #e9e9e9; margin-top: -1px; border-left: none; overflow: hidden; }
+.box a { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80); opacity: 0.8; -moz-transition: opacity 0.2s linear; -o-transition: opacity 0.2s linear; -webkit-transition: opacity 0.2s linear; transition: opacity 0.2s linear; display: block; padding: 30px 25px 17px 30px; }
+.box a:hover { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
+.box a:hover p { color: #1bb4ed; }
+.box a:hover .box__small { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80); opacity: 0.8; }
+.box__img { height: 184px; text-align: center; font-size: 0; }
+.box__img:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.box__img img { display: inline-block; vertical-align: middle; }
+.box__info p { font-family: "museosanscyrl_300", Arial, sans-serif; line-height: 1.65; font-size: 14.06px; letter-spacing: 0.02em; color: black; margin-bottom: 7px; -moz-transition: color 0.2s linear; -o-transition: color 0.2s linear; -webkit-transition: color 0.2s linear; transition: color 0.2s linear; }
+.box__info p span { font-size: 16px; }
+.box__info p span span { font-family: "museosanscyrl_500", Arial, sans-serif; }
+.box__small { line-height: 2; font-size: 12px; letter-spacing: 0.02em; font-family: "museosanscyrl_100", Arial, sans-serif; color: #b5b5b5; margin-bottom: 5px; }
+.box__price { font-family: "museosanscyrl_100", Arial, sans-serif; line-height: 1.5; letter-spacing: 0.02em; color: black; font-size: 16px; }
+.box__bottom { *zoom: 1; }
+.box__bottom:after { content: " "; display: table; clear: both; }
+.box__bottom .box__small { color: #a9d16a; float: left; }
+.box__bottom .box__price { float: right; }
 
 .l { *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }
