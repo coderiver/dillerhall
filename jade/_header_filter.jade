@@ -1,15 +1,40 @@
-header.header.header_absolute
+header.header
 	.header__top
 		a.header__logo(href="#")
 		.header__key
 			button.js-toggle-nav(type="button")
 				i
+	.header__middle
+		nav.breadcumbs
+			a(href="#") Главная
+			a(href="#") Фильтр
+		h1.page-title Ищем BMW 3 series
+		.page-info от $ 20 000 до $ 100 000, дизель / бензин, полный / задний привод, 5 / 6 МКП
+	.header__bottom
+		.header__left
+			ul.tab-pills.js-tabs-single
+				li
+					a(href="#js-tab1") Таблица
+				li
+					a(href="#js-tab2") Список
+			a.btn-do(href="#")
+				i.icon-star-white
+				span 1
+			a.btn-do(href="#")
+				i.icon-rate-white
+				span 5
+		.header__center
+			a.btn-do(href="#")
+				i.icon-filter
+				span Изменить фильтр
+					sup 98
+		.header__right
+			.select.col.col_252
+				select.js-select-single
+					option(value="Сортируем по стоимости") Сортируем по стоимости
+					option(value="Сортируем по дате") Сортируем по дате
+					option(value="Сортируем по названию") Сортируем по названию
+					option(value="Сортируем по марке") Сортируем по марке
 	include _nav.jade
-	nav.breadcumbs
-		a(href="#") Главная
-		a(href="#") Фильтр
-	h1.page-title Ищем BMW 3 series
-	.page-info от $ 20 000 до $ 100 000, дизель / бензин, полный / задний привод, 5 / 6 МКП
-
 
 

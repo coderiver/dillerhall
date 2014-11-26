@@ -1,25 +1,39 @@
-header.header.header_absolute
-	.header__top
-		a.header__logo(href="#")
-		.header__key
-			button.js-toggle-nav(type="button")
-				i
+header.header
+	.header__wrap
+		.header__top
+			a.header__logo(href="#")
+			.header__key
+				button.js-toggle-nav(type="button")
+					i
+		.header__middle
+			nav.breadcumbs
+				a(href="#") Главная
+				a(href="#") Каталог новых автомобилей
+			.page-title BMW 
+		.header__bottom
+			.header__nav
+				.header__nav-list
+					a(href="#") 1 series
+					a(href="#") 3 series
+					a(href="#") 5 series
+					a(href="#") 6 series
+					a(href="#") 7 series
+					a(href="#") X series
+					a(href="#") Z4 series
+					a(href="#") M series 
+				.select.col.col_252
+					select.js-select-single
+						option(value="1 series") 1 series
+						option(value="3 series") 3 series
+						option(value="5 series") 5 series
+						option(value="6 series") 6 series
+						option(value="7 series") 7 series
+						option(value="X series") X series
+						option(value="Z4 series") Z4 series
+						option(value="M series ") M series 
+		.header__img(style="background-image: url(img/bmw-bg.jpg)")
 	include _nav.jade
-	nav.breadcumbs
-		a(href="#") Главная
-		a(href="#") Каталог новых автомобилей
-	.page-title BMW 
-.promo.promo_catalog
-	.promo__img(style="background-image: url(img/bmw-bg.jpg)")
-	.promo__bottom
-		.promo__nav
-			a(href="#") 1 series
-			a(href="#") 3 series
-			a(href="#") 5 series
-			a(href="#") 6 series
-			a(href="#") 7 series
-			a(href="#") X series
-			a(href="#") Z4 series
-			a(href="#") M series
+	
+		
 		
 
