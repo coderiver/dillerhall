@@ -1,4 +1,4 @@
-head.ready(function() {
+$(document).ready(function() {
 
 	//map
 	// ymaps.ready(init);
@@ -70,7 +70,7 @@ head.ready(function() {
 		var mapType = new google.maps.StyledMapType(stylez, { name:"Grayscale" });    
 		map.mapTypes.set('tehgrayz', mapType);
 		map.setMapTypeId('tehgrayz');
-		var image = 'img/icons/marker.png';
+		var image = 'img/marker.png';
 		var myLatLng1 = new google.maps.LatLng(53.899367, 27.5630000);
 		var marker1 = new google.maps.Marker({
 			position: myLatLng1,

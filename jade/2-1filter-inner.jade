@@ -4,7 +4,30 @@ html
 		include _head.jade
 	body
 		.out
-			include _header.jade
+			include _header_filter.jade
+			.promo.promo_catalog
+				.promo__bottom
+					.promo__left
+						ul.tab-pills
+							li.is-active
+								a(href="#") Таблица
+							li
+								a(href="#") Список
+						a.btn-do(href="#")
+							i.icon-star-white
+							span 1
+						a.btn-do(href="#")
+							i.icon-rate-white
+							span 5
+					.promo__right
+						.select.col.col_252
+							select.js-select-single
+								option(value="Сортируем по стоимости") Сортируем по стоимости
+								option(value="Сортируем по дате") Сортируем по дате
+								option(value="Сортируем по названию") Сортируем по названию
+								option(value="Сортируем по марке") Сортируем по марке
+					.promo__center
+
 			.l-center
 				.row-item__wrap
 					ul

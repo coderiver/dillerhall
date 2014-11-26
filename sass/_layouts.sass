@@ -41,3 +41,8 @@
 	+r(980)
 		display: block
 		border-left: 0
+		
+$grid-columns: 252
+@each $i in $grid-columns 
+	.col_#{$i}
+		width: #{$i}px

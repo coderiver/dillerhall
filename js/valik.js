@@ -1,4 +1,4 @@
-head.ready(function() {
+$(document).ready(function() {
 	$('.search__keyword').focusin(function(event) {
 		$('.search__label').addClass('js-active');
 	});
