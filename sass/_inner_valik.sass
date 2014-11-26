@@ -539,7 +539,7 @@ h2.title
 	&:hover
 		img
 			+opacity(1)
-	&__wrap
+	&-wrap
 		padding: 50px 0
 		+r(1280)
 			padding: 50px 30px 
@@ -680,11 +680,14 @@ h2.title
 	&__time
 		+f100
 	&__link
-		color: #ee6e7d
+		color: $red
 		font-size: 12px
 		line-height: 2
 		letter-spacing: 0.02em 
 		+f500 
+		+tr_color
+		&:hover
+			color: $red_h
 	&__center
 		overflow: hidden
 		+r(768)
@@ -695,6 +698,7 @@ h2.title
 		font-size: 16px
 		letter-spacing: 0.019em 
 		display: block
+		margin-bottom: 5px
 	&__text
 		a
 			+f300
@@ -702,7 +706,9 @@ h2.title
 			line-height: 1.5
 			letter-spacing: 0.02em 
 			color: #000
-			+opacity(0.8) 
+			+opacity(0.8)
+			+tr_color 
+			display: block
 			span
 				+f500
 			&:hover
@@ -712,34 +718,11 @@ h2.title
 	text-align: center
 	padding: 50px 20px 40px 20px
 	border-bottom: 1px solid #ededed 
+	ul.sorting
+		margin-bottom: 20px
 	h2.title
 		+f300
 		margin-bottom: 40px
-	ul
-		margin-bottom: 20px
-		li
-			display: inline-block
-			padding: 0 14px 10px 
-		a
-			+f300
-			color: #23b7ed
-			font-size: 14px
-			line-height: 24px
-			letter-spacing: 0.02em 
-			+tr_color
-			&:hover
-				color: #000000
-				sup
-					visibility: visible
-					+opacity(1) 
-			sup
-				font-size: 11.01px
-				position: relative
-				top: -10px
-				+f100
-				visibility: hidden
-				+opacity(0)
-				+tr_op
 	&__search
 		max-width: 540px
 		margin: 0 auto
@@ -749,6 +732,14 @@ h2.title
 		height: 30px
 		padding: 0 30px 
 		text-align: center
+		+transition(border-color 0.3s, box-shadow 0.3s, color 0.3s)
+		&:hover
+			border-color: #c0c0c0
+		&:focus
+			border-color: #1bb4ed
+			color: #1bb4ed 
+		&.is-active
+			text-align: left
 	&__icon
 		+svg(glass, 14, 14)
 		position: absolute
@@ -756,6 +747,8 @@ h2.title
 		top: 50%
 		left: 11px
 		+opacity(0.5)
+		&.is-active
+			+svg(glass-act, 14, 14)
 	&__delete
 		+svg(close-gray, 9, 9)
 		position: absolute
@@ -769,6 +762,36 @@ h2.title
 			visibility: hidden
 			+opacity(0)
 
+ul.sorting
+	text-align: center
+	li
+		display: inline-block
+		padding: 0 14px 10px 
+	a
+		+f300
+		color: #23b7ed
+		font-size: 14px
+		line-height: 24px
+		letter-spacing: 0.02em 
+		+tr_color
+		&:hover
+			color: #000000
+			sup
+				visibility: visible
+				+opacity(1) 
+		sup
+			font-size: 11.01px
+			position: relative
+			top: -10px
+			+f100
+			visibility: hidden
+			+opacity(0)
+			+tr_op
+		&.is-active
+			color: #000 
+			sup
+				visibility: visible
+				+opacity(1)
 //message
 .messages
 	padding: 50px 0 45px 0 
@@ -923,3 +946,133 @@ h2.title
 		line-height: 22px
 		letter-spacing: 0.02em 
 		color: #4f4f4f 
+		
+//news-box
+.news-box__wrap
+	max-width: 1000px
+	margin: 0 auto
+	font-size: 0
+	padding: 60px 0 0 0 
+	+r(980)
+		padding: 60px 8px 0 
+	+r(768)
+		padding: 40px 0 0
+	+r(480)
+		padding: 0 0 65px 0
+	.sorting
+		margin-bottom: 10px
+		+r(480)
+			display: none
+	.btn
+		margin: 0 auto
+		display: none
+		+r(480)
+			display: block
+			width: 220px
+	.preloader
+		+r(480)
+			display: none
+.news-box
+	padding: 10px
+	display: inline-block
+	vertical-align: top
+	margin-bottom: 35px
+	+r(768)
+		padding: 10px 0 
+	+r(480)
+		padding: 0
+		margin-bottom: 60px
+	&__img
+		border: 1px solid #ededed
+		position: relative
+		+clr
+		margin-bottom: 30px
+		overflow: hidden
+		+r(768)
+			border: none
+		div
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+		&:before
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			background: #2db9ee
+			+opacity(0)
+			content: "" 
+			will-change: opacity
+			+tr_op 
+			z-index: 5
+		img
+			width: 100%
+			float: left
+	a
+		display: block
+		&:hover
+			h2.title
+				color: #2db9ee
+			.news-box__img
+				&:before
+					+opacity(0.5) 
+	h2.title
+		+f300
+		text-transform: uppercase
+		+tr_color
+		margin-bottom: 2px
+		+r(768)
+			font-size: 20px
+			letter-spacing: 0 
+	.meta
+		display: block
+		font-size: 11px
+		margin-top: 17px
+	p
+		+f100
+		font-size: 16px
+		line-height: 24px
+		color: #000 
+	&_big
+		width: 100%
+		.news-box__img
+			height: 0
+			width: 100%
+			padding-bottom: 39%  
+			+r(768)
+				padding-bottom: 80%
+			+r(480)
+				height: 280px
+				padding-bottom: 0
+	&_small
+		width: 40%
+		+r(768)
+			width: 100%
+		.news-box__img
+			height: 0
+			width: 100%
+			padding-bottom: 100%   
+			+r(768)
+				padding-bottom: 80%
+			+r(480)
+				height: 280px
+				padding-bottom: 0
+	&_middle
+		width: 60%
+		+r(768)
+			width: 100%
+		.news-box__img
+			height: 0
+			width: 100%
+			padding-bottom: 65.5%   
+			+r(768)
+				padding-bottom: 80%
+			+r(480)
+				height: 280px
+				padding-bottom: 0
+	&__info
+		+r(768)
+			padding: 0 30px 

@@ -21,12 +21,21 @@ $(document).ready(function() {
 	$('.request-top__keyword').on('keyup', function(event) {
 	 if($(this).val() == '') {
 		$(this).parent().find('.request-top__delete').addClass('js-not');
+		$(this).removeClass('is-active');
 	 } else {
 		$(this).parent().find('.request-top__delete').removeClass('js-not');
+		$(this).addClass('is-active');
 	 }
 	});
 	$('.request-top__delete').on('click', function() {
 		$('.request-top__keyword').val('');
 		$(this).addClass('js-not');
+	});
+	//request-top search
+	$('.request-top__search').focusin(function(event) {
+		$('.request-top__icon').addClass('is-active');
+	});
+	$('.request-top__search').focusout(function(event) {
+		$('.request-top__icon').removeClass('is-active');
 	});
 });
