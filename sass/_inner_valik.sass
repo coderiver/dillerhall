@@ -771,21 +771,20 @@ h2.title
 
 //message
 .messages
+	padding: 50px 0 45px 0 
 	h2.title
 		text-align: center
 		+f300
 .message
+	padding: 0 0 10px 0 
 	&__left
 		width: 220px
-		padding: 0 20px 0 50px 
+		padding: 30px 20px 0 50px 
 		float: left
 		position: relative
 		z-index: 5
 		+r(768)
-			padding: 10px 0 10px 20px
-			width: 170px 
-		+r(480)
-			padding: 10px 20px
+			padding: 30px 20px
 			width: 100%
 			float: none
 			text-align: center
@@ -794,6 +793,13 @@ h2.title
 	&__right
 		overflow: hidden
 		+clr
+		border-top: 1px solid #e9e9e9
+		padding: 40px 0 0 0 
+		+r(1024)
+			margin: 0 20px 0 
+		+r(768)
+			padding: 20px 20px 0 20px  
+			margin: 0
 	&__date
 		float: right
 		text-align: right
@@ -803,23 +809,34 @@ h2.title
 		line-height: 2
 		letter-spacing: 0.02em 
 		color: #000
+		+r(758)
+			padding-bottom: 20px
 	&__time
 		+f100
 	&__info
 		overflow: hidden
+		max-width: 480px
+		+r(768)
+			clear: both
+		.confirm, .cancel
+			margin-left: 20px
 	&__title
 		+f500
 		font-size: 14px
-		line-height: 18px
+		line-height: 1.35
 		letter-spacing: 0.019em 
 		color: #000
 		display: block
+		margin-bottom: 8px
 	&__link
 		+f300
 		font-size: 14px
 		line-height: 24px
 		letter-spacing: 0.02em 
 		color: #2db9ee
+	&__box
+		font-size: 0
+		padding: 44px 0 50px 0
 	textarea
 		border: 1px solid #eaeaea
 		+transition(border .3s, box-shadow .3s)
@@ -831,8 +848,78 @@ h2.title
 		color: #000
 		+f300
 		height: 98px
+		margin-bottom: 16px
 		&:hover
 			border-color: #c3c3c3
 		&:focus
 			border: 1px solid #1BB4ED
 			box-shadow: 0 0 5px rgba(27, 180, 237, 0.3)
+	&__buttons
+		float: right
+		padding: 5px 0 0 
+		+r(980)
+			float: none
+			margin-bottom: 10px
+		button
+			+r(980)
+				margin-bottom: 10px
+		.confirm
+			margin-left: 34px
+			+r(480)
+				margin-left: 0
+.cancel, .confirm
+	+f300
+	font-size: 12px
+	line-height: 22px
+	letter-spacing: 0.02em
+	position: relative 
+	padding-left: 15px
+	background: none
+	display: inline-block
+	&:before
+		position: absolute
+		top: 7px
+		left: 0
+		content: ""
+.cancel
+	color: #ffb954 
+	&:before
+		+s(close-yellow)
+.confirm
+	color: #a9d16a 
+	&:before
+		+s(check-green)
+	
+//dialog
+.comment
+	border-top: 1px solid #e9e9e9
+	padding: 45px 0 25px 
+	&__right
+		float: right
+		padding: 2px 0 0 0
+		+clr
+		+r(768) 
+			float: none
+	&__left
+		overflow: hidden
+		max-width: 600px
+		padding: 5px 
+		+r(768)
+			float: none
+	&__name, &__my
+		+f300
+		font-size: 14px
+		line-height: 18px
+		letter-spacing: 0.019em 
+		color: #000
+		margin-bottom: 8px
+		a
+			color: #2db9ee
+	&__my
+		+f500
+	p
+		+f100
+		font-size: 14px
+		line-height: 22px
+		letter-spacing: 0.02em 
+		color: #4f4f4f 
