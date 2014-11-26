@@ -8,10 +8,34 @@
   </head>
   <body>
     <div class="out">
-      <header class="header header_absolute">
+      <header class="header">
         <div class="header__top"><a href="#" class="header__logo"></a>
           <div class="header__key">
             <button type="button" class="js-toggle-nav"><i></i></button>
+          </div>
+        </div>
+        <div class="header__middle">
+          <nav class="breadcumbs"><a href="#">Главная</a><a href="#">Фильтр</a></nav>
+          <h1 class="page-title">Ищем BMW 3 series</h1>
+          <div class="page-info">от $ 20 000 до $ 100 000, дизель / бензин, полный / задний привод, 5 / 6 МКП</div>
+        </div>
+        <div class="header__bottom">
+          <div class="header__left">
+            <ul class="tab-pills js-tabs-single">
+              <li><a href="#js-tab1">Таблица</a></li>
+              <li><a href="#js-tab2">Список</a></li>
+            </ul><a href="#" class="btn-do"><i class="icon-star-white"></i><span>1</span></a><a href="#" class="btn-do"><i class="icon-rate-white"></i><span>5</span></a>
+          </div>
+          <div class="header__center"><a href="#" class="btn-do"><i class="icon-filter"></i><span>Изменить фильтр<sup>98</sup></span></a></div>
+          <div class="header__right">
+            <div class="select col col_252">
+              <select class="js-select-single">
+                <option value="Сортируем по стоимости">Сортируем по стоимости</option>
+                <option value="Сортируем по дате">Сортируем по дате</option>
+                <option value="Сортируем по названию">Сортируем по названию</option>
+                <option value="Сортируем по марке">Сортируем по марке</option>
+              </select>
+            </div>
           </div>
         </div>
         <div class="nav js-nav">
@@ -62,182 +86,165 @@
             </div>
           </div>
         </div>
-        <nav class="breadcumbs"><a href="#">Главная</a><a href="#">Фильтр</a></nav>
-        <h1 class="page-title">Ищем BMW 3 series</h1>
-        <div class="page-info">от $ 20 000 до $ 100 000, дизель / бензин, полный / задний привод, 5 / 6 МКП</div>
       </header>
-      <div class="promo promo_catalog">
-        <div class="promo__bottom">
-          <div class="promo__left">
-            <ul class="tab-pills">
-              <li class="is-active"><a href="#">Таблица</a></li>
-              <li><a href="#">Список</a></li>
-            </ul><a href="#" class="btn-do"><i class="icon-star-white"></i><span>1</span></a><a href="#" class="btn-do"><i class="icon-rate-white"></i><span>5</span></a>
-          </div>
-          <div class="promo__right">
-            <div class="select col col_252">
-              <select class="js-select-single">
-                <option value="Сортируем по стоимости">Сортируем по стоимости</option>
-                <option value="Сортируем по дате">Сортируем по дате</option>
-                <option value="Сортируем по названию">Сортируем по названию</option>
-                <option value="Сортируем по марке">Сортируем по марке</option>
-              </select>
+      <div class="js-tabs-group">
+        <div data-id="#js-tab1" class="tabs-content js-tabs-content">
+          <div class="l-center">
+            <div class="row-item-wrap">
+              <ul>
+                <li class="row-item">
+                  <div class="row-item__left"><span class="sticker">акция</span><img src="img/item/bmw-3series-hatchback.png" alt=""></div>
+                  <div class="row-item__right">
+                    <div class="compare">
+                      <button class="compare__rate"></button>
+                      <button class="compare__favorites"></button>
+                    </div><span class="row-item__price">$ 25 300</span><a href="#" class="btn-link">Посмотреть</a>
+                  </div>
+                  <div class="row-item__center"><a href="#"><span class="row-item__title"><span><span>BMW </span></span>320d xDrive Modern Line 
+                        2.0 AT (360л.с.) бензин, задний привод, 6 МКП, серый металлик, </span><span class="row-item__gray">Кроссовер, 2014–2015  </span><span class="row-item__green">В наличии</span></a>
+                    <p>Дополнительно: кожаный салон, система Isofix / LATCH, тонированные окна, золотой металлик, подогрев передних сидений, легкосплавные диски 16", передний центральный подлокотник, активный уси... <a href="#">подробнее</a></p>
+                  </div>
+                </li>
+                <li class="row-item">
+                  <div class="row-item__left"><img src="img/item/bmw-3series-hatchback.png" alt=""></div>
+                  <div class="row-item__right">
+                    <div class="compare">
+                      <button class="compare__rate"></button>
+                      <button class="compare__favorites"></button>
+                    </div><span class="row-item__price">$ 25 300</span><a href="#" class="btn-link">Посмотреть</a>
+                  </div>
+                  <div class="row-item__center"><a href="#"><span class="row-item__title"><span><span>BMW </span></span>320d xDrive Modern Line 
+                        2.0 AT (360л.с.) бензин, задний привод, 6 МКП, серый металлик, </span><span class="row-item__gray">Кроссовер, 2014–2015  </span><span class="row-item__green">В наличии</span></a>
+                    <p>Дополнительно: кожаный салон, система Isofix / LATCH, тонированные окна, золотой металлик, подогрев передних сидений, легкосплавные диски 16", передний центральный подлокотник, активный уси... <a href="#">подробнее</a></p>
+                  </div>
+                </li>
+                <li class="row-item">
+                  <div class="row-item__left"><span class="sticker">акция</span><img src="img/item/bmw-3series-hatchback.png" alt=""></div>
+                  <div class="row-item__right">
+                    <div class="compare">
+                      <button class="compare__rate"></button>
+                      <button class="compare__favorites"></button>
+                    </div><span class="row-item__price">$ 25 300</span><a href="#" class="btn-link">Посмотреть</a>
+                  </div>
+                  <div class="row-item__center"><a href="#"><span class="row-item__title"><span><span>BMW </span></span>320d xDrive Modern Line 
+                        2.0 AT (360л.с.) бензин, задний привод, 6 МКП, серый металлик, </span><span class="row-item__gray">Кроссовер, 2014–2015  </span><span class="row-item__green">В наличии</span></a>
+                    <p>Дополнительно: кожаный салон, система Isofix / LATCH, тонированные окна, золотой металлик, подогрев передних сидений, легкосплавные диски 16", передний центральный подлокотник, активный уси... <a href="#">подробнее</a></p>
+                  </div>
+                </li>
+                <li class="row-item">
+                  <div class="row-item__left"><img src="img/item/bmw-3series-hatchback.png" alt=""></div>
+                  <div class="row-item__right">
+                    <div class="compare">
+                      <button class="compare__rate"></button>
+                      <button class="compare__favorites"></button>
+                    </div><span class="row-item__price">$ 25 300</span><a href="#" class="btn-link">Посмотреть</a>
+                  </div>
+                  <div class="row-item__center"><a href="#"><span class="row-item__title"><span><span>BMW </span></span>320d xDrive Modern Line 
+                        2.0 AT (360л.с.) бензин, задний привод, 6 МКП, серый металлик, </span><span class="row-item__gray">Кроссовер, 2014–2015  </span><span class="row-item__green">В наличии</span></a>
+                    <p>Дополнительно: кожаный салон, система Isofix / LATCH, тонированные окна, золотой металлик, подогрев передних сидений, легкосплавные диски 16", передний центральный подлокотник, активный уси... <a href="#">подробнее</a></p>
+                  </div>
+                </li>
+              </ul>
             </div>
+            <div class="preloader"><img src="img/preloader.png" alt=""></div>
           </div>
-          <div class="promo__center"></div>
         </div>
-      </div>
-      <div class="l-center">
-        <div class="row-item__wrap">
-          <ul>
-            <li class="row-item">
-              <div class="row-item__left"><span class="sticker">акция</span><img src="img/item/bmw-3series-hatchback.png" alt=""></div>
-              <div class="row-item__right">
-                <div class="compare">
-                  <button class="compare__rate"></button>
-                  <button class="compare__favorites"></button>
-                </div><span class="row-item__price">$ 25 300</span><a href="#" class="btn-link">Посмотреть</a>
-              </div>
-              <div class="row-item__center"><a href="#"><span class="row-item__title"><span><span>BMW </span></span>320d xDrive Modern Line 
-                    2.0 AT (360л.с.) бензин, задний привод, 6 МКП, серый металлик, </span><span class="row-item__gray">Кроссовер, 2014–2015  </span><span class="row-item__green">В наличии</span></a>
-                <p>Дополнительно: кожаный салон, система Isofix / LATCH, тонированные окна, золотой металлик, подогрев передних сидений, легкосплавные диски 16", передний центральный подлокотник, активный уси... <a href="#">подробнее</a></p>
-              </div>
+        <div data-id="#js-tab2" class="tabs-content js-tabs-content">
+          <ul class="box-wrap">
+            <li class="box">
+              <div class="compare">
+                <button class="compare__rate"></button>
+                <button class="compare__favorites"></button>
+              </div><a href="#">
+                <div class="box__img"><img src="img/item/bmw-xseries-hatchback.png" alt=""></div>
+                <div class="box__info">
+                  <p><span><span>BMW </span>328i </span>2.0 AT (220л.с.) дизель, полный привод, 6 МКП  </p><span class="box__small">Кроссовер, 2014–2015</span>
+                  <div class="box__bottom"><span class="box__small">В наличии</span><span class="box__price">$ 65 414</span></div>
+                </div></a>
             </li>
-            <li class="row-item">
-              <div class="row-item__left"><img src="img/item/bmw-3series-hatchback.png" alt=""></div>
-              <div class="row-item__right">
-                <div class="compare">
-                  <button class="compare__rate"></button>
-                  <button class="compare__favorites"></button>
-                </div><span class="row-item__price">$ 25 300</span><a href="#" class="btn-link">Посмотреть</a>
-              </div>
-              <div class="row-item__center"><a href="#"><span class="row-item__title"><span><span>BMW </span></span>320d xDrive Modern Line 
-                    2.0 AT (360л.с.) бензин, задний привод, 6 МКП, серый металлик, </span><span class="row-item__gray">Кроссовер, 2014–2015  </span><span class="row-item__green">В наличии</span></a>
-                <p>Дополнительно: кожаный салон, система Isofix / LATCH, тонированные окна, золотой металлик, подогрев передних сидений, легкосплавные диски 16", передний центральный подлокотник, активный уси... <a href="#">подробнее</a></p>
-              </div>
+            <li class="box">
+              <div class="compare">
+                <button class="compare__rate"></button>
+                <button class="compare__favorites"></button>
+              </div><a href="#">
+                <div class="box__img"><span class="sticker">акция</span><img src="img/item/bmw-xseries-hatchback.png" alt=""></div>
+                <div class="box__info">
+                  <p><span><span>BMW </span>328i </span>2.0 AT (220л.с.) дизель, полный привод, 6 МКП  </p><span class="box__small">Кроссовер, 2014–2015</span>
+                  <div class="box__bottom"><span class="box__small">В наличии</span><span class="box__price">$ 65 414</span></div>
+                </div></a>
             </li>
-            <li class="row-item">
-              <div class="row-item__left"><span class="sticker">акция</span><img src="img/item/bmw-3series-hatchback.png" alt=""></div>
-              <div class="row-item__right">
-                <div class="compare">
-                  <button class="compare__rate"></button>
-                  <button class="compare__favorites"></button>
-                </div><span class="row-item__price">$ 25 300</span><a href="#" class="btn-link">Посмотреть</a>
-              </div>
-              <div class="row-item__center"><a href="#"><span class="row-item__title"><span><span>BMW </span></span>320d xDrive Modern Line 
-                    2.0 AT (360л.с.) бензин, задний привод, 6 МКП, серый металлик, </span><span class="row-item__gray">Кроссовер, 2014–2015  </span><span class="row-item__green">В наличии</span></a>
-                <p>Дополнительно: кожаный салон, система Isofix / LATCH, тонированные окна, золотой металлик, подогрев передних сидений, легкосплавные диски 16", передний центральный подлокотник, активный уси... <a href="#">подробнее</a></p>
-              </div>
+            <li class="box">
+              <div class="compare">
+                <button class="compare__rate"></button>
+                <button class="compare__favorites"> </button>
+              </div><a href="#">
+                <div class="box__img"><img src="img/item/bmw-xseries-hatchback.png" alt=""></div>
+                <div class="box__info">
+                  <p><span><span>BMW </span>328i </span>2.0 AT (220л.с.) дизель, полный привод, 6 МКП  </p><span class="box__small">Кроссовер, 2014–2015</span>
+                  <div class="box__bottom"><span class="box__small">В наличии</span><span class="box__price">$ 65 414</span></div>
+                </div></a>
             </li>
-            <li class="row-item">
-              <div class="row-item__left"><img src="img/item/bmw-3series-hatchback.png" alt=""></div>
-              <div class="row-item__right">
-                <div class="compare">
-                  <button class="compare__rate"></button>
-                  <button class="compare__favorites"></button>
-                </div><span class="row-item__price">$ 25 300</span><a href="#" class="btn-link">Посмотреть</a>
-              </div>
-              <div class="row-item__center"><a href="#"><span class="row-item__title"><span><span>BMW </span></span>320d xDrive Modern Line 
-                    2.0 AT (360л.с.) бензин, задний привод, 6 МКП, серый металлик, </span><span class="row-item__gray">Кроссовер, 2014–2015  </span><span class="row-item__green">В наличии</span></a>
-                <p>Дополнительно: кожаный салон, система Isofix / LATCH, тонированные окна, золотой металлик, подогрев передних сидений, легкосплавные диски 16", передний центральный подлокотник, активный уси... <a href="#">подробнее</a></p>
-              </div>
+            <li class="box">
+              <div class="compare">
+                <button class="compare__rate"></button>
+                <button class="compare__favorites"> </button>
+              </div><a href="#">
+                <div class="box__img"><img src="img/item/bmw-xseries-hatchback.png" alt=""></div>
+                <div class="box__info">
+                  <p><span><span>BMW </span>328i </span>2.0 AT (220л.с.) дизель, полный привод, 6 МКП  </p><span class="box__small">Кроссовер, 2014–2015</span>
+                  <div class="box__bottom"><span class="box__small">В наличии</span><span class="box__price">$ 65 414</span></div>
+                </div></a>
             </li>
           </ul>
+          <ul class="box-wrap">
+            <li class="box">
+              <div class="compare">
+                <button class="compare__rate"></button>
+                <button class="compare__favorites"></button>
+              </div><a href="#">
+                <div class="box__img"><img src="img/item/bmw-xseries-hatchback.png" alt=""></div>
+                <div class="box__info">
+                  <p><span><span>BMW </span>328i </span>2.0 AT (220л.с.) дизель, полный привод, 6 МКП  </p><span class="box__small">Кроссовер, 2014–2015</span>
+                  <div class="box__bottom"><span class="box__small">В наличии</span><span class="box__price">$ 65 414</span></div>
+                </div></a>
+            </li>
+            <li class="box">
+              <div class="compare">
+                <button class="compare__rate"></button>
+                <button class="compare__favorites"></button>
+              </div><a href="#">
+                <div class="box__img"><span class="sticker">акция</span><img src="img/item/bmw-xseries-hatchback.png" alt=""></div>
+                <div class="box__info">
+                  <p><span><span>BMW </span>328i </span>2.0 AT (220л.с.) дизель, полный привод, 6 МКП  </p><span class="box__small">Кроссовер, 2014–2015</span>
+                  <div class="box__bottom"><span class="box__small">В наличии</span><span class="box__price">$ 65 414</span></div>
+                </div></a>
+            </li>
+            <li class="box">
+              <div class="compare">
+                <button class="compare__rate"></button>
+                <button class="compare__favorites"></button>
+              </div><a href="#">
+                <div class="box__img"><img src="img/item/bmw-xseries-hatchback.png" alt=""></div>
+                <div class="box__info">
+                  <p><span><span>BMW </span>328i </span>2.0 AT (220л.с.) дизель, полный привод, 6 МКП  </p><span class="box__small">Кроссовер, 2014–2015</span>
+                  <div class="box__bottom"><span class="box__small">В наличии</span><span class="box__price">$ 65 414</span></div>
+                </div></a>
+            </li>
+            <li class="box">
+              <div class="compare">
+                <button class="compare__rate"></button>
+                <button class="compare__favorites"></button>
+              </div><a href="#">
+                <div class="box__img"><img src="img/item/bmw-xseries-hatchback.png" alt=""></div>
+                <div class="box__info">
+                  <p><span><span>BMW </span>328i </span>2.0 AT (220л.с.) дизель, полный привод, 6 МКП  </p><span class="box__small">Кроссовер, 2014–2015</span>
+                  <div class="box__bottom"><span class="box__small">В наличии</span><span class="box__price">$ 65 414</span></div>
+                </div></a>
+            </li>
+          </ul>
+          <div class="preloader"><img src="img/preloader.png" alt=""></div>
         </div>
       </div>
-      <ul class="box-wrap">
-        <li class="box">
-          <div class="compare">
-            <button class="compare__rate"></button>
-            <button class="compare__favorites"></button>
-          </div><a href="#">
-            <div class="box__img"><img src="img/item/bmw-xseries-hatchback.png" alt=""></div>
-            <div class="box__info">
-              <p><span><span>BMW </span>328i </span>2.0 AT (220л.с.) дизель, полный привод, 6 МКП  </p><span class="box__small">Кроссовер, 2014–2015</span>
-              <div class="box__bottom"><span class="box__small">В наличии</span><span class="box__price">$ 65 414</span></div>
-            </div></a>
-        </li>
-        <li class="box">
-          <div class="compare">
-            <button class="compare__rate"></button>
-            <button class="compare__favorites"></button>
-          </div><a href="#">
-            <div class="box__img"><span class="sticker">акция</span><img src="img/item/bmw-xseries-hatchback.png" alt=""></div>
-            <div class="box__info">
-              <p><span><span>BMW </span>328i </span>2.0 AT (220л.с.) дизель, полный привод, 6 МКП  </p><span class="box__small">Кроссовер, 2014–2015</span>
-              <div class="box__bottom"><span class="box__small">В наличии</span><span class="box__price">$ 65 414</span></div>
-            </div></a>
-        </li>
-        <li class="box">
-          <div class="compare">
-            <button class="compare__rate"></button>
-            <button class="compare__favorites"> </button>
-          </div><a href="#">
-            <div class="box__img"><img src="img/item/bmw-xseries-hatchback.png" alt=""></div>
-            <div class="box__info">
-              <p><span><span>BMW </span>328i </span>2.0 AT (220л.с.) дизель, полный привод, 6 МКП  </p><span class="box__small">Кроссовер, 2014–2015</span>
-              <div class="box__bottom"><span class="box__small">В наличии</span><span class="box__price">$ 65 414</span></div>
-            </div></a>
-        </li>
-        <li class="box">
-          <div class="compare">
-            <button class="compare__rate"></button>
-            <button class="compare__favorites"> </button>
-          </div><a href="#">
-            <div class="box__img"><img src="img/item/bmw-xseries-hatchback.png" alt=""></div>
-            <div class="box__info">
-              <p><span><span>BMW </span>328i </span>2.0 AT (220л.с.) дизель, полный привод, 6 МКП  </p><span class="box__small">Кроссовер, 2014–2015</span>
-              <div class="box__bottom"><span class="box__small">В наличии</span><span class="box__price">$ 65 414</span></div>
-            </div></a>
-        </li>
-      </ul>
-      <ul class="box-wrap">
-        <li class="box">
-          <div class="compare">
-            <button class="compare__rate"></button>
-            <button class="compare__favorites"></button>
-          </div><a href="#">
-            <div class="box__img"><img src="img/item/bmw-xseries-hatchback.png" alt=""></div>
-            <div class="box__info">
-              <p><span><span>BMW </span>328i </span>2.0 AT (220л.с.) дизель, полный привод, 6 МКП  </p><span class="box__small">Кроссовер, 2014–2015</span>
-              <div class="box__bottom"><span class="box__small">В наличии</span><span class="box__price">$ 65 414</span></div>
-            </div></a>
-        </li>
-        <li class="box">
-          <div class="compare">
-            <button class="compare__rate"></button>
-            <button class="compare__favorites"></button>
-          </div><a href="#">
-            <div class="box__img"><span class="sticker">акция</span><img src="img/item/bmw-xseries-hatchback.png" alt=""></div>
-            <div class="box__info">
-              <p><span><span>BMW </span>328i </span>2.0 AT (220л.с.) дизель, полный привод, 6 МКП  </p><span class="box__small">Кроссовер, 2014–2015</span>
-              <div class="box__bottom"><span class="box__small">В наличии</span><span class="box__price">$ 65 414</span></div>
-            </div></a>
-        </li>
-        <li class="box">
-          <div class="compare">
-            <button class="compare__rate"></button>
-            <button class="compare__favorites"></button>
-          </div><a href="#">
-            <div class="box__img"><img src="img/item/bmw-xseries-hatchback.png" alt=""></div>
-            <div class="box__info">
-              <p><span><span>BMW </span>328i </span>2.0 AT (220л.с.) дизель, полный привод, 6 МКП  </p><span class="box__small">Кроссовер, 2014–2015</span>
-              <div class="box__bottom"><span class="box__small">В наличии</span><span class="box__price">$ 65 414</span></div>
-            </div></a>
-        </li>
-        <li class="box">
-          <div class="compare">
-            <button class="compare__rate"></button>
-            <button class="compare__favorites"></button>
-          </div><a href="#">
-            <div class="box__img"><img src="img/item/bmw-xseries-hatchback.png" alt=""></div>
-            <div class="box__info">
-              <p><span><span>BMW </span>328i </span>2.0 AT (220л.с.) дизель, полный привод, 6 МКП  </p><span class="box__small">Кроссовер, 2014–2015</span>
-              <div class="box__bottom"><span class="box__small">В наличии</span><span class="box__price">$ 65 414</span></div>
-            </div></a>
-        </li>
-      </ul>
-      <div class="preloader"><img src="img/preloader.png" alt=""></div>
       <div class="push"></div>
     </div>
     <div class="footer">

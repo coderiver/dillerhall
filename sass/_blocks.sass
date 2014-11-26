@@ -336,6 +336,7 @@ a
 
 .select
 	font-size: 14px
+	display: inline-block
 	+f300
 	.ui-multiselect
 		position: relative
@@ -381,7 +382,7 @@ a
 	overflow: hidden
 	display: inline-block
 	vertical-align: middle
-	margin-right: 80px
+	
 	li
 		float: left
 		border: 1px solid rgba(#fff,.5)
@@ -408,10 +409,11 @@ a
 		color: #fff 
 
 .btn-do
+	position: relative
 	display: inline-block
 	vertical-align: middle
 	margin-right: 10px
-	padding: 0 5px
+	padding: 0 10px
 	height: 30px
 	line-height: 30px
 	text-align: center
@@ -426,6 +428,8 @@ a
 		position: relative
 		top: -2px
 		vertical-align: middle
+	.icon-filte
+		top: 0
 	&:hover
 		border-color: #fff 
 	&:active
@@ -435,7 +439,61 @@ a
 			+svg(star-blue,19,18)
 		.icon-rate-white
 			+svg(rate-blue,14,17)
+		.icon-filter
+			+sp(filter-act) 
+	sup
+		position: absolute
+		left: 100%
+		top: -11px		
+		margin-left: 5px
+		font-size: 11px
+		+f100
 .icon-star-white
 	+svg(star-white,19,18)
 .icon-rate-white
 	+svg(rate-white,14,17) 
+.icon-filter
+	display: inline-block
+	+s(filter) 
+
+.tabs-content
+	display: none
+.tabs-icon
+	text-align: center
+	li
+		display: inline-block
+		margin-left: 5.5%
+		vertical-align: middle
+		&:first-child
+			margin-left: 0
+		&.is-active
+			span
+				display: inline-block
+			i
+				opacity: 1
+	a
+		font-size: 18px
+		color: #fff 
+	span
+		display: none
+		margin-left: 12px
+		vertical-align: middle
+	i
+		display: inline-block
+		vertical-align: middle
+		+opacity(0.5)
+		+tr_o
+		&:hover
+			+opacity(1)
+.icon-tab1
+	+s(tab1)
+.icon-tab2
+	+s(tab2)
+.icon-tab3
+	+s(tab3)
+.icon-tab4
+	+s(tab4)
+.icon-tab5
+	+s(tab5)
+.icon-tab6
+	+s(tab6)

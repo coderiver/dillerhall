@@ -1,0 +1,39 @@
+header.header
+	.header__top
+		a.header__logo(href="#")
+		.header__key
+			button.js-toggle-nav(type="button")
+				i
+	.header__middle
+		nav.breadcumbs
+			a(href="#") Главная
+		h1.page-title Личный кабинет
+	.header__bottom
+		ul.tabs-icon.js-tabs-single
+			li
+				a(href="#js-tab1")
+					i.icon-tab1
+					span tab1
+			li
+				a(href="#js-tab2")
+					i.icon-tab2
+					span Избранные автомобили
+			li
+				a(href="#js-tab3")
+					i.icon-tab3
+					span История просмотров
+			li
+				a(href="#js-tab4")
+					i.icon-tab4
+					span История сравнений
+			li
+				a(href="#js-tab5")
+					i.icon-tab5
+					span Личные данные
+			li
+				a(href="#js-tab6")
+					i.icon-tab6
+					span Рассылка
+	include _nav.jade
+
+
