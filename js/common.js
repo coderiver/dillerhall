@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
-	// $(document).on("click", function(){
-	// 	$(".js-popup").hide();
-	// });
+	$(document).on("click", function(){
+		$(".js-menu").removeClass("is-active");
+	});
 
 // add any block
 	$("body").on("click",".js-add-btn",function(){
@@ -48,6 +48,7 @@ $(".js-select-single").multiselect({
    hide: ["fade", 200] 
 });
 
+// single tabs
 	function tabsSingleLoad() {
         var hash = window.location.hash;
         if (hash) {
@@ -74,6 +75,11 @@ $(".js-select-single").multiselect({
         $('[data-id="'+content+'"]').fadeIn();
         window.location.hash = this.hash;
         return false;
+    });
+
+$('.js-menu').on("click",function(event) {
+      	$(this).toggleClass("is-active");
+      	event.stopPropagation()
     });
 
 });

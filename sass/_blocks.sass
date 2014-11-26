@@ -497,3 +497,70 @@ a
 	+s(tab5)
 .icon-tab6
 	+s(tab6)
+.icon-user
+	+svg(user,13,14)
+.menu
+	position: relative
+	width: 175px
+	+f300
+	&:after
+		content: ""
+		position: absolute
+		right: 14px
+		top: 9px
+		+svg(select-white,5,14)
+	&.is-active
+		.menu__item
+			border-radius: 5px 5px 0 0
+		.menu__list
+			+opacity(1)
+			visibility: visible
+	&:hover,
+	&.is-active
+		.menu__item
+			background: #49c3f1
+	&.is-visible
+		.menu__list
+			visibility: visible
+	&__item
+		position: relative
+		padding: 0 25px 0 34px 
+		height: 30px
+		line-height: 30px
+		background: #32bcef
+		+br5
+		font-size: 14px
+		color: #fff 
+		cursor: pointer
+		+tr_bg
+		white-space: nowrap
+		overflow: hidden
+		text-overflow: ellipsis
+		.icon-user
+			position: absolute
+			top: 8px
+			left: 13px
+	a
+		color: #fff
+	&__list
+		position: absolute
+		top: 100%
+		left: 0
+		right: 0
+		z-index: 10
+		padding: 0 0 14px 
+		background: #49c3f1
+		border-radius: 0 0 5px 5px 
+		+opacity(0)
+		+tr_o
+		visibility: hidden
+		a
+			display: block
+			font-size: 12px
+			padding: 2px 10px 2px 34px 
+			opacity: 0.7
+			+tr_o
+			&:hover
+				opacity: 1
+		
+		
