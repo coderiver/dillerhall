@@ -1,0 +1,32 @@
+doctype
+html
+	head
+		include _head.jade
+	body
+		.out
+			include _header.jade
+			.l-center
+				.messages
+					h2.title Диалог с дилером Мультимоторс
+				.message
+					.message__left
+						img(src="img/item/bmw-5series-hatchback2.png", alt="")
+					.message__right
+						span.message__date 01.05.14,
+							span.message__time 12:00
+						.massege__info
+							span.message__title 5 запросов, последний:
+							a.message__link BMW 320d xDrive Modern Line  2.0 AT (220л.с.) дизель, полный привод, 6 МКП, красный металлик, $ 44 500
+						.message__box
+							textarea(placeholder="Введите ваше сообщение...")
+							.message__buttons
+								a(href="#").message__cancel Отменить запрос
+								a(href="#").message__confirm Подтвердить и завершить запрос
+							button.btn-link Отправить
+
+			.preloader
+				img(src="img/preloader.png", alt="")
+			.push 
+		include _footer.jade 
+
+

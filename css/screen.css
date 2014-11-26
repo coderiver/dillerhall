@@ -431,25 +431,25 @@ a { text-decoration: none; }
 .search { padding: 87px 40px 70px; }
 @media only screen and (max-width: 768px) { .search { padding: 60px 40px 60px; } }
 @media only screen and (max-width: 480px) { .search { padding: 40px 20px 30px; } }
-.search .input { height: 40px; padding: 0 46px; color: #1bb4ed; margin-bottom: 9px; }
+.search__keyword { height: 40px; padding: 0 46px; color: #1bb4ed; margin-bottom: 9px; }
 .search__label { max-width: 592px; margin: 0 auto 36px; }
-.search__label.js-active label { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
-.search__label label { position: relative; display: block; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80); opacity: 0.8; will-change: opacity; }
+.search__label.js-active div { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
+.search__label div { position: relative; display: block; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80); opacity: 0.8; will-change: opacity; }
 .search__label_mod .input { height: 70px; padding: 0 70px; font-size: 24px; }
 .search__label_mod .search__icon { background: url("../img/svg/glass-act.svg") no-repeat 0 0; -moz-background-size: 25px 25px; -o-background-size: 25px 25px; -webkit-background-size: 25px 25px; background-size: 25px 25px; width: 25px; height: 25px; display: inline-block; margin-top: -13px; }
 .ie8 .search__label_mod .search__icon { background: url('../img/icons-sd38cab1419.png') 0 -321px no-repeat; width: 14px; height: 14px; }
 .search__label_mod .search__delete { background: url('../img/icons-sd38cab1419.png') 0 -112px no-repeat; width: 23px; height: 23px; margin-top: -12px; right: 23px; }
 .search__icon { background: url("../img/svg/glass-act.svg") no-repeat 0 0; -moz-background-size: 18px 18px; -o-background-size: 18px 18px; -webkit-background-size: 18px 18px; background-size: 18px 18px; width: 18px; height: 18px; display: inline-block; position: absolute; top: 50%; margin-top: -9px; left: 20px; }
 .ie8 .search__icon { background: url('../img/icons-sd38cab1419.png') 0 -321px no-repeat; width: 14px; height: 14px; }
-.search__delete { background: url('../img/icons-sd38cab1419.png') 0 -183px no-repeat; width: 14px; height: 14px; position: absolute; top: 50%; margin-top: -7px; right: 15px; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30); opacity: 0.3; }
-.search__delete.js-not { display: none; }
+.search__delete { background: url('../img/icons-sd38cab1419.png') 0 -183px no-repeat; width: 14px; height: 14px; position: absolute; top: 50%; margin-top: -7px; right: 15px; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30); opacity: 0.3; -moz-transition: opacity 0.2s linear; -o-transition: opacity 0.2s linear; -webkit-transition: opacity 0.2s linear; transition: opacity 0.2s linear; will-change: opacity; }
+.search__delete.js-not { visibility: hidden; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; }
 .search__text { width: 100%; max-width: 530px; margin: 0 auto; font-family: "museosanscyrl_300", Arial, sans-serif; font-size: 14px; line-height: 1.75; color: #4f4f4f; text-align: center; }
 .search__text a { color: #1bb4ed; filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; -moz-transition: opacity 0.2s linear; -o-transition: opacity 0.2s linear; -webkit-transition: opacity 0.2s linear; transition: opacity 0.2s linear; will-change: opacity; }
 .search__text a:hover { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80); opacity: 0.8; }
 .search ul { font-size: 0; }
 .search li { display: inline-block; }
 
-.pills { color: black; font-family: "museosanscyrl_100", Arial, sans-serif; font-size: 13px; letter-spacing: 0.02em; line-height: 16px; padding: 0 10px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; display: inline-block; -moz-transition: color 0.2s linear; -o-transition: color 0.2s linear; -webkit-transition: color 0.2s linear; transition: color 0.2s linear; margin-right: 6px; }
+.pills { color: black; font-family: "museosanscyrl_100", Arial, sans-serif; font-size: 13px; letter-spacing: 0.02em; line-height: 1.25; padding: 0 10px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; display: inline-block; -moz-transition: color 0.2s linear; -o-transition: color 0.2s linear; -webkit-transition: color 0.2s linear; transition: color 0.2s linear; margin-right: 6px; }
 .pills:hover { color: #2db9ee; }
 .pills.is-active { color: white; background: #2db9ee; }
 
@@ -459,12 +459,12 @@ a { text-decoration: none; }
 @media only screen and (max-width: 1024px) { .post-wrap { padding: 40px 25px 10px; } }
 @media only screen and (max-width: 768px) { .post-wrap { padding: 40px 0 10px; } }
 .post:first-child { border-top: none; }
-.post__title { font-size: 16px; color: black; line-height: 24px; letter-spacing: 0.02em; font-family: "museosanscyrl_300", Arial, sans-serif; display: inline-block; margin-bottom: 12px; -moz-transition: color 0.2s linear; -o-transition: color 0.2s linear; -webkit-transition: color 0.2s linear; transition: color 0.2s linear; }
+.post__title { font-size: 16px; color: black; line-height: 1.5; letter-spacing: 0.02em; font-family: "museosanscyrl_300", Arial, sans-serif; display: inline-block; margin-bottom: 12px; -moz-transition: color 0.2s linear; -o-transition: color 0.2s linear; -webkit-transition: color 0.2s linear; transition: color 0.2s linear; }
 .post__title span { font-family: "museosanscyrl_500", Arial, sans-serif; }
 .post__title:hover { color: #17c0ff; }
-.post p { font-family: "museosanscyrl_100", Arial, sans-serif; font-size: 14px; line-height: 24px; color: black; margin-bottom: 13px; }
+.post p { font-family: "museosanscyrl_100", Arial, sans-serif; font-size: 14px; line-height: 1.75; color: black; margin-bottom: 13px; }
 .post p span { font-family: "museosanscyrl_500", Arial, sans-serif; }
-.post__small { font-family: "museosanscyrl_300", Arial, sans-serif; color: #b5b5b5; font-size: 12px; line-height: 24px; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80); opacity: 0.8; display: inline-block; will-change: opacity; }
+.post__small { font-family: "museosanscyrl_300", Arial, sans-serif; color: #b5b5b5; font-size: 12px; line-height: 2; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80); opacity: 0.8; display: inline-block; will-change: opacity; }
 
 .search-row { padding: 12px 0 80px 0; }
 
@@ -497,19 +497,19 @@ a { text-decoration: none; }
 .box .sticker { position: absolute; top: 0; left: 0; }
 .box .compare { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; position: absolute; top: 30px; right: 30px; }
 
-.compare { -moz-transition: opacity 0.2s linear; -o-transition: opacity 0.2s linear; -webkit-transition: opacity 0.2s linear; transition: opacity 0.2s linear; will-change: opacity; z-index: 99; display: inline-block; font-size: 0; }
+.compare { -moz-transition: opacity 0.2s linear; -o-transition: opacity 0.2s linear; -webkit-transition: opacity 0.2s linear; transition: opacity 0.2s linear; will-change: opacity; z-index: 5; display: inline-block; font-size: 0; }
 .compare__rate { background: url("../img/svg/rate.svg") no-repeat 0 0; -moz-background-size: 14px 18px; -o-background-size: 14px 18px; -webkit-background-size: 14px 18px; background-size: 14px 18px; width: 14px; height: 18px; display: inline-block; }
 .ie8 .compare__rate { background: url('../img/icons-sd38cab1419.png') 0 -785px no-repeat; width: 14px; height: 17px; }
 .compare__rate:hover { background: url("../img/svg/rate-blue.svg") no-repeat 0 0; -moz-background-size: 14px 18px; -o-background-size: 14px 18px; -webkit-background-size: 14px 18px; background-size: 14px 18px; width: 14px; height: 18px; display: inline-block; }
 .ie8 .compare__rate:hover { background: url('../img/icons-sd38cab1419.png') 0 -758px no-repeat; width: 14px; height: 17px; }
 .compare__favorites { margin-left: 15px; background: url("../img/svg/star.svg") no-repeat 0 0; -moz-background-size: 18px 16px; -o-background-size: 18px 16px; -webkit-background-size: 18px 16px; background-size: 18px 16px; width: 18px; height: 16px; display: inline-block; }
 .ie8 .compare__favorites { background: url('../img/icons-sd38cab1419.png') 0 -1064px no-repeat; width: 19px; height: 18px; }
-.compare__favorites:hover { background: url("../img/svg/star-blue.svg") no-repeat 0 0; -moz-background-size: 18px 16px; -o-background-size: 18px 16px; -webkit-background-size: 18px 16px; background-size: 18px 16px; width: 18px; height: 16px; display: inline-block; }
-.ie8 .compare__favorites:hover { background: url('../img/icons-sd38cab1419.png') 0 -1008px no-repeat; width: 19px; height: 18px; }
+.compare__favorites:hover { background: url("../img/svg/star-act.svg") no-repeat 0 0; -moz-background-size: 18px 16px; -o-background-size: 18px 16px; -webkit-background-size: 18px 16px; background-size: 18px 16px; width: 18px; height: 16px; display: inline-block; }
+.ie8 .compare__favorites:hover { background: url('../img/icons-sd38cab1419.png') 0 -980px no-repeat; width: 19px; height: 18px; }
 
 .comp-wrap { padding: 50px 0; }
 .comp-wrap h2.title { text-align: center; font-family: "museosanscyrl_300", Arial, sans-serif; margin-bottom: 14px; }
-.comp-wrap .comp-text { font-size: 18px; line-height: 26px; letter-spacing: 0.02em; color: black; text-align: center; max-width: 440px; margin: 0 auto 25px; font-family: "museosanscyrl_100", Arial, sans-serif; }
+.comp-wrap .comp-text { font-size: 18px; line-height: 1.45; letter-spacing: 0.02em; color: black; text-align: center; max-width: 440px; margin: 0 auto 25px; font-family: "museosanscyrl_100", Arial, sans-serif; }
 
 .comp { max-width: 980px; padding: 47px 83px 20px 76px; *zoom: 1; border-top: 1px solid #ededed; }
 .comp:after { content: " "; display: table; clear: both; }
@@ -537,11 +537,11 @@ a { text-decoration: none; }
 .ie8 .comp__delete { background: url('../img/icons-sd38cab1419.png') 0 -164px no-repeat; width: 9px; height: 9px; }
 .comp__delete:hover { background: url("../img/svg/close-blue.svg") no-repeat 0 0; -moz-background-size: 9px 9px; -o-background-size: 9px 9px; -webkit-background-size: 9px 9px; background-size: 9px 9px; width: 9px; height: 9px; display: inline-block; }
 .ie8 .comp__delete:hover { background: url('../img/icons-sd38cab1419.png') 0 -145px no-repeat; width: 9px; height: 9px; }
-.comp__date { font-family: "museosanscyrl_300", Arial, sans-serif; font-size: 12px; line-height: 24px; letter-spacing: 0.02em; color: black; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50); opacity: 0.5; float: right; }
+.comp__date { font-family: "museosanscyrl_300", Arial, sans-serif; font-size: 12px; line-height: 2; letter-spacing: 0.02em; color: black; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50); opacity: 0.5; float: right; }
 
 h2.title { font-size: 24px; font-family: "museosanscyrl_100", Arial, sans-serif; font-weight: normal; letter-spacing: 0.02em; color: #010101; }
 
-.sticker { display: inline-block; font-family: "museosanscyrl_300", Arial, sans-serif; color: white; font-size: 10px; letter-spacing: 0.02em; background: #ff465c; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; padding: 1px 6px 2px 6px; line-height: 1; z-index: 99; }
+.sticker { display: inline-block; font-family: "museosanscyrl_300", Arial, sans-serif; color: white; font-size: 10px; letter-spacing: 0.02em; background: #ff465c; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; padding: 1px 6px 2px 6px; line-height: 1; z-index: 5; }
 
 .row-item { padding: 22px 1px 20px 2px; border-bottom: 1px solid #e9e9e9; }
 .row-item:hover img { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
@@ -563,15 +563,67 @@ h2.title { font-size: 24px; font-family: "museosanscyrl_100", Arial, sans-serif;
 .row-item__center a { display: inline-block; letter-spacing: 0.02em; font-family: "museosanscyrl_100", Arial, sans-serif; margin-bottom: 10px; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80); opacity: 0.8; -moz-transition: opacity 0.2s linear; -o-transition: opacity 0.2s linear; -webkit-transition: opacity 0.2s linear; transition: opacity 0.2s linear; will-change: opacity; }
 .row-item__center a:hover { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
 .row-item__center a:hover .row-item__title { color: #1bb4ed; }
-.row-item__center p { font-family: "museosanscyrl_100", Arial, sans-serif; color: black; letter-spacing: 0.02em; font-size: 13px; line-height: 20px; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50); opacity: 0.5; }
+.row-item__center p { font-family: "museosanscyrl_100", Arial, sans-serif; color: black; letter-spacing: 0.02em; font-size: 13px; line-height: 1.6; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50); opacity: 0.5; }
 .row-item__center p a { color: #1bb4ed; text-decoration: underline; margin-bottom: 0; }
 .row-item__center p a:hover { text-decoration: none; }
-.row-item__title { font-size: 14px; line-height: 23.9px; -moz-transition: color 0.2s linear; -o-transition: color 0.2s linear; -webkit-transition: color 0.2s linear; transition: color 0.2s linear; color: black; }
+.row-item__title { font-size: 14px; line-height: 1.45; -moz-transition: color 0.2s linear; -o-transition: color 0.2s linear; -webkit-transition: color 0.2s linear; transition: color 0.2s linear; color: black; }
 @media only screen and (max-width: 480px) { .row-item__title { display: block; } }
 .row-item__title span { font-family: "museosanscyrl_300", Arial, sans-serif; font-size: 15.93px; }
 .row-item__title span span { font-family: "museosanscyrl_500", Arial, sans-serif; }
 .row-item__gray { font-size: 13.94px; color: #b5b5b5; }
 .row-item__green { font-size: 11.95px; color: #a9d16a; margin-left: 5px; }
+
+.request { padding: 35px 0 50px; border-bottom: 1px solid #ededed; }
+.request__left { width: 220px; padding: 0 20px 0 50px; float: left; position: relative; z-index: 5; }
+@media only screen and (max-width: 768px) { .request__left { padding: 10px 0 10px 20px; width: 170px; } }
+@media only screen and (max-width: 480px) { .request__left { padding: 10px 20px; width: 100%; float: none; text-align: center; } }
+.request__left img { max-width: 100%; }
+.request__right { width: 270px; text-align: right; float: right; position: relative; z-index: 5; }
+@media only screen and (max-width: 1024px) { .request__right { padding: 0 20px 0 0; width: 290px; } }
+@media only screen and (max-width: 480px) { .request__right { padding: 10px 20px; width: 100%; float: none; } }
+.request__info { font-family: "museosanscyrl_300", Arial, sans-serif; font-size: 12px; line-height: 2; letter-spacing: 0.02em; display: block; margin-bottom: 3px; }
+.request__time { font-family: "museosanscyrl_100", Arial, sans-serif; }
+.request__link { color: #ee6e7d; font-size: 12px; line-height: 2; letter-spacing: 0.02em; font-family: "museosanscyrl_500", Arial, sans-serif; }
+.request__center { overflow: hidden; }
+@media only screen and (max-width: 768px) { .request__center { clear: both; padding: 20px 20px 0 20px; } }
+.request__title { font-family: "museosanscyrl_300", Arial, sans-serif; font-size: 16px; letter-spacing: 0.019em; display: block; }
+.request__text a { font-family: "museosanscyrl_300", Arial, sans-serif; font-size: 12px; line-height: 1.5; letter-spacing: 0.02em; color: black; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80); opacity: 0.8; }
+.request__text a span { font-family: "museosanscyrl_500", Arial, sans-serif; }
+.request__text a:hover { color: #2db9ee; }
+
+.request-top { text-align: center; padding: 50px 20px 40px 20px; border-bottom: 1px solid #ededed; }
+.request-top h2.title { font-family: "museosanscyrl_300", Arial, sans-serif; margin-bottom: 40px; }
+.request-top ul { margin-bottom: 20px; }
+.request-top ul li { display: inline-block; padding: 0 14px 10px; }
+.request-top ul a { font-family: "museosanscyrl_300", Arial, sans-serif; color: #23b7ed; font-size: 14px; line-height: 24px; letter-spacing: 0.02em; -moz-transition: color 0.2s linear; -o-transition: color 0.2s linear; -webkit-transition: color 0.2s linear; transition: color 0.2s linear; }
+.request-top ul a:hover { color: black; }
+.request-top ul a:hover sup { visibility: visible; filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
+.request-top ul a sup { font-size: 11.01px; position: relative; top: -10px; font-family: "museosanscyrl_100", Arial, sans-serif; visibility: hidden; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; -moz-transition: opacity 0.2s linear; -o-transition: opacity 0.2s linear; -webkit-transition: opacity 0.2s linear; transition: opacity 0.2s linear; }
+.request-top__search { max-width: 540px; margin: 0 auto; }
+.request-top__search div { position: relative; }
+.request-top__keyword { height: 30px; padding: 0 30px; text-align: center; }
+.request-top__icon { background: url("../img/svg/glass.svg") no-repeat 0 0; -moz-background-size: 14px 14px; -o-background-size: 14px 14px; -webkit-background-size: 14px 14px; background-size: 14px 14px; width: 14px; height: 14px; display: inline-block; position: absolute; margin-top: -7px; top: 50%; left: 11px; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50); opacity: 0.5; }
+.ie8 .request-top__icon { background: url('../img/icons-sd38cab1419.png') 0 -380px no-repeat; width: 14px; height: 14px; }
+.request-top__delete { background: url("../img/svg/close-gray.svg") no-repeat 0 0; -moz-background-size: 9px 9px; -o-background-size: 9px 9px; -webkit-background-size: 9px 9px; background-size: 9px 9px; width: 9px; height: 9px; display: inline-block; position: absolute; top: 50%; margin-top: -4px; right: 15px; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30); opacity: 0.3; -moz-transition: opacity 0.2s linear; -o-transition: opacity 0.2s linear; -webkit-transition: opacity 0.2s linear; transition: opacity 0.2s linear; will-change: opacity; }
+.ie8 .request-top__delete { background: url('../img/icons-sd38cab1419.png') 0 -164px no-repeat; width: 9px; height: 9px; }
+.request-top__delete.js-not { visibility: hidden; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; }
+
+.messages h2.title { text-align: center; font-family: "museosanscyrl_300", Arial, sans-serif; }
+
+.message__left { width: 220px; padding: 0 20px 0 50px; float: left; position: relative; z-index: 5; }
+@media only screen and (max-width: 768px) { .message__left { padding: 10px 0 10px 20px; width: 170px; } }
+@media only screen and (max-width: 480px) { .message__left { padding: 10px 20px; width: 100%; float: none; text-align: center; } }
+.message__left img { max-width: 100%; }
+.message__right { overflow: hidden; *zoom: 1; }
+.message__right:after { content: " "; display: table; clear: both; }
+.message__date { float: right; text-align: right; width: 100px; font-family: "museosanscyrl_300", Arial, sans-serif; font-size: 12px; line-height: 2; letter-spacing: 0.02em; color: black; }
+.message__time { font-family: "museosanscyrl_100", Arial, sans-serif; }
+.message__info { overflow: hidden; }
+.message__title { font-family: "museosanscyrl_500", Arial, sans-serif; font-size: 14px; line-height: 18px; letter-spacing: 0.019em; color: black; display: block; }
+.message__link { font-family: "museosanscyrl_300", Arial, sans-serif; font-size: 14px; line-height: 24px; letter-spacing: 0.02em; color: #2db9ee; }
+.message textarea { border: 1px solid #eaeaea; -moz-transition: border 0.3s, box-shadow 0.3s; -o-transition: border 0.3s, box-shadow 0.3s; -webkit-transition: border 0.3s, box-shadow 0.3s; transition: border 0.3s, box-shadow 0.3s; width: 100%; border-radius: 5px; resize: none; padding: 14px; font-size: 14px; color: black; font-family: "museosanscyrl_300", Arial, sans-serif; height: 98px; }
+.message textarea:hover { border-color: #c3c3c3; }
+.message textarea:focus { border: 1px solid #1bb4ed; box-shadow: 0 0 5px rgba(27, 180, 237, 0.3); }
 
 .l { *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }

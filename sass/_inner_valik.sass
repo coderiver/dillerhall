@@ -172,7 +172,7 @@
 		padding: 60px 40px 60px 
 	+r(480)
 		padding: 40px 20px 30px 
-	.input
+	&__keyword
 		height: 40px
 		padding: 0 46px
 		color: #1bb4ed
@@ -181,9 +181,9 @@
 		max-width: 592px
 		margin: 0 auto 36px
 		&.js-active
-			label
+			div
 				+opacity(1)
-		label
+		div
 			position: relative
 			display: block
 			+opacity(0.8)
@@ -213,8 +213,11 @@
 		margin-top: -7px
 		right: 15px
 		+opacity(0.3)
+		+tr_op
+		will-change: opacity
 		&.js-not
-			display: none
+			visibility: hidden
+			+opacity(0)
 	&__text
 		width: 100%
 		max-width: 530px
@@ -241,7 +244,7 @@
 	+f100
 	font-size: 13px
 	letter-spacing: 0.02em
-	line-height: 16px
+	line-height: 1.25
 	padding: 0 10px
 	+border-radius(3px)
 	display: inline-block
@@ -271,7 +274,7 @@
 	&__title
 		font-size: 16px
 		color: #000 
-		line-height: 24px
+		line-height: 1.5
 		letter-spacing: 0.02em 
 		+f300
 		display: inline-block
@@ -284,7 +287,7 @@
 	p
 		+f100
 		font-size: 14px
-		line-height: 24px
+		line-height: 1.75
 		color: #000
 		margin-bottom: 13px
 		span
@@ -293,7 +296,7 @@
 		+f300
 		color: #b5b5b5
 		font-size: 12px
-		line-height: 24px 
+		line-height: 2 
 		+opacity(0.8)
 		display: inline-block
 		will-change: opacity
@@ -400,7 +403,7 @@
 .compare
 	+tr_op
 	will-change: opacity
-	z-index: 99
+	z-index: 5
 	display: inline-block
 	font-size: 0
 	&__rate
@@ -411,7 +414,7 @@
 		margin-left: 15px
 		+svg(star, 18, 16)
 		&:hover
-			+svg(star-blue, 18, 16)
+			+svg(star-act, 18, 16)
 		
 //personal
 .comp-wrap
@@ -422,7 +425,7 @@
 		margin-bottom: 14px
 	.comp-text
 		font-size: 18px
-		line-height: 26px
+		line-height: 1.45
 		letter-spacing: 0.02em 
 		color: #000
 		text-align: center
@@ -506,7 +509,7 @@
 	&__date		
 		+f300
 		font-size: 12px
-		line-height: 24px
+		line-height: 2
 		letter-spacing: 0.02em 
 		color: #000
 		+opacity(0.5) 
@@ -528,7 +531,7 @@ h2.title
 	+border-radius(3px)
 	padding: 1px 6px 2px 6px  
 	line-height: 1
-	z-index: 99
+	z-index: 5
 //row-item
 .row-item
 	padding: 22px 1px 20px 2px
@@ -606,7 +609,7 @@ h2.title
 			color: #000 
 			letter-spacing: 0.02em 
 			font-size: 13px
-			line-height: 20px
+			line-height: 1.6
 			+opacity(0.5)
 			a
 				color: #1bb4ed
@@ -616,7 +619,7 @@ h2.title
 					text-decoration: none
 	&__title
 		font-size: 14px
-		line-height: 23.9px
+		line-height: 1.45
 		+tr_color
 		color: #000 
 		+r(480)
@@ -633,3 +636,203 @@ h2.title
 		font-size: 11.95px
 		color: #a9d16a	 
 		margin-left: 5px
+		
+//Request
+.request
+	padding: 35px 0 50px 
+	border-bottom: 1px solid #ededed
+	&__left
+		width: 220px
+		padding: 0 20px 0 50px 
+		float: left
+		position: relative
+		z-index: 5
+		+r(768)
+			padding: 10px 0 10px 20px
+			width: 170px 
+		+r(480)
+			padding: 10px 20px
+			width: 100%
+			float: none
+			text-align: center
+		img
+			max-width: 100%
+	&__right
+		width: 270px
+		text-align: right
+		float: right
+		position: relative
+		z-index: 5
+		+r(1024)
+			padding: 0 20px 0 0 
+			width: 290px
+		+r(480)
+			padding: 10px 20px
+			width: 100%
+			float: none
+	&__info
+		+f300
+		font-size: 12px
+		line-height: 2
+		letter-spacing: 0.02em
+		display: block 
+		margin-bottom: 3px
+	&__time
+		+f100
+	&__link
+		color: #ee6e7d
+		font-size: 12px
+		line-height: 2
+		letter-spacing: 0.02em 
+		+f500 
+	&__center
+		overflow: hidden
+		+r(768)
+			clear: both
+			padding: 20px 20px 0 20px 
+	&__title
+		+f300
+		font-size: 16px
+		letter-spacing: 0.019em 
+		display: block
+	&__text
+		a
+			+f300
+			font-size: 12px
+			line-height: 1.5
+			letter-spacing: 0.02em 
+			color: #000
+			+opacity(0.8) 
+			span
+				+f500
+			&:hover
+				color: #2db9ee 
+
+.request-top
+	text-align: center
+	padding: 50px 20px 40px 20px
+	border-bottom: 1px solid #ededed 
+	h2.title
+		+f300
+		margin-bottom: 40px
+	ul
+		margin-bottom: 20px
+		li
+			display: inline-block
+			padding: 0 14px 10px 
+		a
+			+f300
+			color: #23b7ed
+			font-size: 14px
+			line-height: 24px
+			letter-spacing: 0.02em 
+			+tr_color
+			&:hover
+				color: #000000
+				sup
+					visibility: visible
+					+opacity(1) 
+			sup
+				font-size: 11.01px
+				position: relative
+				top: -10px
+				+f100
+				visibility: hidden
+				+opacity(0)
+				+tr_op
+	&__search
+		max-width: 540px
+		margin: 0 auto
+		div
+			position: relative
+	&__keyword
+		height: 30px
+		padding: 0 30px 
+		text-align: center
+	&__icon
+		+svg(glass, 14, 14)
+		position: absolute
+		margin-top: -7px
+		top: 50%
+		left: 11px
+		+opacity(0.5)
+	&__delete
+		+svg(close-gray, 9, 9)
+		position: absolute
+		top: 50%
+		margin-top: -4px
+		right: 15px
+		+opacity(0.3)
+		+tr_op
+		will-change: opacity
+		&.js-not
+			visibility: hidden
+			+opacity(0)
+
+//message
+.messages
+	h2.title
+		text-align: center
+		+f300
+.message
+	&__left
+		width: 220px
+		padding: 0 20px 0 50px 
+		float: left
+		position: relative
+		z-index: 5
+		+r(768)
+			padding: 10px 0 10px 20px
+			width: 170px 
+		+r(480)
+			padding: 10px 20px
+			width: 100%
+			float: none
+			text-align: center
+		img
+			max-width: 100%
+	&__right
+		overflow: hidden
+		+clr
+	&__date
+		float: right
+		text-align: right
+		width: 100px
+		+f300
+		font-size: 12px
+		line-height: 2
+		letter-spacing: 0.02em 
+		color: #000
+	&__time
+		+f100
+	&__info
+		overflow: hidden
+	&__title
+		+f500
+		font-size: 14px
+		line-height: 18px
+		letter-spacing: 0.019em 
+		color: #000
+		display: block
+	&__link
+		+f300
+		font-size: 14px
+		line-height: 24px
+		letter-spacing: 0.02em 
+		color: #2db9ee
+	textarea
+		border: 1px solid #eaeaea
+		+transition(border .3s, box-shadow .3s)
+		width: 100%
+		+br5
+		resize: none
+		padding: 14px 
+		font-size: 14px
+		color: #000
+		+f300
+		height: 98px
+		&:hover
+			border-color: #c3c3c3
+		&:focus
+			border: 1px solid #1BB4ED
+			box-shadow: 0 0 5px rgba(27, 180, 237, 0.3)
