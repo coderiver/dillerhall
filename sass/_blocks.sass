@@ -333,3 +333,109 @@ a
 .icon-lock
 	display: inline-block
 	+s(lock) 
+
+.select
+	font-size: 14px
+	+f300
+	.ui-multiselect
+		position: relative
+		padding: 0 25px 0 15px 
+		width: 100% !important
+		height: 30px
+		border: 1px solid rgba(#fff,.5)
+		+br5
+		font-size: 14px
+		+f300
+		color: #fff 
+		background: none
+		+transition(border .3s, box-shadow .3s)
+		&:hover
+			border-color: #fff 
+		&.ui-state-active
+			box-shadow: 0 0 5px rgba(255, 255, 255, 0.3)
+			border-color: #fff 
+	.ui-icon
+		position: absolute
+		right: 12px
+		top: 8px
+		+svg(select-white,5,14)
+.ui-multiselect-single
+	margin-top: 5px
+	background: #fff
+	padding: 15px  
+	+br5
+	&:before
+		content: ""
+		position: absolute
+		top: -10px
+		left: 20px
+		+arr(15,10,#fff,t) 
+	label
+		cursor: pointer
+		+tr_c
+		&:hover
+			color: $blue 
+			
+
+.tab-pills
+	overflow: hidden
+	display: inline-block
+	vertical-align: middle
+	margin-right: 80px
+	li
+		float: left
+		border: 1px solid rgba(#fff,.5)
+		border-left: 0
+		+tr(border .3s)
+		&:first-child
+			border-left: 1px solid rgba(#fff,.5)
+			border-radius: 5px 0 0 5px 
+		&:last-child
+			border-radius: 0 5px 5px 0
+		&:hover
+			border-color: #fff 
+		&.is-active
+			background: #fff
+			a
+				color: $blue 
+	a
+		display: block
+		padding: 0 5px
+		height: 28px
+		line-height: 30px
+		text-align: center
+		min-width: 82px
+		color: #fff 
+
+.btn-do
+	display: inline-block
+	vertical-align: middle
+	margin-right: 10px
+	padding: 0 5px
+	height: 30px
+	line-height: 30px
+	text-align: center
+	min-width: 60px
+	color: #fff
+	+f500
+	+br5
+	+tr(border .3s)
+	border: 1px solid rgba(#fff,.5)
+	i
+		margin-right: 10px
+		position: relative
+		top: -2px
+		vertical-align: middle
+	&:hover
+		border-color: #fff 
+	&:active
+		background: #fff
+		color: $blue
+		.icon-star-white
+			+svg(star-blue,19,18)
+		.icon-rate-white
+			+svg(rate-blue,14,17)
+.icon-star-white
+	+svg(star-white,19,18)
+.icon-rate-white
+	+svg(rate-white,14,17)

@@ -1,4 +1,4 @@
-head.ready(function() {
+$(document).ready(function() {
 
 	// $(document).on("click", function(){
 	// 	$(".js-popup").hide();
@@ -31,6 +31,7 @@ head.ready(function() {
 		return false;
 	});
 
+// scroll to top
 	$(".js-scroll-top").on("click", function (){
         $('html, body').animate({
             scrollTop: 0
@@ -38,5 +39,13 @@ head.ready(function() {
 	 	return false;
     });
 
+$(".js-select-single").multiselect({
+   multiple: false,
+   //header: false,
+   //noneSelectedText: "Select an Option",
+   selectedList: 1,
+   show: ["fade", 200],
+   hide: ["fade", 200] 
+});
 
 });

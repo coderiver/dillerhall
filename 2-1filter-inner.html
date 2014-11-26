@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="out">
-      <header class="header">
+      <header class="header header_absolute">
         <div class="header__top"><a href="#" class="header__logo"></a>
           <div class="header__key">
             <button type="button" class="js-toggle-nav"><i></i></button>
@@ -62,9 +62,31 @@
             </div>
           </div>
         </div>
-        <nav class="breadcumbs"><a href="#">Главная</a><a href="#">Каталог новых автомобилей</a></nav>
-        <h1 class="page-title">Каталог новых автомобилей</h1>
+        <nav class="breadcumbs"><a href="#">Главная</a><a href="#">Фильтр</a></nav>
+        <h1 class="page-title">Ищем BMW 3 series</h1>
+        <div class="page-info">от $ 20 000 до $ 100 000, дизель / бензин, полный / задний привод, 5 / 6 МКП</div>
       </header>
+      <div class="promo promo_catalog">
+        <div class="promo__bottom">
+          <div class="promo__left">
+            <ul class="tab-pills">
+              <li class="is-active"><a href="#">Таблица</a></li>
+              <li><a href="#">Список</a></li>
+            </ul><a href="#" class="btn-do"><i class="icon-star-white"></i><span>1</span></a><a href="#" class="btn-do"><i class="icon-rate-white"></i><span>5</span></a>
+          </div>
+          <div class="promo__right">
+            <div class="select col col_252">
+              <select class="js-select-single">
+                <option value="Сортируем по стоимости">Сортируем по стоимости</option>
+                <option value="Сортируем по дате">Сортируем по дате</option>
+                <option value="Сортируем по названию">Сортируем по названию</option>
+                <option value="Сортируем по марке">Сортируем по марке</option>
+              </select>
+            </div>
+          </div>
+          <div class="promo__center"></div>
+        </div>
+      </div>
       <div class="l-center">
         <div class="row-item__wrap">
           <ul>
@@ -262,6 +284,13 @@
         <div class="soc"><a href="#" class="soc__fb"></a><a href="#" class="soc__vk"></a><a href="#" class="soc__tw"></a></div>
       </div>
     </div>
-    <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
+    <script src="js/lib/jquery.js"></script>
+    <script src="js/lib/jquery-ui.min.js"></script>
+    <script src="js/lib/jquery.multiselect.min.js"></script>
+    <script src="js/lib/cycle.js"></script>
+    <script src="js/valera.js"></script>
+    <script src="js/valik.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/lib/head.js"></script>
   </body>
 </html>
