@@ -4,7 +4,17 @@ html
 		include _head.jade
 		title 4-0 vacancy
 		.out
-			include _header.jade
+			header.header
+				.header__top
+					a.header__logo(href="#")
+					.header__key
+						button.js-toggle-nav(type="button")
+							i
+				.header__middle
+					nav.breadcumbs
+						a(href="#") Главная
+					h1.page-title Вакансии
+				include _nav.jade
 			.jobs.to-center
 				.l-center
 					.topic

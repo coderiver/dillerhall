@@ -4,7 +4,40 @@ html
 		include _head.jade
 		title 5-0 news
 		.out
-			include _header.jade
+			header.header
+				.header__top
+					a.header__logo(href="#")
+					.header__key
+						button.js-toggle-nav(type="button")
+							i
+				.header__middle
+					nav.breadcumbs
+						a(href="#") Главная
+					h1.page-title Новости официальных дилеров
+				.header__bottom
+					.header__left
+						.select.select_205
+							select.js-select-single
+								option(value="Сортируем по стоимости") Сортируем по стоимости
+								option(value="Сортируем по дате" selected) Сортируем по дате
+								option(value="Сортируем по названию") Сортируем по названию
+								option(value="Сортируем по марке") Сортируем по марке
+					.header__center
+						.header__nav
+							.header__nav-list.is-small
+								a(href="#") Все
+								a(href="#") 2014
+								a(href="#") 2013
+								a(href="#") 2012
+							.select.col.col_252
+								select.js-select-single
+									option(value="Все") Все
+									option(value="2014") 2014
+									option(value="2013") 2013
+									option(value="2012") 2012
+					.header__right
+						a.btn(href="#") Подписаться на новости
+				include _nav.jade
 			.news.to-center
 				a.news__item(href="#")
 					.meta 15 августа, 2014 / BMW Автоидея

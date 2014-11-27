@@ -1,0 +1,36 @@
+header.header
+	.header__top
+		a.header__logo(href="#")
+		.header__key
+			button.js-toggle-nav(type="button")
+				i
+	.header__middle
+		nav.breadcumbs
+			a(href="#") Главная
+		h1.page-title Новости индустрии
+	.header__bottom
+		.header__left
+			.select.select_205
+				select.js-select-single
+					option(value="Сортируем по стоимости") Сортируем по стоимости
+					option(value="Сортируем по дате" selected) Сортируем по дате
+					option(value="Сортируем по названию") Сортируем по названию
+					option(value="Сортируем по марке") Сортируем по марке
+		.header__center
+			.header__nav
+				.header__nav-list.is-small
+					a(href="#") Все         
+					a(href="#") События         
+					a(href="#") Технологии          
+					a(href="#") Полезные статьи          
+					a(href="#") Видеоролики 
+				.select.col.col_252
+					select.js-select-single
+						option(value="Все") Все
+						option(value="События") События
+						option(value="Технологии") Технологии
+						option(value="Полезные статьи") Полезные статьи
+						option(value="Видеоролики") Видеоролики
+		.header__right
+			a.btn(href="#") Подписаться на новости
+	include _nav.jade

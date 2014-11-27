@@ -1,0 +1,30 @@
+header.header.header_news
+	.header__top
+		.header__key
+			button.js-toggle-nav(type="button")
+				i
+	.header__middle
+		nav.breadcumbs
+			a(href="#") Главная
+			a(href="#") Новости индустрии
+		.page-title Мы запустили новый проект
+		.page-subtitle Смотрите какой клёвый получился!
+	.header__bottom
+		.header__left
+			.user
+				.user__pic
+					a(href="#")
+						img(src="http://lorempixel.com/57/57/people", alt="img")
+				.user__info
+					span Текст
+					a(href="#") Наталья Климова
+		.header__center
+			.meta 15 сентября, 2014 / события
+		.header__right
+			a.btn-do(href="#")  
+				i.icon-prev-white
+				|Назад ко всем запросам
+	.header__bg
+		.header__bg-in(style="background-image: url(img/news-bg.jpg)")
+	include _nav.jade 
+
