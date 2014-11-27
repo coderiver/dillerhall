@@ -1,0 +1,65 @@
+doctype
+html
+	head
+		include _head.jade
+	body
+		.out
+			header.header
+				.header__top
+					a.header__logo(href="#")
+					.header__key
+						button.js-toggle-nav(type="button")
+							i
+				.header__middle
+					nav.breadcumbs
+						a(href="#") Главная
+					h1.page-title Личный кабинет
+				.header__bottom
+					.tabs-icon
+						.tabs-icon__item История просмотров
+						ul.tabs-icon__list
+							li
+								a(href="#")
+									i.icon-tab1
+									span Запросы
+							li
+								a(href="#")
+									i.icon-tab2
+									span Избранные автомобили
+							li
+								a(href="#")
+									i.icon-tab3
+									span История просмотров
+							li
+								a(href="#")
+									i.icon-tab4
+									span История сравнений
+							li
+								a(href="#")
+									i.icon-tab5
+									span Личные данные
+							li.is-active
+								a(href="#")
+									i.icon-tab6
+									span Рассылка
+				include _nav.jade
+			.comp-wrap.is-box
+				h2.title Полезная рассылка
+				p.comp-text Обещаем присылать только самую актуальную и полезную информацию компании Дилер Холл.
+				form(action="").form
+					.form__check
+						label.checkbox
+							input(type="checkbox", name="check", value=" ")
+							span.checkbox__title Новые поступления автомобилей
+						label.checkbox
+							input(type="checkbox", name="check", value=" ")
+							span.checkbox__title Скидки и акции от дилеров
+						label.checkbox
+							input(type="checkbox", name="check", value=" ")
+							span.checkbox__title Новости Дилер Холл
+						label.checkbox
+							input(type="checkbox", name="check", value=" ")
+							span.checkbox__title Дублировать входящие сообщения в личном кабинете на мою электронную почту
+					button.btn Полписаться
+			.push 
+		include _footer.jade 

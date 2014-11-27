@@ -1,35 +1,35 @@
 $(document).ready(function() {
 	$('.search__keyword').focusin(function(event) {
-		$('.search__label').addClass('js-active');
+		$('.search__label').addClass('is-active');
 	});
 	$('.search__keyword').focusout(function(event) {
-		$('.search__label').removeClass('js-active');
+		$('.search__label').removeClass('is-active');
 	});
 	//search
 	$('.search__keyword').on('keyup', function(event) {
 	 if($(this).val() == '') {
-		$(this).parent().find('.search__delete').addClass('js-not');
+		$(this).parent().find('.search__delete').addClass('is-not');
 	 } else {
-		$(this).parent().find('.search__delete').removeClass('js-not');
+		$(this).parent().find('.search__delete').removeClass('is-not');
 	 }
 	});
 	$('.search__delete').on('click', function() {
 		$('.search__keyword').val('');
-		$(this).addClass('js-not');
+		$(this).addClass('is-not');
 	});
 	//request-search
 	$('.request-top__keyword').on('keyup', function(event) {
 	 if($(this).val() == '') {
-		$(this).parent().find('.request-top__delete').addClass('js-not');
+		$(this).parent().find('.request-top__delete').addClass('is-not');
 		$(this).removeClass('is-active');
 	 } else {
-		$(this).parent().find('.request-top__delete').removeClass('js-not');
+		$(this).parent().find('.request-top__delete').removeClass('is-not');
 		$(this).addClass('is-active');
 	 }
 	});
 	$('.request-top__delete').on('click', function() {
 		$('.request-top__keyword').val('');
-		$(this).addClass('js-not');
+		$(this).addClass('is-not');
 	});
 	//request-top search
 	$('.request-top__search').focusin(function(event) {

@@ -4,22 +4,51 @@ html
 		include _head.jade
 	body
 		.out
-			include _header.jade
-			.search
-				.l-center
-					.search__label.search__label_mod
-						div
-							input.search__keyword.input
-							i.search__icon
-							button.search__delete.is-not
-					p.search__text По вашему запросу 
-						a(href="#") BMW
-						|  ” найдено  2 результатов.
-			.search-row
-				ul.box-wrap
+			header.header
+				.header__top
+					a.header__logo(href="#")
+					.header__key
+						button.js-toggle-nav(type="button")
+							i
+				.header__middle
+					nav.breadcumbs
+						a(href="#") Главная
+					h1.page-title Личный кабинет
+				.header__bottom
+					.tabs-icon
+						.tabs-icon__item История просмотров
+						ul.tabs-icon__list
+							li
+								a(href="#")
+									i.icon-tab1
+									span Запросы
+							li
+								a(href="#")
+									i.icon-tab2
+									span Избранные автомобили
+							li.is-active
+								a(href="#")
+									i.icon-tab3
+									span История просмотров
+							li
+								a(href="#")
+									i.icon-tab4
+									span История сравнений
+							li
+								a(href="#")
+									i.icon-tab5
+									span Личные данные
+							li
+								a(href="#")
+									i.icon-tab6
+									span Рассылка
+				include _nav.jade
+			.comp-wrap.is-box
+				h2.title Избранные автомобили
+				p.comp-text Для вашего максимального комфорта, все автомобили отмеченные как избранные, хранятся здесь.
+				ul.box-wrap.is-favorites
 					li.box
 						.compare
-							button.compare__rate 
 							button.compare__favorites 
 						a(href="#")
 							.box__img
@@ -36,11 +65,9 @@ html
 									span.box__price $ 65 414
 					li.box
 						.compare
-							button.compare__rate 
 							button.compare__favorites 
 						a(href="#")
 							.box__img
-								span.sticker акция
 								img(src="img/item/bmw-xseries-hatchback.png", alt="")
 							.box__info
 								p
@@ -54,7 +81,6 @@ html
 									span.box__price $ 65 414
 					li.box
 						.compare
-							button.compare__rate 
 							button.compare__favorites  
 						a(href="#")
 							.box__img
@@ -71,8 +97,7 @@ html
 									span.box__price $ 65 414
 					li.box
 						.compare
-							button.compare__rate 
-							button.compare__favorites  
+							button.compare__favorites 
 						a(href="#")
 							.box__img
 								img(src="img/item/bmw-xseries-hatchback.png", alt="")
@@ -86,10 +111,9 @@ html
 								.box__bottom
 									span.box__small В наличии
 									span.box__price $ 65 414
-				ul.box-wrap
+				ul.box-wrap.is-favorites
 					li.box
 						.compare
-							button.compare__rate 
 							button.compare__favorites 
 						a(href="#")
 							.box__img
@@ -106,25 +130,6 @@ html
 									span.box__price $ 65 414
 					li.box
 						.compare
-							button.compare__rate 
-							button.compare__favorites 
-						a(href="#")
-							.box__img
-								span.sticker акция
-								img(src="img/item/bmw-xseries-hatchback.png", alt="")
-							.box__info
-								p
-									span 
-										span BMW 
-										| 328i 
-									| 2.0 AT (220л.с.) дизель, полный привод, 6 МКП  
-								span.box__small Кроссовер, 2014–2015
-								.box__bottom
-									span.box__small В наличии
-									span.box__price $ 65 414
-					li.box
-						.compare
-							button.compare__rate 
 							button.compare__favorites 
 						a(href="#")
 							.box__img
@@ -137,27 +142,8 @@ html
 									| 2.0 AT (220л.с.) дизель, полный привод, 6 МКП  
 								span.box__small Кроссовер, 2014–2015
 								.box__bottom
-									span.box__small В наличии
-									span.box__price $ 65 414
-					li.box
-						.compare
-							button.compare__rate 
-							button.compare__favorites 
-						a(href="#")
-							.box__img
-								img(src="img/item/bmw-xseries-hatchback.png", alt="")
-							.box__info
-								p
-									span 
-										span BMW 
-										| 328i 
-									| 2.0 AT (220л.с.) дизель, полный привод, 6 МКП  
-								span.box__small Кроссовер, 2014–2015
-								.box__bottom
-									span.box__small В наличии
-									span.box__price $ 65 414
-			.preloader
-				img(src="img/preloader.png", alt="")
+									span.box__small.is-yellow Под заказ
+									span.box__price $ --
 			.push 
 		include _footer.jade 
 
