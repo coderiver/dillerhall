@@ -4,7 +4,53 @@ html
 		include _head.jade
 	body
 		.out
-			include _header.jade
+			header.header
+				.header__top
+					a.header__logo(href="#")
+					.header__key
+						button.js-toggle-nav(type="button")
+							i
+				.header__middle
+					nav.breadcumbs
+						a(href="#") Главная
+					h1.page-title Личный кабинет
+				.header__bottom
+					.header__left
+						.select.select_205
+							select.js-select-single
+								option(value="Сортируем по стоимости") Сортируем по стоимости
+								option(value="Сортируем по дате" selected) Сортируем по дате
+								option(value="Сортируем по названию") Сортируем по названию
+								option(value="Сортируем по марке") Сортируем по марке
+					.header__center
+						.tabs-icon
+							.tabs-icon__item История просмотров
+							ul.tabs-icon__list
+								li
+									a(href="#")
+										i.icon-tab1
+										span Запросы
+								li
+									a(href="#")
+										i.icon-tab2
+										span Избранные автомобили
+								li.is-active
+									a(href="#")
+										i.icon-tab3
+										span История просмотров
+								li
+									a(href="#")
+										i.icon-tab4
+										span История сравнений
+								li
+									a(href="#")
+										i.icon-tab5
+										span Личные данные
+								li
+									a(href="#")
+										i.icon-tab6
+										span Рассылка
+				include _nav.jade
 			.request-top
 				.l-center
 					h2.title Мои запросы

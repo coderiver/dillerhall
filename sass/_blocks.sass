@@ -338,6 +338,8 @@ a
 	font-size: 14px
 	display: inline-block
 	+f300
+	&_205
+		width: 205px
 	.ui-multiselect
 		position: relative
 		padding: 0 25px 0 15px 
@@ -428,8 +430,10 @@ a
 		position: relative
 		top: -2px
 		vertical-align: middle
-	.icon-filte
+	.icon-filter
 		top: 0
+	.icon-prev-white
+		top: -1px
 	&:hover
 		border-color: #fff 
 	&:active
@@ -441,6 +445,8 @@ a
 			+svg(rate-blue,14,17)
 		.icon-filter
 			+sp(filter-act) 
+		.icon-prev-white
+			+svg(arr-prev-blue,7,11)
 	sup
 		position: absolute
 		left: 100%
@@ -450,6 +456,8 @@ a
 		+f100
 .icon-star-white
 	+svg(star-white,19,18)
+.icon-prev-white
+	+svg(arr-prev-white,7,11)
 .icon-rate-white
 	+svg(rate-white,14,17) 
 .icon-filter
@@ -623,4 +631,25 @@ a
 			&:hover
 				opacity: 1
 		
-		
+.user
+	&__pic,
+	&__info
+		display: table-cell
+		vertical-align: middle
+	&__pic
+		width: 57px
+		img
+			width: 100%
+			height: auto
+			border: 1px solid #fff
+			border-radius: 50% 
+	&__info
+		color: #fff
+		padding-left: 18px
+		span
+			display: block
+			+f100
+			opacity: 0.5
+		a
+			color: #fff
+			+f500i 

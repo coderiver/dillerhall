@@ -52,8 +52,6 @@ $(".js-select-single").multiselect({
 	function tabsSingleLoad() {
         var hash = window.location.hash;
         if (hash) {
-        	var text =  $('[href="'+hash+'"]').text();
-            $('[href="'+hash+'"]').parents(".js-tabs-single").prev().text(text);
             $('[href="'+hash+'"]').parents("body").find(".js-tabs-content").hide();
             $('[data-id="'+hash+'"]').show();
             $('[href="'+hash+'"]').parents(".js-tabs-single").find("li").removeClass("is-active");
@@ -67,14 +65,11 @@ $(".js-select-single").multiselect({
             
         }
         
-    } 
+    }
    tabsSingleLoad();
     $('.js-tabs-single a').on("click",function () {
         var content = $(this).attr("href");
-        var text = $(this).text();
         $(this).parents(".js-tabs-single").find("li").removeClass("is-active");
-        $(this).parents(".js-tabs-single").prev().text(text);
-        $(this).parents(".js-tab-list").removeClass("is-active");
         $(this).parent().addClass("is-active");
         $(this).parents("body").find(".js-tabs-content").hide();
         $('[data-id="'+content+'"]').show();
@@ -87,11 +82,7 @@ $(".js-select-single").multiselect({
       	$(this).toggleClass("is-active");
       	event.stopPropagation()
     });
-    $('.js-tab-list').on("click",function(event) {
-      	$(this).toggleClass("is-active");
-      	event.stopPropagation()
-    });
 
-
+    
 
 });

@@ -1,0 +1,125 @@
+.promo
+	position: relative
+	overflow: hidden
+	&:hover
+		.promo__img
+			+scale(1.2)
+.promo_index
+	height: 800px
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		z-index: 1 
+		background: rgba($blue, .9) 
+	+r(1400)
+		height: 700px 
+	.promo__in
+		margin: 95px auto 0 
+		max-width: 740px
+		+r(980)
+			margin-top: 55px
+			padding: 0 20px 
+		img
+			margin-bottom: 45px
+			+r(768)
+				margin-bottom: 24px
+		.page-title
+			margin-bottom: 7px
+			+r(768)
+				margin-bottom: 24px
+.promo_news	
+	height: 700px
+	+r(1400)
+		height: 700px
+.promo_catalog
+	height: 300px
+.promo__img
+	position: absolute
+	top: 0
+	right: 0
+	left: 0
+	bottom: 0
+	overflow: hidden
+	+transition(transform 2.4s ease-out)
+	will-change: transform
+	+cover
+.promo__in
+	position: relative
+	z-index: 2
+	text-align: center
+	font-size: 18px
+	+f100
+	color: #fff 
+	.page-descr
+		opacity: 0.7
+	+r(768)
+		font-size: 14px
+.promo__box
+	position: absolute
+	bottom: 0
+	left: 0
+	width: 100%
+	z-index: 2
+	border-top: 1px solid rgba(#fff,.3) 
+	.l-col2
+		vertical-align: middle
+		height: 270px
+		border-left: 1px solid rgba(#fff,.3) 
+		+r(1400)
+			height: 195px
+		+r(1280)
+			height: 150px
+		+r(980)
+			height: 113px
+			border-bottom: 1px solid rgba(#fff,.3) 
+		&:last-child
+			+r(980)
+				border: 0
+		&:first-child
+			+r(980)
+				border-bottom: 1px solid rgba(#fff,.3) 
+.promo__item
+	+f300
+	font-size: 20px 
+	+r(1280)
+		font-size: 18px
+	+r(980)
+		padding-top: 28px
+		width: 300px
+		display: inline-block
+		text-align: left
+	+r(768)
+		width: 285px
+	&:first-child
+		border-left: 0
+	a
+		display: inline-block
+		color: #fff
+		
+		line-height: 1.5
+		&:hover
+			span
+				&:after
+					+transform(translateX(15px))
+	img, span
+		display: inline-block
+		vertical-align: middle
+		text-align: left
+	span
+		margin-left: 48px
+		color: #fff 
+		vertical-align: middle
+		+r(1280)
+			margin-left: 30px
+		&:after
+			content: ""
+			margin-left: 15px
+			+svg(arr-next-white,10,16) 
+			+tr(transform .3s ease-out)
+	img
+		+r(980)
+			max-width: 50px
