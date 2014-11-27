@@ -459,32 +459,92 @@ a
 .tabs-content
 	display: none
 .tabs-icon
+	position: relative
 	text-align: center
-	li
-		display: inline-block
-		margin-left: 5.5%
-		vertical-align: middle
-		&:first-child
-			margin-left: 0
-		&.is-active
-			span
-				display: inline-block
-			i
-				opacity: 1
-	a
-		font-size: 18px
-		color: #fff 
-	span
-		display: none
-		margin-left: 12px
-		vertical-align: middle
-	i
-		display: inline-block
-		vertical-align: middle
-		+opacity(0.5)
-		+tr_o
-		&:hover
+	+r(1024)
+		text-align: left
+	&.is-active
+		.tabs-icon__item
+			box-shadow: 0 0 5px rgba(255, 255, 255, 0.3)
+			border-color: #fff 
+		.tabs-icon__list
 			+opacity(1)
+			margin-top: 5px
+			+br5
+			overflow: hidden
+			visibility: visible
+	&__item
+		position: relative
+		padding: 0 25px 0 15px 
+		height: 30px
+		line-height: 30px
+		border: 1px solid rgba(#fff,.5)
+		+br5
+		cursor: pointer
+		font-size: 14px
+		+f300
+		color: #fff 
+		background: none
+		+transition(border .3s, box-shadow .3s)
+		display: none
+		+r(1024)
+			display: block
+		&:hover
+			border-color: #fff 
+		&:after
+			content: "" 
+			position: absolute
+			right: 12px
+			top: 8px
+			+svg(select-white,5,14)
+	&__list
+		+r(1024)
+			position: absolute
+			top: 100%
+			left: 0
+			right: 0
+			+opacity(0)
+			visibility: hidden
+			padding: 10px 0 
+			background: #fff 
+			border: 1px solid $border
+			+tr_o
+		li
+			display: inline-block
+			margin-left: 5.5%
+			vertical-align: middle
+			+r(1024)
+				display: block
+				margin: 0
+			&:first-child
+				margin-left: 0
+			&.is-active
+				span
+					display: inline-block
+				i
+					opacity: 1
+		a
+			font-size: 18px
+			color: #fff 
+			+r(1024)
+				color: #000 
+				font-size: 16px
+		span
+			display: none
+			margin-left: 12px
+			vertical-align: middle
+			+r(1024)
+				display: block
+		i
+			display: inline-block
+			vertical-align: middle
+			+opacity(0.5)
+			+tr_o
+			+r(1024)
+				display: none
+			&:hover
+				+opacity(1)
+
 .icon-tab1
 	+s(tab1)
 .icon-tab2
