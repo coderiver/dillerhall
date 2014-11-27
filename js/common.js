@@ -67,7 +67,7 @@ $(".js-select-single").multiselect({
             
         }
         
-    }
+    } 
    tabsSingleLoad();
     $('.js-tabs-single a').on("click",function () {
         var content = $(this).attr("href");
