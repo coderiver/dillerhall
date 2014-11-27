@@ -1,0 +1,66 @@
+.box
+	display: table
+	position: relative
+	width: 100%
+	font-size: 12px
+	+f300
+	color: #000 
+	+tr_bg
+	&:before
+		content: "" 
+		position: absolute
+		left: 0
+		top: 0
+		bottom: 1px
+		width: 2px
+		display: none
+	&.is-red
+		&:before
+			display: block
+			background: $red 
+	&.is-orange
+		&:before
+			display: block
+			background: $orange 
+	&.is-green
+		&:before
+			display: block
+			background: $green 
+	&.is-yellow
+		&:before
+			display: block
+			background: $yellow 
+	&.is-gray
+		&:before
+			display: block
+			background: #ccc
+	&:hover
+		background: #f7f7f7 
+	strong
+		+f500
+		font-weight: normal
+	&__item
+		display: table-cell
+		border-bottom: 1px solid $border_light
+		padding: 11px 0
+		vertical-align: top
+	&__number
+		width: 135px
+		padding-left: 35px
+	&__client
+		padding-right: 105px
+
+.user
+	&__meta
+		+clr
+	&__name
+		float: left
+		font-size: 14px
+		+tr_c
+		+f500
+	&__info
+		float: right
+	&__main
+		padding: 8px 0 
+	.is-yellow
+		color: #e5b41f

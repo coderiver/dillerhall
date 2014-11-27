@@ -1,0 +1,61 @@
+.header
+	a.logo(href="#")
+	.nav
+		a(href="#").is-active.is-marked Запросы
+		a(href="#") Склад
+		a(href="#") Настройки
+	.menu.js-menu
+		.menu__item 
+			i.icon-user
+			|Сергей Никacолаев
+		ul.menu__list
+			li
+				a(href="#") Запросы
+			li
+				a(href="#") Избранные авто
+			li
+				a(href="#") История просмотров
+			li
+				a(href="#") История сравнений
+			li
+				a(href="#") Личные данные
+			li
+				a(href="#") Рассылка
+.filter-wrap
+	.filter
+		a.btn(href="#") 
+			| Все запросы
+			em 98
+		a.btn-simple.btn-simple_red(href="#") 
+			| Необработанные
+			em 60
+		a.btn-simple.btn-simple_orange(href="#") 
+			| Отложенные
+			em 60
+		a.btn-simple.btn-simple_green(href="#") 
+			| Принятые
+			em 60
+		a.btn-simple.btn-simple_yellow(href="#") 
+			| С заметками
+			em 60
+		a.btn-simple(href="#") 
+			| Отменённые 
+			em 60
+	.sort
+		.sort__item.sort__order
+			a(href="#").sort__link.js-sort-link № заказа
+			input(type="checkbox" hidden)
+		.sort__item.sort__client
+			a(href="#").sort__link.js-sort-link Клиент
+			input(type="checkbox" hidden)
+		.sort__item.sort__search
+			.search
+				input.input(placeholder="Поиск по клиентам, запросам и диалогам")
+				button.search__btn(type="submit")
+		.sort__item.sort__select
+			select
+				option(value="Посл. сообщение") Посл. сообщение 
+				option(value="Посл. сообщение") Посл. сообщение 
+				option(value="Посл. сообщение") Посл. сообщение 
+				option(value="Посл. сообщение") Посл. сообщение 
+				option(value="Посл. сообщение") Посл. сообщение

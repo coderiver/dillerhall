@@ -1,0 +1,87 @@
+.header
+	padding: 39px 35px 32px 
+	background: #2fbaee  
+	text-align: right
+	.logo
+		position: absolute
+		left: 34px
+		top: 32px
+	.nav,
+	.menu
+		display: inline-block
+		vertical-align: middle
+		text-align: left
+.logo
+	+s(logo)
+.nav
+	a
+		display: inline-block
+		margin-right: 38px
+		position: relative
+		border-bottom: 3px solid transparent
+		font-size: 18px
+		color: #fff
+		+f100 
+		&.is-active
+			border-color: #fff 
+		&.is-marked
+			&:after
+				content: ""
+				position: absolute
+				right: -11px
+				top: 0px
+				width: 4px
+				height: 4px
+				border-radius: 50%
+				background: #fff
+.filter-wrap
+	position: relative
+	margin-bottom: 20px
+	&:after
+		content: ""
+		position: absolute
+		left: 0
+		right: 0
+		height: 20px
+		+g(rgba(#000,.05), rgba(#000,0)) 		
+.filter
+	position: relative
+	padding: 40px 35px 30px
+	.btn,
+	.btn-simple
+		margin-right: 7px
+		
+.sort
+	border-top: 1px solid $border_light
+	display: table
+	width: 100%
+	table-layout: fixed
+	&__item
+		display: table-cell
+		vertical-align: middle
+		padding: 11px 0
+	&__order
+		width: 135px
+		padding: 11px 10px 11px 35px
+	&__client
+		width: 184px
+	&__search
+		width: 410px
+	&__select
+		padding-left: 132px
+	&__link
+		display: inline-block
+		position: relative
+		font-size: 12px
+		+f500
+		color: #000 
+		&:after
+			content: ""
+			position: absolute
+			right: -13px
+			top: 7px
+			+arr(6,4,#000,b) 
+		&.is-active
+			&:after
+				+arr(6,4,#000,t) 
+		

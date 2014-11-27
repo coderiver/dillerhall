@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/screen.css" media="screen,print"><!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+    <title>template</title>
+  </head>
+  <body>
+    <div class="out">
+      <div class="header"><a href="#" class="logo"></a>
+        <div class="nav"><a href="#" class="is-active is-marked">Запросы</a><a href="#">Склад</a><a href="#">Настройки</a></div>
+        <div class="menu js-menu">
+          <div class="menu__item"><i class="icon-user"></i>Сергей Никacолаев</div>
+          <ul class="menu__list">
+            <li><a href="#">Запросы</a></li>
+            <li><a href="#">Избранные авто</a></li>
+            <li><a href="#">История просмотров</a></li>
+            <li><a href="#">История сравнений</a></li>
+            <li><a href="#">Личные данные</a></li>
+            <li><a href="#">Рассылка</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="filter-wrap">
+        <div class="filter"><a href="#" class="btn">Все запросы<em>98</em></a><a href="#" class="btn-simple btn-simple_red">Необработанные<em>60</em></a><a href="#" class="btn-simple btn-simple_orange">Отложенные<em>60</em></a><a href="#" class="btn-simple btn-simple_green">Принятые<em>60</em></a><a href="#" class="btn-simple btn-simple_yellow">С заметками<em>60</em></a><a href="#" class="btn-simple">Отменённые <em>60</em></a></div>
+        <div class="sort">
+          <div class="sort__item sort__order"><a href="#" class="sort__link js-sort-link">№ заказа</a>
+            <input type="checkbox" hidden>
+          </div>
+          <div class="sort__item sort__client"><a href="#" class="sort__link js-sort-link">Клиент</a>
+            <input type="checkbox" hidden>
+          </div>
+          <div class="sort__item sort__search">
+            <div class="search">
+              <input placeholder="Поиск по клиентам, запросам и диалогам" class="input">
+              <button type="submit" class="search__btn"></button>
+            </div>
+          </div>
+          <div class="sort__item sort__select">
+            <select>
+              <option value="Посл. сообщение">Посл. сообщение </option>
+              <option value="Посл. сообщение">Посл. сообщение </option>
+              <option value="Посл. сообщение">Посл. сообщение </option>
+              <option value="Посл. сообщение">Посл. сообщение </option>
+              <option value="Посл. сообщение">Посл. сообщение</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="l-center">
+        <hr><a href="#" class="btn">.btn</a>
+        <hr><a href="#" class="btn btn_fluid">.btn.btn_fluid</a>
+        <hr><a href="#" class="btn-action">.btn-action</a>
+        <hr><a href="#" class="btn-link">.btn-link</a>
+        <hr><a href="#" class="btn-link btn-link_orange">.btn-link.btn-link_orange</a>
+        <hr><a href="#" class="btn-simple">.btn-simple</a>
+        <hr><a href="#" class="btn-simple btn-simple_round">.btn-simple</a>
+        <hr><a href="#" class="btn-simple btn-simple_yellow">.btn-simple.btn-simple_yellow</a>
+        <hr><a href="#" class="btn-simple btn-simple_prev">.btn-simple.btn-simple_prev</a>
+        <hr>
+        <input type="text" class="input">
+        <hr>
+        <form class="js-validate">
+          <label class="field"><span class="field__title">Ваше имя</span><span class="field__body">
+              <input type="text" name="name" required class="input"></span></label>
+          <label class="field"><span class="field__title">Электронная почта</span><span class="field__body">
+              <input type="text" name="email" required class="input"></span></label>
+          <div class="btn-add-wrap to-right">
+            <button data-hidden="js-hidden-field" type="button" class="btn-add js-add-btn">+ добавить e-mail</button>
+          </div>
+          <div hidden class="js-hidden-field">
+            <label class="field"><span class="field__title">Электронная почта</span><span class="field__body">
+                <input type="text" name="email" required class="input"></span></label>
+          </div>
+        </form>
+        <hr><span class="meta">15 сентября, 2014 / События</span>
+        <hr><a href="#" class="link-section">Новости индустрии</a>
+        <hr><a href="#" class="link-title">Мы запустили новый проект! Смотрите какой клевый!</a>
+        <hr><a href="#" class="link-all">Читать все новости</a>
+      </div>
+      <div class="push"></div>
+    </div>
+    <script src="js/lib/jquery.js"></script>
+    <script src="js/lib/jquery-ui.min.js"></script>
+    <script src="js/lib/jquery.multiselect.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/lib/head.js"></script>
+  </body>
+</html>
