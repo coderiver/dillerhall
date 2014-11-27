@@ -1,0 +1,110 @@
+// # SHORT HOWTO
+// ## Sprites
+//     .whatever
+//          +sized-sprite($icons, coderiver) //or
+//          +s(codedby) //gets default value for spritemap as $icons
+// ### animation example
+//     +include keyframes(rotate)
+//        from
+//           +rotate(0)
+//        to
+//           +rotate(360)
+// ## animation usage
+//     body:hover
+//      +animation(rotate 200s linear infinite)
+// ## animations easing, see easings.net for full list and examples, tnx @ai
+//     transition: all 1.2s ceaser($ease-in)
+// ## gradient example
+//     +background-image(linear-gradient(#232323, #5c5c5c));
+//     +g(#232323, #5c5c5c);
+//     horizontal
+//     +gh(#232323, #5c5c5c);
+// ## making bw-images
+//     img
+//          @extend %gray
+// ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
+//     +min-screen(320)
+//          display: none
+// +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
+//
+// ## use cycles
+//     @for $i from 1 through 3
+//       .item-#{$i}
+//          width: 2em * $i;
+//     @each $s in a,b,c
+//          #{$s}
+//              display: none
+// ## fonts 
+// Save fonts to /css/fonts, after that write (eot, woff, ttf):
+// +font(book, cytiapro-black-webfont)  
+// =book
+//  font-family: "book", Arial, sans-serif 
+// insert pics into css
+// div
+//  +pic("blabla.png")
+// span
+//  +png(blabla)
+// p
+//  +jpg(bla)
++font(museosanscyrl_100, museosanscyrl_100)
+=f100
+    font-family: "museosanscyrl_100", Arial, sans-serif 
+    
++font(museosanscyrl_100_italic, museosanscyrl_100_italic)
+=f100i
+    font-family: "museosanscyrl_100_italic", Arial, sans-serif 
+    
++font(museosanscyrl_300, museosanscyrl_300)
+=f300
+    font-family: "museosanscyrl_300", Arial, sans-serif 
+    
++font(museosanscyrl_300_italic, museosanscyrl_300_italic)
+=f300i
+    font-family: "museosanscyrl_300_italic", Arial, sans-serif 
+    
++font(museosanscyrl_500, museosanscyrl_500)
+=f500
+    font-family: "museosanscyrl_500", Arial, sans-serif 
+    
++font(museosanscyrl_500_italic, museosanscyrl_500_italic)
+=f500i
+    font-family: "museosanscyrl_500_italic", Arial, sans-serif 
+
+// hover.psd
+$blue_ligth: #8cd9f5
+$blue: #1bb4ed
+$blue_h: #17c0ff
+$blue_act: #019bd5
+$border: #e5e5e5
+$border_light: #ededed
+$border-input: #d7d7d7
+$border-input_h: #c0c0c0
+$green: #41e58a
+$orange: #f90
+$orange_h: #fba637
+$orange_act: #ee8600
+$yellow: #ffde00
+$green: #41e58a
+$orange: #ff9000
+$red: #ff5b5b
+
+=br
+    border-radius: 10px
+=br5
+    border-radius: 5px
+=br4
+    border-radius: 4px 
+=tr_bg
+    +transition(background .2s linear)
+=tr_color
+    +transition(color .2s linear)
+=tr_c
+    +transition(color .2s linear)
+=tr_shadow
+    +transition(box-shadow .2s linear)
+=tr_s
+    +transition(box-shadow .2s linear)
+=tr_op
+    +transition(opacity .2s linear)
+=tr_o
+    +transition(opacity .2s linear)
