@@ -513,19 +513,29 @@ a { text-decoration: none; }
 
 .address, .delivery, .phones { padding-bottom: 16px; margin-left: 70px; width: 212px; font-size: 14px; vertical-align: top; display: inline-block; font-family: "museosanscyrl_100", Arial, sans-serif; }
 .address:first-child, .delivery:first-child, .phones:first-child { margin-left: 0; }
+<<<<<<< HEAD
+=======
+@media only screen and (max-width: 980px) { .address, .delivery, .phones { margin: 0 0 50px; max-width: none; display: block; } }
+>>>>>>> 2f558b0b9456a6780792c4b2d0c86088eda2b266
 
 .delivery .delivery__link { color: #1bb4ed; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80); opacity: 0.8; }
 .delivery .delivery__link:hover { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
 
 .map { height: 560px; width: 100%; }
 .map .gmnoprint, .map .gm-style-cc, .map .gm-style > div + div > a { display: none !important; }
+<<<<<<< HEAD
+=======
+@media only screen and (max-width: 480px) { .map { height: 340px; } }
+>>>>>>> 2f558b0b9456a6780792c4b2d0c86088eda2b266
 
 .questions { font-size: 18px; padding: 48px 0 124px; }
+.questions .accordion { padding: 0 15px; }
 .questions .accordion__body { padding-bottom: 120px; line-height: 1.75; }
 .questions .questions__wrap { padding: 59px 0 0; }
 
 .topic .topic__title { font-size: 24px; font-weight: normal; font-family: "museosanscyrl_300", Arial, sans-serif; }
 .topic .topic__text { margin-top: 12px; font-size: 18px; font-family: "museosanscyrl_100", Arial, sans-serif; }
+<<<<<<< HEAD
 
 .accordion { font-size: 14px; font-family: "museosanscyrl_100", Arial, sans-serif; }
 .accordion.is-active .accordion__title span:before { -ms-transform: rotate(180deg); -webkit-transform: rotate(180deg); transform: rotate(180deg); }
@@ -534,11 +544,24 @@ a { text-decoration: none; }
 .accordion .accordion__title span { position: relative; margin-right: 20px; display: inline-block; border-bottom: 1px dotted #1bb4ed; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; }
 .accordion .accordion__title span:before { position: absolute; content: ""; top: 13px; right: -20px; width: 0px; height: 0px; border-style: solid; border-width: 5px 4px 0 4px; border-color: #1bb4ed transparent transparent transparent; }
 .accordion .accordion__body { margin: 0 auto; width: 740px; display: none; }
+=======
+@media only screen and (max-width: 480px) { .topic .topic__text { padding: 0 35px; font-size: 14px; } }
+
+.accordion { font-size: 14px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; font-family: "museosanscyrl_100", Arial, sans-serif; }
+.accordion.is-active .accordion__title:before { -ms-transform: rotate(180deg); -webkit-transform: rotate(180deg); transform: rotate(180deg); }
+.accordion .accordion__title { position: relative; margin-bottom: 31px; padding: 0 20px; color: #1bb4ed; font-size: 18px; cursor: pointer; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80); opacity: 0.8; display: inline-block; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.accordion .accordion__title:hover { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
+.accordion .accordion__title:before { position: absolute; content: ""; top: 13px; right: 0; width: 0px; height: 0px; border-style: solid; border-width: 5px 4px 0 4px; border-color: #1bb4ed transparent transparent transparent; }
+@media only screen and (max-width: 480px) { .accordion .accordion__title:before { right: 10px; } }
+.accordion .accordion__title span { border-bottom: 1px dotted #1bb4ed; }
+.accordion .accordion__body { margin: 0 auto; padding-left: 20px; padding-right: 20px; max-width: 780px; display: none; }
+>>>>>>> 2f558b0b9456a6780792c4b2d0c86088eda2b266
 .accordion .accordion__title-in { margin-bottom: 28px; font-size: 24px; line-height: 1; font-family: "museosanscyrl_500", Arial, sans-serif; }
 
 .jobs { padding-top: 48px; }
 .jobs .jobs__accordion { margin-top: 50px; }
 .jobs .accordion.is-active .accordion__title { color: white; border-color: white; }
+<<<<<<< HEAD
 .jobs .accordion.is-active .accordion__title:before { visibility: visible; filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
 .jobs .accordion.is-active .accordion__title:after { visibility: visible; filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
 .jobs .accordion.is-active .accordion__title span { border-color: white; }
@@ -551,6 +574,27 @@ a { text-decoration: none; }
 .jobs .accordion__title span { text-transform: uppercase; z-index: 1; -moz-transition: all 0.1s linear; -o-transition: all 0.1s linear; -webkit-transition: all 0.1s linear; transition: all 0.1s linear; }
 .jobs .accordion__title span:before { display: none; }
 .jobs .accordion__body { padding: 75px 0 81px; }
+=======
+@media only screen and (max-width: 480px) { .jobs .accordion.is-active .accordion__title:after { -moz-box-shadow: 0 1px 0 #b27272; -webkit-box-shadow: 0 1px 0 #b27272; box-shadow: 0 1px 0 #b27272; } }
+.jobs .accordion.is-active .accordion__title:before { visibility: visible; filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+.jobs .accordion.is-active .accordion__title:after { visibility: visible; filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
+.jobs .accordion.is-active .accordion__title span { border-color: white; }
+@media only screen and (max-width: 480px) { .jobs .accordion:first-child .accordion__title { padding-top: 30px; padding-bottom: 40px; } }
+.jobs .accordion__title { margin: 0; padding-top: 48px; padding-bottom: 54px; border-top: 1px solid #ededed; filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; -moz-transition: all 0.1s linear; -o-transition: all 0.1s linear; -webkit-transition: all 0.1s linear; transition: all 0.1s linear; display: block; font-family: "museosanscyrl_300", Arial, sans-serif; }
+.jobs .accordion__title:hover { color: white; border-color: white; }
+.jobs .accordion__title:hover:after { visibility: visible; filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
+.jobs .accordion__title:hover span { border-color: white; }
+.jobs .accordion__title:before { position: absolute; content: ""; left: 50%; top: 100%; margin-left: -12.5px; visibility: hidden; z-index: 1; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; -moz-transition: all 0.1s linear; -o-transition: all 0.1s linear; -webkit-transition: all 0.1s linear; transition: all 0.1s linear; width: 0px; height: 0px; border-style: solid; border-width: 10px 12.5px 0 12.5px; border-color: #e5717f transparent transparent transparent; }
+.jobs .accordion__title:after { position: absolute; content: ""; top: 0; left: 0; right: 0; bottom: 0; visibility: hidden; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; -moz-transition: all 0.1s linear; -o-transition: all 0.1s linear; -webkit-transition: all 0.1s linear; transition: all 0.1s linear; background: url(../img/accordion-bg.png) no-repeat 50% 0; background-size: cover; }
+@media only screen and (max-width: 480px) { .jobs .accordion__title:after { background: url(../img/accordion-bg-mob.png) no-repeat 26% 0; background-size: cover; }
+  .jobs .accordion__title:before { border-color: #ea7886 transparent; } }
+.jobs .accordion__title span { position: relative; text-transform: uppercase; z-index: 1; }
+.jobs .accordion__title span:before { display: none; }
+@media only screen and (max-width: 480px) { .jobs .accordion__title-in { text-transform: uppercase; font-size: 18px; line-height: 1.5; } }
+.jobs .accordion__body { max-width: 555px; padding: 75px 0 81px; }
+@media only screen and (max-width: 980px) { .jobs .accordion__body { padding: 60px 20px 60px; } }
+@media only screen and (max-width: 480px) { .jobs .accordion__body .btn { margin-top: 44px; } }
+>>>>>>> 2f558b0b9456a6780792c4b2d0c86088eda2b266
 .jobs .btn { margin-top: 64px; }
 
 .brand { -moz-column-count: 4; -webkit-column-count: 4; column-count: 4; }
