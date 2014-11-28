@@ -27,16 +27,13 @@
 .address, .delivery, .phones
 	padding-bottom: 16px
 	margin-left: 70px
-	max-width: 212px
+	width: 212px
 	font-size: 14px
 	vertical-align: top
 	display: inline-block
 	+f100
 	&:first-child
 		margin-left: 0
-	+r(320)
-		margin: 0 0 50px
-		max-width: none
 
 //delivery
 .delivery
@@ -52,8 +49,6 @@
 	width: 100%
 	.gmnoprint, .gm-style-cc, .gm-style > div + div > a
 		display: none !important
-	+r(320)
-		height: 340px
 
 //questions
 .questions
@@ -75,9 +70,6 @@
 		margin-top: 12px
 		font-size: 18px
 		+f100
-		+r(320)
-			padding: 0 35px
-			font-size: 14px
 
 //accordion
 .accordion
@@ -85,37 +77,34 @@
 	+f100
 	&.is-active
 		.accordion__title
-			&:before
-				+rotate(180)
+			span
+				&:before
+					+rotate(180)
 	.accordion__title
 		position: relative
 		margin-bottom: 31px
-		padding: 0 20px
 		color: $blue
 		font-size: 18px
 		cursor: pointer
 		+opacity(0.8)
-		display: inline-block
-		+transition(all 0.2s linear)
 		+box
 		&:hover
 			+opacity(1)
-		&:before
-			position: absolute
-			content: ''
-			top: 13px
-			right: 0
-			+arr(8, 5, $blue, b)
-		+r(320)
-			&:before
-				right: 10px
 		span
+			position: relative
+			margin-right: 20px
+			display: inline-block
 			border-bottom: 1px dotted $blue
+			+transition(all 0.2s linear)
+			&:before
+				position: absolute
+				content: ''
+				top: 13px
+				right: -20px
+				+arr(8, 5, $blue, b)
 	.accordion__body
 		margin: 0 auto
-		padding-left: 20px
-		padding-right: 20px
-		max-width: 780px
+		width: 740px
 		display: none
 	.accordion__title-in
 		margin-bottom: 28px
@@ -133,30 +122,19 @@
 			.accordion__title
 				color: white
 				border-color: white
-				+r(320)
-					&:after
-						+box-shadow(0 1px 0 #b27272)
 				&:before
 					visibility: visible
 					+opacity(1)
-					+rotate(0)
 				&:after
 					visibility: visible
 					+opacity(1)
 				span
 					border-color: white
-		+r(320)
-			&:first-child
-				.accordion__title
-					padding-top: 30px
-					padding-bottom: 40px
 	.accordion__title
 		margin: 0
-		padding-top: 48px
-		padding-bottom: 54px
+		padding: 48px 0 54px
 		border-top: 1px solid $border_light
 		+opacity(1)
-		+transition(all 0.1s linear)
 		display: block
 		+f300
 		&:hover
@@ -171,10 +149,9 @@
 			position: absolute
 			content: ''
 			left: 50%
-			top: 100%
+			bottom: -10px
 			margin-left: -12.5px
 			visibility: hidden
-			z-index: 1
 			+opacity(0)
 			+transition(all 0.1s linear)
 			+arr(25, 10, #e5717f, b)
@@ -190,101 +167,13 @@
 			+transition(all 0.1s linear)
 			background: url(../img/accordion-bg.png) no-repeat 0 0
 			background-size: cover
-		+r(320)
-			&:after
-				background: url(../img/accordion-bg-mob.png) no-repeat 26% 0
-				background-size: cover
-			&:before
-				border-color: #ea7886 transparent
 		span
-			position: relative
 			text-transform: uppercase
 			z-index: 1
+			+transition(all 0.1s linear)
 			&:before
 				display: none
-	.accordion__title-in
-		+r(320)
-			text-transform: uppercase
-			font-size: 18px
-			line-height: 1.5
 	.accordion__body
 		padding: 75px 0 81px
-		+r(320)
-			padding: 60px 20px 60px
-			.btn
-				margin-top: 44px
 	.btn
 		margin-top: 64px
-
-//news
-.news
-	.news__item
-		position: relative
-		padding: 50px 25px
-		color: black
-		border-top: 1px solid $border_light
-		z-index: 1
-		display: block
-		+transition(all 0.1s linear)
-		+box
-		&:before
-			position: absolute
-			content: ''
-			top: 0
-			left: 0
-			right: 0
-			bottom: 0
-			z-index: -1
-			visibility: hidden
-			+opacity(0)
-			+transition(all 0.1s linear)
-			background: url(../img/news-item-bg.png) no-repeat 50% 0
-			background-size: cover
-		&:hover
-			color: white
-			&:before
-				visibility: visible
-				+opacity(1)
-			.more
-				+opacity(0.8)
-			.meta
-				color: white
-		+r(321)
-			padding: 50px 35px 30px
-			&:before
-				background: url(../img/news-item-bg-mob.png) no-repeat 50% 50%
-				background-size: cover
-	.news__title
-		max-width: 770px
-		margin: 25px 0 18px
-		font-size: 20px
-		text-transform: uppercase
-		display: inline-block
-		+f300
-		+r(321)
-			margin: 20px 0 13px
-			line-height: 1.6
-	.meta
-		font-size: 11px
-
-
-//more
-.more
-	position: relative
-	padding-right: 12px
-	font-size: 12px
-	color: #b5b5b5
-	+transition(all 0.2s linear)
-	+f100i
-	display: inline-block
-	&:before
-		position: absolute
-		content: ''
-		top: 50%
-		right: 0
-		margin-top: -6px
-		+svg(more-arr, 8, 12)
-	&:hover
-		+opacity(0.8)
-		// &:before
-		// 	+svg(more-arr-white, 8, 12)
