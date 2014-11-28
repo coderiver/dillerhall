@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; vertical-align: baseline; }
 
 body, html { height: 100%; }
@@ -1001,6 +1002,53 @@ ul.sorting a.is-active sup { visibility: visible; filter: progid:DXImageTransfor
 .radio__title:after { content: ""; position: absolute; left: 3px; top: 3px; width: 10px; height: 10px; -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%; background: #2db9ee; visibility: hidden; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; will-change: opacity; -moz-transition: opacity 0.2s linear, top 0.2s linear; -o-transition: opacity 0.2s linear, top 0.2s linear; -webkit-transition: opacity 0.2s linear, top 0.2s linear; transition: opacity 0.2s linear, top 0.2s linear; }
 
 .input_mod { height: 40px; }
+
+.about-wrap { max-width: 1380px; margin: 0 auto; padding: 75px 40px 62px; }
+@media only screen and (max-width: 480px) { .about-wrap { padding: 60px 20px 40px; } }
+.about-wrap hr { border: none; border-bottom: 1px solid #e9e9e9; margin: 0 auto 36px; }
+
+.about { max-width: 1160px; margin: 0 auto; }
+.about h1, .about h2, .about h3, .about h4, .about h5, .about h6, .about strong { font-weight: normal; }
+.about__inner { overflow: hidden; padding: 0 0 0 65px; max-width: 924px; }
+@media only screen and (max-width: 768px) { .about__inner { padding: 0; overflow: visible; } }
+.about__inner article { font-family: "museosanscyrl_300", Arial, sans-serif; font-size: 14px; line-height: 24px; margin-bottom: 30px; }
+.about__inner article strong { font-family: "museosanscyrl_500", Arial, sans-serif; }
+.about__inner div { margin: 0 -15px 0 -15px; font-size: 0; }
+.about__inner div div { padding: 0 15px; margin: 0; width: 50%; display: inline-block; }
+@media only screen and (max-width: 980px) { .about__inner div div { width: 100%; } }
+.about__inner h1 { font-family: "museosanscyrl_300", Arial, sans-serif; font-size: 28px; line-height: 1.3; letter-spacing: 0.02em; margin-bottom: 37px; }
+@media only screen and (max-width: 768px) { .about__inner h1 { font-size: 24px; } }
+.about__inner h1 strong { font-family: "museosanscyrl_500", Arial, sans-serif; }
+.about__inner h2 { font-family: "museosanscyrl_500", Arial, sans-serif; font-size: 24px; line-height: 1.5; letter-spacing: 0.02em; margin-bottom: 25px; }
+@media only screen and (max-width: 768px) { .about__inner h2 { font-size: 20px; } }
+.about__inner p { font-family: "museosanscyrl_100", Arial, sans-serif; font-size: 14px; line-height: 24px; margin-bottom: 50px; }
+.about__inner p strong { font-family: "museosanscyrl_500", Arial, sans-serif; }
+.about__inner p u { text-decoration: underline; }
+.about__inner p i { font-style: normal; font-family: "museosanscyrl_100_italic", Arial, sans-serif; }
+.about__inner blockquote { font-size: 18px; line-height: 30px; letter-spacing: 0.018em; color: #858585; position: relative; font-family: "museosanscyrl_100_italic", Arial, sans-serif; padding: 0 15px 0 0; margin-bottom: 45px; }
+@media only screen and (max-width: 768px) { .about__inner blockquote { padding: 0 0 0 65px; } }
+@media only screen and (max-width: 480px) { .about__inner blockquote { padding: 0 0 0 30px; font-size: 14px; line-height: 1.7; } }
+.about__inner blockquote strong { font-family: "museosanscyrl_500_italic", Arial, sans-serif; }
+.about__inner blockquote:before { position: absolute; top: 0; left: -65px; content: "“"; font-size: 150px; line-height: 105px; letter-spacing: 0.018em; color: #363535; font-family: Arial, sans-serif; }
+@media only screen and (max-width: 768px) { .about__inner blockquote:before { left: 0; } }
+@media only screen and (max-width: 480px) { .about__inner blockquote:before { font-size: 60px; line-height: 50px; } }
+.about__inner hr { margin-bottom: 45px; }
+
+.result { font-family: "museosanscyrl_300", Arial, sans-serif; font-size: 16px; line-height: 26px; border: 2px solid #2db9ee; max-width: 855px; margin: 0 auto; padding: 37px 48px; }
+@media only screen and (max-width: 480px) { .result { padding: 15px 25px; } }
+
+.sidebar { width: 150px; float: left; padding: 5px 0 20px 0; }
+@media only screen and (max-width: 768px) { .sidebar { width: 100%; font-size: 0; float: none; } }
+.sidebar li { margin: 0 0 20px 0; vertical-align: top; }
+@media only screen and (max-width: 768px) { .sidebar li { display: inline-block; width: 50%; } }
+@media only screen and (max-width: 480px) { .sidebar li { display: block; width: 100%; } }
+.sidebar a { font-family: "museosanscyrl_100", Arial, sans-serif; color: #464646; display: block; margin: 0 0 5px; -moz-transition: color 0.2s linear; -o-transition: color 0.2s linear; -webkit-transition: color 0.2s linear; transition: color 0.2s linear; }
+.sidebar a:hover { color: #2db9ee; }
+.sidebar__link { font-size: 16px; line-height: 24px; }
+.sidebar__link.is-active { color: #2db9ee; }
+.sidebar__drop a { line-height: 30px; font-size: 14px; margin: 0; }
+.sidebar__drop li { margin: 0; }
+@media only screen and (max-width: 768px) { .sidebar__drop li { display: block; width: 100%; } }
 
 .ui-multiselect { text-align: left; }
 

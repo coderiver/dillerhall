@@ -1551,6 +1551,160 @@ ul.sorting
 		will-change: opacity
 		+transition(opacity 0.2s linear, top 0.2s linear)
 
-
 .input_mod
 	height: 40px
+	
+//about
+.about-wrap
+	max-width: 1380px
+	margin: 0 auto
+	padding: 75px 40px 62px 
+	+r(480)
+		padding: 60px 20px 40px 
+	hr
+		border: none
+		border-bottom: 1px solid #e9e9e9 
+		margin: 0 auto 36px
+.about
+	max-width: 1160px
+	margin: 0 auto
+	h1, h2, h3, h4, h5, h6, strong
+		font-weight: normal
+	&__inner
+		overflow: hidden
+		padding: 0 0 0 65px
+		max-width: 924px
+		+r(768)
+			padding: 0
+			overflow: visible
+		article
+			+f300
+			font-size: 14px
+			line-height: 24px
+			margin-bottom: 30px
+			strong
+				+f500
+		div
+			margin: 0 -15px 0 -15px 
+			font-size: 0
+			div
+				padding: 0 15px 
+				margin: 0
+				width: 50%
+				display: inline-block
+				+r(980)
+					width: 100%
+		h1
+			+f300
+			font-size: 28px
+			line-height: 1.3
+			letter-spacing: 0.02em 
+			margin-bottom: 37px
+			+r(768)
+				font-size: 24px
+			strong
+				+f500
+		h2
+			+f500
+			font-size: 24px
+			line-height: 1.5
+			letter-spacing: 0.02em 
+			margin-bottom: 25px
+			+r(768)
+				font-size: 20px
+		p
+			+f100
+			font-size: 14px
+			line-height: 24px
+			margin-bottom: 50px
+			strong
+				+f500
+			u
+				text-decoration: underline
+			i
+				font-style: normal
+				+f100i
+		blockquote
+			font-size: 18px
+			line-height: 30px
+			letter-spacing: 0.018em 
+			color: #858585
+			position: relative
+			+f100i
+			padding: 0 15px 0 0  
+			margin-bottom: 45px
+			+r(768)
+				padding: 0 0 0 65px 
+			+r(480)
+				padding: 0 0 0 30px 
+				font-size: 14px 
+				line-height: 1.7 
+			strong
+				+f500i
+			&:before
+				position: absolute
+				top: 0
+				left: -65px
+				content: "“"
+				font-size: 150px
+				line-height: 105px
+				letter-spacing: 0.018em 
+				color: #363535
+				font-family: Arial, sans-serif 
+				+r(768)
+					left: 0 
+				+r(480)
+					font-size: 60px
+					line-height: 50px
+		hr
+			margin-bottom: 45px
+.result
+	+f300
+	font-size: 16px
+	line-height: 26px
+	border: 2px solid #2db9ee
+	max-width: 855px
+	margin: 0 auto
+	padding: 37px 48px 
+	+r(480)
+		padding: 15px 25px 
+.sidebar
+	width: 150px
+	float: left
+	padding: 5px 0 20px 0
+	+r(768)
+		width: 100%
+		font-size: 0
+		float: none
+	li
+		margin: 0 0 20px 0  
+		vertical-align: top
+		+r(768)
+			display: inline-block
+			width: 50%
+		+r(480)
+			display: block
+			width: 100%
+	a
+		+f100
+		color: #464646 
+		display: block
+		margin: 0 0 5px 
+		+tr_color
+		&:hover
+			color: #2db9ee 
+	&__link
+		font-size: 16px
+		line-height: 24px
+		&.is-active
+			color: #2db9ee 
+	&__drop
+		a
+			line-height: 30px
+			font-size: 14px
+			margin: 0
+		li
+			margin: 0 
+			+r(768)
+				display: block
+				width: 100%
