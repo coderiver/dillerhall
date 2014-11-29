@@ -1,6 +1,6 @@
 .header
-	padding: 39px 35px 32px 
-	background: #2fbaee  
+	padding: 39px 35px 32px
+	background: #2fbaee
 	text-align: right
 	.logo
 		position: absolute
@@ -21,36 +21,36 @@
 		border-bottom: 3px solid transparent
 		font-size: 18px
 		color: #fff
-		+f100 
+		+f100
 		&.is-active
-			border-color: #fff 
+			border-color: #fff
 		&.is-marked
 			&:after
 				content: ""
 				position: absolute
-				right: -11px
+				right: -7px
 				top: 0px
 				width: 4px
 				height: 4px
 				border-radius: 50%
 				background: #fff
-.filter-wrap
+.panel
 	position: relative
-	margin-bottom: 20px
+	background: #FFF
 	&:after
 		content: ""
 		position: absolute
 		left: 0
 		right: 0
 		height: 20px
-		+g(rgba(#000,.05), rgba(#000,0)) 		
+		+g(rgba(#000,.05), rgba(#000,0))
 .filter
 	position: relative
 	padding: 40px 35px 30px
 	.btn,
 	.btn-simple
 		margin-right: 7px
-		
+
 .sort
 	border-top: 1px solid $border_light
 	display: table
@@ -74,14 +74,13 @@
 		position: relative
 		font-size: 12px
 		+f500
-		color: #000 
+		color: #000
 		&:after
 			content: ""
 			position: absolute
 			right: -13px
 			top: 7px
-			+arr(6,4,#000,b) 
+			+arr(6,4,#000,b)
 		&.is-active
 			&:after
-				+arr(6,4,#000,t) 
-		
+				+arr(6,4,#000,t)

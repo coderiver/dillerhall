@@ -1,0 +1,115 @@
+// .footer
+//   position: relative
+//   z-index: 2
+//   border-top: 1px solid $border
+//   margin: 0 auto
+//   max-width: 1400px
+//   background: #fff
+//   +r(1400)
+//     max-width: 1280px
+//   +r(1280)
+//     max-width: 1024px
+//   +r(1024)
+//     max-width: 980px
+//   +r(980)
+//     max-width: 768px
+//   +r(768)
+//     max-width: 480px
+//   +r(480)
+//     max-width: 320px
+//   &__main
+//     +clr
+//     padding: 75px 15% 46px
+//     +r(1280)
+//       padding: 75px 30px 46px
+//     +r(980)
+//       padding: 30px
+//     +r(768)
+//       display: none
+//   &__nav
+//     width: 25%
+//     float: left
+//     padding-right: 10px
+//     &:first-child
+//       width: 21%
+//     &:nth-child(2)
+//       width: 39%
+//     &:nth-child(3)
+//       width: 25%
+//     &:last-child
+//       width: 15%
+//     .ie8 &
+//       width: 25%
+//     ul
+//       +f300
+//       font-size: 14px
+//     li
+//       margin-bottom: 7px
+//       a
+//         color: #7f7f7f
+//         +tr_color
+//         &:hover
+//           color: $blue
+
+//   &__title
+//     margin: 0 0 16px
+//     font-size: 16px
+//     +f500
+//     &.is-active
+//       a
+//         border-bottom: 1px solid rgba($red,.5)
+//     a
+//       color: #000
+//       +transition(color .2s, border .2s)
+//       &:hover
+//         color: $blue
+//         border-color: transparent
+
+.footer
+  position: relative
+  border-top: 1px solid $border
+  padding: 47px 50px
+  +clr
+  color: #7f7f7f
+  font-size: 14px
+  +f300
+  +r(768)
+    display: flex
+    padding: 22px
+    border: 0
+    flex-direction: column
+    text-align: center
+
+  &__btn
+    display: none
+    margin: 0 0 30px
+    // +r(768)
+    //   display: block
+    .btn-simple
+      min-width: 90px
+  &__copy
+    float: left
+    +r(768)
+      float: none
+      order: 3
+  &__created
+    float: right
+    // +r(768)
+    //   float: none
+    //   margin-bottom: 12px
+    //   order: 2
+    a
+      color: #000
+      +tr_color
+      &:hover
+        color: $blue
+  .soc
+    position: absolute
+    right: 300px
+    left: 300px
+    top: 43px
+    // +r(768)
+    //   order: 1
+    //   position: static
+    //   margin-bottom: 16px
+
