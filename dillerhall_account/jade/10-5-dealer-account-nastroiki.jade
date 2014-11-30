@@ -1,0 +1,47 @@
+doctype
+html
+  head
+    include _head.jade
+    title 10-5 dealer account nastroiki
+  body
+    .out
+      .header
+        a.logo(href="#")
+        .nav
+          a(href="#").is-marked Запросы
+          a(href="#") Склад
+          a(href="#").is-active Настройки
+        .menu.js-menu
+          .menu__item
+            i.icon-user
+            |Сергей Никacолаев
+          ul.menu__list
+            li
+              a(href="#") Запросы
+            li
+              a(href="#") Избранные авто
+            li
+              a(href="#") История просмотров
+            li
+              a(href="#") История сравнений
+            li
+              a(href="#") Личные данные
+            li
+              a(href="#") Рассылка
+
+      .form
+        .b-input
+          label(for="name").b-input__label Ваше имя
+          input(type="email").input
+        .b-input
+          label(for="name").b-input__label Электронная почта
+          input(type="email").input
+          .b-input__links
+            button.js-add-field
+              | + добавить e-mail
+
+        button(type="submit").btn
+          | Сохранить комплектацию
+
+      .push
+      include _footer.jade

@@ -29,7 +29,7 @@ html
 							a(href="#") Личные данные
 						li
 							a(href="#") Рассылка
-			.panel
+			.panel.js-panel
 				.filter
 					a.btn(href="#")
 						| Все запросы
@@ -61,12 +61,8 @@ html
 							input.input(placeholder="Поиск по клиентам, запросам и диалогам")
 							button.search__btn(type="submit")
 					.sort__item.sort__select
-						select
-							option(value="Посл. сообщение") Посл. сообщение
-							option(value="Посл. сообщение") Посл. сообщение
-							option(value="Посл. сообщение") Посл. сообщение
-							option(value="Посл. сообщение") Посл. сообщение
-							option(value="Посл. сообщение") Посл. сообщение
+						a(href="#").sort__link.js-sort-link Посл. сообщение
+						input(type="checkbox" hidden)
 			.box-container
 			a.box.is-red(href="#")
 				.box__item.box__number
