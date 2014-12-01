@@ -1,0 +1,101 @@
+doctype
+html
+  head
+    include _head.jade
+    title 10-3 dealer account sklad car
+  body
+    .out
+      .header
+        a.logo(href="#")
+        .nav
+          a(href="#").is-marked Запросы
+          a(href="#").is-active Склад
+          a(href="#") Настройки
+        .menu.js-menu
+          .menu__item
+            i.icon-user
+            |Сергей Никacолаев
+          ul.menu__list
+            li
+              a(href="#") Запросы
+            li
+              a(href="#") Избранные авто
+            li
+              a(href="#") История просмотров
+            li
+              a(href="#") История сравнений
+            li
+              a(href="#") Личные данные
+            li
+              a(href="#") Рассылка
+      .panel.js-panel
+        .account-bar
+          .account-bar__item
+            span.account-bar__name
+              | BWM 320d xDrive Modern Line
+          .account-bar__item
+            .select.select_205(data-border-color="").js-select-color
+              select.js-select-single
+                option(value="", data-border-color="green") Статус: green
+                option(value="", data-border-color="orange") Статус: orange
+                option(value="", data-border-color="yellow") Статус: yellow
+                option(value="", data-border-color="red") Статус: red
+                option(value="", data-border-color="blue") Статус: blue
+                option(value="") Статус: gray/default
+          .account-bar__item
+            a(href="#").btn-do
+              i.icon-prev
+              | Назад ко всем авто
+
+      .auto
+        .auto__pic
+          img(src="img/bmw-3series-hatchback.png")
+        .auto__price
+          span $ 25 300
+          button.btn.btn_orange
+            | Забронировать
+        .auto__container
+          span.auto__name
+            b BMW
+            |  320d xDrive Modern Line
+          |  2.0 AT (220л.с.) дизель, полный привод, 6 МКП, серый металлик,
+          em  Кроссовер, 2014–2015
+          p
+            | Дополнительно: кожаный салон, система Isofix / LATCH, тонированные окна,
+            | золотой металлик, подогрев передних сидений, легкосплавные диски 16", передний
+            | центральный подлокотник, активный усилитель руля.
+          p
+            | Замечательный автомобиль для ежедневных поездок.
+          button.btn-simple.btn-simple_blue
+            | Изменить конфигурацию
+          button.btn-simple.btn-simple_yellow
+            | Оставить заметку
+
+      .auto
+        .auto__pic
+          img(src="img/bmw-3series-hatchback.png")
+        .auto__price
+          span $ 25 300
+          button.btn.btn_orange
+            | Забронировать
+        .auto__container
+          span.auto__name
+            b BMW
+            |  320d xDrive Modern Line
+          |  2.0 AT (220л.с.) дизель, полный привод, 6 МКП, серый металлик,
+          em  Кроссовер, 2014–2015
+          p
+            | Дополнительно: кожаный салон, система Isofix / LATCH, тонированные окна,
+            | золотой металлик, подогрев передних сидений, легкосплавные диски 16", передний
+            | центральный подлокотник, активный усилитель руля.
+          p
+            | Замечательный автомобиль для ежедневных поездок.
+          button.btn-simple.btn-simple_blue
+            | Изменить конфигурацию
+          button.btn-simple.btn-simple_yellow
+            | Оставить заметку
+
+
+      .push
+
+      include _footer.jade

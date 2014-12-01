@@ -1,0 +1,187 @@
+doctype
+html
+  head
+    include _head.jade
+    title 10-2 dealer account sklad
+  body
+    .out
+      //- include _header.jade
+      .header
+        a.logo(href="#")
+        .nav
+          a(href="#").is-marked Запросы
+          a(href="#").is-active Склад
+          a(href="#") Настройки
+        .menu.js-menu
+          .menu__item
+            i.icon-user
+            |Сергей Никacолаев
+          ul.menu__list
+            li
+              a(href="#") Запросы
+            li
+              a(href="#") Избранные авто
+            li
+              a(href="#") История просмотров
+            li
+              a(href="#") История сравнений
+            li
+              a(href="#") Личные данные
+            li
+              a(href="#") Рассылка
+
+      .panel.js-panel
+        .filter
+          a.btn-simple.btn-simple_add(href="#")
+            | Добавить
+          a.btn(href="#")
+            | Все авто
+            em 98
+          a.btn-simple.btn-simple_red(href="#")
+            | На складе
+            em 34
+          a.btn-simple.btn-simple_orange(href="#")
+            | Под заказ
+            em 3
+          a.btn-simple.btn-simple_green(href="#")
+            | Бронь
+            em 11
+          a.btn-simple.btn-simple_yellow(href="#")
+            | С заметками
+            em 14
+          a.btn-simple(href="#")
+            | Архив
+            em 14
+
+        .sort
+          .sort__item.sort__vin
+            a(href="#").sort__link.js-sort-link VIN
+            input(type="checkbox" hidden)
+          .sort__item.sort__auto
+            .search
+              input.input(placeholder="Поиск по авто")
+              button.search__btn(type="submit")
+            a(href="#").sort__link.js-sort-link Авто
+            input(type="checkbox" hidden)
+          .sort__item.sort__price
+            a(href="#").sort__link.js-sort-link Цена
+            input(type="checkbox" hidden)
+          .sort__item.sort__date
+            a(href="#").sort__link.js-sort-link Дата изменения
+            input(type="checkbox" hidden)
+
+      .box-container
+        a.box.box_warehouse.is-green(href="#")
+          .box__item.box__number
+            | XUUTB70EJC0010000
+          .box__item.box__auto
+            .auto
+              span.auto__name
+                b BMW 320d
+                |  xDrive Modern Line
+              |  2.0 AT (220л.с.) дизель, полный привод, 5 МКП, красный металлик,
+              em  Кроссовер, 2014–2015
+          .box__item.box__price
+            | $ 80 414
+          .box__item.box__date
+            | 01.05.14,
+            em  15:41
+        a.box.box_warehouse.is-red(href="#")
+          .box__item.box__number
+            | XUUTB70EJC0010000
+          .box__item.box__auto
+            .auto
+              span.auto__name
+                b BMW 320d
+                |  xDrive Modern Line
+              |  2.0 AT (220л.с.) дизель, полный привод, 5 МКП, красный металлик,
+              em  Кроссовер, 2014–2015
+          .box__item.box__price
+            | $ 12 120 414
+          .box__item.box__date
+            | 01.05.14,
+            em  15:41
+        a.box.box_warehouse.is-red(href="#")
+          .box__item.box__number
+            | XUUTB70EJC0010000
+          .box__item.box__auto
+            .auto
+              span.auto__name
+                b BMW 320d
+                |  xDrive Modern Line
+              |  2.0 AT (220л.с.) дизель, полный привод, 5 МКП, красный металлик,
+              em  Кроссовер, 2014–2015
+              span.auto__info.is-yellow
+                b Заметка:
+                |  Ребята! Оставьте эту тачку для шейха — оч жирный заказ
+          .box__item.box__price
+            | $ 12 120 414
+          .box__item.box__date
+            | 01.05.14,
+            em  15:41
+        a.box.box_warehouse.is-green(href="#")
+          .box__item.box__number
+            | XUUTB70EJC0010000
+          .box__item.box__auto
+            .auto
+              span.auto__name
+                b BMW 320d
+                |  xDrive Modern Line
+              |  2.0 AT (220л.с.) дизель, полный привод, 5 МКП, красный металлик,
+              em  Кроссовер, 2014–2015
+              span.auto__info.is-orange
+                b Забронирован для клиента: Кузнецов Андрей
+          .box__item.box__price
+            | $ 12 120 414
+          .box__item.box__date
+            | 01.05.14,
+            em  15:41
+        a.box.box_warehouse.is-green(href="#")
+          .box__item.box__number
+            | XUUTB70EJC0010000
+          .box__item.box__auto
+            .auto
+              span.auto__name
+                b BMW 320d
+                |  xDrive Modern Line
+              |  2.0 AT (220л.с.) дизель, полный привод, 5 МКП, красный металлик,
+              em  Кроссовер, 2014–2015
+          .box__item.box__price
+            | $ 80 414
+          .box__item.box__date
+            | 01.05.14,
+            em  15:41
+        a.box.box_warehouse.is-green(href="#")
+          .box__item.box__number
+            | XUUTB70EJC0010000
+          .box__item.box__auto
+            .auto
+              span.auto__name
+                b BMW 320d
+                |  xDrive Modern Line
+              |  2.0 AT (220л.с.) дизель, полный привод, 5 МКП, красный металлик,
+              em  Кроссовер, 2014–2015
+          .box__item.box__price
+            | $ 80 414
+          .box__item.box__date
+            | 01.05.14,
+            em  15:41
+        a.box.box_warehouse.is-green(href="#")
+          .box__item.box__number
+            | XUUTB70EJC0010000
+          .box__item.box__auto
+            .auto
+              span.auto__name
+                b BMW 320d
+                |  xDrive Modern Line
+              |  2.0 AT (220л.с.) дизель, полный привод, 5 МКП, красный металлик,
+              em  Кроссовер, 2014–2015
+          .box__item.box__price
+            | $ 80 414
+          .box__item.box__date
+            | 01.05.14,
+            em  15:41
+
+        .preloader
+          img(src="img/preloader.png", alt="")
+      include _footer.jade

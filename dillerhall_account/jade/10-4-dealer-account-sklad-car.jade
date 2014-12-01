@@ -1,0 +1,109 @@
+doctype
+html
+  head
+    include _head.jade
+    title 10-4 dealer account sklad car
+  body
+    .out
+      .header
+        a.logo(href="#")
+        .nav
+          a(href="#").is-marked Запросы
+          a(href="#").is-active Склад
+          a(href="#") Настройки
+        .menu.js-menu
+          .menu__item
+            i.icon-user
+            |Сергей Никacолаев
+          ul.menu__list
+            li
+              a(href="#") Запросы
+            li
+              a(href="#") Избранные авто
+            li
+              a(href="#") История просмотров
+            li
+              a(href="#") История сравнений
+            li
+              a(href="#") Личные данные
+            li
+              a(href="#") Рассылка
+      .panel.js-panel
+        .account-bar
+          .account-bar__item
+            span.account-bar__name
+              | BWM 320d xDrive Modern Line
+          .account-bar__item
+            a(href="#").btn-do
+              i.icon-close
+              | Отменить изменения
+
+      .auto
+        .auto__pic
+          img(src="img/bmw-3series-hatchback.png")
+        .form
+          .b-input
+            label(for="name").b-input__label Марка автомобиля
+            .select
+              select(name="name").js-select-single
+                option BMW
+                option AUDI
+                option MERCEDES
+                option JAGUAR
+                option MASERATTI
+            .select
+              select(name="name").js-select-single
+                option 2014-2015
+                option 2014-2015
+                option 2014-2015
+                option 2014-2015
+                option 2014-2015
+          .b-input
+            label(for="name").b-input__label Комплектация
+            .select
+              select(name="name").js-select-single
+                option 320d xDrive Modern Line
+                option 320d xDrive Modern Line
+                option 320d xDrive Modern Line
+                option 320d xDrive Modern Line
+          .b-input
+            label(for="name").b-input__label Двигатель
+            .select
+              select(name="name").js-select-single
+                option 2.0 AT (220л.с)
+                option 2.0 AT (220л.с)
+                option 2.0 AT (220л.с)
+                option 2.0 AT (220л.с)
+          .b-input
+            label(for="name").b-input__label Топливо
+            .select
+              select(name="name").js-select-single
+                option Полный привод
+                option Полный привод
+                option Полный привод
+          .b-input
+            label(for="name").b-input__label Передачи
+            .select
+              select(name="name").js-select-single
+                option 6 МКП
+                option 5 МКП
+                option 6 AКП
+          .b-input
+            label(for="name").b-input__label Цвет
+            .select
+              select(name="name").js-select-single
+                option Серый металлик
+                option Серый металлик
+                option Серый металлик
+                option Серый металлик
+          .b-input
+            label(for="name").b-input__label Описание
+            textarea(name="name").input
+          .b-input
+            label(for="name").b-input__label Цена
+            input(type="text").input
+
+          button(type="submit").btn
+            | Сохранить комплектацию
+
+      include _footer.jade

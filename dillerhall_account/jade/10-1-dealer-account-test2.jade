@@ -1,0 +1,172 @@
+doctype
+html
+  head
+    include _head.jade
+    title 10-1 dealer account
+  body
+    .out
+      .header
+        a.logo(href="#")
+        .nav
+          a(href="#").is-active.is-marked Запросы
+          a(href="#") Склад
+          a(href="#") Настройки
+        .menu.js-menu
+          .menu__item
+            i.icon-user
+            |Сергей Никacолаев
+          ul.menu__list
+            li
+              a(href="#") Запросы
+            li
+              a(href="#") Избранные авто
+            li
+              a(href="#") История просмотров
+            li
+              a(href="#") История сравнений
+            li
+              a(href="#") Личные данные
+            li
+              a(href="#") Рассылка
+      .panel.js-panel
+        .account-bar
+          .account-bar__item
+            span.account-bar__name
+              | Кузнецов Андрей
+          .account-bar__item
+            .select.select_205
+              select.js-select-single
+                option(value="") Нет статуса
+                option(value="") Есть статус
+                option(value="") Нет статуса
+                option(value="") Ой все!
+          .account-bar__item
+            a(href="#").btn-do
+              i.icon-prev
+              |  Назад ко всем запросам
+      .two-col
+        .col
+          .account.js-account
+            dl.account__item
+              dt.account__item-meta
+                em E-mail
+              dd.account__item-content
+                a(href="mailto:gazeplay@gmail.com")
+                  | gazeplay@gmail.com
+            dl.account__item
+              dt.account__item-meta
+                em Телефон
+              dd.account__item-content
+                | +375 29 614 12 34
+            dl.account__item
+              dt.account__item-meta
+                em Пол
+              dd.account__item-content
+                | Мужской
+            dl.account__item
+              dt.account__item-meta
+                em Возраст
+              dd.account__item-content
+                | 30
+            dl.account__item
+              dt.account__item-meta
+                em Предпочтения
+              dd.account__item-content
+                | Нравятся породистые белые баварцы, никаких французов.
+            dl.account__item
+              dt.account__item-meta
+                em Комментарий
+              dd.account__item-content
+                | Крайне неадекватный молодой человек.
+                | При первом тест-драйве дилер потерял сознание от перегрузки
+                | во время дрифта по городским улицам на BMW M5. <a href="#">Изменить</a>
+            dl.account__item
+              dt.account__item-meta
+                em История сравнения
+              dd.account__item-content
+                p
+                  | 01.05.14,
+                  em  15:41
+                ul
+                  li
+                    b BMW 328i
+                    em  2.0 AT (220л.с.) дизель, полный привод, 6 МКП
+                  li
+                    b BMW 328i
+                    em  2.0 AT (220л.с.) дизель, полный привод, 6 МКП
+                  li
+                    b BMW 328i
+                    em  2.0 AT (220л.с.) дизель, полный привод, 6 МКП
+
+                ul.account__item-more
+                  li
+                    b BMW 328i
+                    em  2.0 AT (220л.с.) дизель, полный привод, 6 МКП
+                  li
+                    b BMW 328i
+                    em  2.0 AT (220л.с.) дизель, полный привод, 6 МКП
+                  li
+                    b BMW 328i
+                    em  2.0 AT (220л.с.) дизель, полный привод, 6 МКП
+                button.link-more(data-text="Скрыть")
+                  | Показать ещё
+            dl.account__item
+              dt.account__item-meta
+                em Избранные автомобили
+              dd.account__item-content
+                ul
+                  li
+                    b BMW 328i
+                    em  2.0 AT (220л.с.) дизель, полный привод, 6 МКП
+                  li
+                    b BMW 328i
+                    em  2.0 AT (220л.с.) дизель, полный привод, 6 МКП
+                  li
+                    b Mercedes-Benz
+                    em  SL 63 AMG 2.0 AT (220л.с.) дизель, полный привод, 6 МКП
+                ul.account__item-more
+                  li
+                    b BMW 328i
+                    em  2.0 AT (220л.с.) дизель, полный привод, 6 МКП
+                  li
+                    b BMW 328i
+                    em  2.0 AT (220л.с.) дизель, полный привод, 6 МКП
+                  li
+                    b BMW 328i
+                    em  2.0 AT (220л.с.) дизель, полный привод, 6 МКП
+                button.link-more(data-text="Скрыть")
+                  | Показать ещё
+        .col
+          .account.account_chat
+            .search
+              input.input(placeholder="Поиск по диалогу")
+              button.search__btn(type="submit")
+            .account__chat
+              .account__item.account__item_notify
+                .account__item-meta
+                  | 01.05.14,
+                  em  15:41
+                .account__item-content
+                  strong Кузнецов Андрей отправил запрос на автомобиль:
+                  a(href="#") BMW 320d xDrive Modern Line  2.0 AT (220л.с.) дизель, полный привод, 6 МКП, $44 500
+              .account__item
+                .account__item-meta
+                  | 01.05.14,
+                  em  15:48
+                .account__item-content
+                  b Я:
+                  |  Добрый день! Автомобиль находится у нас в салоне по адресу ул. Коммунистическая 98а.
+                  | Скажите, когда вам удобно подъехать и пощупать автомобиль?
+              .account__item.account__item_orange
+                .account__item-meta
+                  | 01.05.14,
+                  em  16:00
+                .account__item-content
+                  b Кузнецов Андрей:
+                  |  Сегодня у меня велотренировка, вечер также занят (познакомился с близняшками-азиаточками на драгрейсинге).
+                  | Как насчёт пятницы? Деньги наличными привозить или можно выписать чек?
+            .account__write
+              textarea.input
+              button.btn
+                | Отправить
+      include _footer.jade

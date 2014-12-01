@@ -22,8 +22,8 @@
           </ul>
         </div>
       </div>
-      <div class="filter-wrap">
-        <div class="filter"><a href="#" class="btn">Все запросы<em>98</em></a><a href="#" class="btn-simple btn-simple_red">Необработанные<em>60</em></a><a href="#" class="btn-simple btn-simple_orange">Отложенные<em>60</em></a><a href="#" class="btn-simple btn-simple_green">Принятые<em>60</em></a><a href="#" class="btn-simple btn-simple_yellow">С заметками<em>60</em></a><a href="#" class="btn-simple">Отменённые <em>60</em></a></div>
+      <div class="panel js-panel">
+        <div class="filter"><a href="#" class="btn">Все запросы<em>98</em></a><a href="#" class="btn-simple btn-simple_red">Необработанные<em>3</em></a><a href="#" class="btn-simple btn-simple_orange">Отложенные<em>11</em></a><a href="#" class="btn-simple btn-simple_green">Принятые<em>34</em></a><a href="#" class="btn-simple btn-simple_yellow">С заметками<em>14</em></a><a href="#" class="btn-simple">Отменённые<em>60</em></a></div>
         <div class="sort">
           <div class="sort__item sort__order"><a href="#" class="sort__link js-sort-link">№ заказа</a>
             <input type="checkbox" hidden>
@@ -37,17 +37,12 @@
               <button type="submit" class="search__btn"></button>
             </div>
           </div>
-          <div class="sort__item sort__select">
-            <select>
-              <option value="Посл. сообщение">Посл. сообщение </option>
-              <option value="Посл. сообщение">Посл. сообщение </option>
-              <option value="Посл. сообщение">Посл. сообщение </option>
-              <option value="Посл. сообщение">Посл. сообщение </option>
-              <option value="Посл. сообщение">Посл. сообщение</option>
-            </select>
+          <div class="sort__item sort__select"><a href="#" class="sort__link js-sort-link">Посл. сообщение</a>
+            <input type="checkbox" hidden>
           </div>
         </div>
-      </div><a href="#" class="box is-red">
+      </div>
+      <div class="box-container"></div><a href="#" class="box is-red">
         <div class="box__item box__number">0000132</div>
         <div class="box__item box__client">
           <div class="user">
@@ -55,17 +50,17 @@
               <div class="user__name">Кузнецов Андрей</div>
               <div class="user__info">01.05.14, 15:41</div>
             </div>
-            <div class="user__main">5 запросов, последний: Mercedes-Benz CLS 63 AMG 4MATIC 5.5 AMT (557 л.с.) дизель, полный привод, 6 МКП, красный металлик, $ 124 090</div>
+            <div class="user__main"><strong>Запрос:</strong> BMW 320d xDrive Modern Line  2.0 AT (220л.с.) дизель, полный привод, 6 МКП, красный металлик, $ 44 500</div>
           </div>
         </div></a><a href="#" class="box is-orange">
         <div class="box__item box__number">0000132</div>
         <div class="box__item box__client">
           <div class="user">
             <div class="user__meta">
-              <div class="user__name">Кузнецов Андрей</div>
+              <div class="user__name">Михайлов Стас</div>
               <div class="user__info">01.05.14, 15:41</div>
             </div>
-            <div class="user__main"><strong>5 запросов, </strong>последний: Mercedes-Benz CLS 63 AMG 4MATIC 5.5 AMT (557 л.с.) дизель, полный привод, 6 МКП, красный металлик, $ 124 090</div>
+            <div class="user__main"><strong>5 запросов, последний:</strong> BMW 320d xDrive Modern Line  2.0 AT (220л.с.) дизель, полный привод, 6 МКП, красный металлик, $ 44 500</div>
           </div>
         </div></a><a href="#" class="box is-green">
         <div class="box__item box__number">0000132</div>
@@ -75,7 +70,7 @@
               <div class="user__name">Кузнецов Андрей</div>
               <div class="user__info">01.05.14, 15:41</div>
             </div>
-            <div class="user__main"><strong>5 запросов, </strong>последний: Mercedes-Benz CLS 63 AMG 4MATIC 5.5 AMT (557 л.с.) дизель, полный привод, 6 МКП, красный металлик, $ 124 090</div>
+            <div class="user__main"><strong>5 запросов, последний:</strong> BMW 320d xDrive Modern Line  2.0 AT (220л.с.) дизель, полный привод, 6 МКП, красный металлик, $ 44 500</div>
           </div>
         </div></a><a href="#" class="box is-yellow">
         <div class="box__item box__number">0000132</div>
@@ -85,41 +80,60 @@
               <div class="user__name">Кузнецов Андрей</div>
               <div class="user__info">01.05.14, 15:41</div>
             </div>
-            <div class="user__main">
-              <p>5 запросов, последний: Mercedes-Benz CLS 63 AMG 4MATIC 5.5 AMT (557 л.с.) дизель, полный привод, 6 МКП, красный металлик, $ 124 090</p>
-            </div>
+            <div class="user__main"><strong>5 запросов, последний:</strong> Mercedes-Benz CLS 63 AMG 4MATIC 5.5 AMT (557 л.с.) дизель, полный привод, 6 МКП, красный металлик, $ 124 090</div>
           </div>
         </div></a><a href="#" class="box is-gray">
         <div class="box__item box__number">0000132</div>
         <div class="box__item box__client">
           <div class="user">
             <div class="user__meta">
-              <div class="user__name">Кузнецов Андрей</div>
+              <div class="user__name">Гуфофский Полководец</div>
               <div class="user__info">01.05.14, 15:41</div>
             </div>
-            <div class="user__main"><strong>5 запросов, </strong>последний: Mercedes-Benz CLS 63 AMG 4MATIC 5.5 AMT (557 л.с.) дизель, полный привод, 6 МКП, красный металлик, $ 124 090</div>
+            <div class="user__main"><strong>1945 запросов, последний:</strong> BMW 320d xDrive Modern Line  2.0 AT (220л.с.) дизель, полный привод, 6 МКП, красный металлик, $ 44 500
+              <p class="is-yellow"><strong>Заметка:</strong> несовсем адекватный человек, ежедневно добавляет по 15 машин.</p>
+              <p class="is-gray">Отменён: 01.05.14</p>
+            </div>
           </div>
         </div></a><a href="#" class="box">
         <div class="box__item box__number">0000132</div>
         <div class="box__item box__client">
           <div class="user">
             <div class="user__meta">
-              <div class="user__name">Кузнецов Андрей</div>
+              <div class="user__name">Obama Barack</div>
               <div class="user__info">01.05.14, 15:41</div>
             </div>
-            <div class="user__main"><strong>5 запросов, </strong>
-              <p>последний: Mercedes-Benz CLS 63 AMG 4MATIC 5.5 AMT (557 л.с.) дизель, полный привод, 6 МКП, красный металлик, $ 124 090 </p>
-              <p class="is-yellow">Заметка: несовсем адекватный человек, ежедневно добавляет по 15 машин.</p>
-              <p class="is-gray">Отменён: 01.05.14</p>
+            <div class="user__main"><strong>194 запроса,</strong> последний: BMW 320d xDrive Modern Line  2.0 AT (220л.с.) дизель, полный привод, 6 МКП, красный металлик, $ 44 500
+              <p class="is-orange"><strong>Отложен</strong> до 19.05.14</p>
+            </div>
+          </div>
+        </div></a><a href="#" class="box">
+        <div class="box__item box__number">0000132</div>
+        <div class="box__item box__client">
+          <div class="user">
+            <div class="user__meta">
+              <div class="user__name">Иванов Иван</div>
+              <div class="user__info">01.05.14, 15:41</div>
+            </div>
+            <div class="user__main"><strong>4 запроса,</strong> последний: BMW 320d xDrive Modern Line  2.0 AT (220л.с.) дизель, полный привод, 6 МКП, красный металлик, $ 44 500
+              <p class="is-green"><strong>Куплен:</strong> BMW 320d xDrive Modern Line  2.0 AT, 44 500$</p>
             </div>
           </div>
         </div></a>
-      <div class="push"></div>
+      <div class="preloader"><img src="img/preloader.png" alt=""></div>
+      <div class="footer">
+        <div class="footer__btn">
+          <button type="button" class="btn-simple btn-simple_round js-scroll-top">Наверх</button>
+        </div>
+        <div class="footer__copy">© 2014 Dealerhall.by</div>
+        <div class="footer__created">Разработка проекта:<a href="#">Flex Media</a></div>
+        <div class="soc"><a href="#" class="soc__fb"></a><a href="#" class="soc__vk"></a><a href="#" class="soc__tw"></a></div>
+      </div>
+      <script src="js/lib/jquery.js"></script>
+      <script src="js/lib/jquery-ui.min.js"></script>
+      <script src="js/lib/jquery.multiselect.min.js"></script>
+      <script src="js/common.js"></script>
+      <script src="js/lib/head.js"></script>
     </div>
-    <script src="js/lib/jquery.js"></script>
-    <script src="js/lib/jquery-ui.min.js"></script>
-    <script src="js/lib/jquery.multiselect.min.js"></script>
-    <script src="js/common.js"></script>
-    <script src="js/lib/head.js"></script>
   </body>
 </html>

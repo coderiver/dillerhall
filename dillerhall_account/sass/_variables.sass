@@ -34,11 +34,11 @@
 //     @each $s in a,b,c
 //          #{$s}
 //              display: none
-// ## fonts 
+// ## fonts
 // Save fonts to /css/fonts, after that write (eot, woff, ttf):
-// +font(book, cytiapro-black-webfont)  
+// +font(book, cytiapro-black-webfont)
 // =book
-//  font-family: "book", Arial, sans-serif 
+//  font-family: "book", Arial, sans-serif
 // insert pics into css
 // div
 //  +pic("blabla.png")
@@ -48,27 +48,33 @@
 //  +jpg(bla)
 +font(museosanscyrl_100, museosanscyrl_100)
 =f100
-    font-family: "museosanscyrl_100", Arial, sans-serif 
-    
+    font-family: "museosanscyrl_100", Arial, sans-serif
+
 +font(museosanscyrl_100_italic, museosanscyrl_100_italic)
 =f100i
-    font-family: "museosanscyrl_100_italic", Arial, sans-serif 
-    
+    font-family: "museosanscyrl_100_italic", Arial, sans-serif
+
 +font(museosanscyrl_300, museosanscyrl_300)
 =f300
-    font-family: "museosanscyrl_300", Arial, sans-serif 
-    
+    font-family: "museosanscyrl_300", Arial, sans-serif
+
 +font(museosanscyrl_300_italic, museosanscyrl_300_italic)
 =f300i
-    font-family: "museosanscyrl_300_italic", Arial, sans-serif 
-    
+    font-family: "museosanscyrl_300_italic", Arial, sans-serif
+
 +font(museosanscyrl_500, museosanscyrl_500)
 =f500
-    font-family: "museosanscyrl_500", Arial, sans-serif 
-    
+    font-family: "museosanscyrl_500", Arial, sans-serif
+    font-weight: normal
+
++font(museosanscyrl_700, museosanscyrl_700)
+=f700
+    font-family: "museosanscyrl_700", Arial, sans-serif
+    font-weight: normal
+
 +font(museosanscyrl_500_italic, museosanscyrl_500_italic)
 =f500i
-    font-family: "museosanscyrl_500_italic", Arial, sans-serif 
+    font-family: "museosanscyrl_500_italic", Arial, sans-serif
 
 // hover.psd
 $blue_ligth: #8cd9f5
@@ -88,12 +94,14 @@ $green: #41e58a
 $orange: #ff9000
 $red: #ff5b5b
 
+$link: #2FBAEE
+
 =br
     border-radius: 10px
 =br5
     border-radius: 5px
 =br4
-    border-radius: 4px 
+    border-radius: 4px
 =tr_bg
     +transition(background .2s linear)
 =tr_color

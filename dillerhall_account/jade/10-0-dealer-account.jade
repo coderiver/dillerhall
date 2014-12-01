@@ -5,9 +5,67 @@ html
 		title 10-0 dealer account
 	body
 		.out
-			include _header.jade
+			//- include _header.jade
+			.header
+				a.logo(href="#")
+				.nav
+					a(href="#").is-active.is-marked Запросы
+					a(href="#") Склад
+					a(href="#") Настройки
+				.menu.js-menu
+					.menu__item
+						i.icon-user
+						|Сергей Никacолаев
+					ul.menu__list
+						li
+							a(href="#") Запросы
+						li
+							a(href="#") Избранные авто
+						li
+							a(href="#") История просмотров
+						li
+							a(href="#") История сравнений
+						li
+							a(href="#") Личные данные
+						li
+							a(href="#") Рассылка
+			.panel.js-panel
+				.filter
+					a.btn(href="#")
+						| Все запросы
+						em 98
+					a.btn-simple.btn-simple_red(href="#")
+						| Необработанные
+						em 3
+					a.btn-simple.btn-simple_orange(href="#")
+						| Отложенные
+						em 11
+					a.btn-simple.btn-simple_green(href="#")
+						| Принятые
+						em 34
+					a.btn-simple.btn-simple_yellow(href="#")
+						| С заметками
+						em 14
+					a.btn-simple(href="#")
+						| Отменённые
+						em 60
+				.sort
+					.sort__item.sort__order
+						a(href="#").sort__link.js-sort-link № заказа
+						input(type="checkbox" hidden)
+					.sort__item.sort__client
+						a(href="#").sort__link.js-sort-link Клиент
+						input(type="checkbox" hidden)
+					.sort__item.sort__search
+						.search
+							input.input(placeholder="Поиск по клиентам, запросам и диалогам")
+							button.search__btn(type="submit")
+					.sort__item.sort__select
+						a(href="#").sort__link.js-sort-link Посл. сообщение
+						input(type="checkbox" hidden)
+			.box-container
 			a.box.is-red(href="#")
-				.box__item.box__number 
+				.box__item.box__number
 					| 0000132
 				.box__item.box__client
 					.user
@@ -15,20 +73,21 @@ html
 							.user__name Кузнецов Андрей
 							.user__info 01.05.14, 15:41
 						.user__main
-							|5 запросов, последний: Mercedes-Benz CLS 63 AMG 4MATIC 5.5 AMT (557 л.с.) дизель, полный привод, 6 МКП, красный металлик, $ 124 090
+							strong Запрос:
+							|  BMW 320d xDrive Modern Line  2.0 AT (220л.с.) дизель, полный привод, 6 МКП, красный металлик, $ 44 500
 			a.box.is-orange(href="#")
-				.box__item.box__number 
+				.box__item.box__number
 					| 0000132
 				.box__item.box__client
 					.user
 						.user__meta
-							.user__name Кузнецов Андрей
+							.user__name Михайлов Стас
 							.user__info 01.05.14, 15:41
 						.user__main
-							strong 5 запросов, 
-							| последний: Mercedes-Benz CLS 63 AMG 4MATIC 5.5 AMT (557 л.с.) дизель, полный привод, 6 МКП, красный металлик, $ 124 090
+							strong 5 запросов, последний:
+							|  BMW 320d xDrive Modern Line  2.0 AT (220л.с.) дизель, полный привод, 6 МКП, красный металлик, $ 44 500
 			a.box.is-green(href="#")
-				.box__item.box__number 
+				.box__item.box__number
 					| 0000132
 				.box__item.box__client
 					.user
@@ -36,10 +95,10 @@ html
 							.user__name Кузнецов Андрей
 							.user__info 01.05.14, 15:41
 						.user__main
-							strong 5 запросов, 
-							| последний: Mercedes-Benz CLS 63 AMG 4MATIC 5.5 AMT (557 л.с.) дизель, полный привод, 6 МКП, красный металлик, $ 124 090
+							strong 5 запросов, последний:
+							|  BMW 320d xDrive Modern Line  2.0 AT (220л.с.) дизель, полный привод, 6 МКП, красный металлик, $ 44 500
 			a.box.is-yellow(href="#")
-				.box__item.box__number 
+				.box__item.box__number
 					| 0000132
 				.box__item.box__client
 					.user
@@ -47,30 +106,51 @@ html
 							.user__name Кузнецов Андрей
 							.user__info 01.05.14, 15:41
 						.user__main
-							p 5 запросов, последний: Mercedes-Benz CLS 63 AMG 4MATIC 5.5 AMT (557 л.с.) дизель, полный привод, 6 МКП, красный металлик, $ 124 090
+							strong 5 запросов, последний:
+							|  Mercedes-Benz CLS 63 AMG 4MATIC 5.5 AMT (557 л.с.) дизель, полный привод, 6 МКП, красный металлик, $ 124 090
 			a.box.is-gray(href="#")
-				.box__item.box__number 
+				.box__item.box__number
 					| 0000132
 				.box__item.box__client
 					.user
 						.user__meta
-							.user__name Кузнецов Андрей
+							.user__name Гуфофский Полководец
 							.user__info 01.05.14, 15:41
 						.user__main
-							strong 5 запросов, 
-							| последний: Mercedes-Benz CLS 63 AMG 4MATIC 5.5 AMT (557 л.с.) дизель, полный привод, 6 МКП, красный металлик, $ 124 090
-			a.box(href="#")
-				.box__item.box__number 
-					| 0000132
-				.box__item.box__client
-					.user
-						.user__meta
-							.user__name Кузнецов Андрей
-							.user__info 01.05.14, 15:41
-						.user__main
-							strong 5 запросов, 
-							p последний: Mercedes-Benz CLS 63 AMG 4MATIC 5.5 AMT (557 л.с.) дизель, полный привод, 6 МКП, красный металлик, $ 124 090 
-							p.is-yellow Заметка: несовсем адекватный человек, ежедневно добавляет по 15 машин.
+							strong 1945 запросов, последний:
+							|  BMW 320d xDrive Modern Line  2.0 AT (220л.с.) дизель, полный привод, 6 МКП, красный металлик, $ 44 500
+							p.is-yellow
+								strong Заметка:
+								|  несовсем адекватный человек, ежедневно добавляет по 15 машин.
 							p.is-gray Отменён: 01.05.14
-			.push 
-		include _footer.jade  
+			a.box(href="#")
+				.box__item.box__number
+					| 0000132
+				.box__item.box__client
+					.user
+						.user__meta
+							.user__name Obama Barack
+							.user__info 01.05.14, 15:41
+						.user__main
+							strong 194 запроса,
+							|  последний: BMW 320d xDrive Modern Line  2.0 AT (220л.с.) дизель, полный привод, 6 МКП, красный металлик, $ 44 500
+							p.is-orange
+								strong Отложен
+								|  до 19.05.14
+			a.box(href="#")
+				.box__item.box__number
+					| 0000132
+				.box__item.box__client
+					.user
+						.user__meta
+							.user__name Иванов Иван
+							.user__info 01.05.14, 15:41
+						.user__main
+							strong 4 запроса,
+							|  последний: BMW 320d xDrive Modern Line  2.0 AT (220л.с.) дизель, полный привод, 6 МКП, красный металлик, $ 44 500
+							p.is-green
+								strong Куплен:
+								|  BMW 320d xDrive Modern Line  2.0 AT, 44 500$
+			.preloader
+				img(src="img/preloader.png", alt="")
+			include _footer.jade
