@@ -1,0 +1,153 @@
+doctype
+html
+	head
+		include _head.jade
+		<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=abcdefg" type="text/javascript"></script>
+	body
+		.out
+			header.header
+				.header__top
+					a.header__logo(href="#")
+					.header__key
+						button.js-toggle-nav(type="button")
+							i
+				.header__middle
+					nav.breadcumbs
+						a(href="#") Главная
+					h1.page-title Личный кабинет
+				.header__bottom
+					.tabs-icon
+						.tabs-icon__item История просмотров
+						ul.tabs-icon__list
+							li
+								a(href="#")
+									i.icon-tab1
+									span Запросы
+							li
+								a(href="#")
+									i.icon-tab2
+									span Избранные автомобили
+							li.is-active
+								a(href="#")
+									i.icon-tab3
+									span История просмотров
+							li
+								a(href="#")
+									i.icon-tab4
+									span История сравнений
+							li
+								a(href="#")
+									i.icon-tab5
+									span Личные данные
+							li
+								a(href="#")
+									i.icon-tab6
+									span Рассылка
+				include _nav.jade
+			.stores
+				ul.sorting
+					li
+						a(href="#").is-active АТЛАНТ-М Уручье
+					li
+						a(href="#") АТЛАНТ-М Сухарево
+					li
+						a(href="#") АТЛАНТ-М Машиностроителей  
+				.stores__top
+					.info
+						h3 Адрес
+						p Минск, пр. Независимости, 202
+					.info
+						h3 время работы
+						p с 8:00 до 20:30 без выходных
+					.info
+						h3 телефон
+						p +375 17 33 111 11
+						p +375 29 33 111 11
+						p +375 33 33 111 11 
+					.info
+						h3 website
+						p
+							a(href="#") www.uruchie.by
+				.stores__top
+					.graph
+						h4 Отдел продаж автомобилей Volkswagen:
+						.graph__info
+							span.graph__title Время работы:
+							ul
+								li
+									strong Пн.- Пт. 
+									|  : c 9.00 до 20.00.
+								li
+									strong Сб. - Вс. 
+									|  : с 9.00 до 18.00
+							span.graph__title Контактный телефон:
+							ul
+								li
+									strong Тел. 
+									|  : +375 17 33 111 11
+								li
+									strong Тел. 
+									|  : +375 17 33 111 11 (velcom)
+								li
+									strong Тел. 
+									|  : +375 17 33 111 11 (МТС)
+					.graph
+						h4 Финансовый сервис: страхование, кредит, лизинг:
+						.graph__info
+							span.graph__title Время работы:
+							ul
+								li
+									strong Пн.- Пт. 
+									|  : c 9.00 до 20.00.
+								li
+									strong Сб. - Вс. 
+									|  : с 9.00 до 18.00
+							span.graph__title Контактный телефон:
+							ul
+								li
+									strong Тел. 
+									|  : +375 17 33 111 11
+								li
+									strong Тел. 
+									|  : +375 17 33 111 11 (velcom)
+								li
+									strong Тел. 
+									|  : +375 17 33 111 11 (МТС)
+				.stores__map
+					a(href="#").btn-action Скрыть все отделы
+					.map(id="map-canvas")
+				hr
+				.stores__inner
+					.gallery
+						h2 Фотогалерея автосалона
+						.slider.js-slider
+							.slider__list
+								.slider__item
+									img(src="img/slider-item.jpg", alt="")
+								.slider__item
+									img(src="img/slider-item.jpg", alt="")
+								.slider__item
+									img(src="img/slider-item.jpg", alt="")
+								.slider__item
+									img(src="img/slider-item.jpg", alt="")
+								.slider__item
+									img(src="img/slider-item.jpg", alt="")
+						span Салон отличается своим неповторимым стилем в каждой мелочи
+					.stores__bottom
+						h2 Перечень услуг автосалона
+						h3 Продажа автомобилей
+						ul
+							li продажа легковых автомобилей;
+							li продажа коммерческих автомобилей и микроавтобусов;
+							li продажа автомобилей специального назначения (бронированные автомобили, автомобили медицинской помощи, автомобили специального реагирования МЧС и т.п.);
+						ul
+							li продажа автомобилей в кредит, лизинг;
+							li при покупке нового автомобиля, помощь в реализации старой машины;
+							li прием б/у автомобилей на комиссию.
+						.stores__btn
+							a(href="#").btn Показать автомобили в наличии
+
+			.push 
+		include _footer.jade 
+
+
