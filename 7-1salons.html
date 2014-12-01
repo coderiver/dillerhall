@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1">
+    <link rel="stylesheet" href="css/screen.css" media="screen,print"><!--[if IE]><script src="js/html5shiv.js"></script><![endif]--><script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=abcdefg" type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="out">
+      <header class="header">
+        <div class="header__top"><a href="#" class="header__logo"></a>
+          <div class="header__key">
+            <button type="button" class="js-toggle-nav"><i></i></button>
+          </div>
+        </div>
+        <div class="header__middle">
+          <nav class="breadcumbs"><a href="#">Главная</a></nav>
+          <h1 class="page-title">Личный кабинет</h1>
+        </div>
+        <div class="header__bottom">
+          <div class="tabs-icon">
+            <div class="tabs-icon__item">История просмотров</div>
+            <ul class="tabs-icon__list">
+              <li><a href="#"><i class="icon-tab1"></i><span>Запросы</span></a></li>
+              <li><a href="#"><i class="icon-tab2"></i><span>Избранные автомобили</span></a></li>
+              <li class="is-active"><a href="#"><i class="icon-tab3"></i><span>История просмотров</span></a></li>
+              <li><a href="#"><i class="icon-tab4"></i><span>История сравнений</span></a></li>
+              <li><a href="#"><i class="icon-tab5"></i><span>Личные данные</span></a></li>
+              <li><a href="#"><i class="icon-tab6"></i><span>Рассылка</span></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="nav js-nav">
+          <div class="nav__in">
+            <div class="search-box">
+              <input type="text" placeholder="Поиск" class="search-box__input">
+              <button type="sumbit" class="search-box__btn"></button>
+            </div>
+            <div class="nav__list">
+              <div class="nav__col">
+                <div class="nav__title"><a href="#">Главная</a></div>
+              </div>
+              <div class="nav__col">
+                <div class="nav__title"><a href="#">Новости индустрии</a></div>
+                <ul>
+                  <li><a href="#">Новости и акции дилеров</a></li>
+                </ul>
+              </div>
+              <div class="nav__col">
+                <div class="nav__title is-active"><a href="#">Каталог новых автомобилей</a></div>
+                <ul>
+                  <li><a href="#">Подобрать по характеристикам</a></li>
+                  <li><a href="#">Найти по названию модели</a></li>
+                  <li><a href="#">Автомобильные салоны</a></li>
+                </ul>
+              </div>
+              <div class="nav__col">
+                <div class="nav__title"><a href="#">О проекте</a></div>
+                <ul>
+                  <li><a href="#">Как это работает</a></li>
+                  <li><a href="#">Для дилеров</a></li>
+                  <li><a href="#">Новости проекта</a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                </ul>
+              </div>
+              <div class="nav__col">
+                <div class="nav__title"><a href="#">Обратная связь</a></div>
+                <ul>
+                  <li><a href="#">Стать партнёром</a></li>
+                  <li><a href="#">Вакансии</a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                </ul>
+              </div>
+              <div class="nav__col"><a href="#" class="nav__user"><i class="icon-lock"></i>Личный кабинет </a></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="stores">
+        <ul class="sorting">
+          <li><a href="#" class="is-active">АТЛАНТ-М Уручье</a></li>
+          <li><a href="#">АТЛАНТ-М Сухарево</a></li>
+          <li><a href="#">АТЛАНТ-М Машиностроителей  </a></li>
+        </ul>
+        <div class="stores__top">
+          <div class="info">
+            <h3>Адрес</h3>
+            <p>Минск, пр. Независимости, 202</p>
+          </div>
+          <div class="info">
+            <h3>время работы</h3>
+            <p>с 8:00 до 20:30 без выходных</p>
+          </div>
+          <div class="info">
+            <h3>телефон</h3>
+            <p>+375 17 33 111 11</p>
+            <p>+375 29 33 111 11</p>
+            <p>+375 33 33 111 11 </p>
+          </div>
+          <div class="info">
+            <h3>website</h3>
+            <p><a href="#">www.uruchie.by</a></p>
+          </div>
+        </div>
+        <div class="stores__map stores__map_mod"><a href="#" class="btn-action">Показать все отделы</a>
+          <div id="map-canvas" class="map"></div>
+        </div>
+        <hr>
+        <div class="stores__inner">
+          <div class="gallery">
+            <h2>Фотогалерея автосалона</h2>
+            <div class="slider js-slider">
+              <div class="slider__list">
+                <div class="slider__item"><img src="img/slider-item.jpg" alt=""></div>
+                <div class="slider__item"><img src="img/slider-item.jpg" alt=""></div>
+                <div class="slider__item"><img src="img/slider-item.jpg" alt=""></div>
+                <div class="slider__item"><img src="img/slider-item.jpg" alt=""></div>
+                <div class="slider__item"><img src="img/slider-item.jpg" alt=""></div>
+              </div>
+            </div><span>Салон отличается своим неповторимым стилем в каждой мелочи</span>
+          </div>
+          <div class="stores__bottom">
+            <h2>Перечень услуг автосалона</h2>
+            <h3>Продажа автомобилей</h3>
+            <ul>
+              <li>продажа легковых автомобилей;</li>
+              <li>продажа коммерческих автомобилей и микроавтобусов;</li>
+              <li>продажа автомобилей специального назначения (бронированные автомобили, автомобили медицинской помощи, автомобили специального реагирования МЧС и т.п.);</li>
+            </ul>
+            <ul>
+              <li>продажа автомобилей в кредит, лизинг;</li>
+              <li>при покупке нового автомобиля, помощь в реализации старой машины;</li>
+              <li>прием б/у автомобилей на комиссию.</li>
+            </ul>
+            <div class="stores__btn"><a href="#" class="btn">Показать автомобили в наличии</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="push"></div>
+    </div>
+    <div class="footer">
+      <div class="footer__main">
+        <div class="footer__nav">
+          <div class="footer__title is-active"><a href="#">Главная</a></div>
+        </div>
+        <div class="footer__nav">
+          <div class="footer__title"><a href="#">Каталог новых автомобилей</a></div>
+          <ul>
+            <li><a href="#">Подобрать по характеристикам</a></li>
+            <li><a href="#">Найти по названию модели</a></li>
+            <li><a href="#">Автомобильные салоны</a></li>
+            <li><a href="#">Акции дилеров</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav">
+          <div class="footer__title"><a href="#">О проекте</a></div>
+          <ul>
+            <li><a href="#">Как это работает</a></li>
+            <li><a href="#">Для дилеров</a></li>
+            <li><a href="#">Новости проекта</a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+          </ul>
+        </div>
+        <div class="footer__nav">
+          <div class="footer__title"><a href="#">Обратная связь</a></div>
+          <ul>
+            <li><a href="#">Стать партнёром</a></li>
+            <li><a href="#">Вакансии</a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__info">
+        <div class="footer__btn">
+          <button type="button" class="btn-simple btn-simple_round js-scroll-top">Наверх</button>
+        </div>
+        <div class="footer__copy">© 2014 Dealerhall.by</div>
+        <div class="footer__created">Разработка проекта: <a href="#">Flex Media</a></div>
+        <div class="soc"><a href="#" class="soc__fb"></a><a href="#" class="soc__vk"></a><a href="#" class="soc__tw"></a></div>
+      </div>
+    </div>
+    <script src="js/lib/jquery.js"></script>
+    <script src="js/lib/jquery-ui.min.js"></script>
+    <script src="js/lib/jquery.multiselect.min.js"></script>
+    <script src="js/lib/cycle.js"></script>
+    <script src="js/lib/slick.min.js"></script>
+    <script src="js/valera.js"></script>
+    <script src="js/valik.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/lib/head.js"></script>
+  </body>
+</html>

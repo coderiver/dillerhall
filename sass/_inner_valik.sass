@@ -822,7 +822,7 @@ h2.title
 
 ul.sorting
 	text-align: center
-	+r(480)
+	+r(768)
 		display: none
 	li
 		display: inline-block
@@ -1583,7 +1583,7 @@ ul.sorting
 			line-height: 24px
 			margin-bottom: 30px
 			strong
-				+f500
+				+f700
 		div
 			margin: 0 -15px 0 -15px 
 			font-size: 0
@@ -1603,7 +1603,7 @@ ul.sorting
 			+r(768)
 				font-size: 24px
 			strong
-				+f500
+				+f700
 		h2
 			+f500
 			font-size: 24px
@@ -1708,3 +1708,215 @@ ul.sorting
 			+r(768)
 				display: block
 				width: 100%
+
+//salons
+.salons-map
+	.map
+		height: 860px
+.salons
+	padding: 60px 0
+	&__row
+		+clr
+		max-width: 1020px
+		padding: 0 20px 40px
+		margin: 0 auto
+	&__left
+		float: left
+		width: 55px
+		text-transform: uppercase
+		+f500
+		font-size: 16px
+		letter-spacing: 0.019em
+		padding: 5px 0 0 0 
+		+r(480)
+			width: 30px
+	&__info
+		overflow: hidden
+	&__inner
+		width: 100%
+		+clr
+	&__title
+		+f100
+		text-transform: uppercase
+		font-size: 16.01px
+		line-height: 36px
+		display: block
+		margin-bottom: 20px 
+	&__box
+		float: left
+		width: 33%
+		margin-bottom: 40px
+		+r(980)
+			width: 50%
+		+r(768)
+			width: 100%
+	&__name, p
+		font-size: 14px
+	&__name
+		+f300
+		text-transform: uppercase
+		letter-spacing: 0.019em
+		line-height: 18px
+		margin-bottom: 10px
+		display: block
+	p
+		+f100
+		line-height: 20px  
+		margin-bottom: 3px
+		color: #505050 
+		a
+			color: $blue
+			+tr_color
+			letter-spacing: 0.1em 
+			&:hover
+				color: $blue_h 
+				
+.header_salons
+	background: rgba(47, 186, 238, 0.9)
+	z-index: 9  
+//info
+.info
+	h3
+		+f500
+		font-size: 18px
+		letter-spacing: 0.02em 
+		font-weight: normal
+		text-transform: uppercase
+	p
+		+f100
+		font-size: 14px
+		+opacity(0.8)
+		a
+			color: $blue
+			+tr_color
+			letter-spacing: 0.1em 
+			&:hover
+				color: $blue_h 
+//graph
+.graph
+	text-align: left
+	max-width: 283px
+	h4
+		+f500
+		font-size: 16px
+		line-height: 20px
+		font-weight: normal
+		margin-bottom: 15px
+	&__info
+		border-top: 1px solid #e9e9e9
+		padding: 20px 0 0 
+	&__title, p, li
+		display: block
+		+f100
+		font-size: 14px
+		line-height: 24px
+		+opacity(0.8)
+	&__title
+		margin-bottom: 6px
+	ul
+		margin-bottom: 15px 
+	li, p
+		margin-bottom: 3px
+		strong 
+			+f300
+//stores
+.stores
+	padding: 55px 0 0 0 
+	.sorting
+		margin-bottom: 35px
+		a
+			text-transform: uppercase
+	&__top
+		text-align: center
+		max-width: 1020px 
+		padding: 30px 20px 30px
+		font-size: 0
+		margin: 0 auto
+	.info
+		display: inline-block
+		padding: 0 40px 40px
+		vertical-align: top
+		+r(768)
+			width: 100%
+			padding: 0 0 40px 
+	.graph
+		display: inline-block
+		vertical-align: top
+		margin: 0 36px 
+		padding: 0 0 40px 
+		+r(768)
+			margin: 0
+	&__map
+		text-align: center
+		margin-bottom: 60px 
+		.btn-action
+			margin-bottom: 75px
+		.map
+			height: 360px
+		&_mod
+			.btn-action
+				margin-bottom: 35px
+	.btn-action
+		padding: 16px 20px 15px 
+	hr
+		margin: 0 auto
+		border: none
+		border-top: 1px solid #e9e9e9
+		max-width: 1300px 
+	&__inner
+		max-width: 1020px 
+		padding: 70px 20px 0px
+		margin: 0 auto
+		.gallery
+			margin-bottom: 150px 
+	&__bottom
+		font-size: 0
+		h2, h3
+			font-weight: normal
+		h2
+			+f500
+			font-size: 24px
+			line-height: 36px
+			letter-spacing: 0.02em 
+			margin-bottom: 22px
+		h3
+			+f300
+			font-size: 20px
+			line-height: 36px
+			letter-spacing: 0.02em 
+			margin-bottom: 20px
+		ul
+			display: inline-block
+			width: 50%
+			vertical-align: top
+			padding: 0 0 0 25px 
+			+r(980)
+				width: 100%
+			+r(480)
+				padding: 0
+			li
+				+f100
+				font-size: 14px
+				letter-spacing: 0.02em 
+				line-height: 24px
+				position: relative
+				padding: 0 0 0 30px
+				position: relative
+				&:before
+					position: absolute
+					top: 9px
+					left: 0
+					content: "" 
+					width: 6px
+					height: 6px
+					background-color: #2DB9EE
+					+border-radius(50%)
+		.btn
+			width: 100%
+			max-width: 284px
+			display: block
+			margin: 0 auto
+	&__btn
+		padding: 100px 0 90px 0 
+
+

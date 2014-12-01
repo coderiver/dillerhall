@@ -1,0 +1,19 @@
+doctype
+html
+	head
+		include _head.jade
+	body
+		.out
+			include _header
+				.filter-wrap
+					.filter
+						span.filter__title Уже определились с маркой автомобиля?
+					.filter
+						span.filter__title Тип кузова
+						label.checkbox
+							input(type="checkbox", name="check", value=" ")
+							span.checkbox__title Дублировать входящие сообщения в личном кабинете на мою электронную почту
+			.push 
+		include _footer.jade 
+
+
