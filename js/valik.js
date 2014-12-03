@@ -63,6 +63,7 @@ $(document).ready(function() {
  			}
  		});
  	};
- 	$('.slick-next').slickNext();
- 	$('.slick-prev').slickPrev();
+ 	//$('.slick-next').slickNext();
+ 	//$('.slick-prev').slickPrev();
+ 	
 });
