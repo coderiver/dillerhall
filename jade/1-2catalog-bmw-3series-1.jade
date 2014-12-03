@@ -1,0 +1,129 @@
+doctype
+html
+	head
+		include _head.jade
+		title 1-2catalog-bmw-3series-1
+	body
+		.out
+			header.header.header_news
+				.header__top
+					.header__key
+						button.js-toggle-nav(type="button")
+							i
+				.header__middle
+					nav.breadcumbs
+						a(href="#") Главная
+						a(href="#") Новости индустрии
+						a(href="#") BMW
+					.page-title BMW 3 series
+				.header__bottom
+					.header__center
+						.header__nav
+							.header__nav-list
+								a(href="#") Описание
+								a(href="#") Дизайн
+								a(href="#") Характеристики
+								a(href="#") Технологии
+							.select.col.col_252
+								select.js-select-single
+									option(value="Все") Все
+									option(value="2014") 2014
+									option(value="2013") 2013
+									option(value="2012") 2012
+					.header__right
+						a.btn(href="#") Подписаться на новостиe
+				.header__bg
+					.header__bg-in(style="background-image: url(img/bmw-bg-big.jpg)")
+				include _nav.jade
+			.article
+				h2 Описание
+				p Седан среднего класса BMW 3-Series (F30) дебютировал в 2011 году, но продажи стартовали годом позже. По габаритным размерам «тройка» стала на 93 мм длиннее, на 6 мм шире и на 8 мм выше своего предшественника (BMW E90). Колесная база увеличилась на 50 мм,а объем багажника — на 50 литров. При этом абсолютно все модификации модели стали легче по сравнению с Е90. 
+				hr
+				.article__in.js-tabs-group
+					h2 Дизайн
+					ul.tabs.js-tabs
+						li.is-active
+							a(href="#js-tab1") Фото
+						li
+							a(href="#js-tab2") Видео
+					.tabs-content.js-tabs-content(data-id="#js-tab1")
+						ul.tabs-link.js-tabs-simple
+							li
+								a(href="#") Все                                   
+							li
+								a(href="#") Салон
+							li
+								a(href="#") Экстерьер
+							li
+								a(href="#") Детали
+						.js-tabs-simple-group
+							.tabs-content.js-tabs-simple-content
+								.gallery
+									.slider
+										.slider__list.js-slick
+											.slider__item
+												img(src="img/slider-item2.jpg", alt="")
+											.slider__item
+												img(src="img/slider-item2.jpg", alt="")
+											.slider__item
+												img(src="img/slider-item2.jpg", alt="")
+											.slider__item
+												img(src="img/slider-item2.jpg", alt="")
+											.slider__item
+												img(src="img/slider-item2.jpg", alt="")
+									span Приборная панель BMW отличается эргономичностью и максимальной информативностью всех расположенных на ней приборов. Практически все последние модели БМВ оснащаются спидометрами, которые оцифруются как милями, так и километрами.
+							.tabs-content.js-tabs-simple-content
+								.gallery
+									.slider
+										.slider__list.js-slick
+											.slider__item
+												img(src="img/slider-item.jpg", alt="")
+											.slider__item
+												img(src="img/slider-item2.jpg", alt="")
+											.slider__item
+												img(src="img/slider-item.jpg", alt="")
+											.slider__item
+												img(src="img/slider-item2.jpg", alt="")
+											.slider__item
+												img(src="img/slider-item.jpg", alt="")
+									span Приборная панель BMW 
+							.tabs-content.js-tabs-simple-content
+								.gallery
+									.slider
+										.slider__list.js-slick
+											.slider__item
+												img(src="img/slider-item2.jpg", alt="")
+											.slider__item
+												img(src="img/slider-item2.jpg", alt="")
+									span Приборная панель BMW отличается эргономичностью и максимальной информативностью всех расположенных на ней приборов. Практически все последние модели БМВ оснащаются спидометрами, которые оцифруются как милями, так и километрами.
+							.tabs-content.js-tabs-simple-content
+								.gallery
+									.slider
+										.slider__list.js-slick
+												img(src="img/slider-item.jpg", alt="")
+											.slider__item
+												img(src="img/slider-item2.jpg", alt="")
+											.slider__item
+												img(src="img/slider-item.jpg", alt="")
+											.slider__item
+												img(src="img/slider-item.jpg", alt="")
+									span Приборная панель BMW 
+					.tabs-content.js-tabs-content(data-id="#js-tab2")
+						ul.tabs-link.js-tabs-simple
+							li.is-active
+								a(href="#") Все                                   
+							li
+								a(href="#") Салон
+							li
+								a(href="#") Экстерьер
+							li
+								a(href="#") Детали
+						figure
+							.video
+								iframe(src="http://player.vimeo.com/video/76856850", frameborder="0", webkitallowfullscreen, mozallowfullscreen, allowfullscreen)
+							span Наш офис изнутри. Здесь мы трудимся каждый божий день, делая для вас поистине отменный сервис.
+				hr
+			.push 
+		include _footer.jade 
+
+

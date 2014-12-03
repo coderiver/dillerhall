@@ -63,6 +63,7 @@ $(document).ready(function() {
  			}
  		});
  	};
+<<<<<<< HEAD
  	$('.slick-next').slickNext();
  	$('.slick-prev').slickPrev();
  	//RANGE
@@ -76,3 +77,9 @@ $(document).ready(function() {
 	});
 });
 
+=======
+ 	//$('.slick-next').slickNext();
+ 	//$('.slick-prev').slickPrev();
+ 	
+});
+>>>>>>> 4f035fa52941f4621035df149efdb105face082f
