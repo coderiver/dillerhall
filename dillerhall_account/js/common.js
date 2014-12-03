@@ -12,26 +12,43 @@ $(document).ready(function() {
         return false;
     });
 
+    if ($('.js-select-single').length) {
+        $('.js-select-single').each(function() {
+            $(this).multiselect({
+                multiple: false,
+                selectedList: 1,
+                show: ["fade", 200],
+                hide: ["fade", 200],
+                beforeclose : function() {
+                    if ($(this).hasClass('js-select-border')) {
+                        var select = $(this);
+                        setDataBorderColor(select);
+                    }
+                }
+            });
+        });
+    }
 
-    $(".js-select-single").multiselect({
-         multiple: false,
-         //header: false,
-         //noneSelectedText: "Select an Option",
-         selectedList: 1,
-         show: ["fade", 200],
-         hide: ["fade", 200]
-    });
+    var setDataBorderColor = function( el ) {
+        var options = el.find('option'),
+            wrapper = el.parents('.select'),
+            checkedRadio = el.multiselect('widget').find(":radio:checked"),
+            checkedIndex = checkedRadio.parents('li').index(),
+            color = options.eq(checkedIndex).attr('data-border-color');
 
-    // $('.js-select-color').on('change', function(event) {
-    //     var wrapper = $(this).parent(),
-    //         option  = $(this).find('option:selected'),
-    //         color   = $(this).find('option:selected').attr('data-border-color');
-    //     wrapper.data('border-color', color);
-    //     event.preventDefault();
-    //     console.log(option);
-    //     console.log(color);
-    // });
+            if ( color !== undefined ) {
+                wrapper.attr('data-border-color', color);
+            } else {
+                wrapper.attr('data-border-color', '');
+            }
+    };
 
+    if ($('.js-select-border').length) {
+        $('.js-select-border').each(function() {
+            var color = $(this).find('option:selected').attr('data-border-color');
+            $(this).parent('.select').attr('data-border-color', color);
+        });
+    }
 
 
     $('.js-menu').on("click",function(event) {

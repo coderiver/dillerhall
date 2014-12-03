@@ -235,59 +235,85 @@ a
     padding: 0 25px 0 15px
     width: 100% !important
     height: 30px
-    // border: 1px solid rgba(#fff,.5)
-    border: 1px solid $border-input
+    border: 1px solid rgba(#fff,.5)
     +br5
     font-size: 14px
     +f300
-    // color: #fff
-    color: #000
+    color: #fff
     background: none
     +transition(border .3s, box-shadow .3s)
     &:hover
-      // border-color: #fff
-      border-color: #000
+      border-color: #fff
     &.ui-state-active
       box-shadow: 0 0 5px rgba(255, 255, 255, 0.3)
-      // border-color: #fff
-      border-color: #000
+      border-color: #fff
   .ui-icon
     position: absolute
     right: 12px
     top: 8px
-    // +svg(select-white,5,14)
-    +svg(select,5,14)
+    +svg(select-white,5,14)
+  &_dark
+    .ui-multiselect
+      border: 1px solid $gray
+      color: #000
+      &:hover
+        border-color: #000
+      &.ui-state-active
+        box-shadow: 0 0 5px rgba($gray, 0.3)
+        border-color: #000
+    .ui-icon
+      +svg(select,5,14)
   &[data-border-color="green"]
     .ui-multiselect
       border-color: $green
+      &.ui-state-active
+        box-shadow: 0 0 5px rgba($green, 0.3)
   &[data-border-color="orange"]
     .ui-multiselect
       border-color: $orange
+      &.ui-state-active
+        box-shadow: 0 0 5px rgba($orange, 0.3)
   &[data-border-color="green"]
     .ui-multiselect
       border-color: $green
+      &.ui-state-active
+        box-shadow: 0 0 5px rgba($green, 0.3)
   &[data-border-color="yellow"]
     .ui-multiselect
       border-color: $yellow
+      &.ui-state-active
+        box-shadow: 0 0 5px rgba($yellow, 0.3)
   &[data-border-color="red"]
     .ui-multiselect
       border-color: $red
+      &.ui-state-active
+        box-shadow: 0 0 5px rgba($red, 0.3)
   &[data-border-color="blue"]
     .ui-multiselect
       border-color: $blue
+      &.ui-state-active
+        box-shadow: 0 0 5px rgba($blue, 0.3)
 
 .ui-multiselect-single
-  margin-top: 5px
+  margin-top: 3px
   background: #fff
   padding: 15px
   +br5
-  border: 1px solid $border-input
-  // &:before
-  //   content: ""
-  //   position: absolute
-  //   top: -10px
-  //   left: 20px
-  //   +arr(15,10,#fff,t)
+  border: 1px solid $gray
+  &:before
+    content: ""
+    position: absolute
+    z-index: 1
+    top: -11px
+    left: 20px
+    +arr(16,11,$gray,t)
+  &:after
+    content: ""
+    position: absolute
+    z-index: 2
+    top: -9px
+    left: 21px
+    +arr(14,10,#fff,t)
   label
     cursor: pointer
     +tr_c
