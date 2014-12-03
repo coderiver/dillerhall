@@ -46,7 +46,7 @@ html
 							a(href="#js-tab1") Фото
 						li
 							a(href="#js-tab2") Видео
-					.tabs-content.js-tabs-content(data-id="#js-tab1")
+					.tabs-content.js-tabs-content(data-id="#js-tab1", style="display:block") 
 						ul.tabs-link.js-tabs-simple
 							li
 								a(href="#") Все                                   
@@ -73,41 +73,11 @@ html
 												img(src="img/slider-item2.jpg", alt="")
 									span Приборная панель BMW отличается эргономичностью и максимальной информативностью всех расположенных на ней приборов. Практически все последние модели БМВ оснащаются спидометрами, которые оцифруются как милями, так и километрами.
 							.tabs-content.js-tabs-simple-content
-								.gallery
-									.slider
-										.slider__list.js-slick
-											.slider__item
-												img(src="img/slider-item.jpg", alt="")
-											.slider__item
-												img(src="img/slider-item2.jpg", alt="")
-											.slider__item
-												img(src="img/slider-item.jpg", alt="")
-											.slider__item
-												img(src="img/slider-item2.jpg", alt="")
-											.slider__item
-												img(src="img/slider-item.jpg", alt="")
-									span Приборная панель BMW 
+								p 2
 							.tabs-content.js-tabs-simple-content
-								.gallery
-									.slider
-										.slider__list.js-slick
-											.slider__item
-												img(src="img/slider-item2.jpg", alt="")
-											.slider__item
-												img(src="img/slider-item2.jpg", alt="")
-									span Приборная панель BMW отличается эргономичностью и максимальной информативностью всех расположенных на ней приборов. Практически все последние модели БМВ оснащаются спидометрами, которые оцифруются как милями, так и километрами.
+								p 3
 							.tabs-content.js-tabs-simple-content
-								.gallery
-									.slider
-										.slider__list.js-slick
-												img(src="img/slider-item.jpg", alt="")
-											.slider__item
-												img(src="img/slider-item2.jpg", alt="")
-											.slider__item
-												img(src="img/slider-item.jpg", alt="")
-											.slider__item
-												img(src="img/slider-item.jpg", alt="")
-									span Приборная панель BMW 
+								p 4
 					.tabs-content.js-tabs-content(data-id="#js-tab2")
 						ul.tabs-link.js-tabs-simple
 							li.is-active
@@ -118,10 +88,54 @@ html
 								a(href="#") Экстерьер
 							li
 								a(href="#") Детали
-						figure
-							.video
-								iframe(src="http://player.vimeo.com/video/76856850", frameborder="0", webkitallowfullscreen, mozallowfullscreen, allowfullscreen)
-							span Наш офис изнутри. Здесь мы трудимся каждый божий день, делая для вас поистине отменный сервис.
+						.js-tabs-simple-group
+							.tabs-content.js-tabs-simple-content
+								figure
+									.video
+										iframe(src="http://player.vimeo.com/video/76856850", frameborder="0", webkitallowfullscreen, mozallowfullscreen, allowfullscreen)
+									span Наш офис изнутри. Здесь мы трудимся каждый божий день, делая для вас поистине отменный сервис.
+							.tabs-content.js-tabs-simple-content
+								p 2
+							.tabs-content.js-tabs-simple-content
+								p 3
+							.tabs-content.js-tabs-simple-content
+								p 4
+				hr
+				.article__in.js-tabs-group
+					h2 Основные характеристики
+					.tabs-wrap
+						ul.tabs.js-tabs
+							li.is-active
+								a(href="#js-tab3") Двигатель
+							li
+								a(href="#js-tab4") Коробка передач
+							li
+								a(href="#js-tab5") Тормозная система  
+							li
+								a(href="#js-tab6") Рулевое управление
+							li
+								a(href="#js-tab7") Ходовая часть
+					.tabs-content.js-tabs-content(data-id="#js-tab3", style="display:block")
+						h1 1.5, 1.8, 2.0 литра
+						h2 Компактный автомобиль с задним приводом и продольным расположением двигателя
+						p Автомобиль выпускается с 2004 года. Последним автомобилем такого класса этого немецкого производителя был BMW 3 Compact (E36/5, E46/5). Машина имеет много общих решений с другими моделями. Так, передняя подвеска стойки МакФерсон от «пятёрки» E60, а задняя многорычажная от «трёшки» E90.
+						p Модель позиционируется в зависимости от комплектации как пяти или четырёхместный автомобиль. Центральная часть приборной панели слегка повёрнута в сторону водителя, а вместо ключа зажигания — брелок и кнопка «Start» над ним.
+						p Машина выпускается в четырёх кузовах: с 3-х и 5-дверные хетчбэки (E81, E87) (сняты с производства), купе (E82) и кабриолет (E88).
+						h2 Двигатели S14 (1986 - 1991 г.г.)
+						p Основанный на блоке М10, S14 был разработан отделением BMW Motorsport для М3 в кузове Е30.
+						ul
+							li Объем: 2302 (2467)
+							li Диаметр цилиндра: 93.4 (95)
+							li Ход поршня: 84 (87)
+							li Представлен в 1986 / (1989)
+					.tabs-content.js-tabs-content(data-id="#js-tab4")
+						p cont1
+					.tabs-content.js-tabs-content(data-id="#js-tab5")
+						p cont2
+					.tabs-content.js-tabs-content(data-id="#js-tab6")
+						p cont3
+					.tabs-content.js-tabs-content(data-id="#js-tab7")
+						p cont4
 				hr
 			.push 
 		include _footer.jade 
