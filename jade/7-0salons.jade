@@ -2,7 +2,7 @@ doctype
 html
 	head
 		include _head.jade
-		<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=abcdefg" type="text/javascript"></script>
+		<script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
 	body
 		.out
 			header.header.header_absolute.header_salons
@@ -45,7 +45,7 @@ html
 									span Рассылка
 				include _nav.jade
 			.salons-map
-				.map(id="map-canvas")
+				.ymap(id="map")
 			.salons
 				.salons__row
 					.salons__left A 
@@ -133,5 +133,38 @@ html
 									a(href="#") www.cadillac.by
 			.push 
 		include _footer.jade 
+		script(type="text/javascript").
+			ymaps.ready(init);
+				var myMap;
+
+				function init(){     
+					myMap = new ymaps.Map ("map", {
+						center: [53.90614, 27.54849],
+						zoom: 12
+					});
+					//first mark
+					myPlacemark = new ymaps.Placemark([53.90614, 27.54849], { 
+						balloonContent: '<span class="ymap__title">Автосалон AV</span><span class="ymap__gray">официальный дилер Audi</span><p>г. Минск, ул. Серова, 1</p><p>+375 29 191-88-88</p><p><a href="#">www.audi.by</a></p>'
+					}, {
+						balloonShadow: false
+					});
+					//second mark
+					myPlacemark2 = new ymaps.Placemark([53.93099, 27.54069], { 
+						balloonContent: '<span class="ymap__title">Автосалон AV-2</span><span class="ymap__gray">официальный дилер Audi</span><p>г. Минск, ул. Серова, 1</p><p>+375 29 191-88-88</p><p><a href="#">www.audi.by</a></p>'
+					}, {
+						balloonShadow: false
+					});
+					//third mark
+					myPlacemark3 = new ymaps.Placemark([53.90672, 27.52199], { 
+						balloonContent: '<span class="ymap__title">Автосалон AV-3</span><span class="ymap__gray">официальный дилер Audi</span><p>г. Минск, ул. Серова, 1</p><p>+375 29 191-88-88</p><p><a href="#">www.audi.by</a></p>'
+					}, {
+						balloonShadow: false
+					});
+
+					myMap.geoObjects
+						.add(myPlacemark)
+						.add(myPlacemark2)
+						.add(myPlacemark3);
+				}
 
 

@@ -2,17 +2,75 @@ doctype
 html
 	head
 		include _head.jade
+		//- link(rel="stylesheet", href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css")
 	body
 		.out
 			include _header
-				.filter-wrap
-					.filter
-						span.filter__title Уже определились с маркой автомобиля?
-					.filter
-						span.filter__title Тип кузова
-						label.checkbox
-							input(type="checkbox", name="check", value=" ")
-							span.checkbox__title Дублировать входящие сообщения в личном кабинете на мою электронную почту
+			form.filter-wrap
+				.filter
+					span.filter__title Уже определились с маркой автомобиля?
+					.filter__row
+						a(href="#").filter__close
+						.select.select_blue
+							select.js-select-single
+								option(value="") Нет статуса
+								option(value="") Есть статус
+								option(value="") Нет статуса
+								option(value="") Ой все!
+				.filter.filter__amount
+					span.filter__title Цена в 
+						span долларах
+						| :
+					.filter__box
+						input.input
+						span -
+						input.input
+					.filter__row
+						a(href="#").filter__close
+						.filter__range
+							.range(id="slider")
+				.filter
+					span.filter__title Тип кузова
+					label.checkbox
+						input(type="checkbox", name="check", value=" ")
+						span.checkbox__title Седан
+					label.checkbox
+						input(type="checkbox", name="check", value=" ")
+						span.checkbox__title Внедорожник
+					label.checkbox
+						input(type="checkbox", name="check", value=" ")
+						span.checkbox__title Хэтчбэк
+					label.checkbox
+						input(type="checkbox", name="check", value=" ")
+						span.checkbox__title Купе
+					label.checkbox
+						input(type="checkbox", name="check", value=" ")
+						span.checkbox__title Универсал
+					label.checkbox
+						input(type="checkbox", name="check", value=" ")
+						span.checkbox__title Кабриолет
+					label.checkbox
+						input(type="checkbox", name="check", value=" ")
+						span.checkbox__title Минивен
+					label.checkbox
+						input(type="checkbox", name="check", value=" ")
+						span.checkbox__title Кроссовер
+				.filter
+					span.filter__title Коробка передач
+					.filter__btns
+						button.btn-simple Автоматическая
+						button.btn-simple Механическая
+				.filter
+					span.filter__title Привод
+					.filter__btns
+						button.btn-simple Передний
+						button.btn-simple Задний
+						button.btn-simple Полный
+				.filter_more
+					span Больше параметров
+				a(href="#").btn.btn_fluid Показать!
+				.filter_save
+					a(href="#").btn-simple Сохранить параметры фильтра
 			.push 
 		include _footer.jade 
 

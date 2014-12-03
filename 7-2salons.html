@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="initial-scale=1">
-    <link rel="stylesheet" href="css/screen.css" media="screen,print"><!--[if IE]><script src="js/html5shiv.js"></script><![endif]--><script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=abcdefg" type="text/javascript"></script>
+    <link rel="stylesheet" href="css/screen.css" media="screen,print"><!--[if IE]><script src="js/html5shiv.js"></script><![endif]--><script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
   </head>
   <body>
     <div class="out">
@@ -137,7 +137,7 @@
           </div>
         </div>
         <div class="stores__map"><a href="#" class="btn-action">Скрыть все отделы</a>
-          <div id="map-canvas" class="map"></div>
+          <div id="map" class="ymap"></div>
         </div>
         <hr>
         <div class="stores__inner">
@@ -219,11 +219,34 @@
     <script src="js/lib/jquery.js"></script>
     <script src="js/lib/jquery-ui.min.js"></script>
     <script src="js/lib/jquery.multiselect.min.js"></script>
+    <script src="js/lib/jquery-ui-slider.js"></script>
     <script src="js/lib/cycle.js"></script>
     <script src="js/lib/slick.js"></script>
     <script src="js/valera.js"></script>
     <script src="js/valik.js"></script>
     <script src="js/common.js"></script>
     <script src="js/lib/head.js"></script>
+    <script type="text/javascript">
+      ymaps.ready(init);
+       var myMap3;
+       
+       function init(){     
+        myMap = new ymaps.Map ("map", {
+         center: [53.90614, 27.54849],
+         zoom: 12
+        });
+        //first mark
+        myPlacemark = new ymaps.Placemark([53.90614, 27.54849], { 
+         balloonContent: '<span class="ymap__title">Автосалон AV</span><span class="ymap__gray">официальный дилер Audi</span><p>г. Минск, ул. Серова, 1</p><p>+375 29 191-88-88</p><p><a href="#">www.audi.by</a></p>'
+        }, {
+         balloonShadow: false
+        });
+        
+        myMap.geoObjects
+         .add(myPlacemark);
+       }
+       
+       
+    </script>
   </body>
 </html>

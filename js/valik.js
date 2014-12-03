@@ -63,7 +63,14 @@ $(document).ready(function() {
  			}
  		});
  	};
- 	//$('.slick-next').slickNext();
- 	//$('.slick-prev').slickPrev();
- 	
+ 	//RANGE
+ 	$(function() {
+		$( "#slider" ).slider({
+			range: true,
+			min: 0,
+			max: 41,
+			values: [ 11, 41 ]
+		});
+	});
 });
+
