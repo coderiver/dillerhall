@@ -63,7 +63,30 @@ $(document).ready(function() {
  			}
  		});
  	};
- 	//$('.slick-next').slickNext();
- 	//$('.slick-prev').slickPrev();
- 	
+ 	//RANGE
+ 	$(function() {
+		$( "#slider" ).slider({
+			range: true,
+			min: 0,
+			max: 41,
+			values: [ 11, 41 ]
+		});
+	});
+	//stores
+	$('.js-graph').on('click', function() {
+		$('.js-hidden').slideToggle('slow');
+		$(this).toggleClass('is-close');
+		return false;
+	});
+	//1-1catalog series
+	// scrollTop
+	 $(".header__nav-link").click(function (){
+		var page = $(this).attr("href");
+
+		$('html, body').animate({
+			scrollTop: $(page).offset().top + 20
+		}, 600);
+		return false;
+	});
 });
+

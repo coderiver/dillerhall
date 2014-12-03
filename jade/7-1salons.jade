@@ -2,7 +2,7 @@ doctype
 html
 	head
 		include _head.jade
-		<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=abcdefg" type="text/javascript"></script>
+		<script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
 	body
 		.out
 			header.header
@@ -68,9 +68,56 @@ html
 						h3 website
 						p
 							a(href="#") www.uruchie.by
+				.stores__top.js-hidden
+					.graph
+						h4 Отдел продаж автомобилей Volkswagen:
+						.graph__info
+							span.graph__title Время работы:
+							ul
+								li
+									strong Пн.- Пт. 
+									|  : c 9.00 до 20.00.
+								li
+									strong Сб. - Вс. 
+									|  : с 9.00 до 18.00
+							span.graph__title Контактный телефон:
+							ul
+								li
+									strong Тел. 
+									|  : +375 17 33 111 11
+								li
+									strong Тел. 
+									|  : +375 17 33 111 11 (velcom)
+								li
+									strong Тел. 
+									|  : +375 17 33 111 11 (МТС)
+					.graph
+						h4 Финансовый сервис: страхование, кредит, лизинг:
+						.graph__info
+							span.graph__title Время работы:
+							ul
+								li
+									strong Пн.- Пт. 
+									|  : c 9.00 до 20.00.
+								li
+									strong Сб. - Вс. 
+									|  : с 9.00 до 18.00
+							span.graph__title Контактный телефон:
+							ul
+								li
+									strong Тел. 
+									|  : +375 17 33 111 11
+								li
+									strong Тел. 
+									|  : +375 17 33 111 11 (velcom)
+								li
+									strong Тел. 
+									|  : +375 17 33 111 11 (МТС)
 				.stores__map.stores__map_mod
-					a(href="#").btn-action Показать все отделы
-					.map(id="map-canvas")
+					a(href="#").btn-action.js-graph
+						span.is-open Показать все отделы
+						span.is-close Скрыть все отделы
+					.ymap(id="map")
 				hr
 				.stores__inner
 					.gallery
@@ -88,6 +135,7 @@ html
 								.slider__item
 									img(src="img/slider-item.jpg", alt="")
 						span Салон отличается своим неповторимым стилем в каждой мелочи
+					hr
 					.stores__bottom
 						h2 Перечень услуг автосалона
 						h3 Продажа автомобилей
@@ -104,5 +152,22 @@ html
 
 			.push 
 		include _footer.jade 
+		script(type="text/javascript").
+			ymaps.ready(init);
+				var myMap3;
 
+				function init(){     
+					myMap = new ymaps.Map ("map", {
+						center: [53.90614, 27.54849],
+						zoom: 12
+					});
+					//first mark
+					myPlacemark = new ymaps.Placemark([53.90614, 27.54849], { 
+						balloonContent: '<span class="ymap__title">Автосалон AV</span><span class="ymap__gray">официальный дилер Audi</span><p>г. Минск, ул. Серова, 1</p><p>+375 29 191-88-88</p><p><a href="#">www.audi.by</a></p>'
+					}, {
+						balloonShadow: false
+					});
 
+					myMap.geoObjects
+						.add(myPlacemark);
+				}

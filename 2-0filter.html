@@ -62,19 +62,77 @@
                   <li><a href="#"></a></li>
                 </ul>
               </div>
-              <div class="nav__col"><a href="#" class="nav__user"><i class="icon-lock"></i>Личный кабинет 
-                  <div class="filter-wrap">
-                    <div class="filter"><span class="filter__title">Уже определились с маркой автомобиля?</span></div>
-                    <div class="filter"><span class="filter__title">Тип кузова</span>
-                      <label class="checkbox">
-                        <input type="checkbox" name="check" value=" "><span class="checkbox__title">Дублировать входящие сообщения в личном кабинете на мою электронную почту</span>
-                      </label>
-                    </div>
-                  </div></a></div>
+              <div class="nav__col"><a href="#" class="nav__user"><i class="icon-lock"></i>Личный кабинет </a></div>
             </div>
           </div>
         </div>
       </header>
+      <form class="filter-wrap">
+        <div class="filter"><span class="filter__title">Уже определились с маркой автомобиля?</span>
+          <div class="filter__row"><a href="#" class="filter__close"></a>
+            <div class="select select_blue">
+              <select class="js-select-single">
+                <option value="">Нет статуса</option>
+                <option value="">Есть статус</option>
+                <option value="">Нет статуса</option>
+                <option value="">Ой все!</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="filter filter__amount"><span class="filter__title">Цена в <span>долларах</span>:</span>
+          <div class="filter__box">
+            <input class="input"><span>-</span>
+            <input class="input">
+          </div>
+          <div class="filter__row"><a href="#" class="filter__close"></a>
+            <div class="filter__range">
+              <div id="slider" class="range"></div>
+            </div>
+          </div>
+        </div>
+        <div class="filter"><span class="filter__title">Тип кузова</span>
+          <label class="checkbox">
+            <input type="checkbox" name="check" value=" "><span class="checkbox__title">Седан</span>
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="check" value=" "><span class="checkbox__title">Внедорожник</span>
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="check" value=" "><span class="checkbox__title">Хэтчбэк</span>
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="check" value=" "><span class="checkbox__title">Купе</span>
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="check" value=" "><span class="checkbox__title">Универсал</span>
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="check" value=" "><span class="checkbox__title">Кабриолет</span>
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="check" value=" "><span class="checkbox__title">Минивен</span>
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="check" value=" "><span class="checkbox__title">Кроссовер</span>
+          </label>
+        </div>
+        <div class="filter"><span class="filter__title">Коробка передач</span>
+          <div class="filter__btns">
+            <button class="btn-simple">Автоматическая</button>
+            <button class="btn-simple">Механическая</button>
+          </div>
+        </div>
+        <div class="filter"><span class="filter__title">Привод</span>
+          <div class="filter__btns">
+            <button class="btn-simple">Передний</button>
+            <button class="btn-simple">Задний</button>
+            <button class="btn-simple">Полный</button>
+          </div>
+        </div>
+        <div class="filter_more"><span>Больше параметров</span></div><a href="#" class="btn btn_fluid">Показать!</a>
+        <div class="filter_save"><a href="#" class="btn-simple">Сохранить параметры фильтра</a></div>
+      </form>
       <div class="push"></div>
     </div>
     <div class="footer">
@@ -124,6 +182,7 @@
     <script src="js/lib/jquery.js"></script>
     <script src="js/lib/jquery-ui.min.js"></script>
     <script src="js/lib/jquery.multiselect.min.js"></script>
+    <script src="js/lib/jquery-ui-slider.js"></script>
     <script src="js/lib/cycle.js"></script>
     <script src="js/lib/slick.js"></script>
     <script src="js/valera.js"></script>

@@ -8,30 +8,50 @@ $(document).ready(function() {
     $("body").on("click",".js-add-btn",function(){
         var new_el = $(this).attr("data-hidden");
         var html = $("."+new_el).html();
-        $(this).parent().before(html);
+        // $(this).parent().before(html);
+
+        //only for testing 10-1-test2 page. Remove and uncomment line above
+        $(this).parents('.account').find('.account__chat').append(html);
         return false;
     });
 
+    if ($('.js-select-single').length) {
+        $('.js-select-single').each(function() {
+            $(this).multiselect({
+                multiple: false,
+                selectedList: 1,
+                show: ["fade", 200],
+                hide: ["fade", 200],
+                beforeclose : function() {
+                    if ($(this).hasClass('js-select-border')) {
+                        var select = $(this);
+                        setDataBorderColor(select);
+                    }
+                }
+            });
+        });
+    }
 
-    $(".js-select-single").multiselect({
-         multiple: false,
-         //header: false,
-         //noneSelectedText: "Select an Option",
-         selectedList: 1,
-         show: ["fade", 200],
-         hide: ["fade", 200]
-    });
+    var setDataBorderColor = function( el ) {
+        var options = el.find('option'),
+            wrapper = el.parents('.select'),
+            checkedRadio = el.multiselect('widget').find(":radio:checked"),
+            checkedIndex = checkedRadio.parents('li').index(),
+            color = options.eq(checkedIndex).attr('data-border-color');
 
-    // $('.js-select-color').on('change', function(event) {
-    //     var wrapper = $(this).parent(),
-    //         option  = $(this).find('option:selected'),
-    //         color   = $(this).find('option:selected').attr('data-border-color');
-    //     wrapper.data('border-color', color);
-    //     event.preventDefault();
-    //     console.log(option);
-    //     console.log(color);
-    // });
+            if ( color !== undefined ) {
+                wrapper.attr('data-border-color', color);
+            } else {
+                wrapper.attr('data-border-color', '');
+            }
+    };
 
+    if ($('.js-select-border').length) {
+        $('.js-select-border').each(function() {
+            var color = $(this).find('option:selected').attr('data-border-color');
+            $(this).parent('.select').attr('data-border-color', color);
+        });
+    }
 
 
     $('.js-menu').on("click",function(event) {
@@ -86,16 +106,19 @@ $(document).ready(function() {
         fixedPanel();
     }
 
+    // Add fixed position to account info block when scrolling
     var fixedAccountInfo = function() {
-        var el        = $('.js-account'),
-            wrapper   = el.parent(),
-            elWidth   = el.outerWidth(),
-            elHeight  = el.outerHeight(),
-            panel     = $('.js-panel'),
+        var el          = $('.js-account'),
+            leftColumn  = el.parent(),
+            rightColumn = leftColumn.siblings('.col'),
+            elWidth     = el.outerWidth(),
+            // moreBtn     = el.find('.link-more'),
+            panel       = $('.js-panel'),
             panelHeight = panel.height();
 
+
         function windowHeight() {
-            return $(window).height() - panel.height();
+            return $(window).height() - panelHeight;
         }
 
         function elTopPos() {
@@ -103,33 +126,45 @@ $(document).ready(function() {
         }
 
         function elBottomPos() {
-            var pos = 0;
-            if (el.attr('position') == 'fixed') {
-                pos =  $(window).scrollTop() + panelHeight + el.outerHeight();
-            } else {
-                pos =  $(window).scrollTop() - el.offset().top + el.outerHeight();
-            }
-            return pos;
+            return el.offset().top + el.outerHeight();
         }
 
         function topPoint() {
-            return wrapper.offset().top - panelHeight - $(window).scrollTop();
+            return leftColumn.offset().top - panelHeight - $(window).scrollTop();
         }
 
         function bottomPoint() {
-            return wrapper.offset().top + wrapper.outerHeight() - $(window).scrollTop();
+            return leftColumn.offset().top + leftColumn.height();
         }
 
-        console.log(wrapper.offset().top);
+        function setElHeight() {
+            if ( el.outerHeight() < rightColumn.height() && el.outerHeight() >= windowHeight() ) {
+                el.css({
+                    height : windowHeight()
+                });
+            } else {
+                el.css({
+                    height : ''
+                });
+            }
+        }
 
-        if ( el.outerHeight() < windowHeight() ) {
-            $(window).on('scroll', function() {
+        setElHeight();
 
-                console.log('sctollTop [' + $(window).scrollTop() + ']');
-                console.log('el.top [' +  elTopPos() + ']');
-                console.log('el.bottom [' +  elBottomPos() + ']');
-                console.log('topPoint [' + topPoint() + ']');
-                console.log('bottomPoint [' + bottomPoint() + ']');
+        $(window).on('resize', function() {
+           setElHeight();
+        });
+
+        $(window).on('scroll', function() {
+            setElHeight();
+
+            if ( el.outerHeight() < rightColumn.height() ) {
+
+                // console.log('sctollTop [' + $(window).scrollTop() + ']');
+                // console.log('el.top [' +  elTopPos() + ']');
+                // console.log('el.bottom [' +  elBottomPos() + ']');
+                // console.log('topPoint [' + topPoint() + ']');
+                // console.log('bottomPoint [' + bottomPoint() + ']');
 
                 if ( elTopPos() >= topPoint() ) {
                     el.css({
@@ -145,6 +180,11 @@ $(document).ready(function() {
                         top      : 'auto',
                         bottom   : '0'
                     });
+                    // if ( el.outerHeight() >= windowHeight() ) {
+                    //     el.css({
+                    //         height : ''
+                    //     });
+                    // }
                 }
                 if ( elTopPos() < topPoint() ) {
                      el.css({
@@ -154,9 +194,8 @@ $(document).ready(function() {
                         width    : ''
                     });
                 }
-
-            });
-        }
+            }
+        });
     };
 
     if ( $('.js-account').length ) {
@@ -176,5 +215,22 @@ $(document).ready(function() {
             }).insertBefore($(this).parent());
         }
     });
+
+    //custom scroll
+    // $('.js-scroll').each(function() {
+    //     $(this).jScrollPane();
+    //     var api = $(this).data('jsp');
+    //     var throttleTimeout;
+
+    //     $(window).resize(function() {
+    //         if (!throttleTimeout) {
+    //             throttleTimeout = setTimeout( function() {
+    //                 api.reinitialise();
+    //                 throttleTimeout = null;
+    //             }, 50);
+    //         }
+    //     });
+    // });
+
 
 });

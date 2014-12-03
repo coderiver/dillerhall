@@ -43,7 +43,7 @@ html
           .account-bar__item
             a(href="#").btn-do
               i.icon-prev
-               |  Назад ко всем запросам
+              |  Назад ко всем запросам
       .two-col
         .col
           .account.js-account
@@ -167,6 +167,6 @@ html
                   | Как насчёт пятницы? Деньги наличными привозить или можно выписать чек?
             .account__write
               textarea.input
-              button.btn
+              button.btn.js-add-btn(data-hidden="account__chat .account__item:first-child")
                 | Отправить
       include _footer.jade
