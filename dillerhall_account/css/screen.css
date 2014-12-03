@@ -342,7 +342,7 @@ a { text-decoration: none; }
 .two-col .col { display: table-cell; vertical-align: top; position: relative; }
 .two-col .col:first-child { width: 400px; border-right: 1px solid #e5e5e5; }
 
-.account { padding: 30px 35px; position: relative; font-size: 14px; line-height: 1.3; }
+.account { padding: 30px 35px; position: relative; font-size: 14px; line-height: 1.3; overflow: auto; }
 .account a { color: #2FBAEE; }
 .account a:hover { text-decoration: underline; }
 .account ul li { margin-top: 12px; }
