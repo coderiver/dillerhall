@@ -1466,7 +1466,13 @@ ul.sorting
 					visibility: visible
 					+opacity(1)
 					top: 7px
-	
+				&:before
+					border-color: $blue 
+					+opacity(1)
+					z-index: 8
+				&:hover
+					&:before
+						+box-shadow(0 0 5px rgba(27, 180, 237, 0.3))
 .checkbox__title
 	display: block
 	font-size: 14px
@@ -1484,6 +1490,8 @@ ul.sorting
 		border: 1px solid #000
 		+border-radius(3px)
 		+opacity(0.2)
+		will-change: opacity
+		+transition(opacity 0.2s linear, border-color 0.2s linear)
 	&:after
 		content: ""
 		position: absolute
@@ -1520,7 +1528,11 @@ ul.sorting
 					+opacity(1)
 					top: 6px
 				&:before
-					border-color: #2db9ee				
+					border-color: #2db9ee
+					z-index: 8
+				&:hover
+					&:before
+						+box-shadow(0 0 5px rgba(27, 180, 237, 0.3))
 .radio__title
 	display: inline-block
 	font-size: 14px
@@ -1711,8 +1723,9 @@ ul.sorting
 
 //salons
 .salons-map
-	.map
+	.ymap
 		height: 860px
+		width: 100%
 .salons
 	padding: 60px 0
 	&__row
@@ -1851,8 +1864,9 @@ ul.sorting
 		margin-bottom: 60px 
 		.btn-action
 			margin-bottom: 75px
-		.map
+		.ymap
 			height: 360px
+			width: 100%
 		&_mod
 			.btn-action
 				margin-bottom: 35px
@@ -1920,3 +1934,233 @@ ul.sorting
 		padding: 100px 0 90px 0 
 
 
+//MAP STYLE
+.ymaps-b-balloon__close
+	background: url(../img/icons/close.png) no-repeat center center !important
+	-webkit-background-size: cover !important
+	-o-background-size: cover !important
+	background-size: cover !important
+	width: 11px !important
+	height: 11px !important
+	top: 11px !important
+	right: 14px !important
+.ymaps-b-balloon
+	width: 272px !important
+	height: 190px !important
+	text-align: center
+	background: #fff 
+	+border-radius(3)
+.ymaps-b-balloon__content-body
+	width: 100%
+.ymaps-b-balloon__content
+	height: 170px
+	padding: 22px 30px 22px
+	+box
+	border: none !important
+	ymaps
+		margin: 0 auto
+		width: 100% !important
+		img
+			max-width: 100% !important
+.ymaps-b-balloon__sprite_type_tail
+	background: none !important
+	+arr(23, 10, #fff, b)
+	width: 0 !important
+	height: 0 !important
+.ymaps-b-balloon__sprite
+	background: none !important
+.ymaps-b-balloon__tail
+	background: none !important
+	margin: -4px 0 0 !important 
+.ymaps-b-balloon__content-holster
+	height: 125px
+	overflow: auto
+.ymap
+	&__title
+		+f300
+		font-size: 14px
+		line-height: 18px
+		letter-spacing: 0.019em 
+		color: #000 
+		display: block
+		text-transform: uppercase
+		margin-bottom: 7px
+	&__gray
+		+f100i
+		color: #b5b5b5
+		display: block
+		margin-bottom: 7px
+	p, &__gray
+		font-size: 14px
+		line-height: 20px
+	p
+		margin-bottom: 3px
+		+f100
+		a
+			letter-spacing: 0.1em 
+			color: $blue
+			&:hover
+				color: $blue_h 
+
+//filter
+.filter-wrap
+	max-width: 540px
+	margin: 0 auto
+	padding: 64px 20px 87px
+	+r(480)
+		padding-left: 10px
+		padding-right: 10px
+	.btn_fluid
+		+br
+		margin-bottom: 19px
+	.btn-simple
+		+br5
+.filter
+	border: 1px solid #e5e5e5
+	+br
+	padding: 23px 49px 22px 49px
+	margin-bottom: 18px
+	font-size: 0
+	+transition(border-color .2s linear)
+	+r(480)
+		padding: 23px 20px 22px 20px 
+	&:hover
+		border-color: #8dd9f6 
+	&__title
+		display: block
+		+f300
+		font-size: 16px
+		margin-bottom: 20px
+		span
+			border-bottom: 1px dotted #a3a3a3
+	.checkbox
+		display: inline-block
+		vertical-align: top
+		width: 133px
+		margin-bottom: 16px
+		+r(480)
+			width: 125px
+	&__box
+		display: inline-block
+		margin-bottom: 18px
+		.input
+			width: 94px
+			padding: 0 8px
+			display: inline-block
+		span
+			+f300
+			font-size: 16px
+			line-height: 30px
+			display: inline-block
+			margin: 0 7px 0 5px 
+	&__amount
+		.filter__title
+			display: inline-block
+			margin-right: 15px
+		.filter__close
+			margin-top: 0 
+	&__range
+		padding-top: 19px
+		position: relative
+	&__row
+		position: relative
+	&__close
+		+svg(close-blue, 9, 9)
+		position: absolute
+		left: -28px
+		top: 50%
+		margin-top: -4px
+		+r(480)
+			left: -15px
+	&__btns
+		.btn-simple
+			padding: 8px 22px 6px 22px
+			min-width: 0
+			margin-right: 19px 
+			margin-bottom: 15px 
+	&_more
+		margin-bottom: 18px
+		font-size: 0
+		+transition(border-color .2s linear)
+		border: 1px solid #e5e5e5
+		+br
+		padding: 7px 49px 4px
+		span
+			+f300
+			font-size: 16px
+			+opacity(0.1)
+			+tr_op
+			will-change: opacity
+			display: block
+			text-align: center
+	&_save
+		text-align: center
+		padding: 60px 0 0 0 
+.range
+	border-top: 1px solid #e5e5e5
+	width: 100%
+	height: 7px
+	background: url(../img/range-bb.png) repeat-x bottom left 
+	position: relative
+	.ui-slider-range
+		border-top: 1px solid $blue
+		margin-top: -1px
+		position: relative
+	.ui-state-default
+		position: absolute
+		// &:before
+		// 	+arr(23, 19, $blue, b) 
+		// 	content: "" 
+		// 	position: absolute
+		// 	top: -20px
+		// 	left: -11px
+		&:after
+			content: "" 
+			+s(range-btn)
+			position: absolute
+			top: -23px
+			left: -14px
+.select_blue
+	width: 100%
+	.ui-multiselect
+		border: 1px solid #cccccc
+		+transition(border-color 0.2s linear, box-shadow 0.2s linear, color 0.2s linear)
+		height: 42px
+		width: 100%
+		color: #000 
+		padding: 0 25px 0 19px 
+		&:hover
+			border-color: #1bb4ed 
+			+box-shadow(0 0 5px rgba(27, 180, 237, 0.3))
+			color: #000 
+		&.ui-state-active
+			border-color: #1bb4ed 
+			+box-shadow(0 0 5px rgba(27, 180, 237, 0.3))
+			color: #1BB4ED
+			.ui-icon
+				&:before
+					+opacity(1)
+	.ui-icon
+		+svg(select, 5, 14)
+		top: 50%
+		margin-top: -7px
+		&:before
+			position: absolute
+			top: 0
+			left: 0
+			content: "" 
+			+svg(select-act, 5, 14)
+			+tr_op
+			+opacity(0)
+			will-change: opacity
+.ui-multiselect-single
+	border: 1px solid #1bb4ed
+	&:before
+		z-index: 5 
+	&:after
+		content: "" 
+		+arr(17, 12, #1bb4ed, t)
+		position: absolute
+		top: -12px
+		left: 19px
+		z-index: 3 
