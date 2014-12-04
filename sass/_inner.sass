@@ -1,7 +1,24 @@
+.article_smallfont
+	font-size: 14px
+	p
+		font-size: 14px
+	img
+		margin-bottom: 20px
+		max-width: 100%
+		&[align="left"]
+			margin-right: 50px
+			+r(980)
+				float: none
+				margin: 0 0 20px
+		&[align="right"]
+			margin-left: 50px
+			+r(980)
+				float: none
+				margin: 0 0 20px
 .article__in	
 	margin: 0 auto 
 	padding: 0 35px 
-	max-width: 865px
+	max-width: 975px
 	h1
 		font-size: 40px
 		+f100
@@ -9,6 +26,11 @@
 		font-weight: normal 
 	h1,h2, p
 		padding: 0
+	h2
+		margin: 0 0 25px
+	.row-item
+		p
+			margin-bottom: 0
 	.tabs-content
 		ul
 			//display: inline-block
@@ -38,8 +60,10 @@
 					height: 6px
 					background-color: #2DB9EE
 					+border-radius(50%)
-		.tabs-link
+		.tabs-link,
+		.tabs
 			padding: 0
+			+column-count(1)
 			li
 				padding: 0
 				&:before
@@ -50,8 +74,7 @@
 				padding: 0
 				&:before
 					display: none
-.tabs-wrap
-	white-space: nowrap
+
 .tabs
 	font-size: 0
 	display: inline-block
@@ -90,16 +113,18 @@
 		+tr_c
 		&:hover
 			color: $blue 
+		em
+			font-style: normal
+			+f100
+			font-size: 14px
 .tabs-link
 	font-size: 0
 	margin: 0 0 35px 
-	white-space: nowrap
-	overflow: hidden
 	li
 		display: inline-block
 		vertical-align: middle
 		margin-right: 35px
-		&.is-active
+		&.is-active			
 			a
 				color: $blue 
 				border-color: $blue
@@ -111,5 +136,200 @@
 		+tr_c
 		&:hover
 			color: $blue
-			
 	
+.tabs-wrap
+	white-space: nowrap
+	position: relative
+	overflow: hidden
+	height: 44px
+	margin-bottom: 30px
+	+r(1024)
+		display: none
+	&.is-active
+		.tabs-wrap__next
+			display: none
+		.tabs-wrap__prev
+			display: block
+	&__next,
+	&__prev
+		position: absolute
+		z-index: 2
+		top: 0
+		height: 43px
+		width: 40px		
+		&:before
+			content: ""
+			position: absolute
+			right: 0
+			top: 11px
+			+opacity(.5)
+			+tr_o
+			&:hover
+				opacity: 1
+	&__next
+		right: 0
+		background: none
+		+gh(rgba(#fff,0),rgba(#fff,1))
+		&:before
+			right: 0
+			+svg(arr-next-big,7,20)
+	&__prev
+		left: 0
+		background: none
+		display: none
+		+gh(rgba(#fff,1),rgba(#fff,0))
+		&:before
+			left: 0
+			+svg(arr-prev-big,7,20)
+	.tabs
+		position: absolute
+		left: 0
+		top: 0
+		+tr(left .3s)
+.row-item_mod
+	border-top: 1px solid #e9e9e9
+	border-bottom: 0
+	.row-item__center
+		padding-right: 40px
+		
+.row-item-action
+	border-top: 1px solid #e9e9e9
+	padding: 45px 0 80px 220px
+	+clr
+	+r(980)
+		padding-left: 0
+		text-align: center
+	.btn-action
+		margin-right: 10px
+	.btn
+		float: right
+		+r(980)
+			margin: 20px 0 0
+			float: none
+		
+.tabs-list
+	position: relative
+	z-index: 2
+	display: none
+	margin-bottom: 30px
+	+r(1024)
+		display: block
+	&__text
+		padding-right: 35px
+		border-bottom: 1px solid #e9e9e9 
+		height: 44px
+		line-height: 44px
+		white-space: nowrap
+		overflow: hidden
+		color: #000
+		cursor: pointer
+		font-size: 16px
+		+f300 
+		text-overflow: ellipsis
+		&:after
+			content: ""
+			position: absolute
+			right: 11px
+			bottom: 13px
+			+s(arr-b)
+	.tabs
+		position: absolute
+		margin-top: 1px
+		top: 100%
+		left: 0
+		right: 0
+		border: 1px solid #e9e9e9
+		background: #fff 
+		display: none
+		li
+			display: block
+			
+		a
+			padding: 0 10px !important 
+			border: 0 !important
+
+.main
+	margin: 0 auto
+	position: relative
+	padding: 55px 50px 
+	background: #fff
+	max-width: 1080px 
+	+clr
+.carousel
+	float: left
+	width: 49%
+	&__main
+		margin-bottom: 20px
+	&__preview
+		.slick-slide
+			margin-right: 11px
+		.slick-prev
+			left: -28px
+		.slick-next
+			right: -28px
+	+ .product
+		position: relative
+		top: -15px
+.product
+	padding-left: 60px
+	overflow: hidden
+	&__head
+		border-bottom: 1px solid #e9e9e9 
+		padding-bottom: 25px
+	&__title
+		font-size: 30px
+		+f100
+	&__info
+		font-size: 14px
+		+f500
+	&__meta
+		color: #b5b5b5
+		font-size: 12px
+		+f500
+	.is-green
+		color: #a9d16a
+	&__main
+		margin: 0 0 14px 
+		border-bottom: 1px solid #e9e9e9 
+		padding: 20px 0 
+		+f100
+		font-size: 14px
+		p
+			margin-bottom: 3px
+	&__price
+		font-size: 24px	
+	.btn
+		margin-top: 20px
+	.compare,
+	.sticker
+		display: inline-block
+		vertical-align: middle
+.link-more
+	color: #000 
+	span
+		text-decoration: underline
+		color: $blue
+	&:hover
+		span
+			text-decoration: none
+
+.color
+	font-size: 14px
+	+f100
+	&__title
+		color: #000
+	&__circle
+		display: inline-block
+		margin: 0 9px
+		width: 12px
+		height: 12px
+		border-radius: 50% 
+		&.is-blue
+			background: #1a2a49 
+	&__label
+		font-size: 12px
+		+f100
+
+.text-cols
+	+column-count(2)
+	+column-gap(50px)

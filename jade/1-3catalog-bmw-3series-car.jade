@@ -1,0 +1,119 @@
+doctype
+html
+	head
+		include _head.jade
+		title 1-3catalog-bmw-3series-car-1
+	body
+		.out
+			header.header.header_inside
+				.header__top
+					a.header__logo(href="#")
+					.header__key
+						button.js-toggle-nav(type="button")
+							i
+				.header__middle
+					nav.breadcumbs
+						a(href="#") Главная
+						a(href="#") Новости индустрии
+						a(href="#") BMW
+						a(href="#") 3 series
+				.header__bg
+					.header__bg-in(style="background-image: url(img/bmw-bg-blur.jpg)")
+				include _nav.jade
+			.main
+				.wrap
+					.carousel
+						.carousel__main.js-carousel
+							div
+								img(src="img/gallery-big.jpg", alt="img")
+							div
+								img(src="img/gallery-big.jpg", alt="img")
+							div
+								img(src="img/gallery-big.jpg", alt="img")
+							div
+								img(src="img/gallery-big.jpg", alt="img")
+							div
+								img(src="img/gallery-big.jpg", alt="img")
+							div
+								img(src="img/gallery-big.jpg", alt="img")
+						.carousel__preview.js-carousel-preview
+							div
+								img(src="img/gallery-preview.jpg", width="109" alt="img")
+							div
+								img(src="img/gallery-preview.jpg", width="109" alt="img")
+							div
+								img(src="img/gallery-preview.jpg", width="109" alt="img")
+							div
+								img(src="img/gallery-preview.jpg", width="109" alt="img")
+							div
+								img(src="img/gallery-preview.jpg", width="109" alt="img")
+							div
+								img(src="img/gallery-preview.jpg", width="109" alt="img")
+					.product
+						.product__head
+							.product__title BMW 320d xDrive Modern Line  
+							.product__info 2.0 AT (360л.с.) бензин, задний привод, 6 МКП  
+							.product__meta Купе, 2014–2015  
+								span.is-green В наличии
+							span.sticker акция
+							.compare
+								button.compare__favorites
+						.product__main
+							p Кожаный салон, система Isofix / LATCH, тонированные окна, синий металлик, подогрев передних сидений, легкосплавные диски 16", пе- редний центральный подлокотник, гидроусили- тель руля, золотой портсигар
+								a.link-more(href="#") 
+									| ... 
+									span подробнее
+							.color
+								span.color__title Цвет:
+								i.color__circle.is-blue
+								span.color__label синий металлик
+						.product__price $ 40 500
+						a.btn(href="#") Оставить запрос
+				.tabs-wrap.js-tabs
+					ul.tabs
+						li.is-active
+							a(href="#") Описание
+						li
+							a(href="#") Дизайн
+						li
+							a(href="#") Характеристики
+						li
+							a(href="#") Технологии
+				.tabs-list.js-tabs
+					.tabs-list__text.js-tabs-text Фото
+					ul.tabs
+						li.is-active
+							a(href="#") Описание
+						li
+							a(href="#") Дизайн
+						li
+							a(href="#") Характеристики
+						li
+							a(href="#") Технологии
+				.js-tabs-group
+					.tabs-content.text-cols.js-tabs-content
+						p Седан среднего класса BMW 3-Series (F30) дебютировал в 2011 году, но продажи стартовали годом позже. По габаритным размерам «тройка» стала на 93 мм длиннее, на 6 мм шире и на 8 мм выше своего предшественника (BMW E90). Колесная база увеличилась на 50 мм,а объем багажника — на 50 литров. При этом абсолютно все модификации модели стали легче по сравнению с Е90. 
+						p Седан среднего класса BMW 3-Series (F30) дебютировал в 2011 году, но продажи стартовали годом позже. По габаритным размерам «тройка» стала на 93 мм длиннее, на 6 мм шире и на 8 мм выше своего предшественника (BMW E90). Колесная база увеличилась на 50 мм,а объем багажника — на 50 литров. При этом абсолютно все модификации модели стали легче по сравнению с Е90. 
+					.tabs-content.js-tabs-content 
+						ul.tabs-link.js-tabs
+							li
+								a(href="#") Все                                   
+							li
+								a(href="#") Салон
+							li
+								a(href="#") Экстерьер
+							li
+								a(href="#") Детали
+						.js-tabs-group
+							.tabs-content.js-tabs-content
+								
+							.tabs-content.js-tabs-content
+								p 2
+							.tabs-content.js-tabs-content
+								p 3
+							.tabs-content.js-tabs-content
+								p 4
+			.push 
+		include _footer.jade 
+
+
