@@ -31,10 +31,15 @@
 .header_inside
 	height: 95px
 	min-height: 95px
+	+r(768)
+		height: 200px
+		min-height: 200px
 	.header__bg 
 		height: 700px
 		+r(980)
 			height: 425px
+		+r(768)
+			height: 200px
 	.header__bottom
 		position: absolute
 		top: 600px
@@ -44,6 +49,13 @@
 			top: 500px
 		+r(980)
 			top: 280px
+	.breadcumbs
+		a
+			+r(768)
+				display: block
+				margin: 0 0 4px
+				+opacity(1)
+				text-align: center
 .header__bg 
 	position: absolute
 	top: 0
