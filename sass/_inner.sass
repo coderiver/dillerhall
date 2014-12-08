@@ -539,6 +539,9 @@
 	position: relative
 	padding-top: 65px
 	&.is-fixed
+		height: 184px
+		+r(980)
+			height: auto
 		.compare-head__in
 			position: fixed
 			top: 0
@@ -553,7 +556,7 @@
 				position: static
 	&__in
 		max-width: 1050px
-		padding: 10px 0 45px
+		padding: 10px 0 35px
 		position: relative
 		margin: 0 auto
 		font-size: 0
@@ -602,26 +605,31 @@
 		+tr_c
 		&:hover 
 			color: $blue
-			
+$violet: #b48ead
+$green: #4cd68a
+$yellow: #ffd278
+$red: #ef8f67
+$blue: #6b7a8f			
 .dot-color
 	display: inline-block
 	width: 6px
 	height: 6px
 	border-radius: 50% 
 	&.is-violet
-		background: #B48EAD
+		background: $violet
 	&.is-green
-		background: #4cd68a
+		background: $green
 	&.is-yellow
-		background: #ffd278
+		background: $yellow
 	&.is-red
-		background: #ef8f67
+		background: $red
 	&.is-blue
-		background: #6b7a8f
+		background: $blue
 
 .comparison
 	&__section
 		text-align: center
+		padding: 70px 0 
 		position: relative
 		&:after
 			content: ""
@@ -633,6 +641,7 @@
 			height: 1px
 			background: #ededed
 	&__title
+		margin-bottom: 50px
 		font-size: 30px
 		+f100
 		color: #cacaca 
@@ -643,6 +652,8 @@
 	margin: 0 auto 50px
 	font-size: 13px
 	table-layout: fixed
+	+r(1024)
+		margin-bottom: 0
 	td,th
 		text-align: right
 		&:first-child
@@ -663,4 +674,58 @@
 			&:nth-child(2n)
 				td
 					background: #f7f7f7 
-		
+.circle
+	position: relative
+	display: inline-block
+	margin-left: 25px
+	&:first-child
+		margin-left: 0
+	&__in
+		&.is-violet
+			circle
+				stroke: $violet
+		&.is-green
+			circle
+				stroke: $green
+		&.is-yellow
+			circle
+				stroke: $yellow
+		&.is-red
+			circle
+				stroke: $red
+		&.is-blue
+			circle
+				stroke: $blue
+	&__info
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		+vertical
+	&__in
+		vertical-align: middle
+		display: inline-block
+		+f300
+		font-size: 14px
+		text-align: left
+	&__title
+		color: #26b8ef
+		+f100
+		line-height: 1
+		font-size: 36px 
+		sub
+			color: #000
+			font-size: 14px 
+	.labels
+		position: absolute
+		top: 0
+		left: 100%
+		margin-left: 22px
+		white-space: nowrap
+.labels
+	li
+		margin-bottom: 17px
+	i
+		margin-right: 18px
+		vertical-align: middle

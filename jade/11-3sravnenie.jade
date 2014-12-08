@@ -3,7 +3,7 @@ html
 	head
 		include _head.jade
 	body
-		.out
+		.out 
 			header.header
 				.header__top
 					a.header__logo(href="#")
@@ -41,12 +41,8 @@ html
 							li
 								a(href="#") Таблица
 				include _nav.jade
-
-
-
-			.compare-head
+			.compare-head.js-compare-head
 				.compare-head__in
-					
 					.car
 						.car__img
 							a(href="#")
@@ -100,18 +96,80 @@ html
 								| 320d xDrive 
 						i.dot-color.is-blue
 						button.btn-del(type="button")
-				//- <svg>
-				//- <circle r="100" cx="100" cy="100" fill="slategrey">
-				//- <animate attributeName="r" from="0" to="100" dur="3s"/>
-				//- </circle>
-				//- </svg>
 			.comparison
 				.comparison__section
 					.comparison__title Стоимость
+					.circle
+						svg.circle__in.is-violet(height="250px",width="250px")
+							circle(r="122", cx="125", cy="125",stroke-width="2px", fill="none")
+							animate(attributeName="r", from="0", to="100", dur="3s")
+						ul.labels
+							li
+								i.dot-color.is-violet
+								| $ 125 000
+							li
+								i.dot-color.is-green
+								| $ 125 000
+							li
+								i.dot-color.is-yellow
+								| $ 125 000
+							li
+								i.dot-color.is-red
+								| $ 125 000
+							li
+								i.dot-color.is-blue
+								| $ 125 000
 				.comparison__section
 					.comparison__title Мощность
+					.circle
+						svg.circle__in.is-violet(height="164px",width="164px")
+							circle(r="80", cx="82", cy="82",stroke-width="2px", fill="none")
+							animate(attributeName="r", from="0", to="100", dur="3s")
+						.circle__info
+							.circle__in
+								.circle__title 136 
+									sub л.с.
+								| 100 kw
+					.circle
+						svg.circle__in.is-green(height="164px",width="164px")
+							circle(r="80", cx="82", cy="82",stroke-width="2px", fill="none")
+							animate(attributeName="r", from="0", to="100", dur="3s")
+						.circle__info
+							.circle__in
+								.circle__title 136 
+									sub л.с.
+								| 100 kw
+					.circle
+						svg.circle__in.is-yellow(height="164px",width="164px")
+							circle(r="80", cx="82", cy="82",stroke-width="2px", fill="none")
+							animate(attributeName="r", from="0", to="100", dur="3s")
+						.circle__info
+							.circle__in
+								.circle__title 136 
+									sub л.с.
+								| 100 kw
+					.circle
+						svg.circle__in.is-red(height="164px",width="164px")
+							circle(r="80", cx="82", cy="82",stroke-width="2px", fill="none")
+							animate(attributeName="r", from="0", to="100", dur="3s")
+						.circle__info
+							.circle__in
+								.circle__title 136 
+									sub л.с.
+								| 100 kw
+					.circle
+						svg.circle__in.is-blue(height="164px",width="164px")
+							circle(r="80", cx="82", cy="82",stroke-width="2px", fill="none")
+							animate(attributeName="r", from="0", to="100", dur="3s")
+						.circle__info
+							.circle__in
+								.circle__title 136 
+									sub л.с.
+								| 100 kw
 				.comparison__section
 					.comparison__title Объем двигателя
+					svg(width="202",height="202")
+						polygon(points="150,100 300,0 150,0" style="fill:none;stroke:purple;stroke-width:1")
 				.comparison__section
 					.comparison__title Разгон до 100 км/ч (с)
 				.comparison__section
