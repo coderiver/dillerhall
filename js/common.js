@@ -238,4 +238,20 @@ $(".js-select-single").multiselect({
       return false;
     });
 
+  function fixedCompare() {
+
+    var el = $(".js-compare-head");
+    var top = el.offset().top;
+    if ($("body").scrollTop() >= top) {
+      el.addClass("is-fixed");
+    } 
+    else {
+      el.removeClass("is-fixed");
+    }
+  }
+  fixedCompare();
+  $(window).scroll(function() {
+    fixedCompare();
+  });
+
 });

@@ -1,0 +1,258 @@
+doctype
+html
+	head
+		include _head.jade
+	body
+		.out
+			header.header
+				.header__top
+					a.header__logo(href="#")
+					.menu.js-menu
+						.menu__item 
+							i.icon-user
+							| Личный кабинет
+						ul.menu__list
+							li
+								a(href="#") Запросы
+							li
+								a(href="#") Избранные авто
+							li
+								a(href="#") История просмотров
+							li
+								a(href="#") История сравнений
+							li
+								a(href="#") Личные данные
+							li
+								a(href="#") Рассылка
+
+					.header__key
+						button.js-toggle-nav(type="button")
+							i
+				.header__middle
+					nav.breadcumbs
+						a(href="#") Главная
+						a(href="#") Фильтр
+					h1.page-title Сравнение автомобилей
+				.header__bottom
+					.header__center
+						ul.tab-pills
+							li
+								a(href="#") Диаграмма
+							li.is-active
+								a(href="#") Таблица
+				include _nav.jade
+			.compare-head.js-compare-head
+				.compare-head__in
+					.car
+						.car__img
+							a(href="#")
+								img(src="img/car.png", alt="img")
+						a.car__info(href="#")		
+							.car__model 
+								strong BMW 
+								| 320d xDrive 
+							.car__detail Modern Line
+						i.dot-color.is-violet
+						button.btn-del(type="button")
+					.car
+						.car__img
+							a(href="#")
+								img(src="img/car.png", alt="img")
+						a.car__info(href="#")		
+							.car__model 
+								strong BMW 
+								| 320d xDrive 
+							.car__detail Modern Line
+						i.dot-color.is-green
+						button.btn-del(type="button")
+					.car
+						.car__img
+							a(href="#")
+								img(src="img/car.png", alt="img")
+						a.car__info(href="#")		
+							.car__model 
+								strong BMW 
+								| 320d xDrive 
+						i.dot-color.is-yellow
+						button.btn-del(type="button")
+					.car
+						.car__img
+							a(href="#")
+								img(src="img/car.png", alt="img")
+						a.car__info(href="#")		
+							.car__model 
+								strong BMW 
+								| 320d xDrive 
+							.car__detail Modern Line
+						i.dot-color.is-red
+						button.btn-del(type="button")
+					.car
+						.car__img
+							a(href="#")
+								img(src="img/car.png", alt="img")
+						a.car__info(href="#")		
+							.car__model 
+								strong BMW 
+								| 320d xDrive 
+						i.dot-color.is-blue
+						button.btn-del(type="button")
+				//- <svg>
+				//- <circle r="100" cx="100" cy="100" fill="slategrey">
+				//- <animate attributeName="r" from="0" to="100" dur="3s"/>
+				//- </circle>
+				//- </svg>
+			.compare-table-wrap
+				table.compare-table
+					thead
+						tr
+							th Эксплуатационные показатели
+							th 
+								i.dot-color.is-violet
+							th 
+								i.dot-color.is-green
+							th 
+								i.dot-color.is-yellow
+							th 
+								i.dot-color.is-red
+							th 
+								i.dot-color.is-blue
+					tbody
+						tr
+							td Максимальная скорость, км/ч
+							td 228
+							td 320
+							td 228
+							td 228
+							td 228
+						tr
+							td Разгон до 100 км/ч, с
+							td 228
+							td 320
+							td 228
+							td 228
+							td 228
+						tr
+							td Расход топлива, л город / трасса / смешанный
+							td 228
+							td 320
+							td 228
+							td 228
+							td 228
+						tr
+							td Марка топлива
+							td 228
+							td 320
+							td 228
+							td 228
+							td 228
+						tr
+							td Экологический класс
+							td 228
+							td 320
+							td 228
+							td 228
+							td 228
+						tr
+							td Выбросы CO2, г/км
+							td 228
+							td 320
+							td 228
+							td 228
+							td 228
+			.compare-table-wrap
+				table.compare-table
+					thead
+						tr
+							th Двигатель
+							th 
+								i.dot-color.is-violet
+							th 
+								i.dot-color.is-green
+							th 
+								i.dot-color.is-yellow
+							th 
+								i.dot-color.is-red
+							th 
+								i.dot-color.is-blue
+					tbody
+						tr
+							td Тип двигателя
+							td 228
+							td 320
+							td 228
+							td 228
+							td 228
+						tr
+							td Расположение двигателя
+							td 228
+							td 320
+							td 228
+							td 228
+							td 228
+						tr
+							td Объем двигателя, см³
+							td 228
+							td 320
+							td 228
+							td 228
+							td 228
+						tr
+							td Тип наддува                                      
+							td 228
+							td 320
+							td 228
+							td 228
+							td 228
+						tr
+							td Экологический класс
+							td 228
+							td 320
+							td 228
+							td 228
+							td 228
+						tr
+							td Максимальная мощность, л.с./кВт при об/мин
+							td 228
+							td 320
+							td 228
+							td 228
+							td 228
+						tr
+							td Максимальный крутящий момент, Н*м при об/мин
+							td 228
+							td 320
+							td 228
+							td 228
+							td 228
+						tr
+							td Расположение цилиндров
+							td 228
+							td 320
+							td 228
+							td 228
+							td 228
+						tr
+							td Количество цилиндров
+							td 228
+							td 320
+							td 228
+							td 228
+							td 228
+						tr
+							td Число клапанов на цилиндр
+							td 228
+							td 320
+							td 228
+							td 228
+							td 228
+						tr
+							td Система питания двигателя
+							td 228
+							td 320
+							td 228
+							td 228
+							td 228
+			.push 
+		include _footer.jade 
+
+

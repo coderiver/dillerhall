@@ -1,0 +1,132 @@
+doctype
+html
+	head
+		include _head.jade
+	body
+		.out
+			header.header
+				.header__top
+					a.header__logo(href="#")
+					.menu.js-menu
+						.menu__item 
+							i.icon-user
+							| Личный кабинет
+						ul.menu__list
+							li
+								a(href="#") Запросы
+							li
+								a(href="#") Избранные авто
+							li
+								a(href="#") История просмотров
+							li
+								a(href="#") История сравнений
+							li
+								a(href="#") Личные данные
+							li
+								a(href="#") Рассылка
+
+					.header__key
+						button.js-toggle-nav(type="button")
+							i
+				.header__middle
+					nav.breadcumbs
+						a(href="#") Главная
+						a(href="#") Фильтр
+					h1.page-title Сравнение автомобилей
+				.header__bottom
+					.header__center
+						ul.tab-pills
+							li.is-active
+								a(href="#") Диаграмма
+							li
+								a(href="#") Таблица
+				include _nav.jade
+
+
+
+			.compare-head
+				.compare-head__in
+					
+					.car
+						.car__img
+							a(href="#")
+								img(src="img/car.png", alt="img")
+						a.car__info(href="#")		
+							.car__model 
+								strong BMW 
+								| 320d xDrive 
+							.car__detail Modern Line
+						i.dot-color.is-violet
+						button.btn-del(type="button")
+					.car
+						.car__img
+							a(href="#")
+								img(src="img/car.png", alt="img")
+						a.car__info(href="#")		
+							.car__model 
+								strong BMW 
+								| 320d xDrive 
+							.car__detail Modern Line
+						i.dot-color.is-green
+						button.btn-del(type="button")
+					.car
+						.car__img
+							a(href="#")
+								img(src="img/car.png", alt="img")
+						a.car__info(href="#")		
+							.car__model 
+								strong BMW 
+								| 320d xDrive 
+						i.dot-color.is-yellow
+						button.btn-del(type="button")
+					.car
+						.car__img
+							a(href="#")
+								img(src="img/car.png", alt="img")
+						a.car__info(href="#")		
+							.car__model 
+								strong BMW 
+								| 320d xDrive 
+							.car__detail Modern Line
+						i.dot-color.is-red
+						button.btn-del(type="button")
+					.car
+						.car__img
+							a(href="#")
+								img(src="img/car.png", alt="img")
+						a.car__info(href="#")		
+							.car__model 
+								strong BMW 
+								| 320d xDrive 
+						i.dot-color.is-blue
+						button.btn-del(type="button")
+				//- <svg>
+				//- <circle r="100" cx="100" cy="100" fill="slategrey">
+				//- <animate attributeName="r" from="0" to="100" dur="3s"/>
+				//- </circle>
+				//- </svg>
+			.comparison
+				.comparison__section
+					.comparison__title Стоимость
+				.comparison__section
+					.comparison__title Мощность
+				.comparison__section
+					.comparison__title Объем двигателя
+				.comparison__section
+					.comparison__title Разгон до 100 км/ч (с)
+				.comparison__section
+					.comparison__title Максимальная скорость
+				.comparison__section
+					.comparison__title Коробка передач
+				.comparison__section
+					.comparison__title Тип привода
+				.comparison__section
+					.comparison__title Расход топлива (л)
+				.comparison__section
+					.comparison__title Количество мест
+				.comparison__section
+					.comparison__title Багаж
+			.push 
+		include _footer.jade 
+
+
