@@ -12,36 +12,53 @@ $(document).ready(function() {
         return false;
     });
 
+    if ($('.js-select-single').length) {
+        $('.js-select-single').each(function() {
+            $(this).multiselect({
+                multiple: false,
+                selectedList: 1,
+                show: ["fade", 200],
+                hide: ["fade", 200],
+                beforeclose : function() {
+                    if ($(this).hasClass('js-select-border')) {
+                        var select = $(this);
+                        setDataBorderColor(select);
+                    }
+                }
+            });
+        });
+    }
 
-    $(".js-select-single").multiselect({
-         multiple: false,
-         //header: false,
-         //noneSelectedText: "Select an Option",
-         selectedList: 1,
-         show: ["fade", 200],
-         hide: ["fade", 200]
-    });
+    var setDataBorderColor = function( el ) {
+        var options = el.find('option'),
+            wrapper = el.parents('.select'),
+            checkedRadio = el.multiselect('widget').find(":radio:checked"),
+            checkedIndex = checkedRadio.parents('li').index(),
+            color = options.eq(checkedIndex).attr('data-border-color');
 
-    // $('.js-select-color').on('change', function(event) {
-    //     var wrapper = $(this).parent(),
-    //         option  = $(this).find('option:selected'),
-    //         color   = $(this).find('option:selected').attr('data-border-color');
-    //     wrapper.data('border-color', color);
-    //     event.preventDefault();
-    //     console.log(option);
-    //     console.log(color);
-    // });
+            if ( color !== undefined ) {
+                wrapper.attr('data-border-color', color);
+            } else {
+                wrapper.attr('data-border-color', '');
+            }
+    };
 
+    if ($('.js-select-border').length) {
+        $('.js-select-border').each(function() {
+            var color = $(this).find('option:selected').attr('data-border-color');
+            $(this).parent('.select').attr('data-border-color', color);
+        });
+    }
 
 
     $('.js-menu').on("click",function(event) {
         $(this).toggleClass("is-active");
-        event.stopPropagation()
+        event.stopPropagation();
     });
     $('.js-sort-link').on("click",function(event) {
         $(this).toggleClass("is-active");
         $(this).parent().find('input[type="checkbox"]').trigger("click");
-        event.stopPropagation()
+        event.stopPropagation();
     });
 
 
@@ -55,89 +72,126 @@ $(document).ready(function() {
         $(this).data('text', text);
     });
 
-    if ( $('.js-panel').length ) {
-        function fixedPanel() {
-            var panel       = $('.js-panel'),
-                panelTopPos = panel.offset().top,
-                panelWidth  = panel.width();
-                panelHeight  = panel.height();
+    var fixedPanel = function() {
+        var panel       = $('.js-panel'),
+            panelTopPos = panel.offset().top,
+            panelWidth  = panel.width(),
+            panelHeight = panel.height();
 
-            $(window).on('scroll', function() {
-                if ( panelTopPos - $(window).scrollTop() <= 0 ) {
-                    panel.css({
-                        position : 'fixed',
-                        top      : '0',
-                        zIndex   : '1000',
-                        width    : panelWidth
-                    });
-                    $('body').css('margin-top', panelHeight)
-                } else {
-                    panel.css({
-                        position : '',
-                        top      : '',
-                        zIndex   : '',
-                        width    : ''
-                    });
-                    $('body').css('margin-top', '')
-                };
-            });
-        };
-        fixedPanel();
+        $(window).on('scroll', function() {
+            if ( panelTopPos - $(window).scrollTop() <= 0 ) {
+                panel.css({
+                    position : 'fixed',
+                    top      : '0',
+                    zIndex   : '1000',
+                    width    : panelWidth
+                });
+                $('body').css('margin-top', panelHeight);
+            } else {
+                panel.css({
+                    position : '',
+                    top      : '',
+                    zIndex   : '',
+                    width    : ''
+                });
+                $('body').css('margin-top', '');
+            }
+        });
     };
 
-    if ( $('.js-account').length ) {
-        function fixedAccountInfo() {
-            var el        = $('.js-account'),
-                wrapper   = el.parent(),
-                elTopPos  = el.offset().top,
-                elWidth   = el.outerWidth();
-                elHeight  = el.outerHeight(),
-                posBottom = wrapper.offset().top + wrapper.height(),
-                panelHeight = $('.js-panel').height();
+    if ( $('.js-panel').length ) {
+        fixedPanel();
+    }
 
+    var fixedAccountInfo = function() {
+        var el        = $('.js-account'),
+            wrapper   = el.parent(),
+            elWidth   = el.outerWidth(),
+            elHeight  = el.outerHeight(),
+            panel     = $('.js-panel'),
+            panelHeight = panel.height();
+
+        function windowHeight() {
+            return $(window).height() - panel.height();
+        }
+
+        function elTopPos() {
+            return $(window).scrollTop() - el.offset().top + panelHeight;
+        }
+
+        function elBottomPos() {
+            var pos = 0;
+            if (el.attr('position') == 'fixed') {
+                pos =  $(window).scrollTop() + panelHeight + el.outerHeight();
+            } else {
+                pos =  $(window).scrollTop() - el.offset().top + el.outerHeight();
+            }
+            return pos;
+        }
+
+        function topPoint() {
+            return wrapper.offset().top - panelHeight - $(window).scrollTop();
+        }
+
+        function bottomPoint() {
+            return wrapper.offset().top + wrapper.outerHeight() - $(window).scrollTop();
+        }
+
+        console.log(wrapper.offset().top);
+
+        if ( el.outerHeight() < windowHeight() ) {
             $(window).on('scroll', function() {
 
-                if ( $(window).scrollTop() >= elTopPos - panelHeight && elHeight < wrapper.height() ) {
+                console.log('sctollTop [' + $(window).scrollTop() + ']');
+                console.log('el.top [' +  elTopPos() + ']');
+                console.log('el.bottom [' +  elBottomPos() + ']');
+                console.log('topPoint [' + topPoint() + ']');
+                console.log('bottomPoint [' + bottomPoint() + ']');
+
+                if ( elTopPos() >= topPoint() ) {
                     el.css({
                         position : 'fixed',
+                        zIndex   : '10',
                         top      : panelHeight,
                         width    : elWidth
                     });
-
-                    if ( posBottom <= el.offset().top + el.height() + panelHeight ) {
-                        el.css({
-                            position : 'absolute',
-                            top      : 'auto',
-                            bottom   : '0'
-                        });
-                    };
-
-                } else {
+                }
+                if ( elBottomPos() >= bottomPoint() ) {
                     el.css({
+                        position : 'absolute',
+                        top      : 'auto',
+                        bottom   : '0'
+                    });
+                }
+                if ( elTopPos() < topPoint() ) {
+                     el.css({
                         position : '',
                         top      : '',
                         bottom   : '',
                         width    : ''
                     });
-                };
+                }
+
             });
-        };
-        fixedAccountInfo();
+        }
     };
+
+    if ( $('.js-account').length ) {
+        fixedAccountInfo();
+    }
 
     $('.js-add-field').on('click', function(event) {
         event.preventDefault();
         var inputBlock = $(this).parents('.b-input'),
-            inputs = inputBlock.find('input');
-            inputType  = inputs.attr('type');
+            inputs = inputBlock.find('input'),
+            inputType  = inputs.attr('type'),
             inputClass = inputs.attr('class');
-            console.log(inputClass);
         if (inputs.length <= 5) {
             $('<input />', {
                 type : inputType,
                 class: inputClass
             }).insertBefore($(this).parent());
-        };
+        }
     });
 
 });

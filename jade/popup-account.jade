@@ -6,13 +6,14 @@ html
 	body
 		.overlay
 		.popup-wrap.js-popup
-			.popup.popup-form
-				span.popup__close
-				form(action="")
-					span.popup-form__title Пользователь Андрей Кузнецов хочет подтвердить и завершить запрос на BMW 328i
-					.popup-form__box
-						h3 Можно по-быстрее, а то мне уже не терпиться вы хотите подтвердить
-					button.btn Подтвердить запрос
+			.popup-form
+				.popup-form__inner
+					span.popup-form__close
+					form(action="")
+						span.popup-form__title Пользователь Андрей Кузнецов хочет подтвердить и завершить запрос на BMW 328i
+						.popup-form__row
+							h3 Можно по-быстрее, а то мне уже не терпиться
+						button.btn Подтвердить запрос
 		include _footer.jade 
 
 
