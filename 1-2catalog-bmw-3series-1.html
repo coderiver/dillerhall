@@ -10,7 +10,7 @@
   <body>
     <div class="out">
       <header class="header header_news">
-        <div class="header__top">
+        <div class="header__top"><a href="#" class="header__logo"></a>
           <div class="header__key">
             <button type="button" class="js-toggle-nav"><i></i></button>
           </div>
@@ -22,15 +22,7 @@
         <div class="header__bottom">
           <div class="header__center">
             <div class="header__nav">
-              <div class="header__nav-list"><a href="#">Описание</a><a href="#">Дизайн</a><a href="#">Характеристики</a><a href="#">Технологии</a></div>
-              <div class="select col col_252">
-                <select class="js-select-single">
-                  <option value="Все">Все</option>
-                  <option value="2014">2014</option>
-                  <option value="2013">2013</option>
-                  <option value="2012">2012</option>
-                </select>
-              </div>
+              <div class="header__nav-list"><a href="js-scroll1" class="js-scroll-to">Описание</a><a href="js-scroll2" class="js-scroll-to">Дизайн</a><a href="js-scroll3" class="js-scroll-to">Характеристики</a><a href="js-scroll4" class="js-scroll-to">Технологии</a></div>
             </div>
           </div>
           <div class="header__right"><a href="#" class="btn">Подписаться на новостиe</a></div>
@@ -87,87 +79,196 @@
           </div>
         </div>
       </header>
-      <div class="article">
-        <h2>Описание</h2>
-        <p>Седан среднего класса BMW 3-Series (F30) дебютировал в 2011 году, но продажи стартовали годом позже. По габаритным размерам «тройка» стала на 93 мм длиннее, на 6 мм шире и на 8 мм выше своего предшественника (BMW E90). Колесная база увеличилась на 50 мм,а объем багажника — на 50 литров. При этом абсолютно все модификации модели стали легче по сравнению с Е90. </p>
+      <div class="article article_smallfont js-scroll1">
+        <div class="article__in">
+          <h2>Описание</h2>
+          <p>Седан среднего класса BMW 3-Series (F30) дебютировал в 2011 году, но продажи стартовали годом позже. По габаритным размерам «тройка» стала на 93 мм длиннее, на 6 мм шире и на 8 мм выше своего предшественника (BMW E90). Колесная база увеличилась на 50 мм,а объем багажника — на 50 литров. При этом абсолютно все модификации модели стали легче по сравнению с Е90. </p>
+        </div>
         <hr>
-        <div class="article__in js-tabs-group">
+        <div class="article__in js-scroll2">
           <h2>Дизайн</h2>
-          <ul class="tabs js-tabs">
-            <li class="is-active"><a href="#js-tab1">Фото</a></li>
-            <li><a href="#js-tab2">Видео</a></li>
-          </ul>
-          <div data-id="#js-tab1" class="tabs-content js-tabs-content">
-            <ul class="tabs-link js-tabs-simple">
-              <li><a href="#">Все                                   </a></li>
-              <li><a href="#">Салон</a></li>
-              <li><a href="#">Экстерьер</a></li>
-              <li><a href="#">Детали</a></li>
+          <div class="tabs-wrap">
+            <ul class="tabs">
+              <li class="is-active"><a href="#">Фото</a></li>
+              <li><a href="#">Видео</a></li>
             </ul>
-            <div class="js-tabs-simple-group">
-              <div class="tabs-content js-tabs-simple-content">
-                <div class="gallery">
-                  <div class="slider">
-                    <div class="slider__list js-slick">
-                      <div class="slider__item"><img src="img/slider-item2.jpg" alt=""></div>
-                      <div class="slider__item"><img src="img/slider-item2.jpg" alt=""></div>
-                      <div class="slider__item"><img src="img/slider-item2.jpg" alt=""></div>
-                      <div class="slider__item"><img src="img/slider-item2.jpg" alt=""></div>
-                      <div class="slider__item"><img src="img/slider-item2.jpg" alt=""></div>
-                    </div>
-                  </div><span>Приборная панель BMW отличается эргономичностью и максимальной информативностью всех расположенных на ней приборов. Практически все последние модели БМВ оснащаются спидометрами, которые оцифруются как милями, так и километрами.</span>
-                </div>
-              </div>
-              <div class="tabs-content js-tabs-simple-content">
-                <div class="gallery">
-                  <div class="slider">
-                    <div class="slider__list js-slick">
-                      <div class="slider__item"><img src="img/slider-item.jpg" alt=""></div>
-                      <div class="slider__item"><img src="img/slider-item2.jpg" alt=""></div>
-                      <div class="slider__item"><img src="img/slider-item.jpg" alt=""></div>
-                      <div class="slider__item"><img src="img/slider-item2.jpg" alt=""></div>
-                      <div class="slider__item"><img src="img/slider-item.jpg" alt=""></div>
-                    </div>
-                  </div><span>Приборная панель BMW </span>
-                </div>
-              </div>
-              <div class="tabs-content js-tabs-simple-content">
-                <div class="gallery">
-                  <div class="slider">
-                    <div class="slider__list js-slick">
-                      <div class="slider__item"><img src="img/slider-item2.jpg" alt=""></div>
-                      <div class="slider__item"><img src="img/slider-item2.jpg" alt=""></div>
-                    </div>
-                  </div><span>Приборная панель BMW отличается эргономичностью и максимальной информативностью всех расположенных на ней приборов. Практически все последние модели БМВ оснащаются спидометрами, которые оцифруются как милями, так и километрами.</span>
-                </div>
-              </div>
-              <div class="tabs-content js-tabs-simple-content">
-                <div class="gallery">
-                  <div class="slider">
-                    <div class="slider__list js-slick"><img src="img/slider-item.jpg" alt=""></div>
-                    <div class="slider__item"><img src="img/slider-item2.jpg" alt=""></div>
-                    <div class="slider__item"><img src="img/slider-item.jpg" alt=""></div>
-                    <div class="slider__item"><img src="img/slider-item.jpg" alt=""></div>
-                  </div><span>Приборная панель BMW </span>
-                </div>
-              </div>
-            </div>
           </div>
-          <div data-id="#js-tab2" class="tabs-content js-tabs-content">
-            <ul class="tabs-link js-tabs-simple">
-              <li class="is-active"><a href="#">Все                                   </a></li>
-              <li><a href="#">Салон</a></li>
-              <li><a href="#">Экстерьер</a></li>
-              <li><a href="#">Детали</a></li>
+          <div class="tabs-list">
+            <div class="tabs-list__text js-tabs-text">Фото</div>
+            <ul class="tabs">
+              <li class="is-active"><a href="#">Фото</a></li>
+              <li><a href="#">Видео</a></li>
             </ul>
-            <figure>
-              <div class="video">
-                <iframe src="http://player.vimeo.com/video/76856850" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-              </div><span>Наш офис изнутри. Здесь мы трудимся каждый божий день, делая для вас поистине отменный сервис.</span>
-            </figure>
+          </div>
+          <ul class="tabs-link">
+            <li class="is-active"><a href="#">Все                                   </a></li>
+            <li><a href="#">Салон</a></li>
+            <li><a href="#">Экстерьер</a></li>
+            <li><a href="#">Детали</a></li>
+          </ul>
+          <div class="ajax-content">
+            <div class="gallery">
+              <div class="slider">
+                <div class="slider__list js-slick">
+                  <div class="slider__item"><img src="img/slider-item2.jpg" alt=""></div>
+                  <div class="slider__item"><img src="img/slider-item2.jpg" alt=""></div>
+                  <div class="slider__item"><img src="img/slider-item2.jpg" alt=""></div>
+                  <div class="slider__item"><img src="img/slider-item2.jpg" alt=""></div>
+                  <div class="slider__item"><img src="img/slider-item2.jpg" alt=""></div>
+                </div>
+              </div><span>Приборная панель BMW отличается эргономичностью и максимальной информативностью всех расположенных на ней приборов. Практически все последние модели БМВ оснащаются спидометрами, которые оцифруются как милями, так и километрами.</span>
+            </div>
           </div>
         </div>
         <hr>
+        <div class="article__in js-scroll3">
+          <h2>Основные характеристики</h2>
+          <div class="tabs-wrap">
+            <ul class="tabs">
+              <li class="is-active"><a href="#">Двигатель</a></li>
+              <li><a href="#">Коробка передач</a></li>
+              <li><a href="#">Тормозная система  </a></li>
+              <li><a href="#">Рулевое управление</a></li>
+              <li><a href="#">Ходовая часть</a></li>
+            </ul>
+          </div>
+          <div class="tabs-list">
+            <div class="tabs-list__text js-tabs-text">Двигатель</div>
+            <ul class="tabs">
+              <li class="is-active"><a href="#">Двигатель</a></li>
+              <li><a href="#">Коробка передач</a></li>
+              <li><a href="#">Тормозная система  </a></li>
+              <li><a href="#">Рулевое управление</a></li>
+              <li><a href="#">Ходовая часть</a></li>
+            </ul>
+          </div>
+          <div class="ajax-content">
+            <h1>1.5, 1.8, 2.0 литра</h1>
+            <h2>Компактный автомобиль с задним приводом и продольным расположением двигателя</h2>
+            <p>Автомобиль выпускается с 2004 года. Последним автомобилем такого класса этого немецкого производителя был BMW 3 Compact (E36/5, E46/5). Машина имеет много общих решений с другими моделями. Так, передняя подвеска стойки МакФерсон от «пятёрки» E60, а задняя многорычажная от «трёшки» E90.</p>
+            <p>Модель позиционируется в зависимости от комплектации как пяти или четырёхместный автомобиль. Центральная часть приборной панели слегка повёрнута в сторону водителя, а вместо ключа зажигания — брелок и кнопка «Start» над ним.</p>
+            <p>Машина выпускается в четырёх кузовах: с 3-х и 5-дверные хетчбэки (E81, E87) (сняты с производства), купе (E82) и кабриолет (E88).</p>
+            <h2>Двигатели S14 (1986 - 1991 г.г.)</h2>
+            <p>Основанный на блоке М10, S14 был разработан отделением BMW Motorsport для М3 в кузове Е30.</p>
+            <ul>
+              <li>Объем: 2302 (2467)</li>
+              <li>Диаметр цилиндра: 93.4 (95)</li>
+              <li>Ход поршня: 84 (87)</li>
+              <li>Представлен в 1986 / (1989)</li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+        <div class="article__in js-scroll4">
+          <h2>Технологии</h2>
+          <div class="tabs-wrap">
+            <ul class="tabs">
+              <li class="is-active"><a href="#">Безопасность</a></li>
+              <li><a href="#">Комфорт</a></li>
+              <li><a href="#">Обзор  </a></li>
+              <li><a href="#">Салон</a></li>
+              <li><a href="#">Мультимедиа</a></li>
+              <li><a href="#">Защита от угона</a></li>
+              <li><a href="#">Экстерьер                                           </a></li>
+            </ul>
+          </div>
+          <div class="tabs-list">
+            <div class="tabs-list__text js-tabs-text">Двигатель</div>
+            <ul class="tabs">
+              <li class="is-active"><a href="#">Безопасность</a></li>
+              <li><a href="#">Комфорт</a></li>
+              <li><a href="#">Обзор  </a></li>
+              <li><a href="#">Салон</a></li>
+              <li><a href="#">Мультимедиа</a></li>
+              <li><a href="#">Защита от угона</a></li>
+              <li><a href="#">Экстерьер                                           </a></li>
+            </ul>
+          </div>
+          <ul class="tabs-link">
+            <li class="is-active"><a href="#">ABS</a></li>
+            <li><a href="#">ESP</a></li>
+            <li><a href="#">Isofix / LATCH </a></li>
+            <li><a href="#">Подушка безопасности</a></li>
+            <li><a href="#">Система помощи при старте в гору</a></li>
+          </ul>
+          <div class="ajax-content"><img src="http://placehold.it/525x278" alt="img" align="left">
+            <p>BMW 3 серии несомненно является победителем среди других моделей машин. Захватывающий дух динамики, впечатляющая техника и потрясающий дизайн. </p>
+            <p>BMW 3 серии несомненно является победителем среди других моделей машин. Захватывающий дух динамики, впечатляющая техника и потрясающий дизайн. BMW 3 серии седан несомненно является победителем среди других моделей машин. Захватывающий дух динамики.</p>
+            <p>Впечатляющая техника и потрясающий дизайн выделяет данную серию автомобилей BMW среди остальных машин. </p>
+            <p>BMW 3 серии несомненно является победителем среди других моделей машин. Захватывающий дух динамики, впечатляющая техника и потрясающий дизайн. BMW 3 серии седан несомненно является победителем среди других моделей. Захватывающий дух динамики, впечатляющая техника и потрясающий дизайн.</p>
+          </div>
+        </div>
+        <hr>
+        <div class="article__in">
+          <h2>Комплектации и цены BMW 3 series</h2>
+          <div class="tabs-wrap">
+            <button type="button" class="tabs-wrap__prev js-tabs-prev"></button>
+            <ul class="tabs">
+              <li class="is-active"><a href="#">316i SE <em>5</em></a></li>
+              <li><a href="#">320i SE <em>2</em></a></li>
+              <li><a href="#">320i xDrive <em>1  </em></a></li>
+              <li><a href="#">320d xDrive Modern Line <em>7</em></a></li>
+              <li><a href="#">328i <em>5</em></a></li>
+              <li><a href="#">320i xDrive M Sport <em>1</em></a></li>
+              <li><a href="#">328i xDrive   </a></li>
+              <li><a href="#">335i xDrive</a></li>
+            </ul>
+            <button type="button" class="tabs-wrap__next js-tabs-next"></button>
+          </div>
+          <div class="tabs-list">
+            <div class="tabs-list__text js-tabs-text">316i SE</div>
+            <ul class="tabs">
+              <li class="is-active"><a href="#">316i SE <em>5</em></a></li>
+              <li><a href="#">320i SE <em>2</em></a></li>
+              <li><a href="#">320i xDrive <em>1  </em></a></li>
+              <li><a href="#">320d xDrive Modern Line <em>7</em></a></li>
+              <li><a href="#">328i <em>5</em></a></li>
+              <li><a href="#">320i xDrive M Sport <em>1</em></a></li>
+              <li><a href="#">328i xDrive   </a></li>
+              <li><a href="#">335i xDrive</a></li>
+            </ul>
+          </div>
+          <div class="ajax-content">
+            <p>BMW 320 xDrive Modern Line — седан D-класса. Модель выпускается с 2013 года. По своим габаритам автомобиль превосходит универсал 3-Series. Длина GT увеличилась на 200 мм, высота – на 81 мм, а колесная база – на 110 мм.</p>
+            <div class="row-item row-item_mod">
+              <div class="row-item__left"><img src="img/item/bmw-3series-hatchback.png" alt=""></div>
+              <div class="row-item__right">
+                <div class="compare">
+                  <button class="compare__favorites"></button>
+                </div><span class="row-item__price">$ 25 300</span><a href="#" class="btn-link">Посмотреть</a>
+              </div>
+              <div class="row-item__center"><a href="#"><span class="row-item__title"><span><span>BMW </span></span>320d xDrive Modern Line 
+                    2.0 AT (360л.с.) бензин, задний привод, 6 МКП, серый металлик, </span><span class="row-item__gray">Кроссовер, 2014–2015  </span><span class="row-item__green">В наличии</span></a>
+                <p>Дополнительно: кожаный салон, система Isofix / LATCH, тонированные окна, золотой металлик, подогрев передних сидений, легкосплавные диски 16", передний центральный подлокотник, активный уси... <a href="#">подробнее</a></p>
+              </div>
+            </div>
+            <div class="row-item row-item_mod">
+              <div class="row-item__left"><img src="img/item/bmw-3series-hatchback.png" alt=""></div>
+              <div class="row-item__right">
+                <div class="compare">
+                  <button class="compare__favorites"></button>
+                </div><span class="row-item__price">$ 25 300</span><a href="#" class="btn-link">Посмотреть</a>
+              </div>
+              <div class="row-item__center"><a href="#"><span class="row-item__title"><span><span>BMW </span></span>320d xDrive Modern Line 
+                    2.0 AT (360л.с.) бензин, задний привод, 6 МКП, серый металлик, </span><span class="row-item__gray">Кроссовер, 2014–2015  </span><span class="row-item__green">В наличии</span></a>
+                <p>Дополнительно: кожаный салон, система Isofix / LATCH, тонированные окна, золотой металлик, подогрев передних сидений, легкосплавные диски 16", передний центральный подлокотник, активный уси... <a href="#">подробнее</a></p>
+              </div>
+            </div>
+            <div class="row-item row-item_mod">
+              <div class="row-item__left"><img src="img/item/bmw-3series-hatchback.png" alt=""></div>
+              <div class="row-item__right">
+                <div class="compare">
+                  <button class="compare__favorites"></button>
+                </div><span class="row-item__price">$ 25 300</span><a href="#" class="btn-link">Посмотреть</a>
+              </div>
+              <div class="row-item__center"><a href="#"><span class="row-item__title"><span><span>BMW </span></span>320d xDrive Modern Line 
+                    2.0 AT (360л.с.) бензин, задний привод, 6 МКП, серый металлик, </span><span class="row-item__gray">Кроссовер, 2014–2015  </span><span class="row-item__green">В наличии</span></a>
+                <p>Дополнительно: кожаный салон, система Isofix / LATCH, тонированные окна, золотой металлик, подогрев передних сидений, легкосплавные диски 16", передний центральный подлокотник, активный уси... <a href="#">подробнее</a></p>
+              </div>
+            </div>
+            <div class="row-item-action"><a href="#" class="btn-action">Показать ещё</a><a href="#" class="btn">Все BMW 3 series в каталоге</a></div>
+          </div>
+        </div>
       </div>
       <div class="push"></div>
     </div>
@@ -218,6 +319,7 @@
     <script src="js/lib/jquery.js"></script>
     <script src="js/lib/jquery-ui.min.js"></script>
     <script src="js/lib/jquery.multiselect.min.js"></script>
+    <script src="js/lib/jquery-ui-slider.js"></script>
     <script src="js/lib/cycle.js"></script>
     <script src="js/lib/slick.js"></script>
     <script src="js/valera.js"></script>

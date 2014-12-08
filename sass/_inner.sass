@@ -1,16 +1,97 @@
+.article_smallfont
+	font-size: 14px
+	p
+		font-size: 14px
+	img
+		margin-bottom: 20px
+		max-width: 100%
+		&[align="left"]
+			margin-right: 50px
+			+r(980)
+				float: none
+				margin: 0 0 20px
+		&[align="right"]
+			margin-left: 50px
+			+r(980)
+				float: none
+				margin: 0 0 20px
+.article_no-padding
+	padding-top: 0
+	.article__in
+		padding: 0
+		h1,h2, p
+			max-width: 100%
 .article__in	
 	margin: 0 auto 
 	padding: 0 35px 
-	max-width: 865px
-	h2
+	max-width: 975px
+	h1
+		font-size: 40px
+		+f100
+		color: $blue
+		font-weight: normal 
+	h1,h2, p
 		padding: 0
+		max-width: 100%
+	h2
+		margin: 0 0 25px
+	.row-item
+		p
+			margin-bottom: 0
+	.tabs-content
+		ul
+			//display: inline-block
+			//width: 50%
+			//vertical-align: top
+			padding: 0 0 0 25px
+			+column-count(2)
+			+r(980)
+				+column-count(1)
+			+r(480)
+				padding: 0
+			li
+				+f100
+				font-size: 14px
+				margin-bottom: 15px
+				letter-spacing: 0.02em 
+				line-height: 24px
+				position: relative
+				padding: 0 0 0 30px
+				position: relative
+				&:before
+					position: absolute
+					top: 9px
+					left: 0
+					content: "" 
+					width: 6px
+					height: 6px
+					background-color: #2DB9EE
+					+border-radius(50%)
+		.tabs-link,
+		.tabs
+			padding: 0
+			+column-count(1)
+			li
+				padding: 0
+				&:before
+					display: none
+		.slick-dots
+			+column-count(1)
+			li
+				padding: 0
+				&:before
+					display: none
 
 .tabs
-	+clr
+	font-size: 0
+	display: inline-block
+	min-width: 100%
 	border-bottom: 1px solid #e9e9e9 
 	margin: 0 0 30px 
 	li
-		float: left
+		display: inline-block
+		vertical-align: middle
+		padding: 0
 		&.is-active
 			position: relative
 			pointer-events: none
@@ -24,10 +105,11 @@
 				bottom: -2px
 			a
 				border-color: #e9e9e9 
+				padding: 0 20px 
 
 	a
 		display: block
-		padding: 0 20px
+		padding: 0 10px
 		height: 43px
 		line-height: 43px
 		color: #525252  
@@ -38,13 +120,20 @@
 		+tr_c
 		&:hover
 			color: $blue 
+		em
+			font-style: normal
+			+f100
+			font-size: 14px
 .tabs-link
-	+clr
+	font-size: 0
 	margin: 0 0 35px 
+	+r(980)
+		display: none
 	li
-		float: left
+		display: inline-block
+		vertical-align: middle
 		margin-right: 35px
-		&.is-active
+		&.is-active			
 			a
 				color: $blue 
 				border-color: $blue
@@ -56,3 +145,395 @@
 		+tr_c
 		&:hover
 			color: $blue
+	
+.tabs-wrap
+	white-space: nowrap
+	position: relative
+	overflow: hidden
+	height: 44px
+	margin-bottom: 30px
+	+r(1024)
+		display: none
+	&.is-active
+		.tabs-wrap__next
+			display: none
+		.tabs-wrap__prev
+			display: block
+	&__next,
+	&__prev
+		position: absolute
+		z-index: 2
+		top: 0
+		height: 43px
+		width: 40px		
+		&:before
+			content: ""
+			position: absolute
+			right: 0
+			top: 11px
+			+opacity(.5)
+			+tr_o
+			&:hover
+				opacity: 1
+	&__next
+		right: 0
+		background: none
+		+gh(rgba(#fff,0),rgba(#fff,1))
+		&:before
+			right: 0
+			+svg(arr-next-big,7,20)
+	&__prev
+		left: 0
+		background: none
+		display: none
+		+gh(rgba(#fff,1),rgba(#fff,0))
+		&:before
+			left: 0
+			+svg(arr-prev-big,7,20)
+	.tabs
+		position: absolute
+		left: 0
+		top: 0
+		+tr(left .3s)
+.row-item_mod
+	border-top: 1px solid #e9e9e9
+	border-bottom: 0
+	.row-item__center
+		padding-right: 40px
+		
+.row-item-action
+	border-top: 1px solid #e9e9e9
+	padding: 45px 0 80px 220px
+	+clr
+	+r(980)
+		padding-left: 0
+		text-align: center
+	.btn-action
+		margin-right: 10px
+	.btn
+		float: right
+		+r(980)
+			margin: 20px 0 0
+			float: none
+		
+.tabs-list
+	position: relative
+	z-index: 2
+	display: none
+	margin-bottom: 30px
+	+r(1024)
+		display: block
+	&__text
+		padding-right: 35px
+		border-bottom: 1px solid #e9e9e9 
+		height: 44px
+		line-height: 44px
+		white-space: nowrap
+		overflow: hidden
+		color: #000
+		cursor: pointer
+		font-size: 16px
+		+f300 
+		text-overflow: ellipsis
+		&:after
+			content: ""
+			position: absolute
+			right: 11px
+			bottom: 13px
+			+s(arr-b)
+	.tabs
+		position: absolute
+		margin-top: 1px
+		top: 100%
+		left: 0
+		right: 0
+		border: 1px solid #e9e9e9
+		background: #fff 
+		display: none
+		li
+			display: block
+			
+		a
+			padding: 0 10px !important 
+			border: 0 !important
+
+.main
+	margin: 0 auto
+	position: relative
+	padding: 55px 50px 
+	background: #fff
+	max-width: 1080px 
+	+clr
+.product-wrap
+	+clr
+	+r(768)
+		display: flex
+		flex-direction: column
+.carousel
+	float: left
+	position: relative
+	z-index: 2
+	width: 49%
+	+r(980)
+		width: 100%
+		float: none
+		margin-bottom: 30px
+	+r(768)
+		order: 2
+	&__main
+		margin-bottom: 20px
+		img
+			width: 100%
+	&__preview
+		+r(768)
+			display: none
+		.slick-slide
+			margin-right: 11px
+			cursor: pointer
+			&:hover
+				img
+					+opacity(1)
+			&.is-active
+				&:after
+					display: block
+				img
+					+opacity(1)
+			&:after
+				content: ""
+				position: absolute
+				display: none
+				z-index: 2
+				top: 0
+				right: 0
+				bottom: 0
+				left: 0
+				border: 2px solid $blue 
+			img
+				+opacity(.5)
+				+tr_o
+		.slick-prev
+			left: -28px
+			&:before
+				+opacity(.5)
+				+s(prev)
+			&:hover
+				&:before
+					+opacity(1)
+		.slick-next
+			right: -18px
+			&:before
+				+opacity(.5)
+				+s(next)
+			&:hover
+				&:before
+					+opacity(1)
+	+ .product
+		position: relative
+		top: -15px
+		+r(768)
+			top: 0
+.product
+	padding-left: 60px
+	overflow: hidden
+	+r(980)
+		padding-left: 0
+	+r(768)
+		order: 1
+		margin-bottom: 90px 
+		text-align: center
+	&__head
+		border-bottom: 1px solid #e9e9e9 
+		padding-bottom: 25px
+		+r(768)
+			text-align: left
+	&__title
+		font-size: 30px
+		+f100
+		+r(980)
+			font-size: 24px
+		+r(768)
+			text-align: left
+	&__info
+		font-size: 14px
+		+f500
+		+r(768)
+			text-align: left
+	&__meta
+		color: #b5b5b5
+		font-size: 12px
+		+f500
+		+r(768)
+			text-align: left
+	.is-green
+		color: #a9d16a
+	&__main
+		margin: 0 0 14px 
+		border-bottom: 1px solid #e9e9e9 
+		padding: 20px 0 
+		+f100
+		font-size: 14px
+		+r(768)
+			text-align: left
+		p
+			margin-bottom: 3px
+	&__price
+		font-size: 24px	
+	.btn
+		margin-top: 20px
+	.compare,
+	.sticker
+		display: inline-block
+		vertical-align: middle
+.link-more
+	color: #000 
+	span
+		text-decoration: underline
+		color: $blue
+	&:hover
+		span
+			text-decoration: none
+
+.color
+	font-size: 14px
+	+f100
+	&__title
+		color: #000
+	&__circle
+		display: inline-block
+		margin: 0 9px
+		width: 12px
+		height: 12px
+		border-radius: 50% 
+		&.is-blue
+			background: #1a2a49 
+	&__label
+		font-size: 12px
+		+f100
+
+.text-cols
+	+column-count(2)
+	+column-gap(50px)
+	+r(980)
+		+column-count(1)
+
+.tabs-cat
+	margin-bottom: 30px
+	+r(980)
+		margin-bottom: 22px
+		padding-bottom: 30px
+		border-bottom: 1px solid #e8e8e8 
+	li
+		display: inline-block
+		vertical-align: middle
+		margin-bottom: 3px
+		&.is-active
+			a
+				border-color: #E9E9E9
+	a
+		display: block
+		padding:  0 18px
+		height: 35px
+		line-height: 33px
+		font-size: 16px
+		color: #000
+		+tr_c 
+		border: 1px solid transparent
+		border-radius: 17px
+		+r(980)
+			height: 26px
+			line-height: 24px
+			font-size: 14px
+		&:hover
+			color: $blue 
+			
+.ajax-content
+	margin-bottom: 30px
+	
+.char
+	float: left
+	margin-bottom: 40px
+	width: 50%
+	+r(980)
+		float: none
+		width: 100%
+	&__item
+		display: table
+		margin-bottom: 20px
+		table-layout: fixed
+	&__img
+		display: table-cell
+		vertical-align: middle
+		width: 41px
+		text-align: center
+		img
+			vertical-align: middle
+			max-width: 100%
+	&__info
+		display: table-cell
+		padding-left: 30px
+		vertical-align: middle
+		font-size: 14px
+		color: #000
+		+f300
+		span
+			display: block
+			color: $blue 
+
+.btn-link_small
+	min-width: 100px
+	
+.main-col
+	
+.table-info-wrap
+	margin: 70px 0 0 -3%
+	font-size: 0
+	display: none
+.table-info
+	display: inline-block
+	vertical-align: top
+	margin-bottom: 30px
+	padding-left: 3%
+	width: 47%
+	font-size: 13px
+	color: #000
+	+f300 
+	+r(768)
+		width: 100%	
+		display: block
+		padding-left: 0
+	table
+		table-layout: fixed
+	th
+		padding: 18px 0 
+		text-align: left
+		font-weight: normal
+		font-size: 18px
+		+f500
+	td
+		padding: 8px 20px 
+		width: 50%
+		border-bottom: 1px solid #ececec
+		border-top: 1px solid #ececec
+		&:last-child
+			text-align: right
+	tbody
+		tr
+			&:nth-child(2n)
+				background: #f7f7f7 
+				
+.select_tab
+	margin-bottom: 45px
+	display: none
+	+r(980)
+		display: block
+	.ui-multiselect
+		height: 30px
+		border-color: $blue 
+		color: $blue
+		&:hover
+			color: $blue_h
+			border-color: $blue_h 
+	.ui-icon
+		+svg(select-act,5,14)
+
+		 
