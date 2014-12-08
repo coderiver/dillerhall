@@ -8,10 +8,7 @@ $(document).ready(function() {
     $("body").on("click",".js-add-btn",function(){
         var new_el = $(this).attr("data-hidden");
         var html = $("."+new_el).html();
-        // $(this).parent().before(html);
-
-        //only for testing 10-1-test2 page. Remove and uncomment line above
-        $(this).parents('.account').find('.account__chat').append(html);
+        $(this).parent().before(html);
         return false;
     });
 
@@ -106,19 +103,16 @@ $(document).ready(function() {
         fixedPanel();
     }
 
-    // Add fixed position to account info block when scrolling
     var fixedAccountInfo = function() {
-        var el          = $('.js-account'),
-            leftColumn  = el.parent(),
-            rightColumn = leftColumn.siblings('.col'),
-            elWidth     = el.outerWidth(),
-            // moreBtn     = el.find('.link-more'),
-            panel       = $('.js-panel'),
+        var el        = $('.js-account'),
+            wrapper   = el.parent(),
+            elWidth   = el.outerWidth(),
+            elHeight  = el.outerHeight(),
+            panel     = $('.js-panel'),
             panelHeight = panel.height();
 
-
         function windowHeight() {
-            return $(window).height() - panelHeight;
+            return $(window).height() - panel.height();
         }
 
         function elTopPos() {
@@ -126,45 +120,33 @@ $(document).ready(function() {
         }
 
         function elBottomPos() {
-            return el.offset().top + el.outerHeight();
+            var pos = 0;
+            if (el.attr('position') == 'fixed') {
+                pos =  $(window).scrollTop() + panelHeight + el.outerHeight();
+            } else {
+                pos =  $(window).scrollTop() - el.offset().top + el.outerHeight();
+            }
+            return pos;
         }
 
         function topPoint() {
-            return leftColumn.offset().top - panelHeight - $(window).scrollTop();
+            return wrapper.offset().top - panelHeight - $(window).scrollTop();
         }
 
         function bottomPoint() {
-            return leftColumn.offset().top + leftColumn.height();
+            return wrapper.offset().top + wrapper.outerHeight() - $(window).scrollTop();
         }
 
-        function setElHeight() {
-            if ( el.outerHeight() < rightColumn.height() && el.outerHeight() >= windowHeight() ) {
-                el.css({
-                    height : windowHeight()
-                });
-            } else {
-                el.css({
-                    height : ''
-                });
-            }
-        }
+        console.log(wrapper.offset().top);
 
-        setElHeight();
+        if ( el.outerHeight() < windowHeight() ) {
+            $(window).on('scroll', function() {
 
-        $(window).on('resize', function() {
-           setElHeight();
-        });
-
-        $(window).on('scroll', function() {
-            setElHeight();
-
-            if ( el.outerHeight() < rightColumn.height() ) {
-
-                // console.log('sctollTop [' + $(window).scrollTop() + ']');
-                // console.log('el.top [' +  elTopPos() + ']');
-                // console.log('el.bottom [' +  elBottomPos() + ']');
-                // console.log('topPoint [' + topPoint() + ']');
-                // console.log('bottomPoint [' + bottomPoint() + ']');
+                console.log('sctollTop [' + $(window).scrollTop() + ']');
+                console.log('el.top [' +  elTopPos() + ']');
+                console.log('el.bottom [' +  elBottomPos() + ']');
+                console.log('topPoint [' + topPoint() + ']');
+                console.log('bottomPoint [' + bottomPoint() + ']');
 
                 if ( elTopPos() >= topPoint() ) {
                     el.css({
@@ -180,11 +162,6 @@ $(document).ready(function() {
                         top      : 'auto',
                         bottom   : '0'
                     });
-                    // if ( el.outerHeight() >= windowHeight() ) {
-                    //     el.css({
-                    //         height : ''
-                    //     });
-                    // }
                 }
                 if ( elTopPos() < topPoint() ) {
                      el.css({
@@ -194,8 +171,9 @@ $(document).ready(function() {
                         width    : ''
                     });
                 }
-            }
-        });
+
+            });
+        }
     };
 
     if ( $('.js-account').length ) {
@@ -215,22 +193,5 @@ $(document).ready(function() {
             }).insertBefore($(this).parent());
         }
     });
-
-    //custom scroll
-    // $('.js-scroll').each(function() {
-    //     $(this).jScrollPane();
-    //     var api = $(this).data('jsp');
-    //     var throttleTimeout;
-
-    //     $(window).resize(function() {
-    //         if (!throttleTimeout) {
-    //             throttleTimeout = setTimeout( function() {
-    //                 api.reinitialise();
-    //                 throttleTimeout = null;
-    //             }, 50);
-    //         }
-    //     });
-    // });
-
 
 });

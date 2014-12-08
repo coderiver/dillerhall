@@ -1,0 +1,72 @@
+doctype
+html
+	head
+		include _head.jade
+		title title
+	body
+		.overlay
+		.popup-wrap.js-popup
+			.popup.popup-form
+				span.popup__close
+				form(action="")
+					span.popup-form__title Оставить запрос
+					.popup-form__box
+						h3 Вы оставляете запрос на автомобиль: 
+							br
+							strong BMW 320d xDrive Modern Line 
+						h4
+							span 2.0 AT (360л.с.) бензин, задний привод, 6 МКП
+					.popup-form__field
+						textarea(name="", cols="30", rows="10", placeholder="Оставить комментарий")
+					button.btn Отправить
+			.popup.popup-form
+				span.popup__close
+				form(action="")
+					span.popup-form__title Вход
+					.popup-form__box
+						h3 Если вы уже зарегистрированы на нашем сайте, вам необходимо войти
+					.popup-form__field
+						input(placeholder="E-mail").input
+					.popup-form__field
+						input(placeholder="Пароль").input
+					.popup-form__btns
+						button.popup__btn 
+							span Зарегистрироваться
+						a(href="#").popup__link Забыли пароль?
+					button.btn Войти
+			.popup.popup-form
+				span.popup__close
+				form(action="")
+					span.popup-form__title Регистрация
+					.popup-form__box
+						h3 Зарегистрируйтесь для того, чтобы полностью воспользоваться всеми преимуществами нашего сайта
+					.popup-form__field
+						input(placeholder="E-mail").input
+					button.btn Восстановить пароль
+			.popup.popup-form
+				span.popup__close
+				form(action="")
+					span.popup-form__title Восстановить пароль
+					.popup-form__box
+						h3 Мы пришлем ваш новый пароль на указанный e-mail
+					.popup-form__field
+						input(placeholder="Имя").input
+					.popup-form__field
+						input(placeholder="E-mail").input
+					.popup-form__field
+						input(placeholder="Телефон").input
+					button.btn Зарегистрироваться
+				.popup-form__bottom
+					h2 Плюсы регистрации на сайте
+					ul.popup__list
+						li
+							a(href="#").is-comp История сравнения
+						li
+							a(href="#").is-fav Добавление в избранные
+						li
+							a(href="#").is-rev История просмотров
+						li
+							a(href="#").is-del Подписка на новостную рассылку
+		include _footer.jade 
+
+

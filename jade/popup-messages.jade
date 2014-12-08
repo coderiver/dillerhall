@@ -1,0 +1,51 @@
+doctype
+html
+	head
+		include _head.jade
+		title title
+	body
+		.overlay
+		.popup-wrap.js-popup
+			.popup.popup-form
+				span.popup__close
+				form(action="")
+					span.popup-form__title Отменить запрос
+					.popup-form__box
+						h3 Пожалуйста, выберите автомобиль, запрос на который вы хотите отменить
+					.popup-form__field
+						.select
+							select.js-select-single
+								option(value="") Нет статуса
+								option(value="") Есть статус
+								option(value="") Нет статуса
+								option(value="") Ой все!
+					.popup-form__field
+						textarea(name="", cols="30", rows="10", placeholder="Сообщение")
+					button.btn Отменить запрос
+			.popup.popup-form
+				span.popup__close
+				form(action="")
+					span.popup-form__title Подтвердить и завершить запрос
+					.popup-form__box
+						h3 Выберите автмобиль, запрос на который вы хотите подтвердить
+					.popup-form__field
+						.select
+							select.js-select-single
+								option(value="") Нет статуса
+								option(value="") Есть статус
+								option(value="") Нет статуса
+								option(value="") Ой все!
+					.popup-form__field
+						textarea(name="", cols="30", rows="10", placeholder="Комментарий")
+					button.btn Завершить запрос
+			.popup.popup-form
+				span.popup__close
+				form(action="")
+					span.popup-form__title Спасибо! 
+					.popup-form__box
+						h3 Вы успешно подтвердили и завершили свой запрос на автомобиль 
+							strong BMW 320d xDrive Modern Line. 
+							| Спасибо, что выбрали нас!
+		include _footer.jade 
+
+

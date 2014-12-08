@@ -1,0 +1,28 @@
+doctype
+html
+	head
+		include _head.jade
+		title title
+	body
+		.overlay
+		.popup-wrap.js-popup
+			.popup.popup-form
+				span.popup__close
+				form(action="")
+					span.popup-form__title Откликнуться на вакансию
+					.popup-form__box
+						h3 Все данные будут использоваться только для обработки Вашего запроса и не будут переданы третьим лицам.
+					.popup-form__field
+						input(placeholder="Имя").input
+					.popup-form__field
+						input(placeholder="Фамилия").input
+					.popup-form__field
+						input(placeholder="Телефон").input
+					.popup-form__btns
+						label.popup__file
+							input(type="file")
+							span Прикрепить резюме
+					button.btn Откликнуться
+		include _footer.jade 
+
+
