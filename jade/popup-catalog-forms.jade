@@ -6,8 +6,8 @@ html
 	body
 		.overlay
 		.popup-wrap.js-popup
-			.popup.popup-form
-				span.popup__close
+			.popup-form.popup-form_min
+				span.popup-form__close
 				form(action="")
 					span.popup-form__title Оставить запрос
 					.popup-form__box
@@ -19,8 +19,8 @@ html
 					.popup-form__field
 						textarea(name="", cols="30", rows="10", placeholder="Оставить комментарий")
 					button.btn Отправить
-			.popup.popup-form
-				span.popup__close
+			.popup-form.popup-form_min
+				span.popup-form__close
 				form(action="")
 					span.popup-form__title Вход
 					.popup-form__box
@@ -30,25 +30,25 @@ html
 					.popup-form__field
 						input(placeholder="Пароль").input
 					.popup-form__btns
-						button.popup__btn 
+						button.popup-form__btn 
 							span Зарегистрироваться
-						a(href="#").popup__link Забыли пароль?
+						a(href="#").popup-form__link Забыли пароль?
 					button.btn Войти
-			.popup.popup-form
-				span.popup__close
+			.popup-form.popup-form_min
+				span.popup-form__close
+				form(action="")
+					span.popup-form__title Восстановить пароль
+					.popup-form__box
+						h3 Мы пришлем ваш новый пароль на указанный e-mail 
+					.popup-form__field
+						input(placeholder="E-mail").input
+					button.btn Восстановить пароль
+			.popup-form.popup-form_min
+				span.popup-form__close
 				form(action="")
 					span.popup-form__title Регистрация
 					.popup-form__box
 						h3 Зарегистрируйтесь для того, чтобы полностью воспользоваться всеми преимуществами нашего сайта
-					.popup-form__field
-						input(placeholder="E-mail").input
-					button.btn Восстановить пароль
-			.popup.popup-form
-				span.popup__close
-				form(action="")
-					span.popup-form__title Восстановить пароль
-					.popup-form__box
-						h3 Мы пришлем ваш новый пароль на указанный e-mail
 					.popup-form__field
 						input(placeholder="Имя").input
 					.popup-form__field
@@ -58,7 +58,7 @@ html
 					button.btn Зарегистрироваться
 				.popup-form__bottom
 					h2 Плюсы регистрации на сайте
-					ul.popup__list
+					ul.popup-form__list
 						li
 							a(href="#").is-comp История сравнения
 						li

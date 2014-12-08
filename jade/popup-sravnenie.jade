@@ -1,0 +1,22 @@
+doctype
+html
+	head
+		include _head.jade
+		title title
+	body
+		.overlay
+		.popup-wrap.js-popup
+			.popup-form
+				span.popup-form__close
+				.popup-form__inner
+					form(action="")
+						span.popup-form__main-title Добавить автомобиль для сравнения
+						.search__label
+							div
+								input.search__keyword.input
+								i.search__icon
+								button.search__delete.is-not
+							i.popup-form__plus
+		include _footer.jade 
+
+
