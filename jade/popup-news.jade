@@ -1,0 +1,22 @@
+doctype
+html
+	head
+		include _head.jade
+		title title
+	body
+		.overlay
+		.popup-wrap.js-popup
+			.popup.popup-form
+				span.popup__close
+				form(action="")
+					span.popup-form__title Подписка на новости
+					.popup-form__box
+						h3 Только самые актуальные и свежие новости 
+					.popup-form__field
+						input(placeholder="Имя").input
+					.popup-form__field
+						input(placeholder="E-mail").input
+					button.btn Подписаться
+		include _footer.jade 
+
+

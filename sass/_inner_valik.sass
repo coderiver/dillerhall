@@ -1082,7 +1082,8 @@ ul.sorting
 			+opacity(0)
 			content: "" 
 			will-change: opacity
-			+tr_op 
+			visibility: hidden
+			+transition(opacity 0.2s linear, visibility 0.2s linear)
 			z-index: 5
 		img
 			width: 100%
@@ -1095,6 +1096,7 @@ ul.sorting
 			.news-box__img
 				&:before
 					+opacity(0.5) 
+					visibility: visible
 	h2.title
 		+f300
 		text-transform: uppercase
@@ -1361,12 +1363,14 @@ ul.sorting
 		top: 0
 		right: 0
 		+opacity(0)
-		+tr_op
+		+transition(opacity 0.2s linear, visibility 0.2s linear)
 		will-change: opacity
 		content: "" 
+		visibility: hidden
 	&:hover
 		&:before
 			+opacity(1)
+			visibility: visible
 .slick-prev
 	+s(slick-prev)
 	left: 28px
@@ -2415,3 +2419,342 @@ ul.sorting
 			text-transform: uppercase
 			font-size: 16px
 			letter-spacing: 0.019em 
+			
+//POPUPS
+.overlay
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	background: #1bb4ed
+	+opacity(0.98)
+	will-change: opacity 
+	z-index: 25
+	min-width: 320px 
+.popup-wrap
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	overflow: auto
+	z-index: 30
+	+vertical
+	min-width: 320px
+	padding: 100px 10px  
+.popup
+	max-width: 800px
+	width: 100%
+	display: inline-block
+	vertical-align: middle  
+	text-align: left
+	position: relative
+	margin-bottom: 30px
+	h1, h2, h3, h4, h5, h6, strong
+		font-weight: normal
+	img
+		max-width: 100%
+		margin-bottom: 20px
+	&__title
+		font-size: 40px
+		line-height: 70px
+		letter-spacing: 0.03em 
+		+f100
+		display: block
+		margin-bottom: 18px
+	h2
+		+f100
+		font-size: 24px
+		line-height: 30px
+		letter-spacing: 0.03em
+		margin-bottom: 30px
+	p
+		+f100
+		font-size: 14px
+		line-height: 24px
+		margin-bottom: 24px
+	&__body
+		background: #fff
+	&__inner
+		max-width: 705px
+		padding: 20px 20px 90px
+		margin: 0 auto
+	&__top
+		padding-bottom: 30px 
+	&__close
+		cursor: pointer
+		position: absolute
+		top: -54px
+		right: -47px
+		+svg(popup-close, 33, 33)
+	&_mod
+		.popup__inner
+			padding: 48px 20px 90px 
+		img
+			margin-bottom: 35px
+		.popup__close
+			+svg(popup-close-blue, 33, 33)
+			top: 22px
+			right: 26px
+	h3, h4
+		+f100
+		letter-spacing: 0.02em 
+		color: #FFF 
+		strong
+			+f300
+	h3
+		font-size: 18px
+	h4
+		font-size: 16px
+	textarea
+		border: 1px solid #eaeaea
+		+transition(border .3s, box-shadow .3s)
+		width: 100%
+		+br5
+		resize: none
+		padding: 14px 
+		font-size: 14px
+		color: #000
+		+f300
+		height: 98px
+		margin: 0 auto 39px
+		&:hover
+			border-color: #c3c3c3
+		&:focus
+			border: 1px solid #1BB4ED
+			+box-shadow(0 0 5px rgba(27, 180, 237, 0.3))
+	.input
+		margin: 0 auto 28px
+		+opacity(0.7)
+		+transition(opacity 0.3s linear, border 0.3s linear, box-shadow 0.3s linear)
+		&:hover, &:focus
+			+opacity(1)
+	&__btn
+		background: #36bcef
+		padding: 6px 12px 6px 12px  
+		+border-radius(5px)
+		span
+			color: #fff
+			+opacity(0.7)
+			+f300
+			font-size: 14px 
+	&__link
+		color: #FFF 
+		+opacity(0.7)
+		+f300
+		font-size: 14px
+	form
+		margin: 0 auto
+	&__list
+		text-align: left
+		a
+			+f100
+			font-size: 16px
+			line-height: 24px
+			letter-spacing: 0.02em 
+	.btn
+		+f300
+	&__file
+		position: relative
+		float: left
+		+opacity(0.7)
+		+tr_op
+		will-change: opacity
+		text-align: left
+		overflow: hidden
+		cursor: pointer
+		margin-bottom: 30px
+		&:hover
+			+opacity(1)
+		input
+			+opacity(0)
+			position: absolute
+			top: 0
+			left: 0
+			cursor: pointer
+			z-index: 1 
+		span
+			+f300
+			font-size: 14px
+			color: #fff 
+			border-bottom: 1px dotted #fff 
+			cursor: pointer
+			position: relative
+			z-index: 1
+
+.popup-form
+	max-width: 544px
+	text-align: center
+	.popup__close
+		right: -6px
+	form
+		max-width: 460px 
+	&__title
+		+f100
+		font-size: 30px
+		line-height: 36px
+		margin-bottom: 20px
+		letter-spacing: 0.03em 
+		color: #fff 
+		display: block
+	textarea, .input
+		max-width: 400px
+		border-color: #fff
+		background: none
+		color: #fff 
+		+placeholder
+			color: #fff
+			+opacity(0.7) 
+		&:hover
+			border-color: #fff 
+		&:focus
+			border-color: #fff 
+			box-shadow: 0 0 5px rgba(255, 255, 255, 0.3)
+	.input
+		height: 40px
+		line-height: 40px
+	&__btns
+		max-width: 400px
+		margin: 0 auto
+		padding-bottom: 20px 
+		+clr
+		.popup__btn
+			float: left
+			margin-bottom: 7px
+		.popup__link
+			float: right
+			margin-bottom: 7px
+			text-decoration: underline
+	&__box
+		padding-bottom: 20px
+	.popup__list
+		margin: 0 0 0 155px 
+		+r(768)
+			margin: 0 auto
+			display: inline-block
+		li
+			padding: 10px 0
+		a
+			color: #ffffff 
+			padding: 0 0 0 45px
+			position: relative
+			display: inline-block
+			&:before
+				position: absolute
+				top: 50%
+				left: 0
+				content: "" 
+			&.is-comp
+				&:before
+					+s(tab4)
+					margin-top: -9px
+			&.is-fav
+				&:before
+					+s(tab2)
+					margin-top: -10px
+			&.is-rev
+				&:before
+					+s(tab3)
+					margin-top: -9px
+			&.is-del
+				&:before
+					+s(tab6)
+					margin-top: -7px
+	h2
+		color: #fff 
+	.btn
+		margin-bottom: 44px
+	&__bottom
+		border-top: 1px solid rgba(255, 255, 255, 0.2)
+		padding: 55px 0 0 0 
+	.select
+		max-width: 400px
+		width: 100%
+		margin-bottom: 18px
+.popup
+	.filter-wrap
+		padding: 0
+		.popup__title
+			text-align: center
+			color: #fff
+			margin-bottom: 26px
+	.filter
+		color: #fff
+		border-color: #79d3f4
+		&:hover
+			border-color: #fff 
+		&__box
+			.input
+				background: none
+				color: #fff
+				border-color: #fff 
+				margin: 0 auto
+				&:focus
+					border-color: #fff
+					+box-shadow(0 0 5px rgba(255, 255, 255, 0.3))
+		&__close
+			+svg(close-white, 9, 9)
+		&__btns, &_save
+			.btn-simple
+				color: #fff
+				border-color: #79d3f4 
+				&:hover
+					border-color: #fff
+				&:active
+					border-color: #fff
+					background: #fff
+					color: #1fb5ed   
+		&_more
+			border-color: #79d3f4
+			span
+				color: #fff 
+			&:hover
+				border-color: #fff 
+		&__title
+			span
+				border-color: #FFF 
+		.select
+			width: 100%
+			.ui-multiselect
+				height: 40px
+				line-height: 40px
+			.ui-icon
+				top: 50%
+				margin-top: -7px
+	.range
+		border-top: 1px solid #79d3f4
+		background: url(../img/range-bbw.png) repeat-x bottom left 
+		.ui-slider-range
+			border-top: 1px solid #fff
+		.ui-state-default
+			position: absolute
+			&:before
+				+arr(24, 19, #fff, b) 
+			&:after
+				+s(range-btn-w)
+			&:hover
+				&:after
+					+opacity(1)
+	.checkbox
+		&__title
+			&:before
+				border-color: #FFF 
+			&:after
+				+svg(check-white, 11, 8)
+		input
+			background: none
+			border-color: #fff 
+			&:checked
+				+ .checkbox__title
+					&:before
+						border-color: #fff
+					&:hover
+						&:before
+							+box-shadow(0 0 5px rgba(255, 255, 255, 0.3))
+.popup-filter__close
+	cursor: pointer
+	position: absolute
+	top: 20px
+	right: 20px
+	+svg(popup-close, 33, 33)
