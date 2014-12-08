@@ -238,4 +238,23 @@ $(".js-select-single").multiselect({
       return false;
     });
 
+
+    function fixedCompare() {
+       var el = $(".js-compare-head");
+       var top = el.offset().top;
+       if ($("body").scrollTop() >= top) {
+         el.addClass("is-fixed");
+       } 
+       else {
+         el.removeClass("is-fixed");
+       }
+     }
+     if ($(".js-compare-head").length) {
+        fixedCompare();
+     }
+     $(window).scroll(function() {
+       if ($(".js-compare-head").length) {
+          fixedCompare();
+        }
+     });
 });
