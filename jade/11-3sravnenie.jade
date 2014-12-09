@@ -193,59 +193,299 @@ html
 				.comparison__section
 					.comparison__title Разгон до 100 км/ч (с)
 					.line
-						svg.is-blue(height="24px",width="546px")
-							line(x1="0" y1="1px" x2="180" y2="1px")
-						svg.is-yellow(height="24px",width="546px")
-							line(x1="0" y1="1px" x2="200" y2="1px")
-						svg.is-violet(height="24px",width="546px")
-							line(x1="0" y1="1px" x2="250" y2="1px")
-						svg.is-green(height="24px",width="546px")
-							line(x1="0" y1="1px" x2="300" y2="1px")
-						svg.is-red(height="24px",width="546px")
-							line(x1="0" y1="1px" x2="436" y2="1px")
-					ul.ruler
-						li 
-							span 1
-						li 
-							span 2
-						li 
-							span 3
-						li 
-							span 4
-						li 
-							span 5
-						li 
-							span 6
-						li 
-							span 7
-						li 
-							span 8
-						li 
-							span 9
-						li 
-							span 10
-						li 
-							span 11
-						li 
-							span 12
-						li 
-							span 13
-						li 
-							span 14
-						li 
-							span 15
+						<!-- line's width depends of svg attr "width" -->
+						svg.is-blue(height="24px",width="33%")
+							line(x1="0" y1="1px" x2="100%" y2="1px")
+						svg.is-yellow(height="24px",width="25%")
+							line(x1="0" y1="1px" x2="100%" y2="1px")
+						svg.is-violet(height="24px",width="28%")
+							line(x1="0" y1="1px" x2="100%" y2="1px")
+						svg.is-green(height="24px",width="55%")
+							line(x1="0" y1="1px" x2="100%" y2="1px")
+						svg.is-red(height="24px",width="70%")
+							line(x1="0" y1="1px" x2="100%" y2="1px")
+						ul.ruler
+							li 
+								span 1
+							li 
+								span 2
+							li 
+								span 3
+							li 
+								span 4
+							li 
+								span 5
+							li 
+								span 6
+							li 
+								span 7
+							li 
+								span 8
+							li 
+								span 9
+							li 
+								span 10
+							li 
+								span 11
+							li 
+								span 12
+							li 
+								span 13
+							li 
+								span 14
+							li 
+								span 15
 				.comparison__section
 					.comparison__title Максимальная скорость
+					.circle
+						svg.is-violet(height="250px",width="250px")
+							circle(r="122", cx="125", cy="125",stroke-width="2px", fill="none")
+						ul.labels
+							li
+								i.dot-color.is-violet
+								| $ 125 000
+							li
+								i.dot-color.is-green
+								| $ 125 000
+							li
+								i.dot-color.is-yellow
+								| $ 125 000
+							li
+								i.dot-color.is-red
+								| $ 125 000
+							li
+								i.dot-color.is-blue
+								| $ 125 000
 				.comparison__section
 					.comparison__title Коробка передач
+					.trans.is-violet
+						.trans__icon
+							i
+							i.is-medium
+							i
+							i.is-medium
+							i
+							i.is-medium
+							i.is-small
+							i
+						.trans__title 8 
+							sub ступ. 
+						.trans__info АКПП Triptronic
+					.trans.is-green
+						.trans__icon
+							i
+							i.is-medium
+							i
+							i.is-medium
+							i
+							i.is-medium
+						.trans__title 6 
+							sub ступ. 
+						.trans__info АКПП Triptronic
+					.trans.is-yellow
+						.trans__icon
+							i
+							i.is-medium
+							i
+							i.is-medium
+							i
+							i.is-medium
+							i.is-small
+							i
+						.trans__title 8 
+							sub ступ. 
+						.trans__info АКПП Triptronic
+					.trans.is-red
+						.trans__icon
+							i
+							i.is-medium
+							i
+							i.is-medium
+							i
+							i.is-medium
+							i.is-small
+							i.is-medium
+							i
+							i.is-medium
+						.trans__title 10 
+							sub ступ. 
+						.trans__info АКПП Triptronic
+					.trans.is-blue
+						.trans__icon
+							i
+							i.is-medium
+							i
+							i.is-medium
+							i
+							i.is-medium
+						.trans__title 6 
+							sub ступ. 
+						.trans__info АКПП Triptronic
 				.comparison__section
 					.comparison__title Тип привода
+					.drive-type.is-violet
+						img(src="img/drive1.png", alt="img")
+						span Задний
+					.drive-type.is-green
+						img(src="img/drive2.png", alt="img")
+						span Задний
+					.drive-type.is-yellow
+						img(src="img/drive3.png", alt="img")
+						span Задний
+					.drive-type.is-red
+						img(src="img/drive4.png", alt="img")
+						span Задний
+					.drive-type.is-blue
+						img(src="img/drive5.png", alt="img")
+						span Задний
 				.comparison__section
 					.comparison__title Расход топлива (л)
+					.line.line_horizontal
+						<!-- line's height depends of svg attr "height" -->
+						.line__in
+							.line__label 9
+							svg.is-blue(height="245px",width="2px")
+								line(x1="1px" y1="100%" x2="1px" y2="0")
+						.line__in
+							.line__label 7
+							svg.is-yellow(height="220px",width="2px")
+								line(x1="1px" y1="100%" x2="1px" y2="0")
+						.line__in
+							.line__label 5
+							svg.is-violet(height="200px",width="2px")
+								line(x1="1px" y1="100%" x2="1px" y2="0")
+						.line__in
+							.line__label 5
+							svg.is-green(height="200px",width="2px")
+								line(x1="1px" y1="100%" x2="1px" y2="0")
+						.line__in
+							.line__label 6
+							svg.is-red(height="230px",width="2px")
+								line(x1="1px" y1="100%" x2="1px" y2="0")
+						.line__title Город
+					.line.line_horizontal
+						<!-- line's height depends of svg attr "height" -->
+						.line__in
+							.line__label 9
+							svg.is-blue(height="245px",width="2px")
+								line(x1="1px" y1="100%" x2="1px" y2="0")
+						.line__in
+							.line__label 7
+							svg.is-yellow(height="220px",width="2px")
+								line(x1="1px" y1="100%" x2="1px" y2="0")
+						.line__in
+							.line__label 5
+							svg.is-violet(height="200px",width="2px")
+								line(x1="1px" y1="100%" x2="1px" y2="0")
+						.line__in
+							.line__label 5
+							svg.is-green(height="200px",width="2px")
+								line(x1="1px" y1="100%" x2="1px" y2="0")
+						.line__in
+							.line__label 6
+							svg.is-red(height="230px",width="2px")
+								line(x1="1px" y1="100%" x2="1px" y2="0")
+						.line__title Трасса
+					.line.line_horizontal
+						<!-- line's height depends of svg attr "height" -->
+						.line__in
+							.line__label 9
+							svg.is-blue(height="245px",width="2px")
+								line(x1="1px" y1="100%" x2="1px" y2="0")
+						.line__in
+							.line__label 7
+							svg.is-yellow(height="220px",width="2px")
+								line(x1="1px" y1="100%" x2="1px" y2="0")
+						.line__in
+							.line__label 5
+							svg.is-violet(height="200px",width="2px")
+								line(x1="1px" y1="100%" x2="1px" y2="0")
+						.line__in
+							.line__label 5
+							svg.is-green(height="200px",width="2px")
+								line(x1="1px" y1="100%" x2="1px" y2="0")
+						.line__in
+							.line__label 6
+							svg.is-red(height="230px",width="2px")
+								line(x1="1px" y1="100%" x2="1px" y2="0")
+						.line__title Смешанный
 				.comparison__section
 					.comparison__title Количество мест
+					.place.is-violet
+						img(src="img/place.png", alt="")
+						img(src="img/place.png", alt="")
+						img(src="img/place.png", alt="")
+						img(src="img/place.png", alt="")
+						.place__title 
+							span 4
+							| места
+					.place.is-green
+						img(src="img/place.png", alt="")
+						img(src="img/place.png", alt="")
+						img(src="img/place.png", alt="")
+						img(src="img/place.png", alt="")
+						.place__title 
+							span 3
+							| места
+					.place.is-yellow
+						img(src="img/place.png", alt="")
+						img(src="img/place.png", alt="")
+						img(src="img/place.png", alt="")
+						img(src="img/place.png", alt="")
+						.place__title 
+							span 5
+							| места
+					.place.is-red
+						img(src="img/place.png", alt="")
+						img(src="img/place.png", alt="")
+						img(src="img/place.png", alt="")
+						img(src="img/place.png", alt="")
+						.place__title 
+							span 3
+							| места
+					.place.is-blue
+						img(src="img/place.png", alt="")
+						img(src="img/place.png", alt="")
+						img(src="img/place.png", alt="")
+						img(src="img/place.png", alt="")
+						.place__title 
+							span 5
+							| места
 				.comparison__section
 					.comparison__title Багаж
+					.laggage.is-violet
+						img(src="img/laggage.png", alt="")
+						img(src="img/laggage.png", alt="")
+						img(src="img/laggage.png", alt="")
+						img(src="img/laggage.png", alt="")
+						.laggage__title 480
+							sub л
+					.laggage.is-green
+						img(src="img/laggage.png", alt="")
+						img(src="img/laggage.png", alt="")
+						img(src="img/laggage.png", alt="")
+						img(src="img/laggage.png", alt="")
+						.laggage__title 480
+							sub л
+					.laggage.is-yellow
+						img(src="img/laggage.png", alt="")
+						img(src="img/laggage.png", alt="")
+						img(src="img/laggage.png", alt="")
+						.laggage__title 364
+							sub л
+					.laggage.is-red
+						img(src="img/laggage.png", alt="")
+						img(src="img/laggage.png", alt="")
+						img(src="img/laggage.png", alt="")
+						.laggage__title 364
+							sub л
+					.laggage.is-blue
+						img(src="img/laggage.png", alt="")
+						img(src="img/laggage.png", alt="")
+						img(src="img/laggage.png", alt="")
+						img(src="img/laggage.png", alt="")
+						.laggage__title 480
+							sub л
 			.push 
 		include _footer.jade 
 

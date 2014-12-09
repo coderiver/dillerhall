@@ -219,58 +219,229 @@
         </div>
         <div class="comparison__section">
           <div class="comparison__title">Разгон до 100 км/ч (с)</div>
-          <div class="line">
-            <svg height="24px" width="546px" class="is-blue">
-              <line x1="0" y1="1px" x2="180" y2="1px"></line>
+          <div class="line"><!-- line's width depends of svg attr "width" -->
+            <svg height="24px" width="33%" class="is-blue">
+              <line x1="0" y1="1px" x2="100%" y2="1px"></line>
             </svg>
-            <svg height="24px" width="546px" class="is-yellow">
-              <line x1="0" y1="1px" x2="200" y2="1px"></line>
+            <svg height="24px" width="25%" class="is-yellow">
+              <line x1="0" y1="1px" x2="100%" y2="1px"></line>
             </svg>
-            <svg height="24px" width="546px" class="is-violet">
-              <line x1="0" y1="1px" x2="250" y2="1px"></line>
+            <svg height="24px" width="28%" class="is-violet">
+              <line x1="0" y1="1px" x2="100%" y2="1px"></line>
             </svg>
-            <svg height="24px" width="546px" class="is-green">
-              <line x1="0" y1="1px" x2="300" y2="1px"></line>
+            <svg height="24px" width="55%" class="is-green">
+              <line x1="0" y1="1px" x2="100%" y2="1px"></line>
             </svg>
-            <svg height="24px" width="546px" class="is-red">
-              <line x1="0" y1="1px" x2="436" y2="1px"></line>
+            <svg height="24px" width="70%" class="is-red">
+              <line x1="0" y1="1px" x2="100%" y2="1px"></line>
             </svg>
+            <ul class="ruler">
+              <li><span>1</span></li>
+              <li><span>2</span></li>
+              <li><span>3</span></li>
+              <li><span>4</span></li>
+              <li><span>5</span></li>
+              <li><span>6</span></li>
+              <li><span>7</span></li>
+              <li><span>8</span></li>
+              <li><span>9</span></li>
+              <li><span>10</span></li>
+              <li><span>11</span></li>
+              <li><span>12</span></li>
+              <li><span>13</span></li>
+              <li><span>14</span></li>
+              <li><span>15</span></li>
+            </ul>
           </div>
-          <ul class="ruler">
-            <li><span>1</span></li>
-            <li><span>2</span></li>
-            <li><span>3</span></li>
-            <li><span>4</span></li>
-            <li><span>5</span></li>
-            <li><span>6</span></li>
-            <li><span>7</span></li>
-            <li><span>8</span></li>
-            <li><span>9</span></li>
-            <li><span>10</span></li>
-            <li><span>11</span></li>
-            <li><span>12</span></li>
-            <li><span>13</span></li>
-            <li><span>14</span></li>
-            <li><span>15</span></li>
-          </ul>
         </div>
         <div class="comparison__section">
           <div class="comparison__title">Максимальная скорость</div>
+          <div class="circle">
+            <svg height="250px" width="250px" class="is-violet">
+              <circle r="122" cx="125" cy="125" stroke-width="2px" fill="none"></circle>
+            </svg>
+            <ul class="labels">
+              <li><i class="dot-color is-violet"></i>$ 125 000</li>
+              <li><i class="dot-color is-green"></i>$ 125 000</li>
+              <li><i class="dot-color is-yellow"></i>$ 125 000</li>
+              <li><i class="dot-color is-red"></i>$ 125 000</li>
+              <li><i class="dot-color is-blue"></i>$ 125 000</li>
+            </ul>
+          </div>
         </div>
         <div class="comparison__section">
           <div class="comparison__title">Коробка передач</div>
+          <div class="trans is-violet">
+            <div class="trans__icon"><i></i><i class="is-medium"></i><i></i><i class="is-medium"></i><i></i><i class="is-medium"></i><i class="is-small"></i><i></i></div>
+            <div class="trans__title">8 <sub>ступ. </sub></div>
+            <div class="trans__info">АКПП Triptronic</div>
+          </div>
+          <div class="trans is-green">
+            <div class="trans__icon"><i></i><i class="is-medium"></i><i></i><i class="is-medium"></i><i></i><i class="is-medium"></i></div>
+            <div class="trans__title">6 <sub>ступ. </sub></div>
+            <div class="trans__info">АКПП Triptronic</div>
+          </div>
+          <div class="trans is-yellow">
+            <div class="trans__icon"><i></i><i class="is-medium"></i><i></i><i class="is-medium"></i><i></i><i class="is-medium"></i><i class="is-small"></i><i></i></div>
+            <div class="trans__title">8 <sub>ступ. </sub></div>
+            <div class="trans__info">АКПП Triptronic</div>
+          </div>
+          <div class="trans is-red">
+            <div class="trans__icon"><i></i><i class="is-medium"></i><i></i><i class="is-medium"></i><i></i><i class="is-medium"></i><i class="is-small"></i><i class="is-medium"></i><i></i><i class="is-medium"></i></div>
+            <div class="trans__title">10 <sub>ступ. </sub></div>
+            <div class="trans__info">АКПП Triptronic</div>
+          </div>
+          <div class="trans is-blue">
+            <div class="trans__icon"><i></i><i class="is-medium"></i><i></i><i class="is-medium"></i><i></i><i class="is-medium"></i></div>
+            <div class="trans__title">6 <sub>ступ. </sub></div>
+            <div class="trans__info">АКПП Triptronic</div>
+          </div>
         </div>
         <div class="comparison__section">
           <div class="comparison__title">Тип привода</div>
+          <div class="drive-type is-violet"><img src="img/drive1.png" alt="img"><span>Задний</span></div>
+          <div class="drive-type is-green"><img src="img/drive2.png" alt="img"><span>Задний</span></div>
+          <div class="drive-type is-yellow"><img src="img/drive3.png" alt="img"><span>Задний</span></div>
+          <div class="drive-type is-red"><img src="img/drive4.png" alt="img"><span>Задний</span></div>
+          <div class="drive-type is-blue"><img src="img/drive5.png" alt="img"><span>Задний</span></div>
         </div>
         <div class="comparison__section">
           <div class="comparison__title">Расход топлива (л)</div>
+          <div class="line line_horizontal"><!-- line's height depends of svg attr "height" -->
+            <div class="line__in">
+              <div class="line__label">9</div>
+              <svg height="245px" width="2px" class="is-blue">
+                <line x1="1px" y1="100%" x2="1px" y2="0"></line>
+              </svg>
+            </div>
+            <div class="line__in">
+              <div class="line__label">7</div>
+              <svg height="220px" width="2px" class="is-yellow">
+                <line x1="1px" y1="100%" x2="1px" y2="0"></line>
+              </svg>
+            </div>
+            <div class="line__in">
+              <div class="line__label">5</div>
+              <svg height="200px" width="2px" class="is-violet">
+                <line x1="1px" y1="100%" x2="1px" y2="0"></line>
+              </svg>
+            </div>
+            <div class="line__in">
+              <div class="line__label">5</div>
+              <svg height="200px" width="2px" class="is-green">
+                <line x1="1px" y1="100%" x2="1px" y2="0"></line>
+              </svg>
+            </div>
+            <div class="line__in">
+              <div class="line__label">6</div>
+              <svg height="230px" width="2px" class="is-red">
+                <line x1="1px" y1="100%" x2="1px" y2="0"></line>
+              </svg>
+            </div>
+            <div class="line__title">Город</div>
+          </div>
+          <div class="line line_horizontal"><!-- line's height depends of svg attr "height" -->
+            <div class="line__in">
+              <div class="line__label">9</div>
+              <svg height="245px" width="2px" class="is-blue">
+                <line x1="1px" y1="100%" x2="1px" y2="0"></line>
+              </svg>
+            </div>
+            <div class="line__in">
+              <div class="line__label">7</div>
+              <svg height="220px" width="2px" class="is-yellow">
+                <line x1="1px" y1="100%" x2="1px" y2="0"></line>
+              </svg>
+            </div>
+            <div class="line__in">
+              <div class="line__label">5</div>
+              <svg height="200px" width="2px" class="is-violet">
+                <line x1="1px" y1="100%" x2="1px" y2="0"></line>
+              </svg>
+            </div>
+            <div class="line__in">
+              <div class="line__label">5</div>
+              <svg height="200px" width="2px" class="is-green">
+                <line x1="1px" y1="100%" x2="1px" y2="0"></line>
+              </svg>
+            </div>
+            <div class="line__in">
+              <div class="line__label">6</div>
+              <svg height="230px" width="2px" class="is-red">
+                <line x1="1px" y1="100%" x2="1px" y2="0"></line>
+              </svg>
+            </div>
+            <div class="line__title">Трасса</div>
+          </div>
+          <div class="line line_horizontal"><!-- line's height depends of svg attr "height" -->
+            <div class="line__in">
+              <div class="line__label">9</div>
+              <svg height="245px" width="2px" class="is-blue">
+                <line x1="1px" y1="100%" x2="1px" y2="0"></line>
+              </svg>
+            </div>
+            <div class="line__in">
+              <div class="line__label">7</div>
+              <svg height="220px" width="2px" class="is-yellow">
+                <line x1="1px" y1="100%" x2="1px" y2="0"></line>
+              </svg>
+            </div>
+            <div class="line__in">
+              <div class="line__label">5</div>
+              <svg height="200px" width="2px" class="is-violet">
+                <line x1="1px" y1="100%" x2="1px" y2="0"></line>
+              </svg>
+            </div>
+            <div class="line__in">
+              <div class="line__label">5</div>
+              <svg height="200px" width="2px" class="is-green">
+                <line x1="1px" y1="100%" x2="1px" y2="0"></line>
+              </svg>
+            </div>
+            <div class="line__in">
+              <div class="line__label">6</div>
+              <svg height="230px" width="2px" class="is-red">
+                <line x1="1px" y1="100%" x2="1px" y2="0"></line>
+              </svg>
+            </div>
+            <div class="line__title">Смешанный</div>
+          </div>
         </div>
         <div class="comparison__section">
           <div class="comparison__title">Количество мест</div>
+          <div class="place is-violet"><img src="img/place.png" alt=""><img src="img/place.png" alt=""><img src="img/place.png" alt=""><img src="img/place.png" alt="">
+            <div class="place__title"><span>4</span>места</div>
+          </div>
+          <div class="place is-green"><img src="img/place.png" alt=""><img src="img/place.png" alt=""><img src="img/place.png" alt=""><img src="img/place.png" alt="">
+            <div class="place__title"><span>3</span>места</div>
+          </div>
+          <div class="place is-yellow"><img src="img/place.png" alt=""><img src="img/place.png" alt=""><img src="img/place.png" alt=""><img src="img/place.png" alt="">
+            <div class="place__title"><span>5</span>места</div>
+          </div>
+          <div class="place is-red"><img src="img/place.png" alt=""><img src="img/place.png" alt=""><img src="img/place.png" alt=""><img src="img/place.png" alt="">
+            <div class="place__title"><span>3</span>места</div>
+          </div>
+          <div class="place is-blue"><img src="img/place.png" alt=""><img src="img/place.png" alt=""><img src="img/place.png" alt=""><img src="img/place.png" alt="">
+            <div class="place__title"><span>5</span>места</div>
+          </div>
         </div>
         <div class="comparison__section">
           <div class="comparison__title">Багаж</div>
+          <div class="laggage is-violet"><img src="img/laggage.png" alt=""><img src="img/laggage.png" alt=""><img src="img/laggage.png" alt=""><img src="img/laggage.png" alt="">
+            <div class="laggage__title">480<sub>л</sub></div>
+          </div>
+          <div class="laggage is-green"><img src="img/laggage.png" alt=""><img src="img/laggage.png" alt=""><img src="img/laggage.png" alt=""><img src="img/laggage.png" alt="">
+            <div class="laggage__title">480<sub>л</sub></div>
+          </div>
+          <div class="laggage is-yellow"><img src="img/laggage.png" alt=""><img src="img/laggage.png" alt=""><img src="img/laggage.png" alt="">
+            <div class="laggage__title">364<sub>л</sub></div>
+          </div>
+          <div class="laggage is-red"><img src="img/laggage.png" alt=""><img src="img/laggage.png" alt=""><img src="img/laggage.png" alt="">
+            <div class="laggage__title">364<sub>л</sub></div>
+          </div>
+          <div class="laggage is-blue"><img src="img/laggage.png" alt=""><img src="img/laggage.png" alt=""><img src="img/laggage.png" alt=""><img src="img/laggage.png" alt="">
+            <div class="laggage__title">480<sub>л</sub></div>
+          </div>
         </div>
       </div>
       <div class="push"></div>

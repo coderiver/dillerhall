@@ -766,9 +766,17 @@ $blue: #6b7a8f
 		stroke-dashoffset: 1000
 		+animation(dash 3s linear forwards) 
 .line
+	margin: 0 auto 
+	width: 546px
+	&_horizontal	
+		display: inline-block
+		vertical-align: bottom
+		margin-right: 11%
+		width: auto
+		&:last-child
+			margin-right: 0
 	svg
 		display: block
-		margin: 0 auto
 		&.is-violet
 			line
 				stroke: $violet
@@ -789,6 +797,27 @@ $blue: #6b7a8f
 		stroke-dasharray: 1000
 		stroke-dashoffset: 1000
 		+animation(dash 3s linear forwards) 
+	&__in
+		position: relative
+		font-size: 0
+		display: inline-block
+		vertical-align: bottom
+		width: 14px
+		text-align: center
+		svg
+			display: inline-block
+	&__label
+		position: absolute
+		top: -26px
+		left: 0
+		right: 0
+		font-size: 12px
+		+f300 
+		color: #909090 
+	&__title	
+		margin: 7px 0 0 
+		font-size: 14px
+		color: #000 			  	
 +keyframes(dash)
 	0
 		stroke-dashoffset: 1000
@@ -796,11 +825,10 @@ $blue: #6b7a8f
 		stroke-dashoffset: 0
 		
 .ruler
-	margin: 0 auto 
 	border-top: 1px solid #f2f2f2 
 	display: table
+	width: 100%
 	table-layout: fixed
-	width: 546px
 	text-align: left
 	li
 		display: table-cell
@@ -841,3 +869,99 @@ $blue: #6b7a8f
 		position: relative
 		left: -3px
 		
+.trans
+	display: inline-block
+	width: 13%
+	vertical-align: top
+	&.is-violet
+		.trans__icon
+			i
+				background: $violet 
+	&.is-green
+		.trans__icon
+			i
+				background: $green
+	&.is-yellow
+		.trans__icon
+			i
+				background: $yellow 
+	&.is-red
+		.trans__icon
+			i
+				background: $red 
+	&.is-blue
+		.trans__icon
+			i
+				background: $blue 
+	&__icon
+		display: block
+		margin-bottom: 20px
+		i
+			display: inline-block
+			vertical-align: bottom
+			margin-left: 2px
+			width: 2px
+			height: 25px
+			&.is-medium
+				height: 23px
+			&.is-small
+				height: 21px
+			&:first-child
+				margin: 0
+	&__title
+		font-size: 36px
+		color: #1bb4ed
+		line-height: 1.1
+		+f100
+		sub
+			font-size: 14px
+			+f100
+			color: #696969 
+	&__info
+		+f300
+		font-size: 14px
+
+.drive-type
+	display: inline-block
+	vertical-align: top
+	width: 13%
+	span
+		display: block
+		margin: 4px 0
+		font-size: 14px
+		+f300
+
+.place
+	display: inline-block
+	vertical-align: top
+	width: 13%
+	img
+		margin-left: 6px
+		&:first-child
+			margin-left: 0
+	&__title
+		margin: 10px 0 
+		font-size: 14px
+		+f100
+		line-height: 1.2
+		span
+			display: block
+			color: #1bb4ed			
+			font-size: 36px
+.laggage
+	display: inline-block
+	vertical-align: top
+	width: 13%
+	img
+		margin-left: 6px
+		&:first-child
+			margin-left: 0
+	&__title
+		margin: 10px 0 
+		color: #1bb4ed			
+		font-size: 36px
+		+f100
+		line-height: 1.2
+		sub
+			color: #bdbdbd 
+			font-size: 14px

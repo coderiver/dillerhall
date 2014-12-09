@@ -1667,13 +1667,20 @@ ul.sorting a.is-active sup { visibility: visible; filter: progid:DXImageTransfor
 .triangle svg.is-blue polygon { stroke: #6b7a8f; }
 .triangle polygon { fill: white; stroke-width: 2px; stroke-dasharray: 1000; stroke-dashoffset: 1000; -webkit-animation: dash 3s linear forwards; -moz-animation: dash 3s linear forwards; -ms-animation: dash 3s linear forwards; -o-animation: dash 3s linear forwards; animation: dash 3s linear forwards; }
 
-.line svg { display: block; margin: 0 auto; }
+.line { margin: 0 auto; width: 546px; }
+.line_horizontal { display: inline-block; vertical-align: bottom; margin-right: 11%; width: auto; }
+.line_horizontal:last-child { margin-right: 0; }
+.line svg { display: block; }
 .line svg.is-violet line { stroke: #b48ead; }
 .line svg.is-green line { stroke: #4cd68a; }
 .line svg.is-yellow line { stroke: #ffd278; }
 .line svg.is-red line { stroke: #ef8f67; }
 .line svg.is-blue line { stroke: #6b7a8f; }
 .line line { stroke-width: 2px; stroke-dasharray: 1000; stroke-dashoffset: 1000; -webkit-animation: dash 3s linear forwards; -moz-animation: dash 3s linear forwards; -ms-animation: dash 3s linear forwards; -o-animation: dash 3s linear forwards; animation: dash 3s linear forwards; }
+.line__in { position: relative; font-size: 0; display: inline-block; vertical-align: bottom; width: 14px; text-align: center; }
+.line__in svg { display: inline-block; }
+.line__label { position: absolute; top: -26px; left: 0; right: 0; font-size: 12px; font-family: "museosanscyrl_300", Arial, sans-serif; color: #909090; }
+.line__title { margin: 7px 0 0; font-size: 14px; color: black; }
 
 @-moz-keyframes dash { 0 { stroke-dashoffset: 1000; }
   100% { stroke-dashoffset: 0; } }
@@ -1685,12 +1692,42 @@ ul.sorting a.is-active sup { visibility: visible; filter: progid:DXImageTransfor
   100% { stroke-dashoffset: 0; } }
 @keyframes dash { 0 { stroke-dashoffset: 1000; }
   100% { stroke-dashoffset: 0; } }
-.ruler { margin: 0 auto; border-top: 1px solid #f2f2f2; display: table; table-layout: fixed; width: 546px; text-align: left; }
+.ruler { border-top: 1px solid #f2f2f2; display: table; width: 100%; table-layout: fixed; text-align: left; }
 .ruler li { display: table-cell; position: relative; vertical-align: middle; padding: 4px 0 0; font-size: 12px; font-family: "museosanscyrl_300", Arial, sans-serif; }
 .ruler li:before { content: ""; position: absolute; left: 0; top: 0; width: 1px; height: 5px; background: #f2f2f2; }
 .ruler li:nth-child(10) span, .ruler li:nth-child(11) span, .ruler li:nth-child(12) span, .ruler li:nth-child(13) span, .ruler li:nth-child(14) span, .ruler li:nth-child(15) span, .ruler li:nth-child(16) span, .ruler li:nth-child(17) span { left: -6px; }
 .ruler li:last-child:after { content: none; position: absolute; top: 0; left: 100%; width: 100%; height: 2px; background: #f2f2f2; }
 .ruler span { display: inline-block; position: relative; left: -3px; }
+
+.trans { display: inline-block; width: 13%; vertical-align: top; }
+.trans.is-violet .trans__icon i { background: #b48ead; }
+.trans.is-green .trans__icon i { background: #4cd68a; }
+.trans.is-yellow .trans__icon i { background: #ffd278; }
+.trans.is-red .trans__icon i { background: #ef8f67; }
+.trans.is-blue .trans__icon i { background: #6b7a8f; }
+.trans__icon { display: block; margin-bottom: 20px; }
+.trans__icon i { display: inline-block; vertical-align: bottom; margin-left: 2px; width: 2px; height: 25px; }
+.trans__icon i.is-medium { height: 23px; }
+.trans__icon i.is-small { height: 21px; }
+.trans__icon i:first-child { margin: 0; }
+.trans__title { font-size: 36px; color: #1bb4ed; line-height: 1.1; font-family: "museosanscyrl_100", Arial, sans-serif; }
+.trans__title sub { font-size: 14px; font-family: "museosanscyrl_100", Arial, sans-serif; color: dimgray; }
+.trans__info { font-family: "museosanscyrl_300", Arial, sans-serif; font-size: 14px; }
+
+.drive-type { display: inline-block; vertical-align: top; width: 13%; }
+.drive-type span { display: block; margin: 4px 0; font-size: 14px; font-family: "museosanscyrl_300", Arial, sans-serif; }
+
+.place { display: inline-block; vertical-align: top; width: 13%; }
+.place img { margin-left: 6px; }
+.place img:first-child { margin-left: 0; }
+.place__title { margin: 10px 0; font-size: 14px; font-family: "museosanscyrl_100", Arial, sans-serif; line-height: 1.2; }
+.place__title span { display: block; color: #1bb4ed; font-size: 36px; }
+
+.laggage { display: inline-block; vertical-align: top; width: 13%; }
+.laggage img { margin-left: 6px; }
+.laggage img:first-child { margin-left: 0; }
+.laggage__title { margin: 10px 0; color: #1bb4ed; font-size: 36px; font-family: "museosanscyrl_100", Arial, sans-serif; line-height: 1.2; }
+.laggage__title sub { color: #bdbdbd; font-size: 14px; }
 
 .ui-multiselect { text-align: left; }
 
