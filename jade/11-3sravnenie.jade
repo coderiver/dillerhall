@@ -2,8 +2,9 @@ doctype
 html
 	head
 		include _head.jade
+		
 	body
-		.out 
+		.out
 			header.header
 				.header__top
 					a.header__logo(href="#")
@@ -99,393 +100,454 @@ html
 			.comparison
 				.comparison__section
 					.comparison__title Стоимость
-					.circle
-						svg.is-violet(height="250px",width="250px")
-							circle(r="122", cx="125", cy="125",stroke-width="2px", fill="none")
-						ul.labels
-							li
-								i.dot-color.is-violet
-								| $ 125 000
-							li
-								i.dot-color.is-green
-								| $ 125 000
-							li
-								i.dot-color.is-yellow
-								| $ 125 000
-							li
-								i.dot-color.is-red
-								| $ 125 000
-							li
-								i.dot-color.is-blue
-								| $ 125 000
+					.js-inview
+						.circle
+							.circle__in
+								svg.is-violet(height="250px",width="250px")
+									defs
+										clipPath(id="circle1")
+											rect(x="0" y="0" width="125" height="250")
+											rect(x="125" y="125" width="125" height="125")
+									circle(r="122", cx="125", cy="125",stroke-width="2px", clip-path="url(#circle1)")
+							.circle__in
+								svg.is-green(height="250px",width="250px")
+								defs
+									clipPath(id="circle2")
+										rect(x="0" y="0" width="125" height="250")
+										rect(x="125" y="125" width="125" height="125")
+								circle(r="110", cx="125", cy="125",stroke-width="2px", clip-path="url(#circle2)")
+							ul.labels
+								li
+									i.dot-color.is-violet
+									| $ 125 000
+								li
+									i.dot-color.is-green
+									| $ 125 000
+								li
+									i.dot-color.is-yellow
+									| $ 125 000
+								li
+									i.dot-color.is-red
+									| $ 125 000
+								li
+									i.dot-color.is-blue
+									| $ 125 000
+					include _circle.html
 				.comparison__section
 					.comparison__title Мощность
-					.circle
-						svg.is-violet(height="164px",width="164px")
-							circle(r="80", cx="82", cy="82")
-						.circle__info
-							.circle__in
-								.circle__title 136 
-									sub л.с.
-								| 100 kw
-					.circle
-						svg.is-green(height="164px",width="164px")
-							circle(r="80", cx="82", cy="82")
-						.circle__info
-							.circle__in
-								.circle__title 136 
-									sub л.с.
-								| 100 kw
-					.circle
-						svg.is-yellow(height="164px",width="164px")
-							circle(r="80", cx="82", cy="82")
-						.circle__info
-							.circle__in
-								.circle__title 136 
-									sub л.с.
-								| 100 kw
-					.circle
-						svg.is-red(height="164px",width="164px")
-							circle(r="80", cx="82", cy="82")
-						.circle__info
-							.circle__in
-								.circle__title 136 
-									sub л.с.
-								| 100 kw
-					.circle
-						svg.is-blue(height="164px",width="164px")
-							circle(r="80", cx="82", cy="82")
-						.circle__info
-							.circle__in
-								.circle__title 136 
-									sub л.с.
-								| 100 kw
+					.js-inview
+						.circle
+							svg.is-violet(height="164px",width="164px")
+								circle(r="80", cx="82", cy="82")
+							.circle__info
+								.circle__in
+									.circle__title 136 
+										sub л.с.
+									| 100 kw
+						.circle
+							svg.is-green(height="164px",width="164px")
+								circle(r="80", cx="82", cy="82")
+							.circle__info
+								.circle__in
+									.circle__title 136 
+										sub л.с.
+									| 100 kw
+						.circle
+							svg.is-yellow(height="164px",width="164px")
+								circle(r="80", cx="82", cy="82")
+							.circle__info
+								.circle__in
+									.circle__title 136 
+										sub л.с.
+									| 100 kw
+						.circle
+							svg.is-red(height="164px",width="164px")
+								circle(r="80", cx="82", cy="82")
+							.circle__info
+								.circle__in
+									.circle__title 136 
+										sub л.с.
+									| 100 kw
+						.circle
+							svg.is-blue(height="164px",width="164px")
+								circle(r="80", cx="82", cy="82")
+							.circle__info
+								.circle__in
+									.circle__title 136 
+										sub л.с.
+									| 100 kw
 				.comparison__section
 					.comparison__title Объем двигателя
-					.triangle
-						svg.is-violet(width="235",height="204")
-							polygon(points="2,200 115,0 230,200")
-					.triangle
-						svg.is-green(width="196",height="171")
-							polygon(points="2,167 96,0 192,167")
-					.triangle
-						svg.is-yellow(width="177",height="154")
-							polygon(points="2,150 87,0 173,150")
-					.triangle
-						svg.is-red(width="212",height="186")
-							polygon(points="2,182 104,0 208,182")
-					ul.labels.labels_three-cols
-						li
-							i.dot-color.is-violet
-							| 5 л., бензин
-						li
-							i.dot-color.is-green
-							| 3 л., бензин
-						li
-							i.dot-color.is-yellow
-							| 2.5 л., бензин
-						li
-							i.dot-color.is-red
-							| 4 л., бензин
-						li
-							i.dot-color.is-blue
-							| 2.5 л., бензин
-				.comparison__section
-					.comparison__title Разгон до 100 км/ч (с)
-					.line
-						<!-- line's width depends of svg attr "width" -->
-						svg.is-blue(height="24px",width="33%")
-							line(x1="0" y1="1px" x2="100%" y2="1px")
-						svg.is-yellow(height="24px",width="25%")
-							line(x1="0" y1="1px" x2="100%" y2="1px")
-						svg.is-violet(height="24px",width="28%")
-							line(x1="0" y1="1px" x2="100%" y2="1px")
-						svg.is-green(height="24px",width="55%")
-							line(x1="0" y1="1px" x2="100%" y2="1px")
-						svg.is-red(height="24px",width="70%")
-							line(x1="0" y1="1px" x2="100%" y2="1px")
-						ul.ruler
-							li 
-								span 1
-							li 
-								span 2
-							li 
-								span 3
-							li 
-								span 4
-							li 
-								span 5
-							li 
-								span 6
-							li 
-								span 7
-							li 
-								span 8
-							li 
-								span 9
-							li 
-								span 10
-							li 
-								span 11
-							li 
-								span 12
-							li 
-								span 13
-							li 
-								span 14
-							li 
-								span 15
-				.comparison__section
-					.comparison__title Максимальная скорость
-					.circle
-						svg.is-violet(height="250px",width="250px")
-							circle(r="122", cx="125", cy="125",stroke-width="2px", fill="none")
-						ul.labels
+					.js-inview
+						.triangle
+							svg.is-violet(width="235",height="204")
+								polygon(points="2,200 115,0 230,200")
+						.triangle
+							svg.is-green(width="196",height="171")
+								polygon(points="2,167 96,0 192,167")
+						.triangle
+							svg.is-yellow(width="177",height="154")
+								polygon(points="2,150 87,0 173,150")
+						.triangle
+							svg.is-red(width="212",height="186")
+								polygon(points="2,182 104,0 208,182")
+						ul.labels.labels_three-cols
 							li
 								i.dot-color.is-violet
-								| $ 125 000
+								| 5 л., бензин
 							li
 								i.dot-color.is-green
-								| $ 125 000
+								| 3 л., бензин
 							li
 								i.dot-color.is-yellow
-								| $ 125 000
+								| 2.5 л., бензин
 							li
 								i.dot-color.is-red
-								| $ 125 000
+								| 4 л., бензин
 							li
 								i.dot-color.is-blue
-								| $ 125 000
+								| 2.5 л., бензин
+				.comparison__section
+					.comparison__title Разгон до 100 км/ч (с)
+					.js-inview
+						.line
+							<!-- line's width depends of svg attr "width" -->
+							svg.is-blue(height="24px",width="33%")
+								line(x1="0" y1="1px" x2="100%" y2="1px")
+							svg.is-yellow(height="24px",width="25%")
+								line(x1="0" y1="1px" x2="100%" y2="1px")
+							svg.is-violet(height="24px",width="28%")
+								line(x1="0" y1="1px" x2="100%" y2="1px")
+							svg.is-green(height="24px",width="55%")
+								line(x1="0" y1="1px" x2="100%" y2="1px")
+							svg.is-red(height="24px",width="70%")
+								line(x1="0" y1="1px" x2="100%" y2="1px")
+							ul.ruler
+								li 
+									span 1
+								li 
+									span 2
+								li 
+									span 3
+								li 
+									span 4
+								li 
+									span 5
+								li 
+									span 6
+								li 
+									span 7
+								li 
+									span 8
+								li 
+									span 9
+								li 
+									span 10
+								li 
+									span 11
+								li 
+									span 12
+								li 
+									span 13
+								li 
+									span 14
+								li 
+									span 15
+				.comparison__section
+					.comparison__title Максимальная скорость
+					.js-inview
+						.circle
+							svg.is-violet(height="250px",width="250px")
+								circle(r="122", cx="125", cy="125",stroke-width="2px", fill="none")
+							ul.labels
+								li
+									i.dot-color.is-violet
+									| $ 125 000
+								li
+									i.dot-color.is-green
+									| $ 125 000
+								li
+									i.dot-color.is-yellow
+									| $ 125 000
+								li
+									i.dot-color.is-red
+									| $ 125 000
+								li
+									i.dot-color.is-blue
+									| $ 125 000
 				.comparison__section
 					.comparison__title Коробка передач
-					.trans.is-violet
-						.trans__icon
-							i
-							i.is-medium
-							i
-							i.is-medium
-							i
-							i.is-medium
-							i.is-small
-							i
-						.trans__title 8 
-							sub ступ. 
-						.trans__info АКПП Triptronic
-					.trans.is-green
-						.trans__icon
-							i
-							i.is-medium
-							i
-							i.is-medium
-							i
-							i.is-medium
-						.trans__title 6 
-							sub ступ. 
-						.trans__info АКПП Triptronic
-					.trans.is-yellow
-						.trans__icon
-							i
-							i.is-medium
-							i
-							i.is-medium
-							i
-							i.is-medium
-							i.is-small
-							i
-						.trans__title 8 
-							sub ступ. 
-						.trans__info АКПП Triptronic
-					.trans.is-red
-						.trans__icon
-							i
-							i.is-medium
-							i
-							i.is-medium
-							i
-							i.is-medium
-							i.is-small
-							i.is-medium
-							i
-							i.is-medium
-						.trans__title 10 
-							sub ступ. 
-						.trans__info АКПП Triptronic
-					.trans.is-blue
-						.trans__icon
-							i
-							i.is-medium
-							i
-							i.is-medium
-							i
-							i.is-medium
-						.trans__title 6 
-							sub ступ. 
-						.trans__info АКПП Triptronic
+					.js-inview
+						.trans.is-violet
+							.trans__icon
+								i
+								i.is-medium
+								i
+								i.is-medium
+								i
+								i.is-medium
+								i.is-small
+								i
+							.trans__title 8 
+								sub ступ. 
+							.trans__info АКПП Triptronic
+						.trans.is-green
+							.trans__icon
+								i
+								i.is-medium
+								i
+								i.is-medium
+								i
+								i.is-medium
+							.trans__title 6 
+								sub ступ. 
+							.trans__info АКПП Triptronic
+						.trans.is-yellow
+							.trans__icon
+								i
+								i.is-medium
+								i
+								i.is-medium
+								i
+								i.is-medium
+								i.is-small
+								i
+							.trans__title 8 
+								sub ступ. 
+							.trans__info АКПП Triptronic
+						.trans.is-red
+							.trans__icon
+								i
+								i.is-medium
+								i
+								i.is-medium
+								i
+								i.is-medium
+								i.is-small
+								i.is-medium
+								i
+								i.is-medium
+							.trans__title 10 
+								sub ступ. 
+							.trans__info АКПП Triptronic
+						.trans.is-blue
+							.trans__icon
+								i
+								i.is-medium
+								i
+								i.is-medium
+								i
+								i.is-medium
+							.trans__title 6 
+								sub ступ. 
+							.trans__info АКПП Triptronic
 				.comparison__section
 					.comparison__title Тип привода
-					.drive-type.is-violet
-						img(src="img/drive1.png", alt="img")
-						span Задний
-					.drive-type.is-green
-						img(src="img/drive2.png", alt="img")
-						span Задний
-					.drive-type.is-yellow
-						img(src="img/drive3.png", alt="img")
-						span Задний
-					.drive-type.is-red
-						img(src="img/drive4.png", alt="img")
-						span Задний
-					.drive-type.is-blue
-						img(src="img/drive5.png", alt="img")
-						span Задний
+					.js-inview
+						.drive-type.is-violet
+							<svg width="29" viewBox="0 0 45.6 59.6" enable-background="new 0 0 45.6 59.6"><g><path d="M16.1 49.2l4.8-4.9c.6-.6 1.4-.9 2.2-.9.8 0 1.6.3 2.2.9l4.8 4.9c.3.3.6.8.7 1.2h2.4c.6 0 1.1.5 1.1 1.1 0 .6-.5 1.1-1.1 1.1h-2.2c-.2.4-.4.8-.7 1.2l-4.8 4.9c-.6.6-1.4.9-2.2.9-.8 0-1.6-.3-2.2-.9l-4.8-4.9c-.3-.3-.6-.8-.7-1.2h-2.6c-.6 0-1.1-.5-1.1-1.1 0-.6.5-1.1 1.1-1.1h2.4c.1-.5.4-.9.7-1.2z"/><path d="M39.1 1.4h3.6c.8 0 1.5.3 2 .8s.8 1.2.8 2v10.1c0 .8-.3 1.5-.8 2s-1.2.8-2 .8h-3.6c-.8 0-1.4-.3-2-.8-.5-.5-.8-1.2-.8-2v-10.1c0-.8.3-1.5.8-2 .6-.5 1.3-.8 2-.8zm3.7 2.2h-3.6c-.2 0-.3.1-.4.2-.1.1-.2.2-.2.4v10.1c0 .2.1.3.2.4.1.1.2.2.4.2h3.6c.2 0 .3-.1.4-.2.1-.1.2-.2.2-.4v-10.1c0-.2-.1-.3-.2-.4-.1-.1-.3-.2-.4-.2z"/><path d="M3.5 1.4h3.6c.8 0 1.5.3 2 .8s.8 1.2.8 2v10.1c0 .8-.3 1.5-.8 2s-1.2.8-2 .8h-3.6c-.8 0-1.4-.3-2-.8-.5-.5-.8-1.2-.8-2v-10.1c0-.8.3-1.5.8-2s1.2-.8 2-.8zm3.6 2.2h-3.6c-.2 0-.3.1-.4.2-.1.1-.2.2-.2.4v10.1c0 .2.1.3.2.4.1.1.2.2.4.2h3.6c.2 0 .3-.1.4-.2.1-.1.2-.2.2-.4v-10.1c0-.2-.1-.3-.2-.4-.1-.1-.2-.2-.4-.2z"/><path d="M39.2 44.1h3.6c.8 0 1.5.3 2 .8s.8 1.2.8 2v10.1c0 .8-.3 1.5-.8 2s-1.2.8-2 .8h-3.6c-.8 0-1.4-.3-2-.8-.5-.5-.8-1.2-.8-2v-10.1c0-.8.3-1.5.8-2s1.2-.8 2-.8z"/><path d="M3.5 44.1h3.6c.8 0 1.5.3 2 .8s.8 1.2.8 2v10.1c0 .8-.3 1.5-.8 2s-1.2.8-2 .8h-3.6c-.8 0-1.4-.3-2-.8-.5-.5-.8-1.2-.8-2v-10.1c0-.8.3-1.5.8-2s1.2-.8 2-.8z"/><path d="M13 8.1c-.6 0-1.1.5-1.1 1.1s.5 1.1 1.1 1.1h2.4c.2.4.4.8.7 1.2l4.8 4.9c.6.6 1.4.9 2.2.9.8 0 1.6-.3 2.2-.9l4.8-4.9c.3-.3.6-.8.7-1.2h2.4c.6 0 1.1-.5 1.1-1.1s-.5-1.1-1.1-1.1h-2.2c-.2-.4-.4-.8-.7-1.2l-4.9-4.9c-.6-.6-1.4-.9-2.2-.9-.8 0-1.6.3-2.2.9l-4.8 4.9c-.3.3-.6.8-.7 1.2h-2.5zm5 2.2h10.3l-4.4 4.5c-.2.2-.4.3-.7.3-.2 0-.5-.1-.7-.3l-4.5-4.5zm10.3-2.2h-10.3l4.4-4.5c.2-.2.4-.3.7-.3.2 0 .5.1.7.3l4.5 4.5z"/><path d="M22.1 30.4v9.5c0 .6.5 1.1 1.1 1.1s1.1-.5 1.1-1.1v-19c0-.6-.5-1.1-1.1-1.1s-1.1.5-1.1 1.1v9.5z"/></g></svg>
+							span Задний
+						.drive-type.is-green
+							<svg width="29" viewBox="0 0 44.8 58.5" enable-background="new 0 0 44.8 58.5"><g><path d="M15.4 48.1l4.8-4.9c.6-.6 1.4-.9 2.2-.9.8 0 1.6.3 2.2.9l4.8 4.9c.3.3.6.8.7 1.2h2.4c.6 0 1.1.5 1.1 1.1 0 .6-.5 1.1-1.1 1.1h-2.4c-.2.4-.4.8-.7 1.2l-4.8 4.9c-.6.6-1.4.9-2.2.9-.8 0-1.6-.3-2.2-.9l-4.8-4.9c-.3-.3-.6-.8-.7-1.2h-2.4c-.6 0-1.1-.5-1.1-1.1 0-.6.5-1.1 1.1-1.1h2.4c.1-.5.3-.9.7-1.2z"/><path d="M38.4 43h3.6c.8 0 1.5.3 2 .8s.8 1.2.8 2v10.1c0 .8-.3 1.5-.8 2s-1.2.8-2 .8h-3.6c-.8 0-1.4-.3-2-.8-.5-.5-.8-1.2-.8-2v-10.1c0-.8.3-1.5.8-2 .6-.4 1.3-.8 2-.8z"/><path d="M2.8 43h3.6c.8 0 1.5.3 2 .8s.8 1.2.8 2v10.1c0 .8-.3 1.5-.8 2s-1.2.8-2 .8h-3.6c-.8 0-1.4-.3-2-.8-.5-.5-.8-1.2-.8-2v-10.1c0-.8.3-1.5.8-2 .5-.4 1.2-.8 2-.8z"/><path fill="#2C2A29" d="M12.3 7c-.6 0-1.1.5-1.1 1.1s.5 1.1 1.1 1.1h2.4c.2.4.4.8.7 1.2l4.8 4.9c.6.6 1.4.9 2.2.9.8 0 1.6-.3 2.2-.9l4.8-4.9c.3-.3.6-.8.7-1.2h2.4c.6 0 1.1-.5 1.1-1.1s-.4-1.1-1-1.1h-2.4c-.2-.4-.4-.8-.7-1.2l-4.8-4.8c-.7-.7-1.5-1-2.3-1-.8 0-1.6.3-2.2.9l-4.8 4.9c-.4.4-.6.8-.8 1.2h-2.3z"/><path d="M21.3 29.3v9.5c0 .6.5 1.1 1.1 1.1.6 0 1.1-.5 1.1-1.1v-19c0-.6-.5-1.1-1.1-1.1-.6 0-1.1.5-1.1 1.1v9.5z"/><path d="M38.4.2h3.6c.8 0 1.5.3 2 .8s.8 1.2.8 2v10c0 .8-.3 1.5-.8 2s-1.2.8-2 .8h-3.6c-.8 0-1.4-.3-2-.8-.5-.5-.8-1.2-.8-2v-10.1c0-.8.3-1.5.8-2 .6-.4 1.3-.7 2-.7z"/><path d="M2.8.2h3.6c.8 0 1.5.3 2 .8s.8 1.2.8 2v10c0 .8-.3 1.5-.8 2s-1.2.8-2 .8h-3.6c-.8 0-1.4-.3-2-.8-.5-.5-.8-1.2-.8-2v-10.1c0-.8.3-1.5.8-2 .5-.4 1.2-.7 2-.7z"/></g></svg>
+							span Полный
+						.drive-type.is-yellow
+							<svg width="29" viewBox="0 0 44.8 58.3" enable-background="new 0 0 44.8 58.3"><g><path d="M29.5 10.9l-4.8 4.9c-.6.6-1.4.9-2.2.9-.8 0-1.6-.3-2.2-.9l-4.8-4.9c-.3-.3-.6-.8-.7-1.2h-2.4c-.6 0-1.1-.5-1.1-1.1 0-.6.5-1.1 1.1-1.1h2.4c.2-.4.4-.8.7-1.2l4.8-4.9c.6-.6 1.4-.9 2.2-.9.8 0 1.6.3 2.2.9l4.8 4.9c.3.3.6.8.7 1.2h2.4c.6 0 1.1.5 1.1 1.1 0 .6-.5 1.1-1.1 1.1h-2.4c-.1.4-.4.8-.7 1.2z"/><path d="M6.4 58.3h-3.6c-.8 0-1.5-.3-2-.8s-.8-1.2-.8-2v-10c0-.8.3-1.5.8-2s1.2-.8 2-.8h3.6c.8 0 1.4.3 2 .8.5.5.8 1.2.8 2v10.1c0 .8-.3 1.5-.8 2-.5.4-1.2.7-2 .7zm-3.6-2.2h3.6c.2 0 .3-.1.4-.2.1-.1.2-.2.2-.4v-10c0-.2-.1-.3-.2-.4-.1-.1-.2-.2-.4-.2h-3.6c-.2 0-.3.1-.4.2-.1.1-.2.2-.2.4v10.1c0 .2.1.3.2.4.1.1.2.1.4.1z"/><path d="M42.1 58.3h-3.6c-.8 0-1.5-.3-2-.8s-.8-1.2-.8-2v-10c0-.8.3-1.5.8-2s1.2-.8 2-.8h3.6c.8 0 1.4.3 2 .8.5.5.8 1.2.8 2v10.1c0 .8-.3 1.5-.8 2-.6.4-1.3.7-2 .7zm-3.7-2.2h3.6c.2 0 .3-.1.4-.2.1-.1.2-.2.2-.4v-10c0-.2-.1-.3-.2-.4-.1-.1-.2-.2-.4-.2h-3.6c-.2 0-.3.1-.4.2-.1.1-.2.2-.2.4v10.1c0 .2.1.3.2.4.1.1.3.1.4.1z"/><path d="M6.4 15.6h-3.6c-.8 0-1.5-.3-2-.8s-.8-1.2-.8-2v-10c0-.8.3-1.5.8-2s1.2-.8 2-.8h3.6c.8 0 1.4.3 2 .8.5.5.8 1.2.8 2v10.1c0 .8-.3 1.5-.8 2-.5.4-1.2.7-2 .7z"/><path d="M42.1 15.6h-3.6c-.8 0-1.5-.3-2-.8s-.8-1.2-.8-2v-10c0-.8.3-1.5.8-2s1.2-.8 1.9-.8h3.6c.8 0 1.4.3 2 .8.5.5.8 1.2.8 2v10.1c0 .8-.3 1.5-.8 2-.5.4-1.2.7-1.9.7z"/><path d="M32.6 51.9c.6 0 1.1-.5 1.1-1.1 0-.6-.5-1.1-1.1-1.1h-2.4c-.2-.4-.4-.8-.7-1.2l-4.8-4.9c-.6-.6-1.4-.9-2.2-.9-.8 0-1.6.3-2.2.9l-4.8 4.9c-.3.3-.6.8-.7 1.2h-2.4c-.6 0-1.1.5-1.1 1.1 0 .6.5 1.1 1.1 1.1h2.4c.2.4.4.8.7 1.2l4.8 4.9c.6.6 1.4.9 2.2.9.8 0 1.6-.3 2.2-.9l4.8-4.9c.3-.3.6-.8.7-1.2h2.4zm-5-2.1h-10.3l4.4-4.5c.2-.2.4-.3.7-.3.2 0 .5.1.7.3l4.5 4.5zm-10.3 2.1h10.3l-4.4 4.5c-.2.2-.4.3-.7.3-.2 0-.5-.1-.7-.3l-4.5-4.5z"/><path d="M21.3 29v9.5c0 .6.5 1.1 1.1 1.1.6 0 1.1-.5 1.1-1.1v-19c0-.6-.5-1.1-1.1-1.1-.6 0-1.1.5-1.1 1.1v9.5z"/></g></svg>
+							span Передний
+						.drive-type.is-red
+							<svg width="29" viewBox="0 0 44.8 58.5" enable-background="new 0 0 44.8 58.5"><g><path d="M15.4 48.1l4.8-4.9c.6-.6 1.4-.9 2.2-.9.8 0 1.6.3 2.2.9l4.8 4.9c.3.3.6.8.7 1.2h2.4c.6 0 1.1.5 1.1 1.1 0 .6-.5 1.1-1.1 1.1h-2.4c-.2.4-.4.8-.7 1.2l-4.8 4.9c-.6.6-1.4.9-2.2.9-.8 0-1.6-.3-2.2-.9l-4.8-4.9c-.3-.3-.6-.8-.7-1.2h-2.4c-.6 0-1.1-.5-1.1-1.1 0-.6.5-1.1 1.1-1.1h2.4c.1-.5.3-.9.7-1.2z"/><path d="M38.4 43h3.6c.8 0 1.5.3 2 .8s.8 1.2.8 2v10.1c0 .8-.3 1.5-.8 2s-1.2.8-2 .8h-3.6c-.8 0-1.4-.3-2-.8-.5-.5-.8-1.2-.8-2v-10.1c0-.8.3-1.5.8-2 .6-.4 1.3-.8 2-.8z"/><path d="M2.8 43h3.6c.8 0 1.5.3 2 .8s.8 1.2.8 2v10.1c0 .8-.3 1.5-.8 2s-1.2.8-2 .8h-3.6c-.8 0-1.4-.3-2-.8-.5-.5-.8-1.2-.8-2v-10.1c0-.8.3-1.5.8-2 .5-.4 1.2-.8 2-.8z"/><path fill="#2C2A29" d="M12.3 7c-.6 0-1.1.5-1.1 1.1s.5 1.1 1.1 1.1h2.4c.2.4.4.8.7 1.2l4.8 4.9c.6.6 1.4.9 2.2.9.8 0 1.6-.3 2.2-.9l4.8-4.9c.3-.3.6-.8.7-1.2h2.4c.6 0 1.1-.5 1.1-1.1s-.4-1.1-1-1.1h-2.4c-.2-.4-.4-.8-.7-1.2l-4.8-4.8c-.7-.7-1.5-1-2.3-1-.8 0-1.6.3-2.2.9l-4.8 4.9c-.4.4-.6.8-.8 1.2h-2.3z"/><path d="M21.3 29.3v9.5c0 .6.5 1.1 1.1 1.1.6 0 1.1-.5 1.1-1.1v-19c0-.6-.5-1.1-1.1-1.1-.6 0-1.1.5-1.1 1.1v9.5z"/><path d="M38.4.2h3.6c.8 0 1.5.3 2 .8s.8 1.2.8 2v10c0 .8-.3 1.5-.8 2s-1.2.8-2 .8h-3.6c-.8 0-1.4-.3-2-.8-.5-.5-.8-1.2-.8-2v-10.1c0-.8.3-1.5.8-2 .6-.4 1.3-.7 2-.7z"/><path d="M2.8.2h3.6c.8 0 1.5.3 2 .8s.8 1.2.8 2v10c0 .8-.3 1.5-.8 2s-1.2.8-2 .8h-3.6c-.8 0-1.4-.3-2-.8-.5-.5-.8-1.2-.8-2v-10.1c0-.8.3-1.5.8-2 .5-.4 1.2-.7 2-.7z"/></g></svg>
+							span Полный
+						.drive-type.is-blue
+							<svg width="29" viewBox="0 0 44.8 58.5" enable-background="new 0 0 44.8 58.5"><g><path d="M15.4 48.1l4.8-4.9c.6-.6 1.4-.9 2.2-.9.8 0 1.6.3 2.2.9l4.8 4.9c.3.3.6.8.7 1.2h2.4c.6 0 1.1.5 1.1 1.1 0 .6-.5 1.1-1.1 1.1h-2.4c-.2.4-.4.8-.7 1.2l-4.8 4.9c-.6.6-1.4.9-2.2.9-.8 0-1.6-.3-2.2-.9l-4.8-4.9c-.3-.3-.6-.8-.7-1.2h-2.4c-.6 0-1.1-.5-1.1-1.1 0-.6.5-1.1 1.1-1.1h2.4c.1-.5.3-.9.7-1.2z"/><path d="M38.4 43h3.6c.8 0 1.5.3 2 .8s.8 1.2.8 2v10.1c0 .8-.3 1.5-.8 2s-1.2.8-2 .8h-3.6c-.8 0-1.4-.3-2-.8-.5-.5-.8-1.2-.8-2v-10.1c0-.8.3-1.5.8-2 .6-.4 1.3-.8 2-.8z"/><path d="M2.8 43h3.6c.8 0 1.5.3 2 .8s.8 1.2.8 2v10.1c0 .8-.3 1.5-.8 2s-1.2.8-2 .8h-3.6c-.8 0-1.4-.3-2-.8-.5-.5-.8-1.2-.8-2v-10.1c0-.8.3-1.5.8-2 .5-.4 1.2-.8 2-.8z"/><path fill="#2C2A29" d="M12.3 7c-.6 0-1.1.5-1.1 1.1s.5 1.1 1.1 1.1h2.4c.2.4.4.8.7 1.2l4.8 4.9c.6.6 1.4.9 2.2.9.8 0 1.6-.3 2.2-.9l4.8-4.9c.3-.3.6-.8.7-1.2h2.4c.6 0 1.1-.5 1.1-1.1s-.4-1.1-1-1.1h-2.4c-.2-.4-.4-.8-.7-1.2l-4.8-4.8c-.7-.7-1.5-1-2.3-1-.8 0-1.6.3-2.2.9l-4.8 4.9c-.4.4-.6.8-.8 1.2h-2.3z"/><path d="M21.3 29.3v9.5c0 .6.5 1.1 1.1 1.1.6 0 1.1-.5 1.1-1.1v-19c0-.6-.5-1.1-1.1-1.1-.6 0-1.1.5-1.1 1.1v9.5z"/><path d="M38.4.2h3.6c.8 0 1.5.3 2 .8s.8 1.2.8 2v10c0 .8-.3 1.5-.8 2s-1.2.8-2 .8h-3.6c-.8 0-1.4-.3-2-.8-.5-.5-.8-1.2-.8-2v-10.1c0-.8.3-1.5.8-2 .6-.4 1.3-.7 2-.7z"/><path d="M2.8.2h3.6c.8 0 1.5.3 2 .8s.8 1.2.8 2v10c0 .8-.3 1.5-.8 2s-1.2.8-2 .8h-3.6c-.8 0-1.4-.3-2-.8-.5-.5-.8-1.2-.8-2v-10.1c0-.8.3-1.5.8-2 .5-.4 1.2-.7 2-.7z"/></g></svg>
+							span Полный
 				.comparison__section
 					.comparison__title Расход топлива (л)
-					.line.line_horizontal
-						<!-- line's height depends of svg attr "height" -->
-						.line__in
-							.line__label 9
-							svg.is-blue(height="245px",width="2px")
-								line(x1="1px" y1="100%" x2="1px" y2="0")
-						.line__in
-							.line__label 7
-							svg.is-yellow(height="220px",width="2px")
-								line(x1="1px" y1="100%" x2="1px" y2="0")
-						.line__in
-							.line__label 5
-							svg.is-violet(height="200px",width="2px")
-								line(x1="1px" y1="100%" x2="1px" y2="0")
-						.line__in
-							.line__label 5
-							svg.is-green(height="200px",width="2px")
-								line(x1="1px" y1="100%" x2="1px" y2="0")
-						.line__in
-							.line__label 6
-							svg.is-red(height="230px",width="2px")
-								line(x1="1px" y1="100%" x2="1px" y2="0")
-						.line__title Город
-					.line.line_horizontal
-						<!-- line's height depends of svg attr "height" -->
-						.line__in
-							.line__label 9
-							svg.is-blue(height="245px",width="2px")
-								line(x1="1px" y1="100%" x2="1px" y2="0")
-						.line__in
-							.line__label 7
-							svg.is-yellow(height="220px",width="2px")
-								line(x1="1px" y1="100%" x2="1px" y2="0")
-						.line__in
-							.line__label 5
-							svg.is-violet(height="200px",width="2px")
-								line(x1="1px" y1="100%" x2="1px" y2="0")
-						.line__in
-							.line__label 5
-							svg.is-green(height="200px",width="2px")
-								line(x1="1px" y1="100%" x2="1px" y2="0")
-						.line__in
-							.line__label 6
-							svg.is-red(height="230px",width="2px")
-								line(x1="1px" y1="100%" x2="1px" y2="0")
-						.line__title Трасса
-					.line.line_horizontal
-						<!-- line's height depends of svg attr "height" -->
-						.line__in
-							.line__label 9
-							svg.is-blue(height="245px",width="2px")
-								line(x1="1px" y1="100%" x2="1px" y2="0")
-						.line__in
-							.line__label 7
-							svg.is-yellow(height="220px",width="2px")
-								line(x1="1px" y1="100%" x2="1px" y2="0")
-						.line__in
-							.line__label 5
-							svg.is-violet(height="200px",width="2px")
-								line(x1="1px" y1="100%" x2="1px" y2="0")
-						.line__in
-							.line__label 5
-							svg.is-green(height="200px",width="2px")
-								line(x1="1px" y1="100%" x2="1px" y2="0")
-						.line__in
-							.line__label 6
-							svg.is-red(height="230px",width="2px")
-								line(x1="1px" y1="100%" x2="1px" y2="0")
-						.line__title Смешанный
+					.js-inview
+						.line.line_horizontal
+							<!-- line's height depends of svg attr "height" -->
+							.line__in
+								.line__label 9
+								svg.is-blue(height="245px",width="2px")
+									line(x1="1px" y1="100%" x2="1px" y2="0")
+							.line__in
+								.line__label 7
+								svg.is-yellow(height="220px",width="2px")
+									line(x1="1px" y1="100%" x2="1px" y2="0")
+							.line__in
+								.line__label 5
+								svg.is-violet(height="200px",width="2px")
+									line(x1="1px" y1="100%" x2="1px" y2="0")
+							.line__in
+								.line__label 5
+								svg.is-green(height="200px",width="2px")
+									line(x1="1px" y1="100%" x2="1px" y2="0")
+							.line__in
+								.line__label 6
+								svg.is-red(height="230px",width="2px")
+									line(x1="1px" y1="100%" x2="1px" y2="0")
+							.line__title Город
+						.line.line_horizontal
+							<!-- line's height depends of svg attr "height" -->
+							.line__in
+								.line__label 9
+								svg.is-blue(height="245px",width="2px")
+									line(x1="1px" y1="100%" x2="1px" y2="0")
+							.line__in
+								.line__label 7
+								svg.is-yellow(height="220px",width="2px")
+									line(x1="1px" y1="100%" x2="1px" y2="0")
+							.line__in
+								.line__label 5
+								svg.is-violet(height="200px",width="2px")
+									line(x1="1px" y1="100%" x2="1px" y2="0")
+							.line__in
+								.line__label 5
+								svg.is-green(height="200px",width="2px")
+									line(x1="1px" y1="100%" x2="1px" y2="0")
+							.line__in
+								.line__label 6
+								svg.is-red(height="230px",width="2px")
+									line(x1="1px" y1="100%" x2="1px" y2="0")
+							.line__title Трасса
+						.line.line_horizontal
+							<!-- line's height depends of svg attr "height" -->
+							.line__in
+								.line__label 9
+								svg.is-blue(height="245px",width="2px")
+									line(x1="1px" y1="100%" x2="1px" y2="0")
+							.line__in
+								.line__label 7
+								svg.is-yellow(height="220px",width="2px")
+									line(x1="1px" y1="100%" x2="1px" y2="0")
+							.line__in
+								.line__label 5
+								svg.is-violet(height="200px",width="2px")
+									line(x1="1px" y1="100%" x2="1px" y2="0")
+							.line__in
+								.line__label 5
+								svg.is-green(height="200px",width="2px")
+									line(x1="1px" y1="100%" x2="1px" y2="0")
+							.line__in
+								.line__label 6
+								svg.is-red(height="230px",width="2px")
+									line(x1="1px" y1="100%" x2="1px" y2="0")
+							.line__title Смешанный
 				.comparison__section
 					.comparison__title Количество мест
-					.place.is-violet
-						img(src="img/place.png", alt="")
-						img(src="img/place.png", alt="")
-						img(src="img/place.png", alt="")
-						img(src="img/place.png", alt="")
-						.place__title 
-							span 4
-							| места
-					.place.is-green
-						img(src="img/place.png", alt="")
-						img(src="img/place.png", alt="")
-						img(src="img/place.png", alt="")
-						img(src="img/place.png", alt="")
-						.place__title 
-							span 3
-							| места
-					.place.is-yellow
-						img(src="img/place.png", alt="")
-						img(src="img/place.png", alt="")
-						img(src="img/place.png", alt="")
-						img(src="img/place.png", alt="")
-						.place__title 
-							span 5
-							| места
-					.place.is-red
-						img(src="img/place.png", alt="")
-						img(src="img/place.png", alt="")
-						img(src="img/place.png", alt="")
-						img(src="img/place.png", alt="")
-						.place__title 
-							span 3
-							| места
-					.place.is-blue
-						img(src="img/place.png", alt="")
-						img(src="img/place.png", alt="")
-						img(src="img/place.png", alt="")
-						img(src="img/place.png", alt="")
-						.place__title 
-							span 5
-							| места
+					.js-inview
+						.place.is-violet
+							svg(width="17", viewBox="0 0 23.4 58.9" enable-background="new 0 0 23.4 58.9")
+								path(d="M11.7 0c2.9 0 5.3 2.4 5.3 5.3s-2.4 5.3-5.3 5.3-5.3-2.4-5.3-5.3 2.4-5.3 5.3-5.3zm6.1 18v38.1c0 1.8-1.4 2.8-2.7 2.7-1.3 0-2.6-.9-2.6-2.7v-22.1h-1.4v22.1c0 1.9-1.4 2.8-2.8 2.7-1.3 0-2.5-1-2.5-2.7v-38.1h-1.5v14.8c0 1.6-1.1 2.3-2.2 2.3-1.1.1-2.1-.7-2.1-2.2v-14.7c0-2.7.9-6.2 6.2-6.2h11.1c5.5 0 6.2 3.5 6.2 6.2v14.6c0 1.5-1.1 2.3-2.1 2.3-1.1 0-2.1-.8-2.1-2.3v-14.8h-1.5z")
+							svg(width="17", viewBox="0 0 23.4 58.9" enable-background="new 0 0 23.4 58.9")
+								path(d="M11.7 0c2.9 0 5.3 2.4 5.3 5.3s-2.4 5.3-5.3 5.3-5.3-2.4-5.3-5.3 2.4-5.3 5.3-5.3zm6.1 18v38.1c0 1.8-1.4 2.8-2.7 2.7-1.3 0-2.6-.9-2.6-2.7v-22.1h-1.4v22.1c0 1.9-1.4 2.8-2.8 2.7-1.3 0-2.5-1-2.5-2.7v-38.1h-1.5v14.8c0 1.6-1.1 2.3-2.2 2.3-1.1.1-2.1-.7-2.1-2.2v-14.7c0-2.7.9-6.2 6.2-6.2h11.1c5.5 0 6.2 3.5 6.2 6.2v14.6c0 1.5-1.1 2.3-2.1 2.3-1.1 0-2.1-.8-2.1-2.3v-14.8h-1.5z")
+							svg(width="17", viewBox="0 0 23.4 58.9" enable-background="new 0 0 23.4 58.9")
+								path(d="M11.7 0c2.9 0 5.3 2.4 5.3 5.3s-2.4 5.3-5.3 5.3-5.3-2.4-5.3-5.3 2.4-5.3 5.3-5.3zm6.1 18v38.1c0 1.8-1.4 2.8-2.7 2.7-1.3 0-2.6-.9-2.6-2.7v-22.1h-1.4v22.1c0 1.9-1.4 2.8-2.8 2.7-1.3 0-2.5-1-2.5-2.7v-38.1h-1.5v14.8c0 1.6-1.1 2.3-2.2 2.3-1.1.1-2.1-.7-2.1-2.2v-14.7c0-2.7.9-6.2 6.2-6.2h11.1c5.5 0 6.2 3.5 6.2 6.2v14.6c0 1.5-1.1 2.3-2.1 2.3-1.1 0-2.1-.8-2.1-2.3v-14.8h-1.5z")
+							svg(width="17", viewBox="0 0 23.4 58.9" enable-background="new 0 0 23.4 58.9")
+								path(d="M11.7 0c2.9 0 5.3 2.4 5.3 5.3s-2.4 5.3-5.3 5.3-5.3-2.4-5.3-5.3 2.4-5.3 5.3-5.3zm6.1 18v38.1c0 1.8-1.4 2.8-2.7 2.7-1.3 0-2.6-.9-2.6-2.7v-22.1h-1.4v22.1c0 1.9-1.4 2.8-2.8 2.7-1.3 0-2.5-1-2.5-2.7v-38.1h-1.5v14.8c0 1.6-1.1 2.3-2.2 2.3-1.1.1-2.1-.7-2.1-2.2v-14.7c0-2.7.9-6.2 6.2-6.2h11.1c5.5 0 6.2 3.5 6.2 6.2v14.6c0 1.5-1.1 2.3-2.1 2.3-1.1 0-2.1-.8-2.1-2.3v-14.8h-1.5z")
+							.place__title 
+								span 4
+								| места
+						.place.is-green
+							svg(width="17", viewBox="0 0 23.4 58.9" enable-background="new 0 0 23.4 58.9")
+								path(d="M11.7 0c2.9 0 5.3 2.4 5.3 5.3s-2.4 5.3-5.3 5.3-5.3-2.4-5.3-5.3 2.4-5.3 5.3-5.3zm6.1 18v38.1c0 1.8-1.4 2.8-2.7 2.7-1.3 0-2.6-.9-2.6-2.7v-22.1h-1.4v22.1c0 1.9-1.4 2.8-2.8 2.7-1.3 0-2.5-1-2.5-2.7v-38.1h-1.5v14.8c0 1.6-1.1 2.3-2.2 2.3-1.1.1-2.1-.7-2.1-2.2v-14.7c0-2.7.9-6.2 6.2-6.2h11.1c5.5 0 6.2 3.5 6.2 6.2v14.6c0 1.5-1.1 2.3-2.1 2.3-1.1 0-2.1-.8-2.1-2.3v-14.8h-1.5z")
+							svg(width="17", viewBox="0 0 23.4 58.9" enable-background="new 0 0 23.4 58.9")
+								path(d="M11.7 0c2.9 0 5.3 2.4 5.3 5.3s-2.4 5.3-5.3 5.3-5.3-2.4-5.3-5.3 2.4-5.3 5.3-5.3zm6.1 18v38.1c0 1.8-1.4 2.8-2.7 2.7-1.3 0-2.6-.9-2.6-2.7v-22.1h-1.4v22.1c0 1.9-1.4 2.8-2.8 2.7-1.3 0-2.5-1-2.5-2.7v-38.1h-1.5v14.8c0 1.6-1.1 2.3-2.2 2.3-1.1.1-2.1-.7-2.1-2.2v-14.7c0-2.7.9-6.2 6.2-6.2h11.1c5.5 0 6.2 3.5 6.2 6.2v14.6c0 1.5-1.1 2.3-2.1 2.3-1.1 0-2.1-.8-2.1-2.3v-14.8h-1.5z")
+							svg(width="17", viewBox="0 0 23.4 58.9" enable-background="new 0 0 23.4 58.9")
+								path(d="M11.7 0c2.9 0 5.3 2.4 5.3 5.3s-2.4 5.3-5.3 5.3-5.3-2.4-5.3-5.3 2.4-5.3 5.3-5.3zm6.1 18v38.1c0 1.8-1.4 2.8-2.7 2.7-1.3 0-2.6-.9-2.6-2.7v-22.1h-1.4v22.1c0 1.9-1.4 2.8-2.8 2.7-1.3 0-2.5-1-2.5-2.7v-38.1h-1.5v14.8c0 1.6-1.1 2.3-2.2 2.3-1.1.1-2.1-.7-2.1-2.2v-14.7c0-2.7.9-6.2 6.2-6.2h11.1c5.5 0 6.2 3.5 6.2 6.2v14.6c0 1.5-1.1 2.3-2.1 2.3-1.1 0-2.1-.8-2.1-2.3v-14.8h-1.5z")
+							.place__title 
+								span 3
+								| места
+						.place.is-yellow
+							svg(width="17", viewBox="0 0 23.4 58.9" enable-background="new 0 0 23.4 58.9")
+								path(d="M11.7 0c2.9 0 5.3 2.4 5.3 5.3s-2.4 5.3-5.3 5.3-5.3-2.4-5.3-5.3 2.4-5.3 5.3-5.3zm6.1 18v38.1c0 1.8-1.4 2.8-2.7 2.7-1.3 0-2.6-.9-2.6-2.7v-22.1h-1.4v22.1c0 1.9-1.4 2.8-2.8 2.7-1.3 0-2.5-1-2.5-2.7v-38.1h-1.5v14.8c0 1.6-1.1 2.3-2.2 2.3-1.1.1-2.1-.7-2.1-2.2v-14.7c0-2.7.9-6.2 6.2-6.2h11.1c5.5 0 6.2 3.5 6.2 6.2v14.6c0 1.5-1.1 2.3-2.1 2.3-1.1 0-2.1-.8-2.1-2.3v-14.8h-1.5z")
+							svg(width="17", viewBox="0 0 23.4 58.9" enable-background="new 0 0 23.4 58.9")
+								path(d="M11.7 0c2.9 0 5.3 2.4 5.3 5.3s-2.4 5.3-5.3 5.3-5.3-2.4-5.3-5.3 2.4-5.3 5.3-5.3zm6.1 18v38.1c0 1.8-1.4 2.8-2.7 2.7-1.3 0-2.6-.9-2.6-2.7v-22.1h-1.4v22.1c0 1.9-1.4 2.8-2.8 2.7-1.3 0-2.5-1-2.5-2.7v-38.1h-1.5v14.8c0 1.6-1.1 2.3-2.2 2.3-1.1.1-2.1-.7-2.1-2.2v-14.7c0-2.7.9-6.2 6.2-6.2h11.1c5.5 0 6.2 3.5 6.2 6.2v14.6c0 1.5-1.1 2.3-2.1 2.3-1.1 0-2.1-.8-2.1-2.3v-14.8h-1.5z")
+							svg(width="17", viewBox="0 0 23.4 58.9" enable-background="new 0 0 23.4 58.9")
+								path(d="M11.7 0c2.9 0 5.3 2.4 5.3 5.3s-2.4 5.3-5.3 5.3-5.3-2.4-5.3-5.3 2.4-5.3 5.3-5.3zm6.1 18v38.1c0 1.8-1.4 2.8-2.7 2.7-1.3 0-2.6-.9-2.6-2.7v-22.1h-1.4v22.1c0 1.9-1.4 2.8-2.8 2.7-1.3 0-2.5-1-2.5-2.7v-38.1h-1.5v14.8c0 1.6-1.1 2.3-2.2 2.3-1.1.1-2.1-.7-2.1-2.2v-14.7c0-2.7.9-6.2 6.2-6.2h11.1c5.5 0 6.2 3.5 6.2 6.2v14.6c0 1.5-1.1 2.3-2.1 2.3-1.1 0-2.1-.8-2.1-2.3v-14.8h-1.5z")
+							svg(width="17", viewBox="0 0 23.4 58.9" enable-background="new 0 0 23.4 58.9")
+								path(d="M11.7 0c2.9 0 5.3 2.4 5.3 5.3s-2.4 5.3-5.3 5.3-5.3-2.4-5.3-5.3 2.4-5.3 5.3-5.3zm6.1 18v38.1c0 1.8-1.4 2.8-2.7 2.7-1.3 0-2.6-.9-2.6-2.7v-22.1h-1.4v22.1c0 1.9-1.4 2.8-2.8 2.7-1.3 0-2.5-1-2.5-2.7v-38.1h-1.5v14.8c0 1.6-1.1 2.3-2.2 2.3-1.1.1-2.1-.7-2.1-2.2v-14.7c0-2.7.9-6.2 6.2-6.2h11.1c5.5 0 6.2 3.5 6.2 6.2v14.6c0 1.5-1.1 2.3-2.1 2.3-1.1 0-2.1-.8-2.1-2.3v-14.8h-1.5z")
+							svg(width="17", viewBox="0 0 23.4 58.9" enable-background="new 0 0 23.4 58.9")
+								path(d="M11.7 0c2.9 0 5.3 2.4 5.3 5.3s-2.4 5.3-5.3 5.3-5.3-2.4-5.3-5.3 2.4-5.3 5.3-5.3zm6.1 18v38.1c0 1.8-1.4 2.8-2.7 2.7-1.3 0-2.6-.9-2.6-2.7v-22.1h-1.4v22.1c0 1.9-1.4 2.8-2.8 2.7-1.3 0-2.5-1-2.5-2.7v-38.1h-1.5v14.8c0 1.6-1.1 2.3-2.2 2.3-1.1.1-2.1-.7-2.1-2.2v-14.7c0-2.7.9-6.2 6.2-6.2h11.1c5.5 0 6.2 3.5 6.2 6.2v14.6c0 1.5-1.1 2.3-2.1 2.3-1.1 0-2.1-.8-2.1-2.3v-14.8h-1.5z")
+							.place__title 
+								span 5
+								| места
+						.place.is-red
+							svg(width="17", viewBox="0 0 23.4 58.9" enable-background="new 0 0 23.4 58.9")
+								path(d="M11.7 0c2.9 0 5.3 2.4 5.3 5.3s-2.4 5.3-5.3 5.3-5.3-2.4-5.3-5.3 2.4-5.3 5.3-5.3zm6.1 18v38.1c0 1.8-1.4 2.8-2.7 2.7-1.3 0-2.6-.9-2.6-2.7v-22.1h-1.4v22.1c0 1.9-1.4 2.8-2.8 2.7-1.3 0-2.5-1-2.5-2.7v-38.1h-1.5v14.8c0 1.6-1.1 2.3-2.2 2.3-1.1.1-2.1-.7-2.1-2.2v-14.7c0-2.7.9-6.2 6.2-6.2h11.1c5.5 0 6.2 3.5 6.2 6.2v14.6c0 1.5-1.1 2.3-2.1 2.3-1.1 0-2.1-.8-2.1-2.3v-14.8h-1.5z")
+							svg(width="17", viewBox="0 0 23.4 58.9" enable-background="new 0 0 23.4 58.9")
+								path(d="M11.7 0c2.9 0 5.3 2.4 5.3 5.3s-2.4 5.3-5.3 5.3-5.3-2.4-5.3-5.3 2.4-5.3 5.3-5.3zm6.1 18v38.1c0 1.8-1.4 2.8-2.7 2.7-1.3 0-2.6-.9-2.6-2.7v-22.1h-1.4v22.1c0 1.9-1.4 2.8-2.8 2.7-1.3 0-2.5-1-2.5-2.7v-38.1h-1.5v14.8c0 1.6-1.1 2.3-2.2 2.3-1.1.1-2.1-.7-2.1-2.2v-14.7c0-2.7.9-6.2 6.2-6.2h11.1c5.5 0 6.2 3.5 6.2 6.2v14.6c0 1.5-1.1 2.3-2.1 2.3-1.1 0-2.1-.8-2.1-2.3v-14.8h-1.5z")
+							svg(width="17", viewBox="0 0 23.4 58.9" enable-background="new 0 0 23.4 58.9")
+								path(d="M11.7 0c2.9 0 5.3 2.4 5.3 5.3s-2.4 5.3-5.3 5.3-5.3-2.4-5.3-5.3 2.4-5.3 5.3-5.3zm6.1 18v38.1c0 1.8-1.4 2.8-2.7 2.7-1.3 0-2.6-.9-2.6-2.7v-22.1h-1.4v22.1c0 1.9-1.4 2.8-2.8 2.7-1.3 0-2.5-1-2.5-2.7v-38.1h-1.5v14.8c0 1.6-1.1 2.3-2.2 2.3-1.1.1-2.1-.7-2.1-2.2v-14.7c0-2.7.9-6.2 6.2-6.2h11.1c5.5 0 6.2 3.5 6.2 6.2v14.6c0 1.5-1.1 2.3-2.1 2.3-1.1 0-2.1-.8-2.1-2.3v-14.8h-1.5z")
+							svg(width="17", viewBox="0 0 23.4 58.9" enable-background="new 0 0 23.4 58.9")
+								path(d="M11.7 0c2.9 0 5.3 2.4 5.3 5.3s-2.4 5.3-5.3 5.3-5.3-2.4-5.3-5.3 2.4-5.3 5.3-5.3zm6.1 18v38.1c0 1.8-1.4 2.8-2.7 2.7-1.3 0-2.6-.9-2.6-2.7v-22.1h-1.4v22.1c0 1.9-1.4 2.8-2.8 2.7-1.3 0-2.5-1-2.5-2.7v-38.1h-1.5v14.8c0 1.6-1.1 2.3-2.2 2.3-1.1.1-2.1-.7-2.1-2.2v-14.7c0-2.7.9-6.2 6.2-6.2h11.1c5.5 0 6.2 3.5 6.2 6.2v14.6c0 1.5-1.1 2.3-2.1 2.3-1.1 0-2.1-.8-2.1-2.3v-14.8h-1.5z")
+							.place__title 
+								span 4
+								| места
+						.place.is-blue
+							svg(width="17", viewBox="0 0 23.4 58.9" enable-background="new 0 0 23.4 58.9")
+								path(d="M11.7 0c2.9 0 5.3 2.4 5.3 5.3s-2.4 5.3-5.3 5.3-5.3-2.4-5.3-5.3 2.4-5.3 5.3-5.3zm6.1 18v38.1c0 1.8-1.4 2.8-2.7 2.7-1.3 0-2.6-.9-2.6-2.7v-22.1h-1.4v22.1c0 1.9-1.4 2.8-2.8 2.7-1.3 0-2.5-1-2.5-2.7v-38.1h-1.5v14.8c0 1.6-1.1 2.3-2.2 2.3-1.1.1-2.1-.7-2.1-2.2v-14.7c0-2.7.9-6.2 6.2-6.2h11.1c5.5 0 6.2 3.5 6.2 6.2v14.6c0 1.5-1.1 2.3-2.1 2.3-1.1 0-2.1-.8-2.1-2.3v-14.8h-1.5z")
+							svg(width="17", viewBox="0 0 23.4 58.9" enable-background="new 0 0 23.4 58.9")
+								path(d="M11.7 0c2.9 0 5.3 2.4 5.3 5.3s-2.4 5.3-5.3 5.3-5.3-2.4-5.3-5.3 2.4-5.3 5.3-5.3zm6.1 18v38.1c0 1.8-1.4 2.8-2.7 2.7-1.3 0-2.6-.9-2.6-2.7v-22.1h-1.4v22.1c0 1.9-1.4 2.8-2.8 2.7-1.3 0-2.5-1-2.5-2.7v-38.1h-1.5v14.8c0 1.6-1.1 2.3-2.2 2.3-1.1.1-2.1-.7-2.1-2.2v-14.7c0-2.7.9-6.2 6.2-6.2h11.1c5.5 0 6.2 3.5 6.2 6.2v14.6c0 1.5-1.1 2.3-2.1 2.3-1.1 0-2.1-.8-2.1-2.3v-14.8h-1.5z")
+							svg(width="17", viewBox="0 0 23.4 58.9" enable-background="new 0 0 23.4 58.9")
+								path(d="M11.7 0c2.9 0 5.3 2.4 5.3 5.3s-2.4 5.3-5.3 5.3-5.3-2.4-5.3-5.3 2.4-5.3 5.3-5.3zm6.1 18v38.1c0 1.8-1.4 2.8-2.7 2.7-1.3 0-2.6-.9-2.6-2.7v-22.1h-1.4v22.1c0 1.9-1.4 2.8-2.8 2.7-1.3 0-2.5-1-2.5-2.7v-38.1h-1.5v14.8c0 1.6-1.1 2.3-2.2 2.3-1.1.1-2.1-.7-2.1-2.2v-14.7c0-2.7.9-6.2 6.2-6.2h11.1c5.5 0 6.2 3.5 6.2 6.2v14.6c0 1.5-1.1 2.3-2.1 2.3-1.1 0-2.1-.8-2.1-2.3v-14.8h-1.5z")
+							svg(width="17", viewBox="0 0 23.4 58.9" enable-background="new 0 0 23.4 58.9")
+								path(d="M11.7 0c2.9 0 5.3 2.4 5.3 5.3s-2.4 5.3-5.3 5.3-5.3-2.4-5.3-5.3 2.4-5.3 5.3-5.3zm6.1 18v38.1c0 1.8-1.4 2.8-2.7 2.7-1.3 0-2.6-.9-2.6-2.7v-22.1h-1.4v22.1c0 1.9-1.4 2.8-2.8 2.7-1.3 0-2.5-1-2.5-2.7v-38.1h-1.5v14.8c0 1.6-1.1 2.3-2.2 2.3-1.1.1-2.1-.7-2.1-2.2v-14.7c0-2.7.9-6.2 6.2-6.2h11.1c5.5 0 6.2 3.5 6.2 6.2v14.6c0 1.5-1.1 2.3-2.1 2.3-1.1 0-2.1-.8-2.1-2.3v-14.8h-1.5z")
+							.place__title 
+								span 4
+								| места
 				.comparison__section
 					.comparison__title Багаж
-					.laggage.is-violet
-						img(src="img/laggage.png", alt="")
-						img(src="img/laggage.png", alt="")
-						img(src="img/laggage.png", alt="")
-						img(src="img/laggage.png", alt="")
-						.laggage__title 480
-							sub л
-					.laggage.is-green
-						img(src="img/laggage.png", alt="")
-						img(src="img/laggage.png", alt="")
-						img(src="img/laggage.png", alt="")
-						img(src="img/laggage.png", alt="")
-						.laggage__title 480
-							sub л
-					.laggage.is-yellow
-						img(src="img/laggage.png", alt="")
-						img(src="img/laggage.png", alt="")
-						img(src="img/laggage.png", alt="")
-						.laggage__title 364
-							sub л
-					.laggage.is-red
-						img(src="img/laggage.png", alt="")
-						img(src="img/laggage.png", alt="")
-						img(src="img/laggage.png", alt="")
-						.laggage__title 364
-							sub л
-					.laggage.is-blue
-						img(src="img/laggage.png", alt="")
-						img(src="img/laggage.png", alt="")
-						img(src="img/laggage.png", alt="")
-						img(src="img/laggage.png", alt="")
-						.laggage__title 480
-							sub л
+					.js-inview
+						.laggage.is-violet
+							svg(width="25",viewBox="0 0 26.9 54.7" enable-background="new 0 0 26.9 54.7")
+								path(d="M5.3 50v3.6c0 .6.5 1.1 1.1 1.1s1.1-.5 1.1-1.1v-3.6h11.5v3.6c0 .6.5 1.1 1.1 1.1.6 0 1.1-.5 1.1-1.1v-3.6h1.2c2.4 0 4.4-2 4.4-4.4v-23.1c0-2.4-2-4.4-4.4-4.4h-1.6v-14.8c0-.9-.4-1.7-1-2.3-.6-.6-1.4-1-2.3-1h-7.6c-.9 0-1.7.4-2.3 1-.6.6-1 1.4-1 2.3v14.8h-2.2c-2.4 0-4.4 2-4.4 4.4v23.1c0 2.4 2 4.4 4.4 4.4h.9zm13.4-31.9h-9.9v-14.8c0-.3.1-.6.3-.8.2-.2.5-.3.8-.3h7.7c.3 0 .6.1.8.3.2.2.3.5.3.8v14.8z")
+							svg(width="25",viewBox="0 0 26.9 54.7" enable-background="new 0 0 26.9 54.7")
+								path(d="M5.3 50v3.6c0 .6.5 1.1 1.1 1.1s1.1-.5 1.1-1.1v-3.6h11.5v3.6c0 .6.5 1.1 1.1 1.1.6 0 1.1-.5 1.1-1.1v-3.6h1.2c2.4 0 4.4-2 4.4-4.4v-23.1c0-2.4-2-4.4-4.4-4.4h-1.6v-14.8c0-.9-.4-1.7-1-2.3-.6-.6-1.4-1-2.3-1h-7.6c-.9 0-1.7.4-2.3 1-.6.6-1 1.4-1 2.3v14.8h-2.2c-2.4 0-4.4 2-4.4 4.4v23.1c0 2.4 2 4.4 4.4 4.4h.9zm13.4-31.9h-9.9v-14.8c0-.3.1-.6.3-.8.2-.2.5-.3.8-.3h7.7c.3 0 .6.1.8.3.2.2.3.5.3.8v14.8z")
+							svg(width="25",viewBox="0 0 26.9 54.7" enable-background="new 0 0 26.9 54.7")
+								path(d="M5.3 50v3.6c0 .6.5 1.1 1.1 1.1s1.1-.5 1.1-1.1v-3.6h11.5v3.6c0 .6.5 1.1 1.1 1.1.6 0 1.1-.5 1.1-1.1v-3.6h1.2c2.4 0 4.4-2 4.4-4.4v-23.1c0-2.4-2-4.4-4.4-4.4h-1.6v-14.8c0-.9-.4-1.7-1-2.3-.6-.6-1.4-1-2.3-1h-7.6c-.9 0-1.7.4-2.3 1-.6.6-1 1.4-1 2.3v14.8h-2.2c-2.4 0-4.4 2-4.4 4.4v23.1c0 2.4 2 4.4 4.4 4.4h.9zm13.4-31.9h-9.9v-14.8c0-.3.1-.6.3-.8.2-.2.5-.3.8-.3h7.7c.3 0 .6.1.8.3.2.2.3.5.3.8v14.8z")
+							svg(width="25",viewBox="0 0 26.9 54.7" enable-background="new 0 0 26.9 54.7")
+								path(d="M5.3 50v3.6c0 .6.5 1.1 1.1 1.1s1.1-.5 1.1-1.1v-3.6h11.5v3.6c0 .6.5 1.1 1.1 1.1.6 0 1.1-.5 1.1-1.1v-3.6h1.2c2.4 0 4.4-2 4.4-4.4v-23.1c0-2.4-2-4.4-4.4-4.4h-1.6v-14.8c0-.9-.4-1.7-1-2.3-.6-.6-1.4-1-2.3-1h-7.6c-.9 0-1.7.4-2.3 1-.6.6-1 1.4-1 2.3v14.8h-2.2c-2.4 0-4.4 2-4.4 4.4v23.1c0 2.4 2 4.4 4.4 4.4h.9zm13.4-31.9h-9.9v-14.8c0-.3.1-.6.3-.8.2-.2.5-.3.8-.3h7.7c.3 0 .6.1.8.3.2.2.3.5.3.8v14.8z")
+							.laggage__title 480
+								sub л
+						.laggage.is-green
+							svg(width="25",viewBox="0 0 26.9 54.7" enable-background="new 0 0 26.9 54.7")
+								path(d="M5.3 50v3.6c0 .6.5 1.1 1.1 1.1s1.1-.5 1.1-1.1v-3.6h11.5v3.6c0 .6.5 1.1 1.1 1.1.6 0 1.1-.5 1.1-1.1v-3.6h1.2c2.4 0 4.4-2 4.4-4.4v-23.1c0-2.4-2-4.4-4.4-4.4h-1.6v-14.8c0-.9-.4-1.7-1-2.3-.6-.6-1.4-1-2.3-1h-7.6c-.9 0-1.7.4-2.3 1-.6.6-1 1.4-1 2.3v14.8h-2.2c-2.4 0-4.4 2-4.4 4.4v23.1c0 2.4 2 4.4 4.4 4.4h.9zm13.4-31.9h-9.9v-14.8c0-.3.1-.6.3-.8.2-.2.5-.3.8-.3h7.7c.3 0 .6.1.8.3.2.2.3.5.3.8v14.8z")
+							svg(width="25",viewBox="0 0 26.9 54.7" enable-background="new 0 0 26.9 54.7")
+								path(d="M5.3 50v3.6c0 .6.5 1.1 1.1 1.1s1.1-.5 1.1-1.1v-3.6h11.5v3.6c0 .6.5 1.1 1.1 1.1.6 0 1.1-.5 1.1-1.1v-3.6h1.2c2.4 0 4.4-2 4.4-4.4v-23.1c0-2.4-2-4.4-4.4-4.4h-1.6v-14.8c0-.9-.4-1.7-1-2.3-.6-.6-1.4-1-2.3-1h-7.6c-.9 0-1.7.4-2.3 1-.6.6-1 1.4-1 2.3v14.8h-2.2c-2.4 0-4.4 2-4.4 4.4v23.1c0 2.4 2 4.4 4.4 4.4h.9zm13.4-31.9h-9.9v-14.8c0-.3.1-.6.3-.8.2-.2.5-.3.8-.3h7.7c.3 0 .6.1.8.3.2.2.3.5.3.8v14.8z")
+							svg(width="25",viewBox="0 0 26.9 54.7" enable-background="new 0 0 26.9 54.7")
+								path(d="M5.3 50v3.6c0 .6.5 1.1 1.1 1.1s1.1-.5 1.1-1.1v-3.6h11.5v3.6c0 .6.5 1.1 1.1 1.1.6 0 1.1-.5 1.1-1.1v-3.6h1.2c2.4 0 4.4-2 4.4-4.4v-23.1c0-2.4-2-4.4-4.4-4.4h-1.6v-14.8c0-.9-.4-1.7-1-2.3-.6-.6-1.4-1-2.3-1h-7.6c-.9 0-1.7.4-2.3 1-.6.6-1 1.4-1 2.3v14.8h-2.2c-2.4 0-4.4 2-4.4 4.4v23.1c0 2.4 2 4.4 4.4 4.4h.9zm13.4-31.9h-9.9v-14.8c0-.3.1-.6.3-.8.2-.2.5-.3.8-.3h7.7c.3 0 .6.1.8.3.2.2.3.5.3.8v14.8z")
+							svg(width="25",viewBox="0 0 26.9 54.7" enable-background="new 0 0 26.9 54.7")
+								path(d="M5.3 50v3.6c0 .6.5 1.1 1.1 1.1s1.1-.5 1.1-1.1v-3.6h11.5v3.6c0 .6.5 1.1 1.1 1.1.6 0 1.1-.5 1.1-1.1v-3.6h1.2c2.4 0 4.4-2 4.4-4.4v-23.1c0-2.4-2-4.4-4.4-4.4h-1.6v-14.8c0-.9-.4-1.7-1-2.3-.6-.6-1.4-1-2.3-1h-7.6c-.9 0-1.7.4-2.3 1-.6.6-1 1.4-1 2.3v14.8h-2.2c-2.4 0-4.4 2-4.4 4.4v23.1c0 2.4 2 4.4 4.4 4.4h.9zm13.4-31.9h-9.9v-14.8c0-.3.1-.6.3-.8.2-.2.5-.3.8-.3h7.7c.3 0 .6.1.8.3.2.2.3.5.3.8v14.8z")
+							.laggage__title 480
+								sub л
+						.laggage.is-yellow
+							svg(width="25",viewBox="0 0 26.9 54.7" enable-background="new 0 0 26.9 54.7")
+								path(d="M5.3 50v3.6c0 .6.5 1.1 1.1 1.1s1.1-.5 1.1-1.1v-3.6h11.5v3.6c0 .6.5 1.1 1.1 1.1.6 0 1.1-.5 1.1-1.1v-3.6h1.2c2.4 0 4.4-2 4.4-4.4v-23.1c0-2.4-2-4.4-4.4-4.4h-1.6v-14.8c0-.9-.4-1.7-1-2.3-.6-.6-1.4-1-2.3-1h-7.6c-.9 0-1.7.4-2.3 1-.6.6-1 1.4-1 2.3v14.8h-2.2c-2.4 0-4.4 2-4.4 4.4v23.1c0 2.4 2 4.4 4.4 4.4h.9zm13.4-31.9h-9.9v-14.8c0-.3.1-.6.3-.8.2-.2.5-.3.8-.3h7.7c.3 0 .6.1.8.3.2.2.3.5.3.8v14.8z")
+							svg(width="25",viewBox="0 0 26.9 54.7" enable-background="new 0 0 26.9 54.7")
+								path(d="M5.3 50v3.6c0 .6.5 1.1 1.1 1.1s1.1-.5 1.1-1.1v-3.6h11.5v3.6c0 .6.5 1.1 1.1 1.1.6 0 1.1-.5 1.1-1.1v-3.6h1.2c2.4 0 4.4-2 4.4-4.4v-23.1c0-2.4-2-4.4-4.4-4.4h-1.6v-14.8c0-.9-.4-1.7-1-2.3-.6-.6-1.4-1-2.3-1h-7.6c-.9 0-1.7.4-2.3 1-.6.6-1 1.4-1 2.3v14.8h-2.2c-2.4 0-4.4 2-4.4 4.4v23.1c0 2.4 2 4.4 4.4 4.4h.9zm13.4-31.9h-9.9v-14.8c0-.3.1-.6.3-.8.2-.2.5-.3.8-.3h7.7c.3 0 .6.1.8.3.2.2.3.5.3.8v14.8z")
+							svg(width="25",viewBox="0 0 26.9 54.7" enable-background="new 0 0 26.9 54.7")
+								path(d="M5.3 50v3.6c0 .6.5 1.1 1.1 1.1s1.1-.5 1.1-1.1v-3.6h11.5v3.6c0 .6.5 1.1 1.1 1.1.6 0 1.1-.5 1.1-1.1v-3.6h1.2c2.4 0 4.4-2 4.4-4.4v-23.1c0-2.4-2-4.4-4.4-4.4h-1.6v-14.8c0-.9-.4-1.7-1-2.3-.6-.6-1.4-1-2.3-1h-7.6c-.9 0-1.7.4-2.3 1-.6.6-1 1.4-1 2.3v14.8h-2.2c-2.4 0-4.4 2-4.4 4.4v23.1c0 2.4 2 4.4 4.4 4.4h.9zm13.4-31.9h-9.9v-14.8c0-.3.1-.6.3-.8.2-.2.5-.3.8-.3h7.7c.3 0 .6.1.8.3.2.2.3.5.3.8v14.8z")
+							.laggage__title 364
+								sub л
+						.laggage.is-red
+							svg(width="25",viewBox="0 0 26.9 54.7" enable-background="new 0 0 26.9 54.7")
+								path(d="M5.3 50v3.6c0 .6.5 1.1 1.1 1.1s1.1-.5 1.1-1.1v-3.6h11.5v3.6c0 .6.5 1.1 1.1 1.1.6 0 1.1-.5 1.1-1.1v-3.6h1.2c2.4 0 4.4-2 4.4-4.4v-23.1c0-2.4-2-4.4-4.4-4.4h-1.6v-14.8c0-.9-.4-1.7-1-2.3-.6-.6-1.4-1-2.3-1h-7.6c-.9 0-1.7.4-2.3 1-.6.6-1 1.4-1 2.3v14.8h-2.2c-2.4 0-4.4 2-4.4 4.4v23.1c0 2.4 2 4.4 4.4 4.4h.9zm13.4-31.9h-9.9v-14.8c0-.3.1-.6.3-.8.2-.2.5-.3.8-.3h7.7c.3 0 .6.1.8.3.2.2.3.5.3.8v14.8z")
+							svg(width="25",viewBox="0 0 26.9 54.7" enable-background="new 0 0 26.9 54.7")
+								path(d="M5.3 50v3.6c0 .6.5 1.1 1.1 1.1s1.1-.5 1.1-1.1v-3.6h11.5v3.6c0 .6.5 1.1 1.1 1.1.6 0 1.1-.5 1.1-1.1v-3.6h1.2c2.4 0 4.4-2 4.4-4.4v-23.1c0-2.4-2-4.4-4.4-4.4h-1.6v-14.8c0-.9-.4-1.7-1-2.3-.6-.6-1.4-1-2.3-1h-7.6c-.9 0-1.7.4-2.3 1-.6.6-1 1.4-1 2.3v14.8h-2.2c-2.4 0-4.4 2-4.4 4.4v23.1c0 2.4 2 4.4 4.4 4.4h.9zm13.4-31.9h-9.9v-14.8c0-.3.1-.6.3-.8.2-.2.5-.3.8-.3h7.7c.3 0 .6.1.8.3.2.2.3.5.3.8v14.8z")
+							svg(width="25",viewBox="0 0 26.9 54.7" enable-background="new 0 0 26.9 54.7")
+								path(d="M5.3 50v3.6c0 .6.5 1.1 1.1 1.1s1.1-.5 1.1-1.1v-3.6h11.5v3.6c0 .6.5 1.1 1.1 1.1.6 0 1.1-.5 1.1-1.1v-3.6h1.2c2.4 0 4.4-2 4.4-4.4v-23.1c0-2.4-2-4.4-4.4-4.4h-1.6v-14.8c0-.9-.4-1.7-1-2.3-.6-.6-1.4-1-2.3-1h-7.6c-.9 0-1.7.4-2.3 1-.6.6-1 1.4-1 2.3v14.8h-2.2c-2.4 0-4.4 2-4.4 4.4v23.1c0 2.4 2 4.4 4.4 4.4h.9zm13.4-31.9h-9.9v-14.8c0-.3.1-.6.3-.8.2-.2.5-.3.8-.3h7.7c.3 0 .6.1.8.3.2.2.3.5.3.8v14.8z")
+							.laggage__title 364
+								sub л
+						.laggage.is-blue
+							svg(width="25",viewBox="0 0 26.9 54.7" enable-background="new 0 0 26.9 54.7")
+								path(d="M5.3 50v3.6c0 .6.5 1.1 1.1 1.1s1.1-.5 1.1-1.1v-3.6h11.5v3.6c0 .6.5 1.1 1.1 1.1.6 0 1.1-.5 1.1-1.1v-3.6h1.2c2.4 0 4.4-2 4.4-4.4v-23.1c0-2.4-2-4.4-4.4-4.4h-1.6v-14.8c0-.9-.4-1.7-1-2.3-.6-.6-1.4-1-2.3-1h-7.6c-.9 0-1.7.4-2.3 1-.6.6-1 1.4-1 2.3v14.8h-2.2c-2.4 0-4.4 2-4.4 4.4v23.1c0 2.4 2 4.4 4.4 4.4h.9zm13.4-31.9h-9.9v-14.8c0-.3.1-.6.3-.8.2-.2.5-.3.8-.3h7.7c.3 0 .6.1.8.3.2.2.3.5.3.8v14.8z")
+							svg(width="25",viewBox="0 0 26.9 54.7" enable-background="new 0 0 26.9 54.7")
+								path(d="M5.3 50v3.6c0 .6.5 1.1 1.1 1.1s1.1-.5 1.1-1.1v-3.6h11.5v3.6c0 .6.5 1.1 1.1 1.1.6 0 1.1-.5 1.1-1.1v-3.6h1.2c2.4 0 4.4-2 4.4-4.4v-23.1c0-2.4-2-4.4-4.4-4.4h-1.6v-14.8c0-.9-.4-1.7-1-2.3-.6-.6-1.4-1-2.3-1h-7.6c-.9 0-1.7.4-2.3 1-.6.6-1 1.4-1 2.3v14.8h-2.2c-2.4 0-4.4 2-4.4 4.4v23.1c0 2.4 2 4.4 4.4 4.4h.9zm13.4-31.9h-9.9v-14.8c0-.3.1-.6.3-.8.2-.2.5-.3.8-.3h7.7c.3 0 .6.1.8.3.2.2.3.5.3.8v14.8z")
+							svg(width="25",viewBox="0 0 26.9 54.7" enable-background="new 0 0 26.9 54.7")
+								path(d="M5.3 50v3.6c0 .6.5 1.1 1.1 1.1s1.1-.5 1.1-1.1v-3.6h11.5v3.6c0 .6.5 1.1 1.1 1.1.6 0 1.1-.5 1.1-1.1v-3.6h1.2c2.4 0 4.4-2 4.4-4.4v-23.1c0-2.4-2-4.4-4.4-4.4h-1.6v-14.8c0-.9-.4-1.7-1-2.3-.6-.6-1.4-1-2.3-1h-7.6c-.9 0-1.7.4-2.3 1-.6.6-1 1.4-1 2.3v14.8h-2.2c-2.4 0-4.4 2-4.4 4.4v23.1c0 2.4 2 4.4 4.4 4.4h.9zm13.4-31.9h-9.9v-14.8c0-.3.1-.6.3-.8.2-.2.5-.3.8-.3h7.7c.3 0 .6.1.8.3.2.2.3.5.3.8v14.8z")
+							svg(width="25",viewBox="0 0 26.9 54.7" enable-background="new 0 0 26.9 54.7")
+								path(d="M5.3 50v3.6c0 .6.5 1.1 1.1 1.1s1.1-.5 1.1-1.1v-3.6h11.5v3.6c0 .6.5 1.1 1.1 1.1.6 0 1.1-.5 1.1-1.1v-3.6h1.2c2.4 0 4.4-2 4.4-4.4v-23.1c0-2.4-2-4.4-4.4-4.4h-1.6v-14.8c0-.9-.4-1.7-1-2.3-.6-.6-1.4-1-2.3-1h-7.6c-.9 0-1.7.4-2.3 1-.6.6-1 1.4-1 2.3v14.8h-2.2c-2.4 0-4.4 2-4.4 4.4v23.1c0 2.4 2 4.4 4.4 4.4h.9zm13.4-31.9h-9.9v-14.8c0-.3.1-.6.3-.8.2-.2.5-.3.8-.3h7.7c.3 0 .6.1.8.3.2.2.3.5.3.8v14.8z")
+							.laggage__title 480
+								sub л
 			.push 
 		include _footer.jade 
 

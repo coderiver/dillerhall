@@ -257,4 +257,27 @@ $(".js-select-single").multiselect({
           fixedCompare();
         }
      });
+
+    if ($('.js-inview').length) {
+        $('.js-inview').bind('inview', function(event, isInView, visiblePartX, visiblePartY) {
+        if (isInView) {
+
+          if (visiblePartY == 'top') {
+            $(this).addClass("has-animation");
+          } else if (visiblePartY == 'bottom') {
+            $(this).addClass("has-animation");
+            //$(this).addClass("is-visible-bottom");
+          } else {
+            // whole part of element is visible
+          }
+        } else {
+          // element has gone out of viewport
+        }
+      });
+    }
+
+
+       
+
+
 });

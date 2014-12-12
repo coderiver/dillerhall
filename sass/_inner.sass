@@ -672,6 +672,26 @@ $blue: #6b7a8f
 			&:nth-child(2n)
 				td
 					background: #f7f7f7 
+.has-animation
+	circle,
+	polygon,
+	line
+		+animation(dash 1s linear forwards) 
+	.is-violet
+		path
+			fill: $violet
+	.is-green
+		path
+			fill: $green
+	.is-yellow
+		path
+			fill: $yellow
+	.is-red
+		path
+			fill: $red
+	.is-blue
+		path
+			fill: $blue
 .circle
 	position: relative
 	display: inline-block
@@ -699,7 +719,7 @@ $blue: #6b7a8f
 		stroke-width: 2px
 		stroke-dasharray: 1000
 		stroke-dashoffset: 1000
-		+animation(dash 3s linear forwards) 
+		//+animation(dash 3s linear forwards) 
 	&__info
 		position: absolute
 		top: 0
@@ -764,7 +784,7 @@ $blue: #6b7a8f
 		stroke-width: 2px
 		stroke-dasharray: 1000
 		stroke-dashoffset: 1000
-		+animation(dash 3s linear forwards) 
+		//+animation(dash 3s linear forwards) 
 .line
 	margin: 0 auto 
 	width: 546px
@@ -796,7 +816,7 @@ $blue: #6b7a8f
 		stroke-width: 2px
 		stroke-dasharray: 1000
 		stroke-dashoffset: 1000
-		+animation(dash 3s linear forwards) 
+		//+animation(dash 3s linear forwards) 
 	&__in
 		position: relative
 		font-size: 0
@@ -823,7 +843,11 @@ $blue: #6b7a8f
 		stroke-dashoffset: 1000
 	100%
 		stroke-dashoffset: 0
-		
++keyframes(fill)
+	0
+		fill: #fff
+	100%
+		fill: inherit
 .ruler
 	border-top: 1px solid #f2f2f2 
 	display: table
@@ -930,11 +954,31 @@ $blue: #6b7a8f
 		margin: 4px 0
 		font-size: 14px
 		+f300
-
+	path
+		fill: #fff
+		+tr(fill 1s)
 .place
 	display: inline-block
 	vertical-align: top
 	width: 13%
+	path
+		fill: #fff
+		+tr(fill 1s)
+	// &.is-violet
+	// 	path
+	// 		fill: $violet
+	// &.is-green
+	// 	path
+	// 		fill: $green
+	// &.is-yellow
+	// 	path
+	// 		fill: $yellow
+	// &.is-red
+	// 	path
+	// 		fill: $red
+	// &.is-blue
+	// 	path
+	// 		fill: $blue
 	img
 		margin-left: 6px
 		&:first-child
@@ -952,6 +996,24 @@ $blue: #6b7a8f
 	display: inline-block
 	vertical-align: top
 	width: 13%
+	path
+		fill: #fff
+		+tr(fill 1s)
+	// &.is-violet
+	// 	path
+	// 		fill: $violet
+	// &.is-green
+	// 	path
+	// 		fill: $green
+	// &.is-yellow
+	// 	path
+	// 		fill: $yellow
+	// &.is-red
+	// 	path
+	// 		fill: $red
+	// &.is-blue
+	// 	path
+	// 		fill: $blue
 	img
 		margin-left: 6px
 		&:first-child

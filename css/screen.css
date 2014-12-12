@@ -1639,6 +1639,13 @@ ul.sorting a.is-active sup { visibility: visible; filter: progid:DXImageTransfor
 .compare-table td { padding: 9px 30px 9px 22px; border-top: 1px solid #ececec; border-bottom: 1px solid #ececec; }
 .compare-table tbody tr:nth-child(2n) td { background: #f7f7f7; }
 
+.has-animation circle, .has-animation polygon, .has-animation line { -webkit-animation: dash 1s linear forwards; -moz-animation: dash 1s linear forwards; -ms-animation: dash 1s linear forwards; -o-animation: dash 1s linear forwards; animation: dash 1s linear forwards; }
+.has-animation .is-violet path { fill: #b48ead; }
+.has-animation .is-green path { fill: #4cd68a; }
+.has-animation .is-yellow path { fill: #ffd278; }
+.has-animation .is-red path { fill: #ef8f67; }
+.has-animation .is-blue path { fill: #6b7a8f; }
+
 .circle { position: relative; display: inline-block; margin-left: 25px; }
 .circle:first-child { margin-left: 0; }
 .circle svg.is-violet circle { stroke: #b48ead; }
@@ -1646,7 +1653,7 @@ ul.sorting a.is-active sup { visibility: visible; filter: progid:DXImageTransfor
 .circle svg.is-yellow circle { stroke: #ffd278; }
 .circle svg.is-red circle { stroke: #ef8f67; }
 .circle svg.is-blue circle { stroke: #6b7a8f; }
-.circle circle { fill: white; stroke-width: 2px; stroke-dasharray: 1000; stroke-dashoffset: 1000; -webkit-animation: dash 3s linear forwards; -moz-animation: dash 3s linear forwards; -ms-animation: dash 3s linear forwards; -o-animation: dash 3s linear forwards; animation: dash 3s linear forwards; }
+.circle circle { fill: white; stroke-width: 2px; stroke-dasharray: 1000; stroke-dashoffset: 1000; }
 .circle__info { position: absolute; top: 0; left: 0; right: 0; bottom: 0; text-align: center; font-size: 0; }
 .circle__info:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .circle__in { vertical-align: middle; display: inline-block; font-family: "museosanscyrl_300", Arial, sans-serif; font-size: 14px; text-align: left; }
@@ -1665,7 +1672,7 @@ ul.sorting a.is-active sup { visibility: visible; filter: progid:DXImageTransfor
 .triangle svg.is-yellow polygon { stroke: #ffd278; }
 .triangle svg.is-red polygon { stroke: #ef8f67; }
 .triangle svg.is-blue polygon { stroke: #6b7a8f; }
-.triangle polygon { fill: white; stroke-width: 2px; stroke-dasharray: 1000; stroke-dashoffset: 1000; -webkit-animation: dash 3s linear forwards; -moz-animation: dash 3s linear forwards; -ms-animation: dash 3s linear forwards; -o-animation: dash 3s linear forwards; animation: dash 3s linear forwards; }
+.triangle polygon { fill: white; stroke-width: 2px; stroke-dasharray: 1000; stroke-dashoffset: 1000; }
 
 .line { margin: 0 auto; width: 546px; }
 .line_horizontal { display: inline-block; vertical-align: bottom; margin-right: 11%; width: auto; }
@@ -1676,7 +1683,7 @@ ul.sorting a.is-active sup { visibility: visible; filter: progid:DXImageTransfor
 .line svg.is-yellow line { stroke: #ffd278; }
 .line svg.is-red line { stroke: #ef8f67; }
 .line svg.is-blue line { stroke: #6b7a8f; }
-.line line { stroke-width: 2px; stroke-dasharray: 1000; stroke-dashoffset: 1000; -webkit-animation: dash 3s linear forwards; -moz-animation: dash 3s linear forwards; -ms-animation: dash 3s linear forwards; -o-animation: dash 3s linear forwards; animation: dash 3s linear forwards; }
+.line line { stroke-width: 2px; stroke-dasharray: 1000; stroke-dashoffset: 1000; }
 .line__in { position: relative; font-size: 0; display: inline-block; vertical-align: bottom; width: 14px; text-align: center; }
 .line__in svg { display: inline-block; }
 .line__label { position: absolute; top: -26px; left: 0; right: 0; font-size: 12px; font-family: "museosanscyrl_300", Arial, sans-serif; color: #909090; }
@@ -1692,6 +1699,16 @@ ul.sorting a.is-active sup { visibility: visible; filter: progid:DXImageTransfor
   100% { stroke-dashoffset: 0; } }
 @keyframes dash { 0 { stroke-dashoffset: 1000; }
   100% { stroke-dashoffset: 0; } }
+@-moz-keyframes fill { 0 { fill: white; }
+  100% { fill: inherit; } }
+@-webkit-keyframes fill { 0 { fill: white; }
+  100% { fill: inherit; } }
+@-o-keyframes fill { 0 { fill: white; }
+  100% { fill: inherit; } }
+@-ms-keyframes fill { 0 { fill: white; }
+  100% { fill: inherit; } }
+@keyframes fill { 0 { fill: white; }
+  100% { fill: inherit; } }
 .ruler { border-top: 1px solid #f2f2f2; display: table; width: 100%; table-layout: fixed; text-align: left; }
 .ruler li { display: table-cell; position: relative; vertical-align: middle; padding: 4px 0 0; font-size: 12px; font-family: "museosanscyrl_300", Arial, sans-serif; }
 .ruler li:before { content: ""; position: absolute; left: 0; top: 0; width: 1px; height: 5px; background: #f2f2f2; }
@@ -1716,14 +1733,17 @@ ul.sorting a.is-active sup { visibility: visible; filter: progid:DXImageTransfor
 
 .drive-type { display: inline-block; vertical-align: top; width: 13%; }
 .drive-type span { display: block; margin: 4px 0; font-size: 14px; font-family: "museosanscyrl_300", Arial, sans-serif; }
+.drive-type path { fill: white; -moz-transition: fill 1s; -o-transition: fill 1s; -webkit-transition: fill 1s; transition: fill 1s; }
 
 .place { display: inline-block; vertical-align: top; width: 13%; }
+.place path { fill: white; -moz-transition: fill 1s; -o-transition: fill 1s; -webkit-transition: fill 1s; transition: fill 1s; }
 .place img { margin-left: 6px; }
 .place img:first-child { margin-left: 0; }
 .place__title { margin: 10px 0; font-size: 14px; font-family: "museosanscyrl_100", Arial, sans-serif; line-height: 1.2; }
 .place__title span { display: block; color: #1bb4ed; font-size: 36px; }
 
 .laggage { display: inline-block; vertical-align: top; width: 13%; }
+.laggage path { fill: white; -moz-transition: fill 1s; -o-transition: fill 1s; -webkit-transition: fill 1s; transition: fill 1s; }
 .laggage img { margin-left: 6px; }
 .laggage img:first-child { margin-left: 0; }
 .laggage__title { margin: 10px 0; color: #1bb4ed; font-size: 36px; font-family: "museosanscyrl_100", Arial, sans-serif; line-height: 1.2; }
