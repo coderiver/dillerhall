@@ -101,7 +101,7 @@ html
 				.comparison__section
 					.comparison__title Стоимость
 					.js-inview
-						.circle
+						.circle.circle_big
 							.circle__in
 								svg.is-violet(height="250px",width="250px")
 									defs
@@ -109,13 +109,6 @@ html
 											rect(x="0" y="0" width="125" height="250")
 											rect(x="125" y="125" width="125" height="125")
 									circle(r="122", cx="125", cy="125",stroke-width="2px", clip-path="url(#circle1)")
-							.circle__in
-								svg.is-green(height="250px",width="250px")
-								defs
-									clipPath(id="circle2")
-										rect(x="0" y="0" width="125" height="250")
-										rect(x="125" y="125" width="125" height="125")
-								circle(r="110", cx="125", cy="125",stroke-width="2px", clip-path="url(#circle2)")
 							ul.labels
 								li
 									i.dot-color.is-violet

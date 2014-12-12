@@ -1661,6 +1661,10 @@ ul.sorting a.is-active sup { visibility: visible; filter: progid:DXImageTransfor
 .circle__title sub { color: black; font-size: 14px; }
 .circle .labels { position: absolute; top: 0; left: 100%; margin-left: 22px; white-space: nowrap; }
 
+.circle_big { position: relative; width: 250px; height: 250px; }
+.circle_big .circle__in { position: absolute; left: 0; right: 0; bottom: 0; top: 0; text-align: center; line-height: 250px; }
+.circle_big .circle__in svg { display: inline-block; vertical-align: middle; }
+
 .labels_three-cols { margin: 40px auto 0; max-width: 600px; -moz-column-count: 3; -webkit-column-count: 3; column-count: 3; }
 .labels li { margin-bottom: 17px; }
 .labels .dot-color { margin-right: 18px; vertical-align: middle; }
