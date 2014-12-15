@@ -124,7 +124,7 @@
           <div class="js-inview">
             <div class="circle circle_big">
               <div class="circle__in">
-                <svg height="250px" width="250px" class="is-violet">
+                <svg height="250px" width="250px" class="is-blue">
                   <defs>
                     <clipPath id="circle1">
                       <rect x="0" y="0" width="125" height="250"></rect>
@@ -132,6 +132,48 @@
                     </clipPath>
                   </defs>
                   <circle r="122" cx="125" cy="125" stroke-width="2px" clip-path="url(#circle1)"></circle>
+                </svg>
+              </div>
+              <div class="circle__in">
+                <svg height="225px" width="225px" class="is-green">
+                  <defs>
+                    <clipPath id="circle2">
+                      <rect x="0" y="0" width="112" height="225"></rect>
+                      <rect x="112" y="130" width="112" height="130"></rect>
+                    </clipPath>
+                  </defs>
+                  <circle r="110" cx="112" cy="112" stroke-width="2px" clip-path="url(#circle2)"></circle>
+                </svg>
+              </div>
+              <div class="circle__in">
+                <svg height="200px" width="200px" class="is-yellow">
+                  <defs>
+                    <clipPath id="circle3">
+                      <rect x="0" y="0" width="100" height="200"></rect>
+                      <rect x="100" y="150" width="100" height="150"></rect>
+                    </clipPath>
+                  </defs>
+                  <circle r="98" cx="100" cy="100" stroke-width="2px" clip-path="url(#circle3)"></circle>
+                </svg>
+              </div>
+              <div class="circle__in">
+                <svg height="175px" width="175px" class="is-violet">
+                  <defs>
+                    <clipPath id="circle4">
+                      <rect x="0" y="0" width="87" height="175"></rect>
+                    </clipPath>
+                  </defs>
+                  <circle r="85" cx="87" cy="87" stroke-width="2px" clip-path="url(#circle4)"></circle>
+                </svg>
+              </div>
+              <div class="circle__in">
+                <svg height="150px" width="150px" class="is-red">
+                  <defs>
+                    <clipPath id="circle5">
+                      <rect x="0" y="0" width="75" height="75"></rect>
+                    </clipPath>
+                  </defs>
+                  <circle r="73" cx="75" cy="75" stroke-width="2px" clip-path="url(#circle5)"></circle>
                 </svg>
               </div>
               <ul class="labels">
@@ -149,7 +191,13 @@
           <div class="js-inview">
             <div class="circle">
               <svg height="164px" width="164px" class="is-violet">
-                <circle r="80" cx="82" cy="82"></circle>
+                <defs>
+                  <clipPath id="circle6">
+                    <rect x="0" y="0" width="82" height="164"></rect>
+                    <rect x="82" y="82" width="82" height="82"></rect>
+                  </clipPath>
+                </defs>
+                <circle r="80" cx="82" cy="82" clip-path="url(#circle6)"></circle>
               </svg>
               <div class="circle__info">
                 <div class="circle__in">
@@ -159,7 +207,7 @@
             </div>
             <div class="circle">
               <svg height="164px" width="164px" class="is-green">
-                <circle r="80" cx="82" cy="82"></circle>
+                <circle r="80" cx="82" cy="82" clip-path="url(#circle7)"></circle>
               </svg>
               <div class="circle__info">
                 <div class="circle__in">
@@ -169,7 +217,13 @@
             </div>
             <div class="circle">
               <svg height="164px" width="164px" class="is-yellow">
-                <circle r="80" cx="82" cy="82"></circle>
+                <defs>
+                  <clipPath id="circle8">
+                    <rect x="0" y="0" width="82" height="164"></rect>
+                    <rect x="82" y="82" width="82" height="82"></rect>
+                  </clipPath>
+                </defs>
+                <circle r="80" cx="82" cy="82" clip-path="url(#circle8)"></circle>
               </svg>
               <div class="circle__info">
                 <div class="circle__in">
@@ -179,7 +233,13 @@
             </div>
             <div class="circle">
               <svg height="164px" width="164px" class="is-red">
-                <circle r="80" cx="82" cy="82"></circle>
+                <defs>
+                  <clipPath id="circle9">
+                    <rect x="0" y="0" width="82" height="164"></rect>
+                    <rect x="82" y="82" width="82" height="82"></rect>
+                  </clipPath>
+                </defs>
+                <circle r="80" cx="82" cy="82" clip-path="url(#circle9)"></circle>
               </svg>
               <div class="circle__info">
                 <div class="circle__in">
@@ -189,7 +249,12 @@
             </div>
             <div class="circle">
               <svg height="164px" width="164px" class="is-blue">
-                <circle r="80" cx="82" cy="82"></circle>
+                <defs>
+                  <clipPath id="circle10">
+                    <rect x="0" y="0" width="82" height="164"></rect>
+                  </clipPath>
+                </defs>
+                <circle r="80" cx="82" cy="82" clip-path="url(#circle10)"></circle>
               </svg>
               <div class="circle__info">
                 <div class="circle__in">
@@ -274,9 +339,11 @@
           <div class="comparison__title">Максимальная скорость</div>
           <div class="js-inview">
             <div class="circle">
-              <svg height="250px" width="250px" class="is-violet">
-                <circle r="122" cx="125" cy="125" stroke-width="2px" fill="none"></circle>
-              </svg>
+              <div class="circle__in">
+                <svg height="250px" width="250px" class="is-violet">
+                  <circle r="122" cx="125" cy="125" stroke-width="2px" fill="none"></circle>
+                </svg>
+              </div>
               <ul class="labels">
                 <li><i class="dot-color is-violet"></i>$ 125 000</li>
                 <li><i class="dot-color is-green"></i>$ 125 000</li>
