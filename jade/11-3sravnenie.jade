@@ -290,26 +290,62 @@ html
 				.comparison__section
 					.comparison__title Максимальная скорость
 					.js-inview
-						.circle
+						.circle.circle_large
 							.circle__in
-								svg.is-violet(height="250px",width="250px")
-									circle(r="122", cx="125", cy="125",stroke-width="2px", fill="none")
+								svg.is-gray(height="404px",width="404px")
+									defs
+										clipPath(id="circle11")
+											rect(x="0" y="0" width="402" height="221")
+									circle(r="200", cx="201", cy="201",stroke-width="1px", clip-path="url(#circle11)")
+							.circle__in
+								svg.is-blue(height="370px",width="370px")
+									defs
+										clipPath(id="circle12")
+											rect(x="0" y="0" width="370" height="205")
+									circle(r="183", cx="185", cy="185",clip-path="url(#circle12)")
+							.circle__in
+								svg.is-green(height="340px",width="340px")
+									defs
+										clipPath(id="circle13")
+											rect(x="0" y="0" width="335" height="190")
+									circle(r="168", cx="170", cy="170",clip-path="url(#circle13)")
+							.circle__in
+								svg.is-red(height="310px",width="310px")
+									defs
+										clipPath(id="circle14")
+											rect(x="0" y="0" width="290" height="175")
+									circle(r="153", cx="155", cy="155",clip-path="url(#circle14)")
+							.circle__in
+								svg.is-violet(height="280px",width="280px")
+									defs
+										clipPath(id="circle15")
+											rect(x="0" y="0" width="250" height="160")
+									circle(r="136", cx="140", cy="140",clip-path="url(#circle15)")
+							.circle__in
+								svg.is-yellow(height="250px",width="250px")
+									defs
+										clipPath(id="circle16")
+											rect(x="0" y="0" width="210" height="145")
+									circle(r="121", cx="125", cy="125",clip-path="url(#circle16)")
 							ul.labels
 								li
-									i.dot-color.is-violet
-									| $ 125 000
+									i.dot-color.is-blue
+									| 360 км/ч
 								li
 									i.dot-color.is-green
-									| $ 125 000
-								li
-									i.dot-color.is-yellow
-									| $ 125 000
+									| 320 км/ч
 								li
 									i.dot-color.is-red
-									| $ 125 000
+									| 290 км/ч
 								li
-									i.dot-color.is-blue
-									| $ 125 000
+									i.dot-color.is-violet
+									| 280 км/ч
+								li
+									i.dot-color.is-yellow
+									| 250 км/ч
+								
+								
+					include _circle.html
 				.comparison__section
 					.comparison__title Коробка передач
 					.js-inview

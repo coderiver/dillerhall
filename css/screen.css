@@ -1625,7 +1625,9 @@ ul.sorting a.is-active sup { visibility: visible; filter: progid:DXImageTransfor
 .dot-color.is-red { background: #ef8f67; }
 .dot-color.is-blue { background: #6b7a8f; }
 
+.comparison { overflow: hidden; }
 .comparison__section { text-align: center; padding: 70px 0; position: relative; }
+@media only screen and (max-width: 980px) { .comparison__section { padding: 30px 10px; } }
 .comparison__section:after { content: ""; position: absolute; bottom: 0; left: 50%; margin-left: -425px; width: 850px; height: 1px; background: #ededed; }
 .comparison__title { margin-bottom: 50px; font-size: 30px; font-family: "museosanscyrl_100", Arial, sans-serif; color: #cacaca; }
 
@@ -1639,7 +1641,7 @@ ul.sorting a.is-active sup { visibility: visible; filter: progid:DXImageTransfor
 .compare-table td { padding: 9px 30px 9px 22px; border-top: 1px solid #ececec; border-bottom: 1px solid #ececec; }
 .compare-table tbody tr:nth-child(2n) td { background: #f7f7f7; }
 
-.has-animation circle, .has-animation polygon, .has-animation line { -webkit-animation: dash 1s linear forwards; -moz-animation: dash 1s linear forwards; -ms-animation: dash 1s linear forwards; -o-animation: dash 1s linear forwards; animation: dash 1s linear forwards; }
+.has-animation circle, .has-animation polygon, .has-animation line { -webkit-animation: dash 2s linear forwards; -moz-animation: dash 2s linear forwards; -ms-animation: dash 2s linear forwards; -o-animation: dash 2s linear forwards; animation: dash 2s linear forwards; }
 .has-animation .is-violet path { fill: #b48ead; }
 .has-animation .is-green path { fill: #4cd68a; }
 .has-animation .is-yellow path { fill: #ffd278; }
@@ -1653,7 +1655,8 @@ ul.sorting a.is-active sup { visibility: visible; filter: progid:DXImageTransfor
 .circle svg.is-yellow circle { stroke: #ffd278; }
 .circle svg.is-red circle { stroke: #ef8f67; }
 .circle svg.is-blue circle { stroke: #6b7a8f; }
-.circle circle { fill: white; stroke-width: 2px; stroke-dasharray: 1000; stroke-dashoffset: 1000; }
+.circle svg.is-gray circle { stroke: #ededed; stroke-width: 1px; }
+.circle circle { fill: none; stroke-width: 2px; stroke-dasharray: 2000; stroke-dashoffset: 2000; }
 .circle__info { position: absolute; top: 0; left: 0; right: 0; bottom: 0; text-align: center; font-size: 0; }
 .circle__info:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .circle__in { vertical-align: middle; display: inline-block; font-family: "museosanscyrl_300", Arial, sans-serif; font-size: 14px; text-align: left; }
@@ -1664,6 +1667,10 @@ ul.sorting a.is-active sup { visibility: visible; filter: progid:DXImageTransfor
 .circle_big { position: relative; width: 250px; height: 250px; }
 .circle_big .circle__in { position: absolute; left: 0; right: 0; bottom: 0; top: 0; text-align: center; line-height: 250px; }
 .circle_big .circle__in svg { display: inline-block; vertical-align: middle; }
+
+.circle_large { position: relative; width: 404px; height: 404px; background: url(../img/speed.png) 50% 33% no-repeat; }
+.circle_large .circle__in { position: absolute; left: 0; right: 0; bottom: 0; top: 0; text-align: center; line-height: 402px; }
+.circle_large .circle__in svg { display: inline-block; vertical-align: middle; }
 
 .labels_three-cols { margin: 40px auto 0; max-width: 600px; -moz-column-count: 3; -webkit-column-count: 3; column-count: 3; }
 .labels li { margin-bottom: 17px; }
@@ -1721,6 +1728,7 @@ ul.sorting a.is-active sup { visibility: visible; filter: progid:DXImageTransfor
 .ruler span { display: inline-block; position: relative; left: -3px; }
 
 .trans { display: inline-block; width: 13%; vertical-align: top; }
+@media only screen and (max-width: 980px) { .trans { width: auto; padding: 0 20px; } }
 .trans.is-violet .trans__icon i { background: #b48ead; }
 .trans.is-green .trans__icon i { background: #4cd68a; }
 .trans.is-yellow .trans__icon i { background: #ffd278; }
@@ -1736,17 +1744,20 @@ ul.sorting a.is-active sup { visibility: visible; filter: progid:DXImageTransfor
 .trans__info { font-family: "museosanscyrl_300", Arial, sans-serif; font-size: 14px; }
 
 .drive-type { display: inline-block; vertical-align: top; width: 13%; }
+@media only screen and (max-width: 980px) { .drive-type { width: auto; padding: 0 20px; } }
 .drive-type span { display: block; margin: 4px 0; font-size: 14px; font-family: "museosanscyrl_300", Arial, sans-serif; }
 .drive-type path { fill: white; -moz-transition: fill 1s; -o-transition: fill 1s; -webkit-transition: fill 1s; transition: fill 1s; }
 
-.place { display: inline-block; vertical-align: top; width: 13%; }
+.place { display: inline-block; vertical-align: top; width: 13%; white-space: nowrap; }
+@media only screen and (max-width: 980px) { .place { width: auto; padding: 0 20px; } }
 .place path { fill: white; -moz-transition: fill 1s; -o-transition: fill 1s; -webkit-transition: fill 1s; transition: fill 1s; }
 .place img { margin-left: 6px; }
 .place img:first-child { margin-left: 0; }
 .place__title { margin: 10px 0; font-size: 14px; font-family: "museosanscyrl_100", Arial, sans-serif; line-height: 1.2; }
 .place__title span { display: block; color: #1bb4ed; font-size: 36px; }
 
-.laggage { display: inline-block; vertical-align: top; width: 13%; }
+.laggage { display: inline-block; vertical-align: top; width: 13%; white-space: nowrap; }
+@media only screen and (max-width: 980px) { .laggage { width: auto; padding: 0 20px; } }
 .laggage path { fill: white; -moz-transition: fill 1s; -o-transition: fill 1s; -webkit-transition: fill 1s; transition: fill 1s; }
 .laggage img { margin-left: 6px; }
 .laggage img:first-child { margin-left: 0; }

@@ -625,10 +625,13 @@ $blue: #6b7a8f
 		background: $blue
 
 .comparison
+	overflow: hidden
 	&__section
 		text-align: center
 		padding: 70px 0 
 		position: relative
+		+r(980)
+			padding: 30px 10px 
 		&:after
 			content: ""
 			position: absolute
@@ -676,7 +679,7 @@ $blue: #6b7a8f
 	circle,
 	polygon,
 	line
-		+animation(dash 1s linear forwards) 
+		+animation(dash 2s linear forwards) 
 	.is-violet
 		path
 			fill: $violet
@@ -714,12 +717,15 @@ $blue: #6b7a8f
 		&.is-blue
 			circle
 				stroke: $blue
+		&.is-gray
+			circle
+				stroke: #ededed
+				stroke-width: 1px
 	circle
-		fill: #fff
+		fill: none
 		stroke-width: 2px
-		stroke-dasharray: 1000
-		stroke-dashoffset: 1000
-		//+animation(dash 3s linear forwards) 
+		stroke-dasharray: 2000
+		stroke-dashoffset: 2000
 	&__info
 		position: absolute
 		top: 0
@@ -759,6 +765,22 @@ $blue: #6b7a8f
 		top: 0
 		text-align: center
 		line-height: 250px
+		svg
+			display: inline-block
+			vertical-align: middle
+.circle_large
+	position: relative
+	width: 404px
+	height: 404px
+	background: url(../img/speed.png) 50% 33% no-repeat 
+	.circle__in
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 0
+		top: 0
+		text-align: center
+		line-height: 402px
 		svg
 			display: inline-block
 			vertical-align: middle
@@ -912,6 +934,9 @@ $blue: #6b7a8f
 	display: inline-block
 	width: 13%
 	vertical-align: top
+	+r(980)
+		width: auto
+		padding: 0 20px 
 	&.is-violet
 		.trans__icon
 			i
@@ -964,6 +989,9 @@ $blue: #6b7a8f
 	display: inline-block
 	vertical-align: top
 	width: 13%
+	+r(980)
+		width: auto
+		padding: 0 20px 
 	span
 		display: block
 		margin: 4px 0
@@ -976,6 +1004,10 @@ $blue: #6b7a8f
 	display: inline-block
 	vertical-align: top
 	width: 13%
+	white-space: nowrap
+	+r(980)
+		width: auto
+		padding: 0 20px 
 	path
 		fill: #fff
 		+tr(fill 1s)
@@ -1011,6 +1043,10 @@ $blue: #6b7a8f
 	display: inline-block
 	vertical-align: top
 	width: 13%
+	white-space: nowrap
+	+r(980)
+		width: auto
+		padding: 0 20px 
 	path
 		fill: #fff
 		+tr(fill 1s)

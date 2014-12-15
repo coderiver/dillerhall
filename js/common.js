@@ -258,23 +258,22 @@ $(".js-select-single").multiselect({
         }
      });
 
-    if ($('.js-inview').length) {
-        $('.js-inview').bind('inview', function(event, isInView, visiblePartX, visiblePartY) {
-        if (isInView) {
 
-          if (visiblePartY == 'top') {
-            $(this).addClass("has-animation");
-          } else if (visiblePartY == 'bottom') {
-            $(this).addClass("has-animation");
-            //$(this).addClass("is-visible-bottom");
-          } else {
-            // whole part of element is visible
-          }
-        } else {
-          // element has gone out of viewport
+    function view() {
+      $('.js-inview').each(function(){
+        var el = $(this);
+        var top = ($(this).offset().top - $(window).height());
+        console.log(top);
+        if ($("body").scrollTop() >= top) {
+          $(this).addClass("has-animation")
         }
       });
     }
+    view();
+    $(window).scroll(function(){
+        view();
+    });
+    
 
 
        
