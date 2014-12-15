@@ -646,6 +646,8 @@ $blue: #6b7a8f
 		font-size: 30px
 		+f100
 		color: #cacaca 
+		+r(768)
+			font-size: 24px
 .compare-table-wrap
 	overflow-x: auto
 .compare-table
@@ -699,6 +701,9 @@ $blue: #6b7a8f
 	position: relative
 	display: inline-block
 	margin-left: 25px
+	+r(980)
+		margin-left: 0
+		padding: 20px
 	&:first-child
 		margin-left: 0
 	svg
@@ -753,10 +758,18 @@ $blue: #6b7a8f
 		left: 100%
 		margin-left: 22px
 		white-space: nowrap
+		+r(980)
+			margin-left: 10px
+		+r(768)
+			left: 0
+			top: 100%
+			margin: 40px 0 0 
 .circle_big
 	position: relative
 	width: 250px
 	height: 250px
+	+r(768)
+		margin-bottom: 130px
 	.circle__in
 		position: absolute
 		left: 0
@@ -773,6 +786,13 @@ $blue: #6b7a8f
 	width: 404px
 	height: 404px
 	background: url(../img/speed.png) 50% 33% no-repeat 
+	+r(768)
+		margin-bottom: 0
+	+r(480)
+		+scale(.75)
+	&:first-child
+		+r(480)
+			margin-left: -51px
 	.circle__in
 		position: absolute
 		left: 0
@@ -784,13 +804,24 @@ $blue: #6b7a8f
 		svg
 			display: inline-block
 			vertical-align: middle
+	.labels
+		+r(768)
+			top: 250px
 .labels
 	&_three-cols
 		margin: 40px auto 0
 		max-width: 600px 
 		+column-count(3)
+	+r(768)
+		+column-count(3)
+		text-align: left
+		padding-left: 10px
+	+r(480)
+		+column-count(2)
 	li
 		margin-bottom: 17px
+		
+
 	.dot-color
 		margin-right: 18px
 		vertical-align: middle
@@ -798,6 +829,10 @@ $blue: #6b7a8f
 	display: inline-block
 	margin-left: -110px
 	vertical-align: bottom
+	+r(980)
+		margin-left: -130px
+	+r(480)
+		margin-left: -209px
 	&:first-child
 		margin-left: 0
 	svg
@@ -817,7 +852,7 @@ $blue: #6b7a8f
 			polygon
 				stroke: $blue
 	polygon
-		fill: #fff
+		fill: none
 		stroke-width: 2px
 		stroke-dasharray: 1000
 		stroke-dashoffset: 1000
@@ -825,13 +860,17 @@ $blue: #6b7a8f
 .line
 	margin: 0 auto 
 	width: 546px
-	&_horizontal	
+	+r(980)
+		width: 90%
+	&_vert
 		display: inline-block
 		vertical-align: bottom
 		margin-right: 11%
 		width: auto
 		&:last-child
 			margin-right: 0
+		+r(768)
+			margin-bottom: 30px
 	svg
 		display: block
 		&.is-violet
@@ -936,7 +975,7 @@ $blue: #6b7a8f
 	vertical-align: top
 	+r(980)
 		width: auto
-		padding: 0 20px 
+		padding: 20px 
 	&.is-violet
 		.trans__icon
 			i
@@ -991,7 +1030,7 @@ $blue: #6b7a8f
 	width: 13%
 	+r(980)
 		width: auto
-		padding: 0 20px 
+		padding: 20px 
 	span
 		display: block
 		margin: 4px 0
@@ -1007,7 +1046,7 @@ $blue: #6b7a8f
 	white-space: nowrap
 	+r(980)
 		width: auto
-		padding: 0 20px 
+		padding: 20px 
 	path
 		fill: #fff
 		+tr(fill 1s)
@@ -1046,7 +1085,7 @@ $blue: #6b7a8f
 	white-space: nowrap
 	+r(980)
 		width: auto
-		padding: 0 20px 
+		padding: 20px 
 	path
 		fill: #fff
 		+tr(fill 1s)

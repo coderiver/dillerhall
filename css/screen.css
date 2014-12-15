@@ -1630,6 +1630,7 @@ ul.sorting a.is-active sup { visibility: visible; filter: progid:DXImageTransfor
 @media only screen and (max-width: 980px) { .comparison__section { padding: 30px 10px; } }
 .comparison__section:after { content: ""; position: absolute; bottom: 0; left: 50%; margin-left: -425px; width: 850px; height: 1px; background: #ededed; }
 .comparison__title { margin-bottom: 50px; font-size: 30px; font-family: "museosanscyrl_100", Arial, sans-serif; color: #cacaca; }
+@media only screen and (max-width: 768px) { .comparison__title { font-size: 24px; } }
 
 .compare-table-wrap { overflow-x: auto; }
 
@@ -1649,6 +1650,7 @@ ul.sorting a.is-active sup { visibility: visible; filter: progid:DXImageTransfor
 .has-animation .is-blue path { fill: #6b7a8f; }
 
 .circle { position: relative; display: inline-block; margin-left: 25px; }
+@media only screen and (max-width: 980px) { .circle { margin-left: 0; padding: 20px; } }
 .circle:first-child { margin-left: 0; }
 .circle svg.is-violet circle { stroke: #b48ead; }
 .circle svg.is-green circle { stroke: #4cd68a; }
@@ -1663,31 +1665,44 @@ ul.sorting a.is-active sup { visibility: visible; filter: progid:DXImageTransfor
 .circle__title { color: #26b8ef; font-family: "museosanscyrl_100", Arial, sans-serif; line-height: 1; font-size: 36px; }
 .circle__title sub { color: black; font-size: 14px; }
 .circle .labels { position: absolute; top: 0; left: 100%; margin-left: 22px; white-space: nowrap; }
+@media only screen and (max-width: 980px) { .circle .labels { margin-left: 10px; } }
+@media only screen and (max-width: 768px) { .circle .labels { left: 0; top: 100%; margin: 40px 0 0; } }
 
 .circle_big { position: relative; width: 250px; height: 250px; }
+@media only screen and (max-width: 768px) { .circle_big { margin-bottom: 130px; } }
 .circle_big .circle__in { position: absolute; left: 0; right: 0; bottom: 0; top: 0; text-align: center; line-height: 250px; }
 .circle_big .circle__in svg { display: inline-block; vertical-align: middle; }
 
 .circle_large { position: relative; width: 404px; height: 404px; background: url(../img/speed.png) 50% 33% no-repeat; }
+@media only screen and (max-width: 768px) { .circle_large { margin-bottom: 0; } }
+@media only screen and (max-width: 480px) { .circle_large { -ms-transform: scale(0.75); -webkit-transform: scale(0.75); transform: scale(0.75); } }
+@media only screen and (max-width: 480px) { .circle_large:first-child { margin-left: -51px; } }
 .circle_large .circle__in { position: absolute; left: 0; right: 0; bottom: 0; top: 0; text-align: center; line-height: 402px; }
 .circle_large .circle__in svg { display: inline-block; vertical-align: middle; }
+@media only screen and (max-width: 768px) { .circle_large .labels { top: 250px; } }
 
 .labels_three-cols { margin: 40px auto 0; max-width: 600px; -moz-column-count: 3; -webkit-column-count: 3; column-count: 3; }
+@media only screen and (max-width: 768px) { .labels { -moz-column-count: 3; -webkit-column-count: 3; column-count: 3; text-align: left; padding-left: 10px; } }
+@media only screen and (max-width: 480px) { .labels { -moz-column-count: 2; -webkit-column-count: 2; column-count: 2; } }
 .labels li { margin-bottom: 17px; }
 .labels .dot-color { margin-right: 18px; vertical-align: middle; }
 
 .triangle { display: inline-block; margin-left: -110px; vertical-align: bottom; }
+@media only screen and (max-width: 980px) { .triangle { margin-left: -130px; } }
+@media only screen and (max-width: 480px) { .triangle { margin-left: -209px; } }
 .triangle:first-child { margin-left: 0; }
 .triangle svg.is-violet polygon { stroke: #b48ead; }
 .triangle svg.is-green polygon { stroke: #4cd68a; }
 .triangle svg.is-yellow polygon { stroke: #ffd278; }
 .triangle svg.is-red polygon { stroke: #ef8f67; }
 .triangle svg.is-blue polygon { stroke: #6b7a8f; }
-.triangle polygon { fill: white; stroke-width: 2px; stroke-dasharray: 1000; stroke-dashoffset: 1000; }
+.triangle polygon { fill: none; stroke-width: 2px; stroke-dasharray: 1000; stroke-dashoffset: 1000; }
 
 .line { margin: 0 auto; width: 546px; }
-.line_horizontal { display: inline-block; vertical-align: bottom; margin-right: 11%; width: auto; }
-.line_horizontal:last-child { margin-right: 0; }
+@media only screen and (max-width: 980px) { .line { width: 90%; } }
+.line_vert { display: inline-block; vertical-align: bottom; margin-right: 11%; width: auto; }
+.line_vert:last-child { margin-right: 0; }
+@media only screen and (max-width: 768px) { .line_vert { margin-bottom: 30px; } }
 .line svg { display: block; }
 .line svg.is-violet line { stroke: #b48ead; }
 .line svg.is-green line { stroke: #4cd68a; }
@@ -1728,7 +1743,7 @@ ul.sorting a.is-active sup { visibility: visible; filter: progid:DXImageTransfor
 .ruler span { display: inline-block; position: relative; left: -3px; }
 
 .trans { display: inline-block; width: 13%; vertical-align: top; }
-@media only screen and (max-width: 980px) { .trans { width: auto; padding: 0 20px; } }
+@media only screen and (max-width: 980px) { .trans { width: auto; padding: 20px; } }
 .trans.is-violet .trans__icon i { background: #b48ead; }
 .trans.is-green .trans__icon i { background: #4cd68a; }
 .trans.is-yellow .trans__icon i { background: #ffd278; }
@@ -1744,12 +1759,12 @@ ul.sorting a.is-active sup { visibility: visible; filter: progid:DXImageTransfor
 .trans__info { font-family: "museosanscyrl_300", Arial, sans-serif; font-size: 14px; }
 
 .drive-type { display: inline-block; vertical-align: top; width: 13%; }
-@media only screen and (max-width: 980px) { .drive-type { width: auto; padding: 0 20px; } }
+@media only screen and (max-width: 980px) { .drive-type { width: auto; padding: 20px; } }
 .drive-type span { display: block; margin: 4px 0; font-size: 14px; font-family: "museosanscyrl_300", Arial, sans-serif; }
 .drive-type path { fill: white; -moz-transition: fill 1s; -o-transition: fill 1s; -webkit-transition: fill 1s; transition: fill 1s; }
 
 .place { display: inline-block; vertical-align: top; width: 13%; white-space: nowrap; }
-@media only screen and (max-width: 980px) { .place { width: auto; padding: 0 20px; } }
+@media only screen and (max-width: 980px) { .place { width: auto; padding: 20px; } }
 .place path { fill: white; -moz-transition: fill 1s; -o-transition: fill 1s; -webkit-transition: fill 1s; transition: fill 1s; }
 .place img { margin-left: 6px; }
 .place img:first-child { margin-left: 0; }
@@ -1757,7 +1772,7 @@ ul.sorting a.is-active sup { visibility: visible; filter: progid:DXImageTransfor
 .place__title span { display: block; color: #1bb4ed; font-size: 36px; }
 
 .laggage { display: inline-block; vertical-align: top; width: 13%; white-space: nowrap; }
-@media only screen and (max-width: 980px) { .laggage { width: auto; padding: 0 20px; } }
+@media only screen and (max-width: 980px) { .laggage { width: auto; padding: 20px; } }
 .laggage path { fill: white; -moz-transition: fill 1s; -o-transition: fill 1s; -webkit-transition: fill 1s; transition: fill 1s; }
 .laggage img { margin-left: 6px; }
 .laggage img:first-child { margin-left: 0; }
