@@ -532,10 +532,16 @@
 			border-color: $blue_h 
 	.ui-icon
 		+svg(select-act,5,14)
-
+.btn-del
+	+svg(close-gray,9,9)
+	+opacity(.5)
+	+tr(opacity .3s)
+	&:hover
+		+opacity(1)
+	
 .compare-head
 	position: relative
-	padding-top: 65px
+	padding-top: 40px
 	&.is-fixed
 		height: 184px
 		+r(980)
@@ -578,13 +584,16 @@
 	display: inline-block
 	vertical-align: top
 	width: 160px
-	padding-left: 25px
+	padding: 25px 0 0 25px
 	font-size: 14px
 	text-align: left
+	&:hover
+		.btn-del
+			display: block
 	.dot-color
 		position: absolute
 		left: 0
-		top: 0
+		top: 25px
 	&__img
 		height: 70px
 		line-height: 70px
@@ -603,6 +612,11 @@
 		+tr_c
 		&:hover 
 			color: $blue
+	.btn-del
+		position: absolute
+		right: 35px
+		top: 0
+		display: none
 $violet: #b48ead
 $green: #4cd68a
 $yellow: #ffd278
@@ -852,11 +866,13 @@ $blue: #6b7a8f
 			polygon
 				stroke: $blue
 	polygon
-		fill: none
+		fill: #fff
 		stroke-width: 2px
 		stroke-dasharray: 1000
 		stroke-dashoffset: 1000
 		//+animation(dash 3s linear forwards) 
+		+r(980)
+			fill: none
 .line
 	margin: 0 auto 
 	width: 546px
