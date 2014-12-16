@@ -4,11 +4,11 @@ html
 		include _head.jade
 		title title
 	body
-		.overlay
-		.popup-wrap.js-popup
+		.overlay.js-overlay(style="display:block")
+		.popup-wrap.js-popup(data-popup="js-popup-el", style="display:block")
 			.popup-form
 				.popup-form__inner
-					span.popup-form__close
+					span.popup-form__close.js-popup-close
 					form(action="")
 						span.popup-form__title Пользователь Андрей Кузнецов хочет подтвердить и завершить запрос на BMW 328i
 						.popup-form__row

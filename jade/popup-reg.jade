@@ -1,0 +1,35 @@
+doctype
+html
+	head
+		include _head.jade
+		title title
+	body
+		.overlay.js-overlay(style="display:block")
+		.popup-wrap.js-popup(data-popup="js-popup-enter", style="display:block")
+			.popup-form.popup-form_min
+				span.popup-form__close.js-popup-close
+				form.js-validate
+					span.popup-form__title Регистрация
+					.popup-form__box
+						h3 Зарегистрируйтесь для того, чтобы полностью воспользоваться всеми преимуществами нашего сайта
+					.popup-form__field
+						input(type="text", name="firstname", placeholder="Имя", required).input
+					.popup-form__field
+						input(type="email", name="email", placeholder="E-mail", required).input
+					.popup-form__field
+						input(type="tel", name="tel", placeholder="Телефон", required).input
+					button.btn(type="submit") Зарегистрироваться
+				.popup-form__bottom
+					h2 Плюсы регистрации на сайте
+					ul.popup-form__list
+						li
+							a(href="#").is-comp История сравнения
+						li
+							a(href="#").is-fav Добавление в избранные
+						li
+							a(href="#").is-rev История просмотров
+						li
+							a(href="#").is-del Подписка на новостную рассылку
+		include _footer.jade 
+
+

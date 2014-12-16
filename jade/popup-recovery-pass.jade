@@ -1,0 +1,20 @@
+doctype
+html
+	head
+		include _head.jade
+		title title
+	body
+		.overlay.js-overlay(style="display:block")
+		.popup-wrap.js-popup(data-popup="js-popup-enter", style="display:block")
+			.popup-form.popup-form_min
+				span.popup-form__close.js-popup-close
+				form.js-validate
+					span.popup-form__title Восстановить пароль
+					.popup-form__box
+						h3 Мы пришлем ваш новый пароль на указанный e-mail 
+					.popup-form__field
+						input.input(type="email", name="email", placeholder="E-mail" required)
+					button.btn(type="submit") Восстановить пароль
+		include _footer.jade 
+
+

@@ -769,7 +769,23 @@ h2.title
 				+f500
 			&:hover
 				color: #2db9ee 
-
+.request_search
+	padding-right: 30px
+	padding: 25px 30px 25px 0
+	.request__left
+		width: 155px
+		padding: 0 10px
+		text-align: center
+	.request__text
+		a
+			font-size: 14px
+			+f100
+			strong
+				+f300
+				font-weight: normal
+			span
+				color: #808080 
+				+f100
 .request-top
 	text-align: center
 	padding: 50px 20px 40px 20px
@@ -1431,8 +1447,17 @@ ul.sorting
 	&__check
 		padding-bottom: 40px
 	&__input
+		position: relative
 		margin-bottom: 20px
 		display: block
+label
+	&.has-error
+		position: absolute
+		top: 100%
+		left: 0
+		right: 0
+		color: #ee6e7d
+		font-size: 11px 
 	textarea
 		border: 1px solid #d2d2d2
 		+transition(border .3s, box-shadow .3s)
@@ -1547,6 +1572,26 @@ ul.sorting
 				&:hover
 					&:before
 						+box-shadow(0 0 5px rgba(27, 180, 237, 0.3))
+			+ label
+				+ .radio__title
+					&:after
+						visibility: visible
+						+opacity(1)
+					&:before
+						border-color: #2db9ee
+						z-index: 8
+					&:hover
+						&:before
+							+box-shadow(0 0 5px rgba(27, 180, 237, 0.3))
+	label
+		&.has-error
+			display: none !important
+	.has-error
+		+ .radio__title
+			color: #ee6e7d
+			&:before
+				border-color: #ee6e7d 
+
 .radio__title
 	display: inline-block
 	font-size: 14px
@@ -1567,7 +1612,7 @@ ul.sorting
 		content: ""
 		position: absolute
 		left: 3px
-		top: 3px
+		top: 6px
 		width: 10px
 		height: 10px
 		+border-radius(50%)
@@ -1575,7 +1620,7 @@ ul.sorting
 		visibility: hidden
 		+opacity(0)
 		will-change: opacity
-		+transition(opacity 0.2s linear, top 0.2s linear)
+		+tr_o
 
 .input_mod
 	height: 40px
@@ -2432,7 +2477,9 @@ ul.sorting
 	will-change: opacity 
 	z-index: 25
 	min-width: 320px 
+	display: none
 .popup-wrap
+	display: none
 	position: fixed
 	top: 0
 	left: 0
@@ -2716,6 +2763,8 @@ ul.sorting
 		+opacity(0.7)
 		+f300
 		font-size: 14px
+		&:hover
+			text-decoration: none
 	.btn
 		+f300
 	&__file
@@ -2745,6 +2794,15 @@ ul.sorting
 			cursor: pointer
 			position: relative
 			z-index: 1
+.popup-form__field
+	position: relative
+	.input
+		&.has-error
+			border-color: #ee6e7d 
+	label
+		&.has-error
+			text-align: center
+			color: #fff 
 .popup-sravnenie
 	max-width: 580px
 .popup

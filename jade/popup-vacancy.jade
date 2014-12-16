@@ -4,10 +4,10 @@ html
 		include _head.jade
 		title title
 	body
-		.overlay
-		.popup-wrap.js-popup
+		.overlay.js-overlay(style="display:block")
+		.popup-wrap.js-popup(data-popup="js-popup-el", style="display:block")
 			.popup-form.popup-form_min
-				span.popup-form__close
+				span.popup-form__close.js-popup-close
 				form(action="")
 					span.popup-form__title Откликнуться на вакансию
 					.popup-form__box

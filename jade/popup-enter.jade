@@ -1,0 +1,26 @@
+doctype
+html
+	head
+		include _head.jade
+		title title
+	body
+		.overlay.js-overlay(style="display:block")
+		.popup-wrap.js-popup(data-popup="js-popup-enter", style="display:block")
+			.popup-form.popup-form_min
+				span.popup-form__close.js-popup-close
+				form.js-validate
+					span.popup-form__title Вход
+					.popup-form__box
+						h3 Если вы уже зарегистрированы на нашем сайте, вам необходимо войти
+					.popup-form__field
+						input.input(type="email", placeholder="E-mail", name="email", required)
+					.popup-form__field
+						input.input(type="password", placeholder="Пароль", name="password", required)
+					.popup-form__btns
+						button.popup-form__btn 
+							span Зарегистрироваться
+						a(href="#").popup-form__link Забыли пароль?
+					button.btn(type="submit") Войти
+		include _footer.jade 
+
+

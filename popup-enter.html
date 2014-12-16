@@ -9,18 +9,23 @@
   </head>
   <body>
     <div style="display:block" class="overlay js-overlay"></div>
-    <div data-popup="js-popup-el" style="display:block" class="popup-wrap js-popup">
-      <div class="popup-form"><span class="popup-form__close js-popup-close"></span>
-        <div class="popup-form__inner">
-          <form action=""><span class="popup-form__main-title">Добавить автомобиль для сравнения</span>
-            <div class="search__label">
-              <div>
-                <input class="search__keyword input"><i class="search__icon"></i>
-                <button class="search__delete is-not"></button>
-              </div><i class="popup-form__plus"></i>
-            </div>
-          </form>
-        </div>
+    <div data-popup="js-popup-enter" style="display:block" class="popup-wrap js-popup">
+      <div class="popup-form popup-form_min"><span class="popup-form__close js-popup-close"></span>
+        <form class="js-validate"><span class="popup-form__title">Вход</span>
+          <div class="popup-form__box">
+            <h3>Если вы уже зарегистрированы на нашем сайте, вам необходимо войти</h3>
+          </div>
+          <div class="popup-form__field">
+            <input type="email" placeholder="E-mail" name="email" required class="input">
+          </div>
+          <div class="popup-form__field">
+            <input type="password" placeholder="Пароль" name="password" required class="input">
+          </div>
+          <div class="popup-form__btns">
+            <button class="popup-form__btn"><span>Зарегистрироваться</span></button><a href="#" class="popup-form__link">Забыли пароль?</a>
+          </div>
+          <button type="submit" class="btn">Войти</button>
+        </form>
       </div>
     </div>
     <div class="footer">

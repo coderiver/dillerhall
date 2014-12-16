@@ -488,3 +488,27 @@
 		+s(glass-big)
 		opacity: 0.5
 		+tr_o
+
+.search-popup
+	position: absolute
+	top: 100%
+	left: 0
+	right: 0
+	margin: 4px 0 0 
+	padding: 30px 
+	background: #fff
+	+br5
+	&:before
+		content: ""
+		position: absolute
+		left: 30px
+		top: -10px
+		+arr(15,10,#fff,t) 
+.search-popup__title
+	margin-bottom: -10px
+	font-size: 14px
+	+f300
+.search-popup__more
+	font-size: 14px
+	color: $blue !important
+	border-bottom: 1px dotted

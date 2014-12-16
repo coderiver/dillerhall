@@ -9,18 +9,17 @@
   </head>
   <body>
     <div style="display:block" class="overlay js-overlay"></div>
-    <div data-popup="js-popup-el" style="display:block" class="popup-wrap js-popup">
-      <div class="popup-form"><span class="popup-form__close js-popup-close"></span>
-        <div class="popup-form__inner">
-          <form action=""><span class="popup-form__main-title">Добавить автомобиль для сравнения</span>
-            <div class="search__label">
-              <div>
-                <input class="search__keyword input"><i class="search__icon"></i>
-                <button class="search__delete is-not"></button>
-              </div><i class="popup-form__plus"></i>
-            </div>
-          </form>
-        </div>
+    <div data-popup="js-popup-enter" style="display:block" class="popup-wrap js-popup">
+      <div class="popup-form popup-form_min"><span class="popup-form__close js-popup-close"></span>
+        <form class="js-validate"><span class="popup-form__title">Восстановить пароль</span>
+          <div class="popup-form__box">
+            <h3>Мы пришлем ваш новый пароль на указанный e-mail </h3>
+          </div>
+          <div class="popup-form__field">
+            <input type="email" name="email" placeholder="E-mail" required class="input">
+          </div>
+          <button type="submit" class="btn">Восстановить пароль</button>
+        </form>
       </div>
     </div>
     <div class="footer">

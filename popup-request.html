@@ -9,18 +9,18 @@
   </head>
   <body>
     <div style="display:block" class="overlay js-overlay"></div>
-    <div data-popup="js-popup-el" style="display:block" class="popup-wrap js-popup">
-      <div class="popup-form"><span class="popup-form__close js-popup-close"></span>
-        <div class="popup-form__inner">
-          <form action=""><span class="popup-form__main-title">Добавить автомобиль для сравнения</span>
-            <div class="search__label">
-              <div>
-                <input class="search__keyword input"><i class="search__icon"></i>
-                <button class="search__delete is-not"></button>
-              </div><i class="popup-form__plus"></i>
-            </div>
-          </form>
-        </div>
+    <div data-popup="js-popup-request" style="display:block" class="popup-wrap js-popup">
+      <div class="popup-form popup-form_min"><span class="popup-form__close js-popup-close"></span>
+        <form class="ja-validate"><span class="popup-form__title">Оставить запрос</span>
+          <div class="popup-form__box">
+            <h3>Вы оставляете запрос на автомобиль: <br><strong>BMW 320d xDrive Modern Line </strong></h3>
+            <h4><span>2.0 AT (360л.с.) бензин, задний привод, 6 МКП</span></h4>
+          </div>
+          <div class="popup-form__field">
+            <textarea placeholder="Оставить комментарий" name="message" required></textarea>
+          </div>
+          <button type="submit" class="btn">Отправить</button>
+        </form>
       </div>
     </div>
     <div class="footer">

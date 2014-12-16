@@ -587,6 +587,9 @@
 	padding: 25px 0 0 25px
 	font-size: 14px
 	text-align: left
+	&_add-item
+		padding: 0
+		width: 0
 	&:hover
 		.btn-del
 			display: block
@@ -617,6 +620,32 @@
 		right: 35px
 		top: 0
 		display: none
+.car-add
+	position: absolute
+	top: 55px
+	left: 15px
+	width: 40px
+	height: 40px
+	&:hover	
+		&:before,
+		&:after
+			background: $blue 
+	&:before,
+	&:after
+		content: ""
+		position: absolute
+		left: 50%
+		top: 50%
+		background: #ededed
+		+tr(background .2s)
+	&:before
+		margin: -1px 0 0 -9px 
+		width: 18px
+		height: 2px
+	&:after
+		margin: -9px 0 0 -1px
+		height: 18px
+		width: 2px
 $violet: #b48ead
 $green: #4cd68a
 $yellow: #ffd278

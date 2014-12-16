@@ -46,30 +46,30 @@ html
 			.comp-wrap.is-box
 				h2.title Ваши личные данные
 				p.comp-text Заполните информацию ниже, чтобы получить максимальный комфорт от использования нашего сервиса.
-				form(action="").form
+				form.form.js-validate
 					.form__inner
 						label.form__input
-							input(placeholder="Имя").input.input_mod
+							input(placeholder="Имя", type="text", name="firstname", required).input.input_mod
 						label.form__input
-							input(placeholder="Фамилия").input.input_mod
+							input(placeholder="Фамилия", type="text", name="lastname", required).input.input_mod
 						label.form__input
-							input(placeholder="E-mail").input.input_mod
+							input(placeholder="E-mail", type="email", name="email", required).input.input_mod
 						label.form__input
-							input(placeholder="Мобильный телефон").input.input_mod
+							input(placeholder="Мобильный телефон", type="tel", name="tel", required).input.input_mod
 						label.radio
-							input(type="radio", name="radio", value=" ")
+							input(type="radio", name="radio", required)
 							span.radio__title Женщина
 						label.radio
-							input(type="radio", name="radio", value=" ")
+							input(type="radio", name="radio", required)
 							span.radio__title Мужчина
 						label.form__input
-							input(placeholder="Возраст").input.input_mod
+							input(placeholder="Возраст", type="text").input.input_mod
 						label.form__input
 							textarea(placeholder="Ваши предпочтения в автомобилях")
 						label.form__input
-							input(type="password").input.input_mod
+							input(type="password", name="password", placeholder="Введите пароль" required).input.input_mod
 						label.form__input
-							input(type="password").input.input_mod
-					button.btn Полписаться
+							input(type="password", name="confirm_password", placeholder="Введите пароль еще раз" required5).input.input_mod
+					button.btn(type="submit") Полписаться
 			.push 
 		include _footer.jade 

@@ -4,9 +4,9 @@ html
 		include _head.jade
 		title title
 	body
-		.overlay
-		.popup-wrap.js-popup
-			span.popup-filter__close
+		.overlay.js-overlay(style="display:block")
+		.popup-wrap.js-popup(data-popup="js-popup-el", style="display:block")
+			span.popup-filter__close.js-popup-close
 			.popup
 				form.filter-wrap
 					span.popup__title Изменить фильтр

@@ -5,7 +5,107 @@ html
 		title index
 	body
 		.out
-			include _header_index.jade
+			//include _header_index.jade
+			header.header.header_absolute
+				.header__top
+					.header__key
+						button.js-toggle-nav(type="button")
+							i
+				//include _nav.jade
+				.nav.js-nav
+					.nav__in
+						.search-box
+							input.search-box__input(type="text",placeholder="Поиск")
+							button.search-box__btn(type="sumbit")
+							.search-popup
+									.search-popup__title Поиск по автомобилям
+									.request.request_search
+										.l-center
+											.request__left
+												a(href="#")
+													img(src="img/item/bmw-5series-hatchback2.png", alt="")
+											.request__center
+												p.request__text 
+													a(href="#")
+														strong BMW 
+														| 328i xDrive Modern Line 
+														span 2.0 AT (220л.с.) дизель, полный привод, 6 МКП, серый металлик, 
+									.request.request_search
+										.l-center
+											.request__left
+												a(href="#")
+													img(src="img/item/bmw-5series-hatchback2.png", alt="")
+											.request__center
+												p.request__text 
+													a(href="#")
+														strong BMW 
+														| 328i xDrive Modern Line 
+														span 2.0 AT (220л.с.) дизель, полный привод, 6 МКП, серый металлик, 
+									.request.request_search
+										.l-center
+											.request__left
+												a(href="#")
+													img(src="img/item/bmw-5series-hatchback2.png", alt="")
+											.request__center
+												p.request__text 
+													a(href="#")
+														strong BMW 
+														| 328i xDrive Modern Line 
+														span 2.0 AT (220л.с.) дизель, полный привод, 6 МКП, серый металлик, 
+									.to-center
+										a.search-popup__more(href="#") Показать еще авто
+						.nav__list
+							.nav__col
+								.nav__title
+									a(href="#") Главная
+							.nav__col
+								.nav__title
+									a(href="#") Новости индустрии
+								ul
+									li
+										a(href="#") Новости и акции дилеров
+							.nav__col
+								.nav__title.is-active
+									a(href="#") Каталог новых автомобилей
+								ul
+									li
+										a(href="#") Подобрать по характеристикам
+									li
+										a(href="#") Найти по названию модели
+									li
+										a(href="#") Автомобильные салоны
+							.nav__col
+								.nav__title
+									a(href="#") О проекте
+								ul
+									li
+										a(href="#") Как это работает
+									li
+										a(href="#") Для дилеров
+									li
+										a(href="#") Новости проекта
+									li
+										a(href="#")
+									li
+										a(href="#")
+							.nav__col
+								.nav__title
+									a(href="#") Обратная связь
+								ul
+									li
+										a(href="#") Стать партнёром
+									li
+										a(href="#") Вакансии
+									li
+										a(href="#")
+									li
+										a(href="#")
+									li
+										a(href="#")
+							.nav__col
+								a.nav__user(href="#")
+									i.icon-lock 
+									|Личный кабинет 
 			.promo.promo_index
 				.promo__img(style="background-image: url(img/index-bg.jpg)")
 				.promo__in

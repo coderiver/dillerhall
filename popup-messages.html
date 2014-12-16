@@ -8,9 +8,9 @@
     <title>title</title>
   </head>
   <body>
-    <div class="overlay"></div>
-    <div class="popup-wrap js-popup">
-      <div class="popup-form popup-form_min"><span class="popup-form__close"></span>
+    <div style="display:block" class="overlay js-overlay"></div>
+    <div data-popup="js-popup-el" style="display:block" class="popup-wrap js-popup">
+      <div class="popup-form popup-form_min"><span class="popup-form__close js-popup-close"></span>
         <form action=""><span class="popup-form__title">Отменить запрос</span>
           <div class="popup-form__box">
             <h3>Пожалуйста, выберите автомобиль, запрос на который вы хотите отменить</h3>
@@ -31,7 +31,7 @@
           <button class="btn">Отменить запрос</button>
         </form>
       </div>
-      <div class="popup-form popup-form_min"><span class="popup-form__close"></span>
+      <div class="popup-form popup-form_min"><span class="popup-form__close js-popup-close"></span>
         <form action=""><span class="popup-form__title">Подтвердить и завершить запрос</span>
           <div class="popup-form__box">
             <h3>Выберите автмобиль, запрос на который вы хотите подтвердить</h3>
@@ -52,7 +52,7 @@
           <button class="btn">Завершить запрос</button>
         </form>
       </div>
-      <div class="popup-form popup-form_min"><span class="popup-form__close"></span>
+      <div class="popup-form popup-form_min"><span class="popup-form__close js-popup-close"></span>
         <form action=""><span class="popup-form__title">Спасибо! </span>
           <div class="popup-form__box">
             <h3>Вы успешно подтвердили и завершили свой запрос на автомобиль <strong>BMW 320d xDrive Modern Line. </strong>Спасибо, что выбрали нас!</h3>
@@ -108,10 +108,9 @@
     <script src="js/lib/jquery-ui.min.js"></script>
     <script src="js/lib/jquery.multiselect.min.js"></script>
     <script src="js/lib/jquery-ui-slider.js"></script>
-    <script src="js/lib/cycle.js"></script>
     <script src="js/lib/slick.js"></script>
-    <script src="js/lib/jquery.inview.min.js"></script>
-    <script src="js/lib/highcharts.js"></script>
+    <script src="js/lib/jquery.validate.js"></script>
+    <script src="js/lib/jquery.placeholder.js"></script>
     <script src="js/valera.js"></script>
     <script src="js/valik.js"></script>
     <script src="js/common.js"></script>

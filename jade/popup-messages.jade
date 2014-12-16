@@ -4,10 +4,10 @@ html
 		include _head.jade
 		title title
 	body
-		.overlay
-		.popup-wrap.js-popup
+		.overlay.js-overlay(style="display:block")
+		.popup-wrap.js-popup(data-popup="js-popup-el", style="display:block")
 			.popup-form.popup-form_min
-				span.popup-form__close
+				span.popup-form__close.js-popup-close
 				form(action="")
 					span.popup-form__title Отменить запрос
 					.popup-form__box
@@ -23,7 +23,7 @@ html
 						textarea(name="", cols="30", rows="10", placeholder="Сообщение")
 					button.btn Отменить запрос
 			.popup-form.popup-form_min
-				span.popup-form__close
+				span.popup-form__close.js-popup-close
 				form(action="")
 					span.popup-form__title Подтвердить и завершить запрос
 					.popup-form__box
@@ -39,7 +39,7 @@ html
 						textarea(name="", cols="30", rows="10", placeholder="Комментарий")
 					button.btn Завершить запрос
 			.popup-form.popup-form_min
-				span.popup-form__close
+				span.popup-form__close.js-popup-close
 				form(action="")
 					span.popup-form__title Спасибо! 
 					.popup-form__box

@@ -36,6 +36,17 @@
             <div class="search-box">
               <input type="text" placeholder="Поиск" class="search-box__input">
               <button type="sumbit" class="search-box__btn"></button>
+              <div class="search-popup">
+                <div class="request">
+                  <div class="l-center">
+                    <div class="request__right"><span class="request__info">25 сообщений, последнее: 01.05.14, <span class="request__time">15:41</span></span><a href="#" class="request__link">Новое сообщение</a></div>
+                    <div class="request__left"><a href="#"><img src="img/item/bmw-5series-hatchback2.png" alt=""></a></div>
+                    <div class="request__center"><span class="request__title">Сергей Николаев, Мультимоторс</span>
+                      <p class="request__text"><a href="#"><span>5 запросов, последний: </span>BMW 320d xDrive Modern Line  2.0 AT (220л.с.) дизель, полный привод, 6 МКП, красный металлик, $ 44 500</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="nav__list">
               <div class="nav__col">
@@ -83,40 +94,40 @@
       <div class="comp-wrap is-box">
         <h2 class="title">Ваши личные данные</h2>
         <p class="comp-text">Заполните информацию ниже, чтобы получить максимальный комфорт от использования нашего сервиса.</p>
-        <form action="" class="form">
+        <form class="form js-validate">
           <div class="form__inner">
             <label class="form__input">
-              <input placeholder="Имя" class="input input_mod">
+              <input placeholder="Имя" type="text" name="firstname" required class="input input_mod">
             </label>
             <label class="form__input">
-              <input placeholder="Фамилия" class="input input_mod">
+              <input placeholder="Фамилия" type="text" name="lastname" required class="input input_mod">
             </label>
             <label class="form__input">
-              <input placeholder="E-mail" class="input input_mod">
+              <input placeholder="E-mail" type="email" name="email" required class="input input_mod">
             </label>
             <label class="form__input">
-              <input placeholder="Мобильный телефон" class="input input_mod">
+              <input placeholder="Мобильный телефон" type="tel" name="tel" required class="input input_mod">
             </label>
             <label class="radio">
-              <input type="radio" name="radio" value=" "><span class="radio__title">Женщина</span>
+              <input type="radio" name="radio" required><span class="radio__title">Женщина</span>
             </label>
             <label class="radio">
-              <input type="radio" name="radio" value=" "><span class="radio__title">Мужчина</span>
+              <input type="radio" name="radio" required><span class="radio__title">Мужчина</span>
             </label>
             <label class="form__input">
-              <input placeholder="Возраст" class="input input_mod">
+              <input placeholder="Возраст" type="text" class="input input_mod">
             </label>
             <label class="form__input">
               <textarea placeholder="Ваши предпочтения в автомобилях"></textarea>
             </label>
             <label class="form__input">
-              <input type="password" class="input input_mod">
+              <input type="password" name="password" placeholder="Введите пароль" required class="input input_mod">
             </label>
             <label class="form__input">
-              <input type="password" class="input input_mod">
+              <input type="password" name="confirm_password" placeholder="Введите пароль еще раз" required5 class="input input_mod">
             </label>
           </div>
-          <button class="btn">Полписаться</button>
+          <button type="submit" class="btn">Полписаться</button>
         </form>
       </div>
       <div class="push"></div>
@@ -169,10 +180,9 @@
     <script src="js/lib/jquery-ui.min.js"></script>
     <script src="js/lib/jquery.multiselect.min.js"></script>
     <script src="js/lib/jquery-ui-slider.js"></script>
-    <script src="js/lib/cycle.js"></script>
     <script src="js/lib/slick.js"></script>
-    <script src="js/lib/jquery.inview.min.js"></script>
-    <script src="js/lib/highcharts.js"></script>
+    <script src="js/lib/jquery.validate.js"></script>
+    <script src="js/lib/jquery.placeholder.js"></script>
     <script src="js/valera.js"></script>
     <script src="js/valik.js"></script>
     <script src="js/common.js"></script>

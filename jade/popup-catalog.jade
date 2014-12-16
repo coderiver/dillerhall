@@ -4,8 +4,8 @@ html
 		include _head.jade
 		title title
 	body
-		.overlay
-		.popup-wrap.js-popup
+		.overlay.js-overlay(style="display:block")
+		.popup-wrap.js-popup(data-popup="js-popup-el", style="display:block")
 			.popup
 				.popup__body
 					span.popup__close

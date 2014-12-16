@@ -8,10 +8,10 @@
     <title>title</title>
   </head>
   <body>
-    <div class="overlay"></div>
-    <div class="popup-wrap js-popup">
+    <div style="display:block" class="overlay js-overlay"></div>
+    <div data-popup="js-popup-el" style="display:block" class="popup-wrap js-popup">
       <div class="popup-form">
-        <div class="popup-form__inner"><span class="popup-form__close"></span>
+        <div class="popup-form__inner"><span class="popup-form__close js-popup-close"></span>
           <form action=""><span class="popup-form__title">Пользователь Андрей Кузнецов хочет подтвердить и завершить запрос на BMW 328i</span>
             <div class="popup-form__row">
               <h3>Можно по-быстрее, а то мне уже не терпиться</h3>
@@ -69,10 +69,9 @@
     <script src="js/lib/jquery-ui.min.js"></script>
     <script src="js/lib/jquery.multiselect.min.js"></script>
     <script src="js/lib/jquery-ui-slider.js"></script>
-    <script src="js/lib/cycle.js"></script>
     <script src="js/lib/slick.js"></script>
-    <script src="js/lib/jquery.inview.min.js"></script>
-    <script src="js/lib/highcharts.js"></script>
+    <script src="js/lib/jquery.validate.js"></script>
+    <script src="js/lib/jquery.placeholder.js"></script>
     <script src="js/valera.js"></script>
     <script src="js/valik.js"></script>
     <script src="js/common.js"></script>

@@ -1,0 +1,24 @@
+doctype
+html
+	head
+		include _head.jade
+		title title
+	body
+		.overlay.js-overlay(style="display:block")
+		.popup-wrap.js-popup(data-popup="js-popup-request", style="display:block")
+			.popup-form.popup-form_min
+				span.popup-form__close.js-popup-close
+				form.ja-validate
+					span.popup-form__title Оставить запрос
+					.popup-form__box
+						h3 Вы оставляете запрос на автомобиль: 
+							br
+							strong BMW 320d xDrive Modern Line 
+						h4
+							span 2.0 AT (360л.с.) бензин, задний привод, 6 МКП
+					.popup-form__field
+						textarea(placeholder="Оставить комментарий", name="message", required)
+					button.btn(type="submit") Отправить
+		include _footer.jade 
+
+

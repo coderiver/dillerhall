@@ -9,17 +9,31 @@
   </head>
   <body>
     <div style="display:block" class="overlay js-overlay"></div>
-    <div data-popup="js-popup-el" style="display:block" class="popup-wrap js-popup">
-      <div class="popup-form"><span class="popup-form__close js-popup-close"></span>
-        <div class="popup-form__inner">
-          <form action=""><span class="popup-form__main-title">Добавить автомобиль для сравнения</span>
-            <div class="search__label">
-              <div>
-                <input class="search__keyword input"><i class="search__icon"></i>
-                <button class="search__delete is-not"></button>
-              </div><i class="popup-form__plus"></i>
-            </div>
-          </form>
+    <div data-popup="js-popup-enter" style="display:block" class="popup-wrap js-popup">
+      <div class="popup-form popup-form_min"><span class="popup-form__close js-popup-close"></span>
+        <form action=""><span class="popup-form__title">Регистрация</span>
+          <div class="popup-form__box">
+            <h3>Зарегистрируйтесь для того, чтобы полностью воспользоваться всеми преимуществами нашего сайта</h3>
+          </div>
+          <div class="popup-form__field">
+            <input placeholder="Имя" class="input">
+          </div>
+          <div class="popup-form__field">
+            <input placeholder="E-mail" class="input">
+          </div>
+          <div class="popup-form__field">
+            <input placeholder="Телефон" class="input">
+          </div>
+          <button class="btn">Зарегистрироваться</button>
+        </form>
+        <div class="popup-form__bottom">
+          <h2>Плюсы регистрации на сайте</h2>
+          <ul class="popup-form__list">
+            <li><a href="#" class="is-comp">История сравнения</a></li>
+            <li><a href="#" class="is-fav">Добавление в избранные</a></li>
+            <li><a href="#" class="is-rev">История просмотров</a></li>
+            <li><a href="#" class="is-del">Подписка на новостную рассылку</a></li>
+          </ul>
         </div>
       </div>
     </div>
@@ -71,9 +85,10 @@
     <script src="js/lib/jquery-ui.min.js"></script>
     <script src="js/lib/jquery.multiselect.min.js"></script>
     <script src="js/lib/jquery-ui-slider.js"></script>
+    <script src="js/lib/cycle.js"></script>
     <script src="js/lib/slick.js"></script>
-    <script src="js/lib/jquery.validate.js"></script>
-    <script src="js/lib/jquery.placeholder.js"></script>
+    <script src="js/lib/jquery.inview.min.js"></script>
+    <script src="js/lib/highcharts.js"></script>
     <script src="js/valera.js"></script>
     <script src="js/valik.js"></script>
     <script src="js/common.js"></script>
