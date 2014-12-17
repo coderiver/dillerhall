@@ -150,46 +150,44 @@ html
 					.l-center.l-center_width 
 						.l-cols
 							.l-col2
-								.promo__item
-									a(href="#")
-										img(src="img/promo1.png", alt="img")
-										span Подобрать 
-											br 
-											| по характеристикам
+								a(href="#").promo__item
+									img(src="img/promo1.png", alt="img")
+									span Подобрать 
+										br 
+										| по характеристикам
 							.l-col2
-								.promo__item
-									a(href="#")
-										img(src="img/promo2.png", alt="img")
-										span Изучить 
-											br 
-											| модельный ряд
-			.banner.is-blue-dark
+								a(href="#").promo__item
+									img(src="img/promo2.png", alt="img")
+									span Изучить 
+										br 
+										| модельный ряд
+			a.banner.is-blue-dark(href="#")
 				img(src="img/link-img1.jpg", alt="img") 
 				.banner__wrap
 					.banner__in
-						a.banner__link(href="#") Автомобильные салоны в Беларуси
+						.banner__link Автомобильные салоны в Беларуси
 							i.arr-next-white
 			.l-center.l-center_width
 				.l-cols.l-cols_news
 					.l-col2
 						a.link-section(href="#") Новости индустрии
 						.news-item-wrap
-							.news-item
+							a.news-item(href="#")
 								.meta 15 сентября, 2014 / События
-								a.link-title(href="#") Мы запустили новый проект! Смотрите какой клевый!
-							.news-item
+								.link-title Мы запустили новый проект! Смотрите какой клевый!
+							a.news-item(href="#")
 								.meta 15 сентября, 2014 / События
-								a.link-title(href="#") Мы запустили новый проект! Смотрите какой клевый!
+								.link-title Мы запустили новый проект! Смотрите какой клевый!
 						a.link-all(href="#") Читать все новости
 					.l-col2
 						a.link-section(href="#") Новости индустрии
 						.news-item-wrap
-							.news-item
+							a.news-item(href="#")
 								.meta 15 сентября, 2014 / События
-								a.link-title(href="#") Не управлять, а править. Новый BMW X5
-							.news-item
+								.link-title Не управлять, а править. Новый BMW X5
+							a.news-item(href="#")
 								.meta 15 сентября, 2014 / События
-								a.link-title(href="#") Концепт BMW M 4 Купе: подлинный BMW M
+								.link-title Концепт BMW M 4 Купе: подлинный BMW M
 						a.link-all(href="#") Читать все новости
 			.push 
 		include _footer.jade 

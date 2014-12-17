@@ -94,13 +94,17 @@
 			order: 3
 	&__created
 		float: right
+		color: #7f7f7f
+		+tr_c
+		&:hover
+			color: $blue 
 		+r(768)
 			float: none
 			margin-bottom: 12px
 			order: 2
-		a
+		span
 			color: #000
-			+tr_color
+			+tr_c
 			&:hover
 				color: $blue 
 	.soc
