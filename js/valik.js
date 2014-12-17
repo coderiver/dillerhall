@@ -72,6 +72,51 @@ $(document).ready(function() {
 			values: [ 11, 41 ]
 		});
 	});
+	function ui_slider() {
+        $(".js-ui-slider").each(function(){
+            var slider = $(this).find(".js-ui-slider-main"),
+            	inputFrom = $(this).find(".js-ui-slider-from"),
+            	inputTo = $(this).find(".js-ui-slider-to"),
+            	maxVal = slider.attr("data-max"),
+            	minVal = slider.attr("data-min"),
+            	stepVal = slider.attr("data-step");
+            slider.slider({
+                range: true,
+                min: minVal,
+                max: maxVal,
+                step: stepVal,
+                values: [ minVal, maxVal ],
+                slide: function( event, ui ) {
+                    $(this).find(".ui-slider-handle").html("<span></span>");
+                    //var handle_0 = $(this).find(".ui-slider-range").next().find("span")
+                    //var handle_1 = $(this).find(".ui-slider-range").next().next().find("span");
+                    inputFrom.val(ui.values[0]);
+                    inputTo.val(ui.values[1]);
+                    //handle_0.text(ui.values[0]);
+                    //handle_1.text(ui.values[1]);
+                }
+            });
+            //console.log(handle_0);
+            //console.log(handle_1);
+            $(this).find(".ui-slider-handle").html("<span></span>");
+            //var handle_0 = $(this).find(".ui-slider-range").next().find("span")
+            //var handle_1 = $(this).find(".ui-slider-range").next().next().find("span");
+            //handle_0.text(slider.slider( "values", 0 ));
+            //handle_1.text(slider.slider( "values", 1 ));
+            inputFrom.val(slider.slider( "values", 0 ));
+            inputTo.val(slider.slider( "values", 1 ));
+        });
+    }
+    ui_slider();
+    $(".js-reset-range").on("click",function(){
+    	var slider = $(this).parents(".js-ui-slider").find(".js-ui-slider-main"),
+    		maxVal = slider.attr("data-max"),
+            minVal = slider.attr("data-min");
+    	slider.slider( "values", [ minVal, maxVal ] );
+    	$(this).parents(".js-ui-slider").find(".js-ui-slider-from").val(minVal);
+    	$(this).parents(".js-ui-slider").find(".js-ui-slider-to").val(maxVal);
+    	return false;
+    });
 	//stores
 	$('.js-graph').on('click', function() {
 		$('.js-hidden').slideToggle('slow');

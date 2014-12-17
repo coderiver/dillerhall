@@ -24,14 +24,48 @@
               <input type="text" placeholder="Поиск" class="search-box__input">
               <button type="sumbit" class="search-box__btn"></button>
               <div class="search-popup">
-                <div class="request">
-                  <div class="l-center">
-                    <div class="request__right"><span class="request__info">25 сообщений, последнее: 01.05.14, <span class="request__time">15:41</span></span><a href="#" class="request__link">Новое сообщение</a></div>
-                    <div class="request__left"><a href="#"><img src="img/item/bmw-5series-hatchback2.png" alt=""></a></div>
-                    <div class="request__center"><span class="request__title">Сергей Николаев, Мультимоторс</span>
-                      <p class="request__text"><a href="#"><span>5 запросов, последний: </span>BMW 320d xDrive Modern Line  2.0 AT (220л.с.) дизель, полный привод, 6 МКП, красный металлик, $ 44 500</a></p>
+                <div class="search-popup__section">
+                  <div class="search-popup__title">Поиск по автомобилям</div>
+                  <div class="request request_search">
+                    <div class="l-center">
+                      <div class="request__left"><a href="#"><img src="img/item/bmw-5series-hatchback2.png" alt=""></a></div>
+                      <div class="request__center">
+                        <p class="request__text"><a href="#"><strong>BMW </strong>328i xDrive Modern Line <span>2.0 AT (220л.с.) дизель, полный привод, 6 МКП, серый металлик, </span></a></p>
+                      </div>
                     </div>
                   </div>
+                  <div class="request request_search">
+                    <div class="l-center">
+                      <div class="request__left"><a href="#"><img src="img/item/bmw-5series-hatchback2.png" alt=""></a></div>
+                      <div class="request__center">
+                        <p class="request__text"><a href="#"><strong>BMW </strong>328i xDrive Modern Line <span>2.0 AT (220л.с.) дизель, полный привод, 6 МКП, серый металлик, </span></a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="request request_search">
+                    <div class="l-center">
+                      <div class="request__left"><a href="#"><img src="img/item/bmw-5series-hatchback2.png" alt=""></a></div>
+                      <div class="request__center">
+                        <p class="request__text"><a href="#"><strong>BMW </strong>328i xDrive Modern Line <span>2.0 AT (220л.с.) дизель, полный привод, 6 МКП, серый металлик, </span></a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="to-center"><a href="#" class="search-popup__more">Показать еще авто</a></div>
+                </div>
+                <div class="search-popup__section">
+                  <div class="search-popup__title">Поиск по сайту</div>
+                  <ul class="post-wrap post-wrap_small">
+                    <li class="post"><a href="#" class="post__title"><span>BMW </span>3 series</a>
+                      <p>Седан среднего класса <span>BMW </span>3-Series (F30) дебютировал в 2011 году, но продажи стартовали годом позже. По габаритным размерам «тройка» стала на 93 мм длиннее, на 6 мм шире и на 8 мм выше своего предшественника (<span>BMW </span>E90). Колесная база увеличилась на 50 мм,а объем... </p><span class="post__small">BMW 3 series /</span>
+                    </li>
+                    <li class="post"><a href="#" class="post__title"><span>BMW </span>3 series</a>
+                      <p>Седан среднего класса <span>BMW </span>3-Series (F30) дебютировал в 2011 году, но продажи стартовали годом позже. По габаритным размерам «тройка» стала на 93 мм длиннее, на 6 мм шире и на 8 мм выше своего предшественника (<span>BMW </span>E90). Колесная база увеличилась на 50 мм,а объем... </p><span class="post__small">BMW 3 series /</span>
+                    </li>
+                    <li class="post"><a href="#" class="post__title"><span>BMW </span>3 series</a>
+                      <p>Седан среднего класса <span>BMW </span>3-Series (F30) дебютировал в 2011 году, но продажи стартовали годом позже. По габаритным размерам «тройка» стала на 93 мм длиннее, на 6 мм шире и на 8 мм выше своего предшественника (<span>BMW </span>E90). Колесная база увеличилась на 50 мм,а объем... </p><span class="post__small">BMW 3 series /</span>
+                    </li>
+                  </ul>
+                  <div class="to-center"><a href="#" class="search-popup__more">Показать еще</a></div>
                 </div>
               </div>
             </div>
@@ -80,25 +114,65 @@
       </header>
       <form class="filter-wrap">
         <div class="filter"><span class="filter__title">Уже определились с маркой автомобиля?</span>
-          <div class="filter__row"><a href="#" class="filter__close"></a>
+          <div class="filter__row"><a href="#" class="filter__close js-uncheck-multi"></a>
             <div class="select select_blue">
-              <select class="js-select-single">
-                <option value="">Нет статуса</option>
-                <option value="">Есть статус</option>
-                <option value="">Нет статуса</option>
-                <option value="">Ой все!</option>
+              <select multiple="multiple" data-placeholder="Выбрать марку " class="js-select-multi">
+                <option value="Alfa Romeo">Alfa Romeo </option>
+                <option value="Audi">Audi</option>
+                <option value="Bentley">	Bentley</option>
+                <option value="BMW">	BMW</option>
+                <option value="Cadillac">Cadillac</option>
+                <option value="Chery">Chery</option>
+                <option value="Chevrolet">Chevrolet </option>
+                <option value="Chrysler">Chrysler</option>
+                <option value="Citroen">Citroen </option>
+                <option value="Dacia">Dacia </option>
+                <option value="Daewoo">Daewoo </option>
+                <option value="Dodge">Dodge </option>
+                <option value="Fiat">Fiat </option>
+                <option value="Ford">Ford </option>
+                <option value="Geely">Geely </option>
+                <option value="Great Wall">Great Wall </option>
+                <option value="Honda">Honda </option>
+                <option value="Hyundai">Hyundai </option>
+                <option value="Jaguar">Jaguar </option>
+                <option value="Jeep">Jeep </option>
+                <option value="Kia">Kia </option>
+                <option value="Lad">Lada</option>
+                <option value="Lanci">Lancia</option>
+                <option value="Land Rover">Land Rover </option>
+                <option value="Mazda">Mazda </option>
+                <option value="Mercedes-Benz">Mercedes-Benz </option>
+                <option value="M">MG</option>
+                <option value="Mini">Mini </option>
+                <option value="Mitsubish">Mitsubishi</option>
+                <option value="Nissa">Nissan</option>
+                <option value="Opel">Opel </option>
+                <option value="Peugeot">Peugeot </option>
+                <option value="Porsche">Porsche </option>
+                <option value="Renault">Renault </option>
+                <option value="Samand">Samand </option>
+                <option value="Seat">Seat </option>
+                <option value="SsangYong">SsangYong </option>
+                <option value="Subaru">Subaru </option>
+                <option value="Suzuki">Suzuki </option>
+                <option value="Toyota">Toyota</option>
+                <option value="Uaz ">Uaz </option>
+                <option value="Volkswagen ">Volkswagen </option>
+                <option value="Volvo">Volvo</option>
+                <option value="Zaz">Zaz</option>
               </select>
             </div>
           </div>
         </div>
-        <div class="filter filter__amount"><span class="filter__title">Цена в <span>долларах</span>:</span>
+        <div class="filter filter__amount js-ui-slider"><span class="filter__title">Цена в <span>долларах</span>:</span>
           <div class="filter__box">
-            <input class="input"><span>-</span>
-            <input class="input">
+            <input class="input js-ui-slider-from"><span>-</span>
+            <input class="input js-ui-slider-to">
           </div>
-          <div class="filter__row"><a href="#" class="filter__close"></a>
+          <div class="filter__row"><a href="#" class="filter__close js-reset-range"></a>
             <div class="filter__range">
-              <div id="slider" class="range"></div>
+              <div data-min="0" data-max="100000" data-step="500" class="range js-ui-slider-main"></div>
             </div>
           </div>
         </div>

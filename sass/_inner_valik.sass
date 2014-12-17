@@ -173,6 +173,7 @@
 		display: block
 //poisk		
 .search
+	position: relative
 	padding: 87px 40px 70px
 	+r(768)
 		padding: 60px 40px 60px 
@@ -184,16 +185,12 @@
 		color: #1bb4ed
 		margin-bottom: 9px
 	&__label
+		position: relative
 		max-width: 592px
 		margin: 0 auto 36px
 		&.is-active
 			div
 				+opacity(1)
-		div
-			position: relative
-			display: block
-			+opacity(0.8)
-			will-change: opacity
 		&_mod
 			.input
 				height: 70px
@@ -206,6 +203,11 @@
 				+s(close-big)
 				margin-top: -12px
 				right: 23px
+	&__form
+		position: relative
+		display: block
+		+opacity(0.8)
+		will-change: opacity
 	&__icon
 		+svg(glass-act, 18, 18)
 		position: absolute
@@ -240,10 +242,80 @@
 			will-change: opacity
 			&:hover
 				+opacity(0.8)
-	ul
+	&__tabs
 		font-size: 0
+		li
+			display: inline-block
+.search__popup
+	position: absolute
+	top: 46px
+	left: 0
+	right: 0
+	z-index: 10
+	border: 1px solid $blue
+	padding: 20px 
+	+br5
+	background: #fff 
+	&:before
+		content: ""
+		position: absolute
+		left: 20px
+		top: -10px
+		z-index: 2
+		+arr(14,10,#fff,t) 
+	&:after
+		content: ""
+		position: absolute
+		left: 19px
+		top: -12px
+		+arr(16,12,$blue,t) 
+.search__result-list
+	margin-bottom: 16px
+	border-bottom: 1px solid $border_light 
+	padding: 0 0 5px 
 	li
-		display: inline-block
+		display: block
+		font-size: 14px
+		+f100
+	strong
+		font-weight: normal
+		+f500
+	a
+		color: #000
+		+tr_c
+		&:hover
+			color: $blue 
+		strong
+			+f300
+.search__result-post
+	strong
+		margin-bottom: 5px
+		font-weight: normal
+		+f500
+	li
+		display: block
+		margin-bottom: 20px
+		font-size: 14px
+		+f100
+		&:first-child
+			margin-bottom: 5px
+	a
+		color: #000
+		+tr_c
+		&:hover
+			color: $blue 
+		strong
+			font-weight: normal
+			+f300
+	span
+		display: block
+		color: #b5b5b5
+		font-size: 12px
+		+f100
+.search__result-more
+	text-decoration: underline
+	color: $blue
+	font-size: 12px 
 //poisk - btn
 .pills
 	color: #000
@@ -306,6 +378,14 @@
 		+opacity(0.8)
 		display: inline-block
 		will-change: opacity
+.post-wrap_small
+	padding: 0
+	.post
+		border-top: 0
+		border-bottom: 1px solid #e9e9e9 
+		padding: 24px 10px 17px 10px 
+		.post__title
+			font-size: 14px
 //poisk item		
 .search-row
 	padding: 12px 0 80px 0
@@ -2321,7 +2401,7 @@ label
 			+tr_op
 			+opacity(0)
 			will-change: opacity
-.ui-multiselect-single
+.ui-multiselect-menu
 	border: 1px solid #1bb4ed
 	&:before
 		z-index: 5 
@@ -2803,6 +2883,26 @@ label
 		&.has-error
 			text-align: center
 			color: #fff 
+.popup-form__file-name
+	text-align: left
+	margin: 0 auto 15px 
+	max-width: 400px
+	a
+		position: relative
+		display: inline-block
+		padding-right: 30px
+		color: #fff
+		+opacity(.7)
+		+tr_o
+		font-size: 14px
+		&:hover
+			+opacity(1)
+		&:after
+			content: ""
+			position: absolute
+			right: 0
+			top: 7px
+			+svg(close-white,9,9) 
 .popup-sravnenie
 	max-width: 580px
 .popup

@@ -10,25 +10,66 @@ html
 				.filter
 					span.filter__title Уже определились с маркой автомобиля?
 					.filter__row
-						a(href="#").filter__close
+						a(href="#").filter__close.js-uncheck-multi
 						.select.select_blue
-							select.js-select-single
-								option(value="") Нет статуса
-								option(value="") Есть статус
-								option(value="") Нет статуса
-								option(value="") Ой все!
-				.filter.filter__amount
+							select.js-select-multi(multiple="multiple", data-placeholder="Выбрать марку ")
+								option(value="Alfa Romeo") Alfa Romeo 
+								option(value="Audi") Audi
+								option(value="Bentley")	Bentley
+								option(value="BMW")	BMW
+								option(value="Cadillac") Cadillac
+								option(value="Chery") Chery
+								option(value="Chevrolet") Chevrolet 
+								option(value="Chrysler") Chrysler
+								option(value="Citroen") Citroen 
+								option(value="Dacia") Dacia 
+								option(value="Daewoo") Daewoo 
+								option(value="Dodge") Dodge 
+								option(value="Fiat") Fiat 
+								option(value="Ford") Ford 
+								option(value="Geely") Geely 
+								option(value="Great Wall") Great Wall 
+								option(value="Honda") Honda 
+								option(value="Hyundai") Hyundai 
+								option(value="Jaguar") Jaguar 
+								option(value="Jeep") Jeep 
+								option(value="Kia") Kia 
+								option(value="Lad") Lada
+								option(value="Lanci") Lancia
+								option(value="Land Rover") Land Rover 
+								option(value="Mazda") Mazda 
+								option(value="Mercedes-Benz") Mercedes-Benz 
+								option(value="M") MG
+								option(value="Mini") Mini 
+								option(value="Mitsubish") Mitsubishi
+								option(value="Nissa") Nissan
+								option(value="Opel") Opel 
+								option(value="Peugeot") Peugeot 
+								option(value="Porsche") Porsche 
+								option(value="Renault") Renault 
+								option(value="Samand") Samand 
+								option(value="Seat") Seat 
+								option(value="SsangYong") SsangYong 
+								option(value="Subaru") Subaru 
+								option(value="Suzuki") Suzuki 
+								option(value="Toyota") Toyota
+								option(value="Uaz ") Uaz 
+								option(value="Volkswagen ") Volkswagen 
+								option(value="Volvo") Volvo
+								option(value="Zaz") Zaz
+
+				.filter.filter__amount.js-ui-slider
 					span.filter__title Цена в 
 						span долларах
 						| :
 					.filter__box
-						input.input
+						input.input.js-ui-slider-from
 						span -
-						input.input
+						input.input.js-ui-slider-to
 					.filter__row
-						a(href="#").filter__close
+						a(href="#").filter__close.js-reset-range
 						.filter__range
-							.range(id="slider")
+							.range.js-ui-slider-main(data-min="0", data-max="100000", data-step="500")
 				.filter
 					span.filter__title Тип кузова
 					label.checkbox

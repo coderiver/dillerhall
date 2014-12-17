@@ -8,15 +8,76 @@ html
 			.search
 				.l-center
 					.search__label
-						div
+						.search__form
 							input.search__keyword.input
 							i.search__icon
 							button.search__delete.is-not
-						ul
+						ul.search__tabs
 							li 
 								a(href="#").pills.is-active автомобили
 							li
 								a(href="#").pills сайт
+						.search__popup
+							ul.search__result-list
+								li
+									strong Имя
+								li 
+									a(href="#") 
+										strong А
+										| ндрей Кузнецов
+								li 
+									a(href="#") Сергей Audi
+								li 
+									a(href="#") 
+										strong А
+										| нтонина Петровна
+							ul.search__result-list
+								li 
+									strong Автомобили
+								li 
+									a(href="#") 
+										strong A
+										| lfa Romeo
+								li 
+									a(href="#") 
+										strong A
+										| ston Martin
+								li 
+									a(href="#") 
+										strong A
+										| udi
+							ul.search__result-list
+								li 
+									strong Салоны
+								li 
+									a(href="#") 
+										strong A
+										| втомир
+								li 
+									a(href="#") 
+										strong A
+										| тлант-М
+								li 
+									a(href="#") 
+										strong А
+										| втобай
+							ul.search__result-post
+								li 
+									strong Текст
+								li
+									a(href="#") Появилась 
+										strong A
+										| , что будет здорово предоставить такую же возможность...
+									span 01.05.14, 15:41
+								li
+									a(href="#") Появилась 
+										strong A
+										| , что будет здорово предоставить такую же возможность...
+								li
+									a(href="#") Появилась 
+										strong A
+										| , что будет здорово предоставить такую же возможность...
+							a.search__result-more(href="#") Показать ещё
 					p.search__text По вашему запросу 
 						a(href="#") BMW
 						|  ” найдено  25 результатов.

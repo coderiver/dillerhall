@@ -5,19 +5,18 @@ html
 		title index
 	body
 		.out
-			//include _header_index.jade
 			header.header.header_absolute
 				.header__top
 					.header__key
 						button.js-toggle-nav(type="button")
 							i
-				//include _nav.jade
 				.nav.js-nav
 					.nav__in
 						.search-box
 							input.search-box__input(type="text",placeholder="Поиск")
 							button.search-box__btn(type="sumbit")
-							.search-popup
+							.search-popup(style="display:block")
+								.search-popup__section
 									.search-popup__title Поиск по автомобилям
 									.request.request_search
 										.l-center
@@ -54,6 +53,41 @@ html
 														span 2.0 AT (220л.с.) дизель, полный привод, 6 МКП, серый металлик, 
 									.to-center
 										a.search-popup__more(href="#") Показать еще авто
+								.search-popup__section
+									.search-popup__title Поиск по сайту
+									ul.post-wrap.post-wrap_small
+										li.post
+											a(href="#").post__title 
+												span BMW 
+												| 3 series
+											p Седан среднего класса 
+												span BMW 
+												| 3-Series (F30) дебютировал в 2011 году, но продажи стартовали годом позже. По габаритным размерам «тройка» стала на 93 мм длиннее, на 6 мм шире и на 8 мм выше своего предшественника (
+												span BMW 
+												| E90). Колесная база увеличилась на 50 мм,а объем... 
+											span.post__small BMW 3 series /
+										li.post
+											a(href="#").post__title 
+												span BMW 
+												| 3 series
+											p Седан среднего класса 
+												span BMW 
+												| 3-Series (F30) дебютировал в 2011 году, но продажи стартовали годом позже. По габаритным размерам «тройка» стала на 93 мм длиннее, на 6 мм шире и на 8 мм выше своего предшественника (
+												span BMW 
+												| E90). Колесная база увеличилась на 50 мм,а объем... 
+											span.post__small BMW 3 series /
+										li.post
+											a(href="#").post__title 
+												span BMW 
+												| 3 series
+											p Седан среднего класса 
+												span BMW 
+												| 3-Series (F30) дебютировал в 2011 году, но продажи стартовали годом позже. По габаритным размерам «тройка» стала на 93 мм длиннее, на 6 мм шире и на 8 мм выше своего предшественника (
+												span BMW 
+												| E90). Колесная база увеличилась на 50 мм,а объем... 
+											span.post__small BMW 3 series /
+									.to-center
+										a.search-popup__more(href="#") Показать еще
 						.nav__list
 							.nav__col
 								.nav__title

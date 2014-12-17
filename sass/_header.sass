@@ -347,12 +347,6 @@
 	will-change: transform
 	+transition(transform .4s, opacity .4s)
 	+vertical
-	a
-		color: #fff 
-		color: rgba(#fff,.7)
-		+tr_c
-		&:hover
-			color: #fff 
 	&.is-active 
 		opacity: 1
 		+scale(1)
@@ -490,6 +484,7 @@
 		+tr_o
 
 .search-popup
+	display: none
 	position: absolute
 	top: 100%
 	left: 0
@@ -503,12 +498,21 @@
 		position: absolute
 		left: 30px
 		top: -10px
-		+arr(15,10,#fff,t) 
+		+arr(15,10,#fff,t)
+	.to-center
+		margin: 13px 0 0 
+.search-popup__section
+	padding-bottom: 25px
+	&:last-child
+		padding-bottom: 0 
 .search-popup__title
-	margin-bottom: -10px
+	padding-left: 10px
 	font-size: 14px
 	+f300
 .search-popup__more
 	font-size: 14px
 	color: $blue !important
 	border-bottom: 1px dotted
+	+tr(border .2s)
+	&:hover
+		border-color: transparent 

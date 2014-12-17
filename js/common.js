@@ -48,6 +48,21 @@ $(".js-select-single").multiselect({
    show: ["fade", 200],
    hide: ["fade", 200] 
 });
+$(".js-select-multi").each(function(){
+	var placeholder = $(this).attr("data-placeholder");
+	$(this).multiselect({
+	   //multiple: false,
+	   header: false,
+	   show: ["fade", 200],
+	   hide: ["fade", 200] ,
+	   noneSelectedText: placeholder,
+	   selectedList: 100 // 0-based index
+	});
+});
+$(".js-uncheck-multi").on("click", function(){
+	$(this).parent().find(".js-select-multi").multiselect("uncheckAll");
+	return false;
+});
 
 // single tabs
 	function tabsSingleLoad() {
