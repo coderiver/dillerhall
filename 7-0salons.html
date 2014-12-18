@@ -16,9 +16,19 @@
         </div>
         <div class="header__middle">
           <nav class="breadcumbs"><a href="#">Главная</a></nav>
-          <h1 class="page-title">Личный кабинет</h1>
+          <h1 class="page-title">Автомобильные салоны</h1>
         </div>
         <div class="header__bottom">
+          <div class="header__left">
+            <div class="select select_205">
+              <select class="js-select-single">
+                <option value="Сортируем по стоимости">Сортируем по стоимости</option>
+                <option value="Сортируем по дате" selected>Сортируем по дате</option>
+                <option value="Сортируем по названию">Сортируем по названию</option>
+                <option value="Сортируем по марке">Сортируем по марке</option>
+              </select>
+            </div>
+          </div>
           <div class="header__center">
             <div class="header__nav">
               <div class="header__nav-list is-small"><a href="#" class="is-active">Минск</a><a href="#">Брест</a><a href="#">Могилев</a><a href="#">Гродно</a></div>
@@ -167,41 +177,6 @@
     <script src="js/valik.js"></script>
     <script src="js/common.js"></script>
     <script src="js/lib/head.js"></script>
-    <script type="text/javascript">
-      ymaps.ready(init);
-       var myMap;
-       
-       function init(){     
-        myMap = new ymaps.Map ("map", {
-         center: [53.90614, 27.54849],
-         zoom: 12
-        });
-        //first mark
-        myPlacemark = new ymaps.Placemark([53.90614, 27.54849], { 
-         balloonContent: '<span class="ymap__title">Автосалон AV</span><span class="ymap__gray">официальный дилер Audi</span><p>г. Минск, ул. Серова, 1</p><p>+375 29 191-88-88</p><p><a href="#">www.audi.by</a></p>'
-        }, {
-         balloonShadow: false
-        });
-        //second mark
-        myPlacemark2 = new ymaps.Placemark([53.93099, 27.54069], { 
-         balloonContent: '<span class="ymap__title">Автосалон AV-2</span><span class="ymap__gray">официальный дилер Audi</span><p>г. Минск, ул. Серова, 1</p><p>+375 29 191-88-88</p><p><a href="#">www.audi.by</a></p>'
-        }, {
-         balloonShadow: false
-        });
-        //third mark
-        myPlacemark3 = new ymaps.Placemark([53.90672, 27.52199], { 
-         balloonContent: '<span class="ymap__title">Автосалон AV-3</span><span class="ymap__gray">официальный дилер Audi</span><p>г. Минск, ул. Серова, 1</p><p>+375 29 191-88-88</p><p><a href="#">www.audi.by</a></p>'
-        }, {
-         balloonShadow: false
-        });
-        
-        myMap.geoObjects
-         .add(myPlacemark)
-         .add(myPlacemark2)
-         .add(myPlacemark3);
-       }
-       
-       
-    </script>
+    <script src="js/yandexMapInit.js"></script>
   </body>
 </html>

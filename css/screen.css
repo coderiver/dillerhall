@@ -215,6 +215,7 @@ a { text-decoration: none; }
 .tabs-icon__item:hover { border-color: white; }
 .tabs-icon__item:after { content: ""; position: absolute; right: 12px; top: 8px; background: url("../img/svg/select-white.svg") no-repeat 0 0; -moz-background-size: 5px 14px; -o-background-size: 5px 14px; -webkit-background-size: 5px 14px; background-size: 5px 14px; width: 5px; height: 14px; display: inline-block; }
 .ie8 .tabs-icon__item:after { background: url('../img/icons-sba7a35db0b.png') 0 -1290px no-repeat; width: 5px; height: 14px; }
+.tabs-icon__list { white-space: nowrap; }
 @media only screen and (max-width: 1024px) { .tabs-icon__list { position: absolute; top: 100%; left: 0; right: 0; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; visibility: hidden; padding: 10px 0; background: white; border: 1px solid #e5e5e5; -moz-transition: opacity 0.2s linear; -o-transition: opacity 0.2s linear; -webkit-transition: opacity 0.2s linear; transition: opacity 0.2s linear; } }
 .tabs-icon__list li { display: inline-block; margin-left: 5.5%; vertical-align: middle; }
 @media only screen and (max-width: 1024px) { .tabs-icon__list li { display: block; margin: 0; } }
@@ -222,6 +223,7 @@ a { text-decoration: none; }
 .tabs-icon__list li.is-active span { display: inline-block; }
 .tabs-icon__list li.is-active i { opacity: 1; }
 .tabs-icon__list a { font-size: 18px; color: white; }
+.tabs-icon__list a:hover span { display: inline-block; }
 @media only screen and (max-width: 1024px) { .tabs-icon__list a { color: black; font-size: 16px; } }
 .tabs-icon__list span { display: none; margin-left: 12px; vertical-align: middle; }
 @media only screen and (max-width: 1024px) { .tabs-icon__list span { display: block; } }
@@ -399,7 +401,7 @@ a { text-decoration: none; }
 @media only screen and (max-width: 980px) { .is-hidden-for-small { display: none; } }
 
 .header__center { position: absolute; left: 250px; top: 35px; right: 250px; text-align: center; }
-@media only screen and (max-width: 980px) { .header__center { order: 1; position: static; } }
+@media only screen and (max-width: 980px) { .header__center { order: 1; margin-bottom: 10px; position: static; } }
 @media only screen and (max-width: 1024px) { .header__center .tabs-icon { margin-bottom: 20px; } }
 @media only screen and (max-width: 480px) { .header__center .btn-do { margin-bottom: 10px; } }
 @media only screen and (max-width: 480px) { .header__center .btn-do:last-child { margin-bottom: 0; } }
