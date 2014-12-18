@@ -774,11 +774,18 @@ h2.title
 		
 //Request
 .request
-	padding: 35px 0 50px 
-	border-bottom: 1px solid #ededed
-	+tr_bg
-	&:hover
-		background: #fbfbfb 
+	position: relative
+	&__in
+		display: block
+		padding: 35px 0 50px 
+		border-bottom: 1px solid #ededed
+		+tr_bg
+		color: #000 
+		+clr
+		&:hover
+			background: #fbfbfb 
+			.request__text
+				color: #2db9ee 
 	&__left
 		width: 220px
 		padding: 0 20px 0 50px 
@@ -818,6 +825,9 @@ h2.title
 	&__time
 		+f100
 	&__link
+		position: absolute
+		right: 150px
+		top: 65px
 		color: $red
 		font-size: 12px
 		line-height: 2
@@ -826,8 +836,11 @@ h2.title
 		+tr_color
 		&:hover
 			color: $red_h
+		&:active
+			color: $red_act 
 	&__center
 		overflow: hidden
+		
 		+r(768)
 			clear: both
 			padding: 20px 20px 0 20px 
@@ -838,19 +851,16 @@ h2.title
 		display: block
 		margin-bottom: 5px
 	&__text
-		a
-			+f300
-			font-size: 12px
-			line-height: 1.5
-			letter-spacing: 0.02em 
-			color: #000
-			+opacity(0.8)
-			+tr_color 
-			display: block
-			span
-				+f500
-			&:hover
-				color: #2db9ee 
+		+f300
+		font-size: 12px
+		line-height: 1.5
+		letter-spacing: 0.02em 
+		color: #000
+		+opacity(0.8)
+		+tr_color 
+		display: block
+		span
+			+f500
 .request_search
 	padding-right: 30px
 	padding: 25px 30px 25px 0
@@ -1495,7 +1505,8 @@ ul.sorting
 		margin: 0 9px 
 		+r(768)
 			margin: 0 5px 
-		&.slick-active
+		&.slick-active,
+		&:hover
 			button
 				+opacity(0.7) 
 	button

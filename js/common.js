@@ -389,5 +389,23 @@ $(".js-uncheck-multi").on("click", function(){
 	}
 		
 	validate();
+	var headerHeight = $(".header").outerHeight(),
+		navKey = $(".header__key button");
+	function headerNav() {
+		var	top = navKey.offset().top + navKey.height();
+		if (top > headerHeight) {
+			navKey.addClass("is-blue");
+		}
+		else {
+			navKey.removeClass("is-blue");
+		}
+	}
+	headerNav();
+	$(window).resize(function(){
+		headerNav();
+	});
+	$(window).scroll(function(){
+		headerNav();
+	});
 
 });

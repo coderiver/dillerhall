@@ -13,20 +13,56 @@
 .header_news
 	height: 700px
 	+r(980)
-		height: 425px
+		height: 465px
 	.header__bg 
 		height: 700px
 		+r(980)
-			height: 425px
+			height: 465px
 	.header__bottom
 		position: absolute
 		top: 600px
 		left: 0
 		right: 0
 		+r(1024)
-			top: 500px
+			top: 565px
 		+r(980)
-			top: 280px
+			top: 304px
+		+r(480)
+			top: 364px
+			padding: 20px 30px 
+	.header__center
+		+r(1024)
+			top: 55px
+		+r(980)
+			top: 35px
+	.header__right
+		+r(1024)
+			top: 15px
+		+r(980)
+			top: 0
+	.meta
+		+r(480)
+			position: absolute
+			top: -52px
+			left: 0
+			right: 0
+			+f100
+			font-size: 11px
+	&.is-small
+		height: 450px
+		.header__bg
+			height: 450px
+			+r(980)
+				height: 465px
+		.header__bottom
+			top: 349px
+			+r(1024)
+				top: 565px
+			+r(980)
+				top: 304px
+			+r(480)
+				top: 364px
+				padding: 20px 30px
 .header_inside
 	height: 95px
 	min-height: 95px
@@ -79,7 +115,7 @@
 	.menu
 		position: absolute
 		right: 110px
-		top: 4px
+		top: 20px
 		z-index: 13
 		+r(980)
 			display: none
@@ -92,7 +128,7 @@
 .header__key
 	float: right
 	position: relative 
-	top: -15px
+	top: 0
 	right: -18px
 	+r(1024)	
 		position: fixed
@@ -121,8 +157,10 @@
 		+transition(transform .3s)
 		will-change: transform 
 		+r(1024)
-			background: rgba($blue, .95)
 			float: right
+		&.is-blue
+			+r(1024)
+				background: rgba($blue, .95)
 		&.is-active
 			i
 				background: none
@@ -211,6 +249,9 @@
 			margin-right: 20px
 		+r(980)
 			display: none
+.is-hidden-for-small
+	+r(980)
+		display: none
 .header__center
 	position: absolute
 	left: 250px
@@ -255,7 +296,8 @@
 		+f100
 		+opacity(0.7)
 		+tr_o
-		&:hover
+		&:hover,
+		&.is-active
 			+opacity(1)
 		&:first-child
 			margin: 0
@@ -299,6 +341,9 @@
 		+opacity(0.5)
 		+tr_op
 		text-decoration: none
+		+r(768)
+			display: block
+			margin: 0
 		&:hover
 			+opacity(1)
 		&:first-child

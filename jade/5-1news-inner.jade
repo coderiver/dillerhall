@@ -4,7 +4,7 @@ html
 		include _head.jade
 	body
 		.out
-			header.header
+			header.header.header_news.is-small
 				.header__top
 					a.header__logo(href="#")
 					.header__key
@@ -13,35 +13,20 @@ html
 				.header__middle
 					nav.breadcumbs
 						a(href="#") Главная
-					h1.page-title Личный кабинет
+						a(href="#") Акции официальных дилеров
+					h1.page-title Не управлять, а править. 
+						br 
+						| Новый BMW X5
 				.header__bottom
-					.tabs-icon
-						.tabs-icon__item.js-open-list История просмотров
-						ul.tabs-icon__list
-							li
-								a(href="#")
-									i.icon-tab1
-									span Запросы
-							li
-								a(href="#")
-									i.icon-tab2
-									span Избранные автомобили
-							li.is-active
-								a(href="#")
-									i.icon-tab3
-									span История просмотров
-							li
-								a(href="#")
-									i.icon-tab4
-									span История сравнений
-							li
-								a(href="#")
-									i.icon-tab5
-									span Личные данные
-							li
-								a(href="#")
-									i.icon-tab6
-									span Рассылка
+					.header__left
+					.header__center
+						.meta 15 сентября, 2014 / события
+					.header__right
+						a.btn-do(href="#")  
+							i.icon-prev-white
+							| Назад ко всем акциям
+				.header__bg
+					.header__bg-in(style="background-image: url(img/bmw-bg2.jpg)")
 				include _nav.jade
 			.inner
 				h2 Компания АВТОИДЕЯ, официальный дилер BMW в Республике Беларусь, приглашает в свой дилерский центр в Минске для знакомства с новым BMW X5
