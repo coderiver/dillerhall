@@ -9,13 +9,51 @@ html
 			.popup-form
 				span.popup-form__close.js-popup-close
 				.popup-form__inner
-					form(action="")
+					form
 						span.popup-form__main-title Добавить автомобиль для сравнения
 						.search__label
-							div
+							.search__form
 								input.search__keyword.input
 								i.search__icon
 								button.search__delete.is-not
+							.search-popup(style="display:block")
+								.search-popup__section
+									.search-popup__title Поиск по автомобилям
+									.request.request_search
+										.l-center
+											.request__left
+												a(href="#")
+													img(src="img/item/bmw-5series-hatchback2.png", alt="")
+											.request__center
+												p.request__text 
+													a(href="#")
+														strong BMW 
+														| 328i xDrive Modern Line 
+														span 2.0 AT (220л.с.) дизель, полный привод, 6 МКП, серый металлик, 
+									.request.request_search
+										.l-center
+											.request__left
+												a(href="#")
+													img(src="img/item/bmw-5series-hatchback2.png", alt="")
+											.request__center
+												p.request__text 
+													a(href="#")
+														strong BMW 
+														| 328i xDrive Modern Line 
+														span 2.0 AT (220л.с.) дизель, полный привод, 6 МКП, серый металлик, 
+									.request.request_search
+										.l-center
+											.request__left
+												a(href="#")
+													img(src="img/item/bmw-5series-hatchback2.png", alt="")
+											.request__center
+												p.request__text 
+													a(href="#")
+														strong BMW 
+														| 328i xDrive Modern Line 
+														span 2.0 AT (220л.с.) дизель, полный привод, 6 МКП, серый металлик, 
+									.to-center
+										a.search-popup__more(href="#") Показать еще авто
 							i.popup-form__plus
 		include _footer.jade 
 
