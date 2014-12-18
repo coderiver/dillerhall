@@ -385,6 +385,8 @@ a { text-decoration: none; }
 .header__center { position: absolute; left: 250px; top: 35px; right: 250px; text-align: center; }
 @media only screen and (max-width: 980px) { .header__center { order: 1; position: static; } }
 @media only screen and (max-width: 1024px) { .header__center .tabs-icon { margin-bottom: 20px; } }
+@media only screen and (max-width: 480px) { .header__center .btn-do { margin-bottom: 10px; } }
+@media only screen and (max-width: 480px) { .header__center .btn-do:last-child { margin-bottom: 0; } }
 
 .header__nav { text-align: center; font-size: 0; }
 .header__nav .select { display: none; }
@@ -1271,10 +1273,9 @@ label__inner { padding-bottom: 6px; }
 .filter__title span { border-bottom: 1px dotted #a3a3a3; }
 .filter .checkbox { display: inline-block; vertical-align: top; width: 133px; margin-bottom: 16px; }
 @media only screen and (max-width: 480px) { .filter .checkbox { width: 125px; } }
-.filter__box { display: inline-block; margin-bottom: 18px; }
+.filter__box { text-align: center; margin-bottom: 18px; }
 .filter__box .input { width: 94px; padding: 0 8px; display: inline-block; }
 .filter__box span { font-family: "museosanscyrl_300", Arial, sans-serif; font-size: 16px; line-height: 30px; display: inline-block; margin: 0 7px 0 5px; }
-.filter__amount .filter__title { display: inline-block; margin-right: 15px; }
 .filter__amount .filter__close { margin-top: 0; }
 .filter__range { padding-top: 19px; position: relative; }
 .filter__row { position: relative; }
@@ -1282,7 +1283,9 @@ label__inner { padding-bottom: 6px; }
 .ie8 .filter__close { background: url('../img/icons-sba7a35db0b.png') 0 -280px no-repeat; width: 9px; height: 9px; }
 @media only screen and (max-width: 480px) { .filter__close { left: -15px; } }
 .filter__btns .btn-simple { padding: 8px 22px 6px 22px; min-width: 0; margin-right: 19px; margin-bottom: 15px; }
-.filter_more { margin-bottom: 18px; font-size: 0; -moz-transition: border-color 0.2s linear; -o-transition: border-color 0.2s linear; -webkit-transition: border-color 0.2s linear; transition: border-color 0.2s linear; border: 1px solid #e5e5e5; border-radius: 10px; padding: 7px 49px 4px; }
+.filter_more { margin-bottom: 18px; font-size: 0; display: block; width: 100%; background: white; -moz-transition: border-color 0.2s linear; -o-transition: border-color 0.2s linear; -webkit-transition: border-color 0.2s linear; transition: border-color 0.2s linear; border: 1px solid #e5e5e5; border-radius: 10px; padding: 7px 49px 4px; }
+.filter_more:hover { border-color: #666666; }
+.filter_more:active { background: #1bb4ed; color: white; }
 .filter_more span { font-family: "museosanscyrl_300", Arial, sans-serif; font-size: 16px; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10); opacity: 0.1; -moz-transition: opacity 0.2s linear; -o-transition: opacity 0.2s linear; -webkit-transition: opacity 0.2s linear; transition: opacity 0.2s linear; will-change: opacity; display: block; text-align: center; }
 .filter_save { text-align: center; padding: 60px 0 0 0; }
 
@@ -1292,6 +1295,7 @@ label__inner { padding-bottom: 6px; }
 .range .ui-state-default:before { width: 0px; height: 0px; border-style: solid; border-width: 19px 12px 0 12px; border-color: #1bb4ed transparent transparent transparent; content: ""; position: absolute; top: -20px; left: -11px; z-index: 2; }
 .range .ui-state-default:after { content: ""; background: url('../img/icons-sba7a35db0b.png') 0 -1123px no-repeat; width: 29px; height: 25px; position: absolute; top: -23px; left: -14px; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; -moz-transition: opacity 0.2s linear; -o-transition: opacity 0.2s linear; -webkit-transition: opacity 0.2s linear; transition: opacity 0.2s linear; will-change: opacity; z-index: 1; }
 .range .ui-state-default:hover:after { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
+.range .ui-slider-handle { cursor: pointer; }
 
 .select_blue { width: 100%; text-align: left; }
 .select_blue .ui-multiselect { border: 1px solid #cccccc; -moz-transition: border-color 0.2s linear, box-shadow 0.2s linear, color 0.2s linear; -o-transition: border-color 0.2s linear, box-shadow 0.2s linear, color 0.2s linear; -webkit-transition: border-color 0.2s linear, box-shadow 0.2s linear, color 0.2s linear; transition: border-color 0.2s linear, box-shadow 0.2s linear, color 0.2s linear; height: 42px; width: 100%; color: black; padding: 0 25px 0 19px; }

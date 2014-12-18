@@ -2282,7 +2282,7 @@ label
 		+r(480)
 			width: 125px
 	&__box
-		display: inline-block
+		text-align: center
 		margin-bottom: 18px
 		.input
 			width: 94px
@@ -2295,9 +2295,6 @@ label
 			display: inline-block
 			margin: 0 7px 0 5px 
 	&__amount
-		.filter__title
-			display: inline-block
-			margin-right: 15px
 		.filter__close
 			margin-top: 0 
 	&__range
@@ -2322,10 +2319,18 @@ label
 	&_more
 		margin-bottom: 18px
 		font-size: 0
+		display: block
+		width: 100%
+		background: #fff 
 		+transition(border-color .2s linear)
 		border: 1px solid #e5e5e5
 		+br
 		padding: 7px 49px 4px
+		&:hover
+			border-color: #666 
+		&:active
+			background: $blue
+			color: #fff  
 		span
 			+f300
 			font-size: 16px
@@ -2369,6 +2374,8 @@ label
 		&:hover
 			&:after
 				+opacity(1)
+	.ui-slider-handle
+		cursor: pointer
 .select_blue
 	width: 100%
 	text-align: left

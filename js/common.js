@@ -13,7 +13,12 @@ $(document).ready(function() {
 		$(this).parent().before(html); 
 		return false;
 	});
-
+// show/hide any block
+	$("body").on("click",".js-toogle",function(){
+		var el = $(this).attr("data-toggle");
+		$("."+el).fadeToggle(200);
+		return false;
+	});
 // show/hide nav
 	$("body").on("click",".js-toggle-nav",function(){
 		if ($(this).hasClass("is-active")) {
