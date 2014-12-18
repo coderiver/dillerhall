@@ -10,6 +10,16 @@
 	left: 0
 	top: 0
 	right: 0
+.header_index
+	.header__logo
+		visibility: hidden
+		+opacity(0)
+		+tr_o
+.has-open-nav
+	.header_index
+		.header__logo
+			visibility: visible
+			+opacity(1)
 .header_news
 	height: 700px
 	+r(980)
@@ -147,7 +157,7 @@
 		margin-left: -240px
 	+r(480)
 		width: 320px
-		margin-left: -160px
+		margin-left: -169px
 	button
 		position: relative
 		display: block
@@ -417,7 +427,8 @@
 		+r(980)
 			width: 100%
 			padding: 30px 
-			
+		+r(480)
+			text-align: right
 	&__list
 		+clr
 		font-size: 0
@@ -534,7 +545,11 @@
 		+s(glass-big)
 		opacity: 0.5
 		+tr_o
-
+	&__clear
+		position: absolute
+		top: 27px
+		right: 20px
+		+svg(close-white,18,18)
 .search-popup
 	display: none
 	position: absolute

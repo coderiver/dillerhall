@@ -23,7 +23,8 @@ $(document).ready(function() {
 	$("body").on("click",".js-toggle-nav",function(){
 		if ($(this).hasClass("is-active")) {
 			$(this).removeClass("is-active");
-			$(".js-nav").removeClass("is-active")
+			$(".js-nav").removeClass("is-active");
+			$("html").removeClass("has-open-nav");
 			setTimeout(function() {
 				$(".js-nav").removeClass("is-visible");
 			}, 500);

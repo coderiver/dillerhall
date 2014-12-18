@@ -1,12 +1,13 @@
-doctype
+doctype3
 html
 	head
 		include _head.jade
 		title index
 	body
 		.out
-			header.header.header_absolute
+			header.header.header_absolute.header_index
 				.header__top
+					a.header__logo(href="#")
 					.header__key
 						button.js-toggle-nav(type="button")
 							i
@@ -15,6 +16,7 @@ html
 						.search-box
 							input.search-box__input(type="text",placeholder="Поиск")
 							button.search-box__btn(type="sumbit")
+							button.search-box__clear.js-clear-input(type="reset")
 							.search-popup(style="display:block")
 								.search-popup__section
 									.search-popup__title Поиск по автомобилям
