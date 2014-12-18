@@ -1151,10 +1151,11 @@ label__inner { padding-bottom: 6px; }
 @media only screen and (max-width: 480px) { .about__inner blockquote:before { font-size: 60px; line-height: 50px; } }
 .about__inner hr { margin-bottom: 45px; }
 
-.result { font-family: "museosanscyrl_300", Arial, sans-serif; font-size: 16px; line-height: 26px; border: 2px solid #2db9ee; max-width: 855px; margin: 0 auto; padding: 37px 48px; }
+.result { font-family: "museosanscyrl_300", Arial, sans-serif; font-size: 16px; line-height: 26px; border: 2px solid #2db9ee; margin-left: 215px; padding: 37px 48px; }
+@media only screen and (max-width: 768px) { .result { margin-left: 0; } }
 @media only screen and (max-width: 480px) { .result { padding: 15px 25px; } }
 
-.sidebar { width: 150px; float: left; padding: 5px 0 20px 0; }
+.sidebar { width: 150px; float: left; min-height: 1px; padding: 5px 0 20px 0; }
 @media only screen and (max-width: 768px) { .sidebar { width: 100%; font-size: 0; float: none; } }
 .sidebar li { margin: 0 0 20px 0; vertical-align: top; }
 @media only screen and (max-width: 768px) { .sidebar li { display: inline-block; width: 50%; } }
