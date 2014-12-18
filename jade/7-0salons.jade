@@ -16,7 +16,19 @@ html
 						a(href="#") Главная
 					h1.page-title Личный кабинет
 				.header__bottom
-				include _nav.jade
+					.header__center
+						.header__nav
+							.header__nav-list.is-small
+								a(href="#").is-active Минск
+								a(href="#") Брест
+								a(href="#") Могилев
+								a(href="#") Гродно
+							.select.col.col_252
+								select.js-select-single
+									option(value="Минск") Минск
+									option(value="Брест") Брест
+									option(value="Могилев") Могилев
+									option(value="Гродно") Гродно
 			.salons-map
 				.ymap(id="map")
 			.salons

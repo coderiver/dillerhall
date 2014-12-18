@@ -1251,7 +1251,7 @@ label__inner { padding-bottom: 6px; }
 .stores__bottom ul { display: inline-block; width: 50%; vertical-align: top; padding: 0 0 0 25px; }
 @media only screen and (max-width: 980px) { .stores__bottom ul { width: 100%; } }
 @media only screen and (max-width: 480px) { .stores__bottom ul { padding: 0; } }
-.stores__bottom ul li { font-family: "museosanscyrl_100", Arial, sans-serif; font-size: 14px; letter-spacing: 0.02em; line-height: 24px; position: relative; padding: 0 0 0 30px; position: relative; }
+.stores__bottom ul li { font-family: "museosanscyrl_100", Arial, sans-serif; margin-bottom: 10px; font-size: 14px; letter-spacing: 0.02em; line-height: 24px; position: relative; padding: 0 0 0 30px; position: relative; }
 .stores__bottom ul li:before { position: absolute; top: 9px; left: 0; content: ""; width: 6px; height: 6px; background-color: #2db9ee; -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%; }
 .stores__bottom .btn { width: 100%; max-width: 284px; display: block; margin: 0 auto; }
 .stores__btn { padding: 100px 0 90px 0; }
