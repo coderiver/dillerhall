@@ -235,34 +235,40 @@ a
     padding: 0 25px 0 15px
     width: 100% !important
     height: 30px
-    border: 1px solid rgba(#fff,.5)
+    // border: 1px solid rgba(#fff,.5)
+    border: 1px solid $gray
     +br5
     font-size: 14px
     +f300
-    color: #fff
+    // color: #fff
+    color: #000
     background: none
     +transition(border .3s, box-shadow .3s)
     &:hover
-      border-color: #fff
+      // border-color: #FFF
+      border-color: #000
     &.ui-state-active
-      box-shadow: 0 0 5px rgba(255, 255, 255, 0.3)
-      border-color: #fff
+      // box-shadow: 0 0 5px rgba(255, 255, 255, 0.3)
+      // border-color: #fff
+      box-shadow: 0 0 5px rgba($gray, 0.3)
+      border-color: #000
   .ui-icon
     position: absolute
     right: 12px
     top: 8px
-    +svg(select-white,5,14)
-  &_dark
-    .ui-multiselect
-      border: 1px solid $gray
-      color: #000
-      &:hover
-        border-color: #000
-      &.ui-state-active
-        box-shadow: 0 0 5px rgba($gray, 0.3)
-        border-color: #000
-    .ui-icon
-      +svg(select,5,14)
+    // +svg(select-white,5,14)
+    +svg(select,5,14)
+  // &_dark
+  //   .ui-multiselect
+  //     border: 1px solid $gray
+  //     color: #000
+  //     &:hover
+  //       border-color: #000
+  //     &.ui-state-active
+  //       box-shadow: 0 0 5px rgba($gray, 0.3)
+  //       border-color: #000
+  //   .ui-icon
+  //     +svg(select,5,14)
   &[data-border-color="green"]
     .ui-multiselect
       border-color: $green
