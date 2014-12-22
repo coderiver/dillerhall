@@ -217,7 +217,7 @@ a
 	font-size: 14px
 	color: #000
 	+f300 
-	+transition(border .3s, box-shadow .3s)
+	+transition(border .3s, box-shadow .3s, color .3s)
 	.ie8 &
 		line-height: 30px
 	&:focus
@@ -227,7 +227,8 @@ a
 		border: 1px solid #EE6E7D
 		color: #ee6e7d 
 		box-shadow: 0 0 5px rgba(238, 110, 125, 0.3)
-
+	&.valid
+		border: 1px solid #1BB4ED
 .soc
 	text-align: center
 	a

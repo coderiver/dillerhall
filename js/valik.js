@@ -133,5 +133,16 @@ $(document).ready(function() {
 		}, 600);
 		return false;
 	});
+	//input popup
+	$('.popup-form input').on('keyup', function(event) {
+		if($(this).val() == '') {
+			$(this).removeClass('is-active');
+		} else {
+			$(this).addClass('is-active');
+		}
+	});
+	$('.form__input input').on('click', function() {
+		$(this).removeClass('has-error');
+	});
 });
 

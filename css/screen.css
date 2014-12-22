@@ -107,10 +107,11 @@ a { text-decoration: none; }
 .field__action { display: block; padding: 2px 0; text-align: right; }
 .field + .btn-add-wrap { margin-top: -24px; }
 
-.input { display: block; padding: 0 14px; width: 100%; height: 30px; background: white; border: 1px solid #d7d7d7; border-radius: 5px; font-size: 14px; color: black; font-family: "museosanscyrl_300", Arial, sans-serif; -moz-transition: border 0.3s, box-shadow 0.3s; -o-transition: border 0.3s, box-shadow 0.3s; -webkit-transition: border 0.3s, box-shadow 0.3s; transition: border 0.3s, box-shadow 0.3s; }
+.input { display: block; padding: 0 14px; width: 100%; height: 30px; background: white; border: 1px solid #d7d7d7; border-radius: 5px; font-size: 14px; color: black; font-family: "museosanscyrl_300", Arial, sans-serif; -moz-transition: border 0.3s, box-shadow 0.3s, color 0.3s; -o-transition: border 0.3s, box-shadow 0.3s, color 0.3s; -webkit-transition: border 0.3s, box-shadow 0.3s, color 0.3s; transition: border 0.3s, box-shadow 0.3s, color 0.3s; }
 .ie8 .input { line-height: 30px; }
 .input:focus { border: 1px solid #1bb4ed; box-shadow: 0 0 5px rgba(27, 180, 237, 0.3); }
 .input.has-error { border: 1px solid #ee6e7d; color: #ee6e7d; box-shadow: 0 0 5px rgba(238, 110, 125, 0.3); }
+.input.valid { border: 1px solid #1bb4ed; }
 
 .soc { text-align: center; }
 .soc a { display: inline-block; margin-left: 30px; vertical-align: middle; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50); opacity: 0.5; -moz-transition: opacity 0.2s linear; -o-transition: opacity 0.2s linear; -webkit-transition: opacity 0.2s linear; transition: opacity 0.2s linear; }
@@ -326,7 +327,7 @@ a { text-decoration: none; }
 @media only screen and (max-width: 980px) { .header_news { height: 465px; } }
 .header_news .header__bg { height: 700px; }
 @media only screen and (max-width: 980px) { .header_news .header__bg { height: 465px; } }
-.header_news .header__bottom { position: absolute; top: 600px; left: 0; right: 0; }
+.header_news .header__bottom { position: absolute; top: 600px; left: 0; right: 0; -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
 @media only screen and (max-width: 1024px) { .header_news .header__bottom { top: 565px; } }
 @media only screen and (max-width: 980px) { .header_news .header__bottom { top: 304px; } }
 @media only screen and (max-width: 480px) { .header_news .header__bottom { top: 364px; padding: 20px 30px; } }
@@ -798,6 +799,7 @@ a { text-decoration: none; }
 .comp-wrap .comp-text { font-size: 18px; line-height: 1.45; letter-spacing: 0.02em; color: black; text-align: center; max-width: 540px; margin: 0 auto 25px; padding: 0 20px; font-family: "museosanscyrl_100", Arial, sans-serif; }
 .comp-wrap.is-box { padding-bottom: 0; margin-bottom: -1px; }
 .comp-wrap.is-box .comp-text { margin-bottom: 60px; }
+.comp-wrap .form label.has-error { display: none !important; }
 
 .comp { max-width: 980px; padding: 47px 83px 20px 76px; *zoom: 1; border-top: 1px solid #ededed; }
 .comp:after { content: " "; display: table; clear: both; }
@@ -1097,6 +1099,7 @@ ul.sorting a.is-active sup { visibility: visible; filter: progid:DXImageTransfor
 label.has-error { position: absolute; top: 100%; left: 0; right: 0; color: #ee6e7d; font-size: 11px; }
 label textarea { border: 1px solid #d2d2d2; -moz-transition: border 0.3s, box-shadow 0.3s; -o-transition: border 0.3s, box-shadow 0.3s; -webkit-transition: border 0.3s, box-shadow 0.3s; transition: border 0.3s, box-shadow 0.3s; width: 100%; border-radius: 5px; resize: none; padding: 14px; font-size: 14px; color: black; font-family: "museosanscyrl_300", Arial, sans-serif; height: 98px; margin-bottom: 16px; }
 label textarea:focus { border: 1px solid #1bb4ed; box-shadow: 0 0 5px rgba(27, 180, 237, 0.3); }
+label textarea.valid { border: 1px solid #1bb4ed; }
 label .btn { display: block; margin: 0 auto; }
 label .radio { width: 100%; max-width: 152px; margin-bottom: 25px; }
 label__inner { padding-bottom: 6px; }
@@ -1466,7 +1469,7 @@ label__inner { padding-bottom: 6px; }
 .popup-form textarea:hover { border-color: #c3c3c3; }
 .popup-form textarea:focus { border: 1px solid #1bb4ed; -moz-box-shadow: 0 0 5px rgba(27, 180, 237, 0.3); -webkit-box-shadow: 0 0 5px rgba(27, 180, 237, 0.3); box-shadow: 0 0 5px rgba(27, 180, 237, 0.3); }
 .popup-form .input { margin: 0 auto 28px; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70); opacity: 0.7; -moz-transition: opacity 0.3s linear, border 0.3s linear, box-shadow 0.3s linear; -o-transition: opacity 0.3s linear, border 0.3s linear, box-shadow 0.3s linear; -webkit-transition: opacity 0.3s linear, border 0.3s linear, box-shadow 0.3s linear; transition: opacity 0.3s linear, border 0.3s linear, box-shadow 0.3s linear; }
-.popup-form .input:hover, .popup-form .input:focus { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
+.popup-form .input:hover, .popup-form .input:focus, .popup-form .input.is-active { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
 .popup-form__btn { background: #36bcef; padding: 6px 12px 6px 12px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }
 .popup-form__btn span { color: white; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70); opacity: 0.7; font-family: "museosanscyrl_300", Arial, sans-serif; font-size: 14px; }
 .popup-form__link { color: white; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70); opacity: 0.7; font-family: "museosanscyrl_300", Arial, sans-serif; font-size: 14px; }
