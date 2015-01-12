@@ -4,12 +4,12 @@
 	// will-change: transform
 	&:hover
 		.header__bg-in 
-			+scale(1.2)
+			+transform(scale(1.2), translate3d(0,0,0))
 .header_absolute
 	background: none
 	position: absolute
 	left: 0
-	top: 0   
+	top: 0 
 	right: 0
 .header_index
 	.header__logo
@@ -115,9 +115,10 @@
 	left: 0
 	bottom: 0
 	+transition(transform 2.4s ease-out)
-	will-change: transform
+	//will-change: transform
 	+cover
-.header__top
+	+transform(scale(1), translate3d(0,0,0))
+.header__top   
 	position: relative
 	padding: 0 30px
 	height: 30px
@@ -479,8 +480,11 @@
 			+r(1400)
 				width: percentage(285/785)
 				margin: 0
-		li
+		li 
 			margin-bottom: 3px
+			&.is-active
+				a
+					border-bottom: 1px solid 
 		a
 			padding-bottom: 4px
 			color: #fff 
