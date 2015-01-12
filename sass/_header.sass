@@ -1,6 +1,7 @@
 .header
 	background: $blue
 	min-height: 200px
+	+gpu
 	&:hover
 		.header__bg-in 
 			+scale(1.2)
@@ -33,11 +34,6 @@
 		top: 600px
 		left: 0
 		right: 0
-		-webkit-transform: translate3d(0,0,0) 
-		-moz-transform: translate3d(0,0,0) 
-		-ms-transform: translate3d(0,0,0) 
-		-o-transform: translate3d(0,0,0) 
-		transform: translate3d(0,0,0) 
 		+r(1024)
 			top: 565px
 		+r(980)
@@ -370,6 +366,7 @@
 	font-size: 40px
 	color: #fff
 	+f100
+	clear: both
 	text-align: center
 	font-weight: normal 
 	+r(980)
