@@ -441,7 +441,7 @@ a { text-decoration: none; }
 
 .page-info { position: relative; z-index: 2; font-size: 14px; text-align: center; font-family: "museosanscyrl_100", Arial, sans-serif; color: #fff; -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
 
-.page-subtitle { position: relative; z-index: 2; font-size: 24px; text-align: center; font-family: "museosanscyrl_100", Arial, sans-serif; color: #fff; }
+.page-subtitle { position: relative; z-index: 2; font-size: 24px; text-align: center; font-family: "museosanscyrl_100", Arial, sans-serif; color: #fff; -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
 
 .has-open-nav { overflow: hidden; }
 .has-open-nav body { overflow: hidden; padding-right: 17px; }
