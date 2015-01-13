@@ -81,7 +81,34 @@
 				padding: 0
 				&:before
 					display: none
-
+.article__list
+	padding: 0 0 0 25px 
+	font-size: 0
+	li
+		+f100
+		margin-bottom: 10px
+		font-size: 14px
+		letter-spacing: 0.02em 
+		line-height: 24px
+		position: relative
+		padding: 0 0 0 30px
+		display: inline-block
+		width: 50%
+		+box
+		vertical-align: top
+		+r(980)
+			width: 100%
+		+r(480)
+			padding: 0
+		&:before
+			position: absolute
+			top: 9px
+			left: 0
+			content: "" 
+			width: 6px
+			height: 6px
+			background-color: #2DB9EE
+			+border-radius(50%)
 .tabs
 	font-size: 0
 	display: inline-block
