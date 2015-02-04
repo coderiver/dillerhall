@@ -306,7 +306,7 @@ $(".js-uncheck-multi").on("click", function(){
 	$(".js-popup-link").on("click", function(){
 		$(".js-overlay").fadeIn(300);
 		var popup = $(this).attr("href");
-		$(".js-popup").fadeOut(300)
+		$(".js-popup").fadeIn(300)
 		$('[data-popup="'+popup+'"]').fadeIn(300);
 		return false; 
 	});

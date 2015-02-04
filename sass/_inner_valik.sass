@@ -64,7 +64,7 @@
 	+clr
 	&:hover
 		.title
-			i
+			i, a
 				+opacity(0.3) 
 	+r(768)
 		padding: 40px 0 20px 
@@ -88,7 +88,7 @@
 		font-weight: normal
 		letter-spacing: 0.02em 
 		color: #010101 
-		i
+		i, a
 			+opacity(0)
 			+tr_op
 			will-change: opacity
@@ -520,7 +520,7 @@
 			visibility: hidden
 			+transition(opacity 0.2s linear, visibility 0.2s linear)
 			will-change: opacity
-		&:hover
+		&:hover, &.is-active
 			&:before
 				+opacity(1)
 				visibility: visible
@@ -538,7 +538,7 @@
 			visibility: hidden
 			+transition(opacity 0.2s linear, visibility 0.2s linear)
 			will-change: opacity
-		&:hover
+		&:hover, &.is-active
 			&:before
 				+opacity(1)
 				visibility: visible
@@ -773,6 +773,10 @@ h2.title
 	&__green
 		font-size: 11.95px
 		color: #a9d16a	 
+		margin-left: 5px
+	&__yellow
+		font-size: 11.95px
+		color: #ffb954	 
 		margin-left: 5px
 		
 //Request
@@ -2338,6 +2342,21 @@ label
 			min-width: 0
 			margin-right: 19px 
 			margin-bottom: 15px 
+		label
+			position: relative
+			display: inline-block
+			input
+				position: absolute
+				top: 0
+				left: 0
+				+opacity(0)
+				visibility: hidden
+				&:checked
+					+ span
+						background: #1bb4ed
+						border-color: #1bb4ed
+						color: #fff  
+				
 	&_more
 		margin-bottom: 18px
 		font-size: 0

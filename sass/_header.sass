@@ -214,6 +214,36 @@
 	padding: 0 30px 30px
 	clear: both
 	//+gpu
+.js-fixed
+	&.is-fixed
+		.header
+			padding-bottom: 100px
+		.header-fixed
+			position: fixed
+			top: 0
+			left: 0
+			right: 0
+			z-index: 5
+			.header__bottom
+				position: relative
+				margin: 0 auto
+				max-width: 1400px
+				background: rgba(27, 180, 237, 0.9)
+				+r(1400)
+					max-width: 1280px
+				+r(1280)
+					max-width: 1024px
+				+r(1024)
+					max-width: 980px
+				+r(980)
+					max-width: 768px
+					margin-bottom: 0
+				+r(768)
+					max-width: 480px
+				+r(480)
+					max-width: 320px
+.header-fixed
+	z-index: 5 
 .header__bottom
 	position: relative
 	padding: 35px 30px 

@@ -133,6 +133,16 @@ $(document).ready(function() {
 		}, 600);
 		return false;
 	});
+	//header fixed
+	$(window).scroll(function() {    
+	    var scroll = $(window).scrollTop();
+
+	    if (scroll >= $('.js-wrap').offset().top) {
+	        $(".js-fixed").addClass("is-fixed");
+	    } else {
+	        $(".js-fixed").removeClass("is-fixed");
+	    }
+	});
 	//input popup
 	$('.popup-form input').on('keyup', function(event) {
 		if($(this).val() == '') {

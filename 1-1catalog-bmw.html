@@ -6,8 +6,23 @@
     <meta name="viewport" content="initial-scale=1">
     <link rel="stylesheet" href="css/screen.css" media="screen,print"><!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
   </head>
-  <body>
-    <div class="out"> 
+  <body class="js-fixed">
+    <div style="display:none" class="overlay js-overlay"></div>
+    <div data-popup="js-popup-el" style="display:none" class="popup-wrap js-popup">
+      <div id="popup1" class="popup">
+        <div class="popup__body"><span class="popup__close js-popup-close"></span><img src="http://placehold.it/800x465" alt="">
+          <div class="popup__inner">
+            <div class="popup__top"><span class="popup__title">BMW 1 series</span>
+              <p>Автомобиль выпускается с 2004 года. Последним автомобилем такого класса этого немецкого производителя был BMW 3 Compact (E36/5, E46/5). Машина имеет много общих решений с другими моделями. Так, передняя подвеска стойки МакФерсон от «пятёрки» E60, а задняя многорычажная от «трёшки» E90.</p>
+            </div>
+            <h2>Компактный автомобиль с задним приводом и продольным расположением двигателя</h2>
+            <p>Автомобиль выпускается с 2004 года. Последним автомобилем такого класса этого немецкого производителя был BMW 3 Compact (E36/5, E46/5). Машина имеет много общих решений с другими моделями. Так, передняя подвеска стойки МакФерсон от «пятёрки» E60, а задняя многорычажная от «трёшки» E90.</p>
+            <p>Модель позиционируется в зависимости от комплектации как пяти или четырёхместный автомобиль. Центральная часть приборной панели слегка повёрнута в сторону водителя, а вместо ключа зажигания — брелок и кнопка «Start» над ним.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="out">
       <header class="header">
         <div class="header__wrap">
           <div class="header__top"><a href="#" class="header__logo"></a>
@@ -19,21 +34,25 @@
             <nav class="breadcumbs"><a href="#">Главная</a><a href="#">Каталог новых автомобилей</a></nav>
             <div class="page-title">BMW </div>
           </div>
-          <div class="header__bottom">
-            <div class="header__nav">
-              <div class="header__nav-list"><a href="#series1" class="header__nav-link">1 series</a><a href="#series2" class="header__nav-link">3 series</a><a href="#series3" class="header__nav-link">5 series</a><a href="#series4" class="header__nav-link">6 series</a><a href="#series5" class="header__nav-link">7 series</a><a href="#series6" class="header__nav-link">X series</a><a href="#series7" class="header__nav-link">Z4 series</a><a href="#series8" class="header__nav-link">M series </a></div>
-              <div class="tabs-icon">
-                <div class="tabs-icon__item js-open-list">1 series</div>
-                <ul class="tabs-icon__list">
-                  <li> <a href="#series1"> <span>1 series</span></a></li>
-                  <li> <a href="#series2"> <span>3 series</span></a></li>
-                  <li> <a href="#series3"> <span>5 series</span></a></li>
-                  <li><a href="#series4"> <span>6 series</span></a></li>
-                  <li> <a href="#series5"> <span>7 series</span></a></li>
-                  <li> <a href="#series6"> <span>X series</span></a></li>
-                  <li> <a href="#series7"> <span>Z4 series</span></a></li>
-                  <li> <a href="#series8"> <span>M series </span></a></li>
-                </ul>
+          <div class="js-wrap">
+            <div class="header-fixed">
+              <div class="header__bottom">
+                <div class="header__nav">
+                  <div class="header__nav-list"><a href="#series1" class="header__nav-link">1 series</a><a href="#series2" class="header__nav-link">3 series</a><a href="#series3" class="header__nav-link">5 series</a><a href="#series4" class="header__nav-link">6 series</a><a href="#series5" class="header__nav-link">7 series</a><a href="#series6" class="header__nav-link">X series</a><a href="#series7" class="header__nav-link">Z4 series</a><a href="#series8" class="header__nav-link">M series </a></div>
+                  <div class="tabs-icon">
+                    <div class="tabs-icon__item js-open-list">1 series</div>
+                    <ul class="tabs-icon__list">
+                      <li><a href="#series1"><span>1 series</span></a></li>
+                      <li><a href="#series2"><span>3 series</span></a></li>
+                      <li><a href="#series3"><span>5 series</span></a></li>
+                      <li><a href="#series4"><span>6 series</span></a></li>
+                      <li><a href="#series5"><span>7 series</span></a></li>
+                      <li><a href="#series6"><span>X series</span></a></li>
+                      <li><a href="#series7"><span>Z4 series</span></a></li>
+                      <li><a href="#series8"><span>M series </span></a></li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -52,7 +71,7 @@
                     <div class="l-center">
                       <div class="request__left"><a href="#"><img src="img/item/bmw-5series-hatchback2.png" alt=""></a></div>
                       <div class="request__center">
-                        <p class="request__text"> <a href="#"><strong>BMW </strong>328i xDrive Modern Line <span>2.0 AT (220л.с.) дизель, полный привод, 6 МКП, серый металлик, </span></a></p>
+                        <p class="request__text"><a href="#"><strong>BMW </strong>328i xDrive Modern Line <span>2.0 AT (220л.с.) дизель, полный привод, 6 МКП, серый металлик, </span></a></p>
                       </div>
                     </div>
                   </div>
@@ -60,7 +79,7 @@
                     <div class="l-center">
                       <div class="request__left"><a href="#"><img src="img/item/bmw-5series-hatchback2.png" alt=""></a></div>
                       <div class="request__center">
-                        <p class="request__text"> <a href="#"><strong>BMW </strong>328i xDrive Modern Line <span>2.0 AT (220л.с.) дизель, полный привод, 6 МКП, серый металлик, </span></a></p>
+                        <p class="request__text"><a href="#"><strong>BMW </strong>328i xDrive Modern Line <span>2.0 AT (220л.с.) дизель, полный привод, 6 МКП, серый металлик, </span></a></p>
                       </div>
                     </div>
                   </div>
@@ -68,7 +87,7 @@
                     <div class="l-center">
                       <div class="request__left"><a href="#"><img src="img/item/bmw-5series-hatchback2.png" alt=""></a></div>
                       <div class="request__center">
-                        <p class="request__text"> <a href="#"><strong>BMW </strong>328i xDrive Modern Line <span>2.0 AT (220л.с.) дизель, полный привод, 6 МКП, серый металлик, </span></a></p>
+                        <p class="request__text"><a href="#"><strong>BMW </strong>328i xDrive Modern Line <span>2.0 AT (220л.с.) дизель, полный привод, 6 МКП, серый металлик, </span></a></p>
                       </div>
                     </div>
                   </div>
@@ -77,13 +96,13 @@
                 <div class="search-popup__section">
                   <div class="search-popup__title">Поиск по сайту</div>
                   <ul class="post-wrap post-wrap_small">
-                    <li class="post"><a href="#" class="post__title"> <span>BMW </span>3 series</a>
+                    <li class="post"><a href="#" class="post__title"><span>BMW </span>3 series</a>
                       <p>Седан среднего класса <span>BMW </span>3-Series (F30) дебютировал в 2011 году, но продажи стартовали годом позже. По габаритным размерам «тройка» стала на 93 мм длиннее, на 6 мм шире и на 8 мм выше своего предшественника (<span>BMW </span>E90). Колесная база увеличилась на 50 мм,а объем... </p><span class="post__small">BMW 3 series /</span>
                     </li>
-                    <li class="post"><a href="#" class="post__title"> <span>BMW </span>3 series</a>
+                    <li class="post"><a href="#" class="post__title"><span>BMW </span>3 series</a>
                       <p>Седан среднего класса <span>BMW </span>3-Series (F30) дебютировал в 2011 году, но продажи стартовали годом позже. По габаритным размерам «тройка» стала на 93 мм длиннее, на 6 мм шире и на 8 мм выше своего предшественника (<span>BMW </span>E90). Колесная база увеличилась на 50 мм,а объем... </p><span class="post__small">BMW 3 series /</span>
                     </li>
-                    <li class="post"><a href="#" class="post__title"> <span>BMW </span>3 series</a>
+                    <li class="post"><a href="#" class="post__title"><span>BMW </span>3 series</a>
                       <p>Седан среднего класса <span>BMW </span>3-Series (F30) дебютировал в 2011 году, но продажи стартовали годом позже. По габаритным размерам «тройка» стала на 93 мм длиннее, на 6 мм шире и на 8 мм выше своего предшественника (<span>BMW </span>E90). Колесная база увеличилась на 50 мм,а объем... </p><span class="post__small">BMW 3 series /</span>
                     </li>
                   </ul>
@@ -129,16 +148,16 @@
                   <li><a href="#"></a></li>
                 </ul>
               </div>
-              <div class="nav__col"><a href="#" class="nav__user"><i class="icon-lock"> </i>Личный кабинет </a></div>
+              <div class="nav__col"><a href="#" class="nav__user"><i class="icon-lock"></i>Личный кабинет </a></div>
             </div>
           </div>
         </div>
       </header>
-      <div class="catalog-wrap">
+      <div class="catalog-wrap js-content">
         <div id="series1" class="catalog">
           <div class="l-center">
             <div class="catalog__top">
-              <h2 class="title">1 series<i>i</i></h2>
+              <h2 class="title">1 series<a href="#popup1" class="js-popup-link">i</a></h2>
             </div>
             <div class="item"><a href="#">
                 <div class="item__img"><img src="img/item/bmw-1series-hatchback.png" alt=""></div>
@@ -155,7 +174,7 @@
         <div id="series2" class="catalog">
           <div class="l-center">
             <div class="catalog__top">
-              <h2 class="title">3 series<i>i</i></h2>
+              <h2 class="title">3 series<a href="#popup1" class="js-popup-link">i</a></h2>
             </div>
             <div class="item"><a href="#">
                 <div class="item__img"><img src="img/item/bmw-3series-sedan.png" alt=""></div>
@@ -172,7 +191,7 @@
         <div id="series3" class="catalog">
           <div class="l-center">
             <div class="catalog__top">
-              <h2 class="title">5 series<i>i</i></h2>
+              <h2 class="title">5 series<a href="#popup1" class="js-popup-link">i</a></h2>
             </div>
             <div class="item"><a href="#">
                 <div class="item__img"><img src="img/item/bmw-5series-hatchback.png" alt=""></div>
@@ -189,7 +208,7 @@
         <div id="series4" class="catalog">
           <div class="l-center">
             <div class="catalog__top">
-              <h2 class="title">6 series<i>i</i></h2>
+              <h2 class="title">6 series<a href="#popup1" class="js-popup-link">i</a></h2>
             </div>
             <div class="item"><a href="#">
                 <div class="item__img"><img src="img/item/bmw-6series-hatchback.png" alt=""></div>
@@ -211,7 +230,7 @@
         <div id="series5" class="catalog">
           <div class="l-center">
             <div class="catalog__top">
-              <h2 class="title">7 series<i>i</i></h2>
+              <h2 class="title">7 series<a href="#popup1" class="js-popup-link">i</a></h2>
             </div>
             <div class="item"><a href="#">
                 <div class="item__img"><img src="img/item/bmw-7series-hatchback.png" alt=""></div>
@@ -223,7 +242,7 @@
         <div id="series6" class="catalog">
           <div class="l-center">
             <div class="catalog__top">
-              <h2 class="title">X series<i>i</i></h2>
+              <h2 class="title">X series<a href="#popup1" class="js-popup-link">i</a></h2>
             </div>
             <div class="item"><a href="#">
                 <div class="item__img"><img src="img/item/bmw-xseries-hatchback.png" alt=""></div>
@@ -260,7 +279,7 @@
         <div id="series7" class="catalog">
           <div class="l-center">
             <div class="catalog__top">
-              <h2 class="title">Z4 series<i>i</i></h2>
+              <h2 class="title">Z4 series<a href="#popup1" class="js-popup-link">i</a></h2>
             </div>
             <div class="item"><a href="#">
                 <div class="item__img"><img src="img/item/bmw-z4series-hatchback.png" alt=""></div>
@@ -272,7 +291,7 @@
         <div id="series8" class="catalog">
           <div class="l-center">
             <div class="catalog__top">
-              <h2 class="title">M series<i>i</i></h2>
+              <h2 class="title">M series<a href="#popup1" class="js-popup-link">i</a></h2>
             </div>
             <div class="item"><a href="#">
                 <div class="item__img"><img src="img/item/bmw-m3series-sedan.png" alt=""></div>
@@ -323,7 +342,7 @@
         </div>
       </div>
       <div class="l-center"></div>
-      <div class="push"> </div>
+      <div class="push"></div>
     </div>
     <div class="footer">
       <div class="footer__main">

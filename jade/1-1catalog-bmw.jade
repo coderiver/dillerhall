@@ -2,15 +2,28 @@ doctype
 html
 	head
 		include _head.jade
-	body
+	body.js-fixed
+		.overlay.js-overlay(style="display:none")
+		.popup-wrap.js-popup(data-popup="js-popup-el", style="display:none")
+			.popup#popup1
+				.popup__body
+					span.popup__close.js-popup-close
+					img(src="http://placehold.it/800x465", alt="")
+					.popup__inner
+						.popup__top
+							span.popup__title BMW 1 series
+							p Автомобиль выпускается с 2004 года. Последним автомобилем такого класса этого немецкого производителя был BMW 3 Compact (E36/5, E46/5). Машина имеет много общих решений с другими моделями. Так, передняя подвеска стойки МакФерсон от «пятёрки» E60, а задняя многорычажная от «трёшки» E90.
+						h2 Компактный автомобиль с задним приводом и продольным расположением двигателя
+						p Автомобиль выпускается с 2004 года. Последним автомобилем такого класса этого немецкого производителя был BMW 3 Compact (E36/5, E46/5). Машина имеет много общих решений с другими моделями. Так, передняя подвеска стойки МакФерсон от «пятёрки» E60, а задняя многорычажная от «трёшки» E90.
+						p Модель позиционируется в зависимости от комплектации как пяти или четырёхместный автомобиль. Центральная часть приборной панели слегка повёрнута в сторону водителя, а вместо ключа зажигания — брелок и кнопка «Start» над ним.
 		.out 
 			include _header_catalog.jade
-			.catalog-wrap
+			.catalog-wrap.js-content
 				.catalog(id="series1")
 					.l-center
 						.catalog__top
 							h2.title 1 series
-								i i
+								a.js-popup-link(href="#popup1") i
 						.item
 							a(href="#")
 								.item__img
@@ -33,7 +46,7 @@ html
 					.l-center
 						.catalog__top
 							h2.title 3 series
-								i i
+								a.js-popup-link(href="#popup1") i
 						.item
 							a(href="#")
 								.item__img
@@ -56,7 +69,7 @@ html
 					.l-center
 						.catalog__top
 							h2.title 5 series
-								i i
+								a.js-popup-link(href="#popup1") i
 						.item
 							a(href="#")
 								.item__img
@@ -79,7 +92,7 @@ html
 					.l-center
 						.catalog__top
 							h2.title 6 series
-								i i
+								a.js-popup-link(href="#popup1") i
 						.item
 							a(href="#")
 								.item__img
@@ -111,7 +124,7 @@ html
 					.l-center
 						.catalog__top
 							h2.title 7 series
-								i i
+								a.js-popup-link(href="#popup1") i
 						.item
 							a(href="#")
 								.item__img
@@ -125,7 +138,7 @@ html
 					.l-center
 						.catalog__top
 							h2.title X series
-								i i
+								a.js-popup-link(href="#popup1") i
 						.item
 							a(href="#")
 								.item__img
@@ -184,7 +197,7 @@ html
 					.l-center
 						.catalog__top
 							h2.title Z4 series
-								i i
+								a.js-popup-link(href="#popup1") i
 						.item
 							a(href="#")
 								.item__img
@@ -198,7 +211,7 @@ html
 					.l-center
 						.catalog__top
 							h2.title M series
-								i i
+								a.js-popup-link(href="#popup1") i
 						.item
 							a(href="#")
 								.item__img
