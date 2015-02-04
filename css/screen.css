@@ -1335,7 +1335,7 @@ label__inner { padding-bottom: 6px; }
 .filter__close { background: url("../img/svg/close-blue.svg") no-repeat 0 0; -moz-background-size: 9px 9px; -o-background-size: 9px 9px; -webkit-background-size: 9px 9px; background-size: 9px 9px; width: 9px; height: 9px; display: inline-block; position: absolute; left: -28px; top: 50%; margin-top: -4px; }
 .ie8 .filter__close { background: url('../img/icons-sba7a35db0b.png') 0 -280px no-repeat; width: 9px; height: 9px; }
 @media only screen and (max-width: 480px) { .filter__close { left: -15px; } }
-.filter__btns .btn-simple { padding: 8px 22px 6px 22px; min-width: 0; margin-right: 19px; margin-bottom: 15px; }
+.filter__btns .btn-simple { padding: 8px 22px 6px 22px; min-width: 0; margin-right: 19px; margin-bottom: 15px; cursor: pointer; }
 .filter__btns label { position: relative; display: inline-block; }
 .filter__btns label input { position: absolute; top: 0; left: 0; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; visibility: hidden; }
 .filter__btns label input:checked + span { background: #1bb4ed; border-color: #1bb4ed; color: white; }
