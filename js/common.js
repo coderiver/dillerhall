@@ -211,7 +211,19 @@ $(".js-uncheck-multi").on("click", function(){
 		});
 		return false;
 	});
+	$(".js-tabs-item").click(function(){	
+		$(this).parents(".js-tabs-icon").find(".js-open-list").text($(this).text());
+	});
 
+	 $(".js-tabs-item").click(function (){
+		var page = $(this).attr("href");
+
+		$('html, body').animate({
+			scrollTop: $(page).offset().top - 100
+		}, 600);
+		$('.tabs-icon').removeClass('is-active');
+		return false;
+	});
 	$(".js-scroll-to").on("click",function (){
 		var el = $(this).attr("href");
 		$("body, html").animate({

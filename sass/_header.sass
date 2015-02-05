@@ -242,6 +242,9 @@
 					max-width: 480px
 				+r(480)
 					max-width: 320px
+.js-wrap
+	position: relative
+	z-index: 5 
 .header-fixed
 	z-index: 5 
 .header__bottom
@@ -332,7 +335,7 @@
 			+f300
 			height: 30px
 			line-height: 30px
-	+r(980)
+	+r(1024)
 		display: none
 	a
 		display: inline-block
@@ -345,6 +348,8 @@
 		&:hover,
 		&.is-active
 			+opacity(1)
+		&.is-active
+			border-bottom: 1px solid #fff 
 		&:first-child
 			margin: 0
 .header__wrap

@@ -125,29 +125,58 @@ $(document).ready(function() {
 	});
 	//1-1catalog series
 	// scrollTop
-	 $(".header__nav-link").click(function (){
+	 $(".js-header__nav-link").click(function (){
 		var page = $(this).attr("href");
 
 		$('html, body').animate({
-			scrollTop: $(page).offset().top + 20
+			scrollTop: $(page).offset().top - 100
 		}, 600);
+			$('.js-header__nav-link').removeClass('is-active');
+			$(this).addClass('is-active')
 		return false;
+	});
+	function scrollHeader() {
+	    if ($('.js-block').length) {
+	      $('.js-block').each(function() {
+	        if ($(window).scrollTop() >= $(this).offset().top) {
+	          var id = $(this).attr("id");
+	          $(".header__nav-list a").removeClass("is-active");
+	          $("[href='"+id+"']").addClass("is-active");
+	        }	       
+	      });
+	    }
+	  }
+	scrollHeader();
+	$(window).scroll(function() {
+		scrollHeader();
 	});
 	//header fixed
 	$(window).scroll(function() {    
 	    var scroll = $(window).scrollTop();
-
-	    if (scroll >= $('.js-wrap').offset().top) {
-	        $(".js-fixed").addClass("is-fixed");
-	    } else {
-	        $(".js-fixed").removeClass("is-fixed");
-	    }
+	    if ($('.js-wrap').length>0) {
+	    	if (scroll >= $('.js-wrap').offset().top) {
+	    	    $(".js-fixed").addClass("is-fixed");
+	    	} else {
+	    	    $(".js-fixed").removeClass("is-fixed");
+	    	};
+	    };
+	});
+	$(window).load(function() {    
+	    var scroll = $(window).scrollTop();
+	    if ($('.js-wrap').length>0) {
+	    	if (scroll >= $('.js-wrap').offset().top) {
+	    	    $(".js-fixed").addClass("is-fixed");
+	    	} else {
+	    	    $(".js-fixed").removeClass("is-fixed");
+	    	};
+	    };
 	});
 	//input popup
 	$('.popup-form input').on('keyup', function(event) {
 		if($(this).val() == '') {
 			$(this).removeClass('is-active');
-		} else {
+		} 
+		else {
 			$(this).addClass('is-active');
 		}
 	});
