@@ -131,17 +131,16 @@ $(document).ready(function() {
 		$('html, body').animate({
 			scrollTop: $(page).offset().top - 100
 		}, 600);
-			$('.js-header__nav-link').removeClass('is-active');
-			$(this).addClass('is-active')
 		return false;
 	});
 	function scrollHeader() {
 	    if ($('.js-block').length) {
 	      $('.js-block').each(function() {
-	        if ($(window).scrollTop() >= $(this).offset().top) {
+	      	var navHeight = $('.header__bottom').outerHeight();
+	        if ($(window).scrollTop() >= $(this).offset().top - navHeight) {
 	          var id = $(this).attr("id");
 	          $(".header__nav-list a").removeClass("is-active");
-	          $("[href='"+id+"']").addClass("is-active");
+	          $("[href='#"+id+"']").addClass("is-active");
 	        }	       
 	      });
 	    }
