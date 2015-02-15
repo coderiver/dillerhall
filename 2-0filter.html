@@ -166,10 +166,13 @@
             </div>
           </div>
         </div>
-        <div class="filter filter__amount js-ui-slider"><span class="filter__title">Цена в <span>долларах</span>:</span>
+        <div class="filter filter__amount js-ui-slider">
+          <span class="filter__title">Цена в <span>долларах</span>:</span>
           <div class="filter__box">
-            <input class="input js-ui-slider-from"><span>-</span>
-            <input class="input js-ui-slider-to">
+            <input class="input js-ui-slider-from" type="text"><span>-</span>
+            <input class="input js-ui-slider-to" type="text">
+            <input class="input js-input-from-hidden" type="hidden" value="">
+            <input class="input js-input-to-hidden" type="hidden" value="">
           </div>
           <div class="filter__row"><a href="#" class="filter__close js-reset-range"></a>
             <div class="filter__range">

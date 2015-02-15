@@ -76,22 +76,34 @@ $(document).ready(function() {
         $(".js-ui-slider").each(function(){
             var slider = $(this).find(".js-ui-slider-main"),
             	inputFrom = $(this).find(".js-ui-slider-from"),
+            	inputFromHidden = $(this).find(".js-input-from-hidden"),
             	inputTo = $(this).find(".js-ui-slider-to"),
+            	inputToHidden = $(this).find(".js-input-to-hidden"),
             	maxVal = slider.attr("data-max"),
             	minVal = slider.attr("data-min"),
+            	valFrom = inputFromHidden.val(),
+            	valTo = inputToHidden.val(),
             	stepVal = slider.attr("data-step");
+            	if (!valFrom) {
+            		var valFrom = minVal;
+            	}
+            	if (!valTo) {
+            		var valTo = maxVal;
+            	}
             slider.slider({
                 range: true,
                 min: minVal,
                 max: maxVal,
                 step: stepVal,
-                values: [ minVal, maxVal ],
+                values: [ valFrom, valTo ],
                 slide: function( event, ui ) {
                     $(this).find(".ui-slider-handle").html("<span></span>");
                     //var handle_0 = $(this).find(".ui-slider-range").next().find("span")
                     //var handle_1 = $(this).find(".ui-slider-range").next().next().find("span");
                     inputFrom.val(ui.values[0]);
+                    inputFromHidden.val(ui.values[0]);
                     inputTo.val(ui.values[1]);
+                    inputToHidden.val(ui.values[1]);
                     //handle_0.text(ui.values[0]);
                     //handle_1.text(ui.values[1]);
                 }
@@ -131,17 +143,15 @@ $(document).ready(function() {
 		$('html, body').animate({
 			scrollTop: $(page).offset().top - 100
 		}, 600);
-			$('.js-header__nav-link').removeClass('is-active');
-			$(this).addClass('is-active')
 		return false;
 	});
 	function scrollHeader() {
 	    if ($('.js-block').length) {
 	      $('.js-block').each(function() {
-	        if ($(window).scrollTop() >= $(this).offset().top) {
+	        if ($(window).scrollTop() >= $(this).offset().top-100) {
 	          var id = $(this).attr("id");
 	          $(".header__nav-list a").removeClass("is-active");
-	          $("[href='"+id+"']").addClass("is-active");
+	          $("[href='#"+id+"']").addClass("is-active");
 	        }	       
 	      });
 	    }
