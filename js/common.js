@@ -217,9 +217,9 @@ $(".js-uncheck-multi").on("click", function(){
 
 	 $(".js-tabs-item").click(function (){
 		var page = $(this).attr("href");
-
+		var navHeight = $('.header__bottom').outerHeight();
 		$('html, body').animate({
-			scrollTop: $(page).offset().top - 100
+			scrollTop: $(page).offset().top - navHeight
 		}, 600);
 		$('.tabs-icon').removeClass('is-active');
 		return false;

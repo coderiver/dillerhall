@@ -148,7 +148,12 @@ $(document).ready(function() {
 	function scrollHeader() {
 	    if ($('.js-block').length) {
 	      $('.js-block').each(function() {
+<<<<<<< HEAD
 	        if ($(window).scrollTop() >= $(this).offset().top-100) {
+=======
+	      	var navHeight = $('.header__bottom').outerHeight();
+	        if ($(window).scrollTop() >= $(this).offset().top - navHeight) {
+>>>>>>> 35bf68b2d22d9c9ed6e889d01d680950dbc6f4b0
 	          var id = $(this).attr("id");
 	          $(".header__nav-list a").removeClass("is-active");
 	          $("[href='#"+id+"']").addClass("is-active");
