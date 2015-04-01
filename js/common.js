@@ -281,7 +281,7 @@ $(".js-uncheck-multi").on("click", function(){
 	function fixedCompare() {
 	   var el = $(".js-compare-head");
 	   var top = el.offset().top;
-	   if ($("body").scrollTop() >= top) {
+	   if ($(window).scrollTop() >= top) {
 		 el.addClass("is-fixed");
 	   } 
 	   else {
