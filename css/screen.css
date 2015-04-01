@@ -1181,7 +1181,7 @@ label__inner { padding-bottom: 6px; }
 @media only screen and (max-width: 768px) { .about__inner blockquote { padding: 0 0 0 65px; } }
 @media only screen and (max-width: 480px) { .about__inner blockquote { padding: 0 0 0 30px; font-size: 14px; line-height: 1.7; } }
 .about__inner blockquote strong { font-family: "museosanscyrl_500_italic", Arial, sans-serif; }
-.about__inner blockquote:before { position: absolute; top: 0; left: -65px; content: "“"; font-size: 150px; line-height: 105px; letter-spacing: 0.018em; color: #363535; font-family: Arial, sans-serif; }
+.about__inner blockquote:before { position: absolute; top: 0; left: -65px; content: "тАЬ"; font-size: 150px; line-height: 105px; letter-spacing: 0.018em; color: #363535; font-family: Arial, sans-serif; }
 @media only screen and (max-width: 768px) { .about__inner blockquote:before { left: 0; } }
 @media only screen and (max-width: 480px) { .about__inner blockquote:before { font-size: 60px; line-height: 50px; } }
 .about__inner hr { margin-bottom: 45px; }
@@ -1394,7 +1394,7 @@ label__inner { padding-bottom: 6px; }
 @media only screen and (max-width: 768px) { .inner blockquote { padding: 0 0 0 65px; } }
 @media only screen and (max-width: 480px) { .inner blockquote { padding: 0 0 0 30px; font-size: 14px; line-height: 1.7; } }
 .inner blockquote strong { font-family: "museosanscyrl_500_italic", Arial, sans-serif; }
-.inner blockquote:before { position: absolute; top: 0; left: -65px; content: "“"; font-size: 150px; line-height: 105px; letter-spacing: 0.018em; color: #363535; font-family: Arial, sans-serif; }
+.inner blockquote:before { position: absolute; top: 0; left: -65px; content: "тАЬ"; font-size: 150px; line-height: 105px; letter-spacing: 0.018em; color: #363535; font-family: Arial, sans-serif; }
 @media only screen and (max-width: 768px) { .inner blockquote:before { left: 0; } }
 @media only screen and (max-width: 480px) { .inner blockquote:before { font-size: 60px; line-height: 50px; } }
 .inner figure { max-width: 980px; padding: 0px 0 35px 0; margin: 0 auto; text-align: center; }
@@ -1809,6 +1809,7 @@ label__inner { padding-bottom: 6px; }
 .circle svg.is-blue circle { stroke: #6b7a8f; }
 .circle svg.is-gray circle { stroke: #ededed; stroke-width: 1px; }
 .circle circle { fill: none; stroke-width: 2px; stroke-dasharray: 2000; stroke-dashoffset: 2000; }
+.ie .circle circle { stroke-dasharray: 0; }
 .circle__info { position: absolute; top: 0; left: 0; right: 0; bottom: 0; text-align: center; font-size: 0; }
 .circle__info:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .circle__in { vertical-align: middle; display: inline-block; font-family: "museosanscyrl_300", Arial, sans-serif; font-size: 14px; text-align: left; }
@@ -1847,6 +1848,7 @@ label__inner { padding-bottom: 6px; }
 .triangle svg.is-red polygon { stroke: #ef8f67; }
 .triangle svg.is-blue polygon { stroke: #6b7a8f; }
 .triangle polygon { fill: #fff; stroke-width: 2px; stroke-dasharray: 1000; stroke-dashoffset: 1000; }
+.ie .triangle polygon { stroke-dasharray: 0; }
 @media only screen and (max-width: 980px) { .triangle polygon { fill: none; } }
 
 .line { margin: 0 auto; width: 546px; }
@@ -1861,6 +1863,7 @@ label__inner { padding-bottom: 6px; }
 .line svg.is-red line { stroke: #ef8f67; }
 .line svg.is-blue line { stroke: #6b7a8f; }
 .line line { stroke-width: 2px; stroke-dasharray: 1000; stroke-dashoffset: 1000; }
+.ie .line line { stroke-dasharray: 0; }
 .line__in { position: relative; font-size: 0; display: inline-block; vertical-align: bottom; width: 14px; text-align: center; }
 .line__in svg { display: inline-block; }
 .line__label { position: absolute; top: -26px; left: 0; right: 0; font-size: 12px; font-family: "museosanscyrl_300", Arial, sans-serif; color: #909090; }

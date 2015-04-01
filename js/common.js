@@ -302,8 +302,7 @@ $(".js-uncheck-multi").on("click", function(){
 	  $('.js-inview').each(function(){
 		var el = $(this);
 		var top = ($(this).offset().top - $(window).height());
-		console.log(top);
-		if ($("body").scrollTop() >= top) {
+		if ($(window).scrollTop() >= top) {
 		  $(this).addClass("has-animation")
 		}
 	  });
