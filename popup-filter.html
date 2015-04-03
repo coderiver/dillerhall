@@ -24,14 +24,14 @@
               </div>
             </div>
           </div>
-          <div class="filter filter__amount"><span class="filter__title">Цена в <span>долларах</span>:</span>
+          <div class="filter filter__amountt js-ui-slider"><span class="filter__title">Цена в <span>долларах</span>:</span>
             <div class="filter__box">
-              <input class="input"><span>-</span>
-              <input class="input">
+              <input class="input js-ui-slider-from"><span>-</span>
+              <input class="input js-ui-slider-to">
             </div>
-            <div class="filter__row"><a href="#" class="filter__close"></a>
+            <div class="filter__row"><a href="#" class="filter__close js-reset-range"></a>
               <div class="filter__range">
-                <div id="slider" class="range"></div>
+                <div data-min="0" data-max="100000" data-step="500" class="range js-ui-slider-main"></div>
               </div>
             </div>
           </div>

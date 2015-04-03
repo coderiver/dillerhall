@@ -412,12 +412,19 @@ $(".js-uncheck-multi").on("click", function(){
 			navKey.removeClass("is-blue");
 		}
 	}
-	headerNav();
-	$(window).resize(function(){
+	if ($(".header__key").length) {
 		headerNav();
+	}
+	
+	$(window).resize(function(){
+		if ($(".header__key").length) {
+			headerNav();
+		}
 	});
 	$(window).scroll(function(){
-		headerNav();
+		if ($(".header__key").length) {
+			headerNav();
+		}
 	});
 
 });
