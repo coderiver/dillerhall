@@ -64,14 +64,14 @@ $(document).ready(function() {
  		});
  	};
  	//RANGE
- 	$(function() {
-		$( "#slider" ).slider({
-			range: true,
-			min: 0,
-			max: 41,
-			values: [ 11, 41 ]
-		});
-	});
+ // 	$(function() {
+	// 	$( "#slider" ).slider({
+	// 		range: true,
+	// 		min: 0,
+	// 		max: 41,
+	// 		values: [ 11, 41 ]
+	// 	});
+	// });
 	function ui_slider() {
         $(".js-ui-slider").each(function(){
             var slider = $(this).find(".js-ui-slider-main"),
@@ -79,11 +79,11 @@ $(document).ready(function() {
             	inputFromHidden = $(this).find(".js-input-from-hidden"),
             	inputTo = $(this).find(".js-ui-slider-to"),
             	inputToHidden = $(this).find(".js-input-to-hidden"),
-            	maxVal = slider.attr("data-max"),
-            	minVal = slider.attr("data-min"),
+            	maxVal = +slider.attr("data-max"),
+            	minVal = +slider.attr("data-min"),
             	valFrom = inputFromHidden.val(),
             	valTo = inputToHidden.val(),
-            	stepVal = slider.attr("data-step");
+            	stepVal = +slider.attr("data-step");
             	if (!valFrom) {
             		var valFrom = minVal;
             	}

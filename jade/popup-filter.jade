@@ -31,7 +31,7 @@ html
 						.filter__row
 							a(href="#").filter__close.js-reset-range
 							.filter__range
-								.range.js-ui-slider-main(data-min="0", data-max="100000", data-step="500")
+								.range.js-ui-slider-main(data-min="50000", data-max="100000", data-step="500")
 					.filter
 						span.filter__title Тип кузова
 						label.checkbox
@@ -60,16 +60,26 @@ html
 							span.checkbox__title Кроссовер
 					.filter
 						span.filter__title Коробка передач
-						.filter__btns
-							button.btn-simple Автоматическая
-							button.btn-simple Механическая
+						.filter__btns.filter__btns_mod
+							label
+								input(type="radio" name="radio1")
+								span.btn-simple Автоматическая
+							label
+								input(type="radio" name="radio1")
+								span.btn-simple Механическая
 					.filter
 						span.filter__title Привод
-						.filter__btns
-							button.btn-simple Передний
-							button.btn-simple Задний
-							button.btn-simple Полный
-					.filter_more
+						.filter__btns.filter__btns_mod
+							label
+								input(type="radio" name="radio2")
+								span.btn-simple Передний
+							label
+								input(type="radio" name="radio2")
+								span.btn-simple Задний
+							label
+								input(type="radio" name="radio2")
+								span.btn-simple Полный
+					button.filter_more.js-toogle(type="button", data-toggle="js-hidden-filter")
 						span Больше параметров
 					a(href="#").btn.btn_fluid Показать!
 					.filter_save

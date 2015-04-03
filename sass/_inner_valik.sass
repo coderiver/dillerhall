@@ -2357,13 +2357,12 @@ label
 						background: #1bb4ed
 						border-color: #1bb4ed
 						color: #fff  
-				
 	&_more
 		margin-bottom: 18px
 		font-size: 0
 		display: block
 		width: 100%
-		background: #fff 
+		background: none 
 		+transition(border-color .2s linear)
 		border: 1px solid #e5e5e5
 		+br
@@ -2989,6 +2988,12 @@ label
 					border-color: #fff
 					background: #fff
 					color: #1fb5ed   
+			input
+				&:checked
+					+ span
+						background: #fff 
+						border-color: #fff	
+						color: #1bb4ed 
 		&_more
 			border-color: #79d3f4
 			span
