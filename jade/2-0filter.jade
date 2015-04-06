@@ -69,7 +69,9 @@ html
 					.filter__row
 						a(href="#").filter__close.js-reset-range
 						.filter__range
-							.range.js-ui-slider-main(data-min="10000", data-max="100000", data-step="500")
+							.range.js-ui-slider-main(data-min="10000", data-max="100000", data-step="1")
+							input.js-input-from-hidden(type="hidden", value="50000")
+							input.js-input-to-hidden(type="hidden", value="70000")
 				.filter
 					span.filter__title Тип кузова
 					label.checkbox

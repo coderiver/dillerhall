@@ -120,6 +120,12 @@ $(document).ready(function() {
         });
     }
     ui_slider();
+    // $( ".js-ui-slider-from" ).change(function() {
+    //   $(".js-ui-slider").slider( "values", 0 );
+    // });
+    // $( ".js-ui-slider-to" ).change(function() {
+    //   $(".js-ui-slider").slider( "values", 1 );
+    // });
     $(".js-reset-range").on("click",function(){
     	var slider = $(this).parents(".js-ui-slider").find(".js-ui-slider-main"),
     		maxVal = slider.attr("data-max"),
